@@ -1,0 +1,32 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package CONEXION;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+/**
+ *
+ */
+public class Connexio {
+
+    public Connection connectar() {
+        String url = "jdbc:mysql://localhost:3306/nico";
+        String user = "root";
+        String password = "Nico1234";
+        
+        Connection con = null;
+        try (Connection conn = DriverManager.getConnection(url, user, password)) {
+            System.out.println("Connexi� OK");
+        } catch (SQLException e) {
+            System.out.println("No s'ha pogut establir la connexio");
+
+            e.printStackTrace();
+        }
+        return con;
+    }
+
+}
