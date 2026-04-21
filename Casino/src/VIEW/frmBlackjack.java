@@ -6,7 +6,7 @@ package VIEW;
 
 /**
  *
- * @author nicod
+ * @author nicod i marti
  */
 public class frmBlackjack extends javax.swing.JFrame {
     
