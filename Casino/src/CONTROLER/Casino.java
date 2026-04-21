@@ -25,7 +25,7 @@ public class Casino {
 
         Connexio c = new Connexio();
         c.connectar();
-
+        System.out.println("marti maricon");
     }
 
 }
