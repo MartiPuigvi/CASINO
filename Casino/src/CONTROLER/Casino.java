@@ -4,6 +4,8 @@
  */
 package CONTROLER;
 
+import CONEXION.Connexio;
+
 /**
  *
  * @author Marti Puigvi Serra
@@ -13,8 +15,15 @@ public class Casino {
     /**
      * @param args the command line arguments
      */
+    public static String url = "jdbc:mysql://localhost:3306/casino";
+    public static String user = "root";
+    public static String password = "Nico1234";
+    
     public static void main(String[] args) {
         
+        Connexio c = new Connexio();
+        c.connectar();
+
         
         
     }
