@@ -9,5 +9,5 @@ package MODEL;
  * @author nicod
  */
 public class Joc {
-    int joc;
+
 }
