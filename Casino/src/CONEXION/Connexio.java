@@ -20,7 +20,7 @@ public class Connexio {
         
         Connection con = null;
         try (Connection conn = DriverManager.getConnection(url, user, password)) {
-            System.out.println("Connexiï¿½ OK");
+            System.out.println("Connexio½ OK");
         } catch (SQLException e) {
             System.out.println("No s'ha pogut establir la connexio");
 
