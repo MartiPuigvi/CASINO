@@ -8,6 +8,27 @@ package MODEL;
  *
  * @author nicod
  */
-public class Joc {
+public abstract class Joc {
+    
+    private String nom;
+
+    public Joc(String nom) {
+        this.nom = nom;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    @Override
+    public String toString() {
+        return "Joc{" + "nom=" + nom + '}';
+    }
+    
+    
 
 }
