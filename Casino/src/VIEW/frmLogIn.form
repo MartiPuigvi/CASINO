@@ -47,7 +47,7 @@
                       <Component id="txtPassword" pref="133" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="55" max="32767" attributes="0"/>
+              <EmptySpace pref="72" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -66,7 +66,7 @@
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <Component id="txtPassword" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="48" max="32767" attributes="0"/>
+              <EmptySpace pref="72" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btmSignup" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btmLogin" alignment="3" min="-2" max="-2" attributes="0"/>

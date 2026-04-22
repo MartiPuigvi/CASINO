@@ -17,15 +17,6 @@ import java.io.IOException;
  */
 public class GestioFitxers {
 
-    public static void creacioLog() {
-        DateTimeFormatter formater = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        String diaActual = LocalDateTime.now().format(formater);
-        String directori = ("src/LOG/");
-        String rutaCompleta = directori + diaActual + ".log";
-        Casino.rutaFitxerLogActual = rutaCompleta;
-        creacioFitxer(rutaCompleta);
-    }
-
     public static void creacioFitxer(String text) {
 
         try {
@@ -41,5 +32,6 @@ public class GestioFitxers {
 
         }
     }
+    
 
 }
