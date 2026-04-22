@@ -4,12 +4,15 @@
  */
 package VIEW;
 
+import static CONTROLER.Casino.Users;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author nicod
  */
 public class frmLogIn extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(frmLogIn.class.getName());
 
     /**
@@ -51,6 +54,11 @@ public class frmLogIn extends javax.swing.JFrame {
         btmSignup.setText("SIGNUP");
 
         btmLogin.setText("LOGIN");
+        btmLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmLoginActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,6 +107,31 @@ public class frmLogIn extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btmLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmLoginActionPerformed
+        // TODO add your handling code here:
+        boolean found = false;
+
+        for (int i = 0; i < Users.size(); i++) {
+            if (Users.get(i).getNom().equals(txtUsuari.getText()) && Users.get(i).getContrasenya().equals(txtPassword.getText())) {
+                found = true;
+
+                frmMenu f = new frmMenu();
+                f.setVisible(true);
+                this.dispose();
+
+                break;
+
+            }
+        }
+        if (!found) {
+            JOptionPane.showMessageDialog(null, "Usuari no trobat o incorrecte");
+            txtUsuari.setText("");
+            txtPassword.setText("");
+        }
+
+
+    }//GEN-LAST:event_btmLoginActionPerformed
 
     /**
      * @param args the command line arguments

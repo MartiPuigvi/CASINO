@@ -7,6 +7,8 @@ package CONTROLER;
 import CONEXION.Connexio;
 import static CONEXION.Queries.usuariAaraylist;
 import MODEL.Usuari;
+import VIEW.frmLogIn;
+import VIEW.frmMenu;
 import java.util.ArrayList;
 
 /**
@@ -25,14 +27,19 @@ public class Casino {
     public static ArrayList<Usuari> Users = new ArrayList<Usuari>();
 
     public static void main(String[] args) {
-        
+
         usuariAaraylist();
         GestioLog.creacioLog();
 
         Connexio c = new Connexio();
         c.connectar();
-        for(Usuari u : Users) {System.out.println(u);}
-        
+
+        frmLogIn f = new frmLogIn();
+        f.setVisible(true);
+        for (Usuari u : Users) {
+            System.out.println(u);
+        }
+
     }
 
 }

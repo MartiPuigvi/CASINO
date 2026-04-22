@@ -37,7 +37,7 @@ public class Queries {
                 boolean admin = rs.getBoolean("admin");
                 LocalDate age = rs.getDate("age").toLocalDate();
 
-                Users.add(new Usuari(id, nom, password, email, age, saldo, admin));          
+                Users.add(new Usuari(id, nom, email, password, age, saldo, admin));          
  //System.out.println(id + " - " + nom + " - ");
             }
 
