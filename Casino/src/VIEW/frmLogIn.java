@@ -139,10 +139,12 @@ public class frmLogIn extends javax.swing.JFrame {
     }//GEN-LAST:event_btmLoginActionPerformed
 
     private void btmSignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmSignupActionPerformed
-        // TODO add your handling code here:
-        frmSignUp signup = new frmSignUp();
-        signup.setVisible(true);
-        this.dispose();
+
+                frmSignUp m = new frmSignUp();
+                m.setVisible(true);
+                this.dispose();
+
+
     }//GEN-LAST:event_btmSignupActionPerformed
 
     /**
