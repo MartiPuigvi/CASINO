@@ -42,9 +42,9 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btmSignup" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="txtUsuari" max="32767" attributes="0"/>
-                      <Component id="txtPassword" pref="133" max="32767" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="txtPassword" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtUsuari" alignment="0" pref="133" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="72" max="32767" attributes="0"/>
@@ -106,8 +106,6 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtUsuari">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtPassword">
-    </Component>
     <Component class="javax.swing.JButton" name="btmSignup">
       <Properties>
         <Property name="text" type="java.lang.String" value="SIGNUP"/>
@@ -120,6 +118,8 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btmLoginActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="txtPassword">
     </Component>
   </SubComponents>
 </Form>
