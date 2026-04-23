@@ -4,12 +4,15 @@
  */
 package VIEW;
 
+import static CONTROLER.Casino.Users;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author nicod
  */
 public class frmLogIn extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(frmLogIn.class.getName());
 
     /**
@@ -32,9 +35,9 @@ public class frmLogIn extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtUsuari = new javax.swing.JTextField();
-        txtPassword = new javax.swing.JTextField();
         btmSignup = new javax.swing.JButton();
         btmLogin = new javax.swing.JButton();
+        txtPassword = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,8 +52,18 @@ public class frmLogIn extends javax.swing.JFrame {
         jLabel3.setText("LOG IN");
 
         btmSignup.setText("SIGNUP");
+        btmSignup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmSignupActionPerformed(evt);
+            }
+        });
 
         btmLogin.setText("LOGIN");
+        btmLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmLoginActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -72,9 +85,9 @@ public class frmLogIn extends javax.swing.JFrame {
                         .addComponent(btmLogin)
                         .addGap(18, 18, 18)
                         .addComponent(btmSignup))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtUsuari)
-                        .addComponent(txtPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(txtPassword, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtUsuari, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)))
                 .addContainerGap(72, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -99,6 +112,38 @@ public class frmLogIn extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btmLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmLoginActionPerformed
+        // TODO add your handling code here:
+        boolean found = false;
+
+        for (int i = 0; i < Users.size(); i++) {
+            if (Users.get(i).getNom().equals(txtUsuari.getText()) && Users.get(i).getContrasenya().equals(txtPassword.getText())) {
+                found = true;
+
+                frmMenu f = new frmMenu();
+                f.setVisible(true);
+                this.dispose();
+
+                break;
+
+            }
+        }
+        if (!found) {
+            JOptionPane.showMessageDialog(null, "Usuari no trobat o incorrecte");
+            txtUsuari.setText("");
+            txtPassword.setText("");
+        }
+
+
+    }//GEN-LAST:event_btmLoginActionPerformed
+
+    private void btmSignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmSignupActionPerformed
+        // TODO add your handling code here:
+        frmSignUp signup = new frmSignUp();
+        signup.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btmSignupActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,7 +176,7 @@ public class frmLogIn extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField txtPassword;
+    private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUsuari;
     // End of variables declaration//GEN-END:variables
 }
