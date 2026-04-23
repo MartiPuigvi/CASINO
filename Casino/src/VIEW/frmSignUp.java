@@ -9,7 +9,7 @@ package VIEW;
  * @author nicod
  */
 public class frmSignUp extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(frmSignUp.class.getName());
 
     /**
@@ -35,10 +35,10 @@ public class frmSignUp extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         txtAge = new javax.swing.JTextField();
         txtName = new javax.swing.JTextField();
-        txtPass = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
         btmCancel = new javax.swing.JButton();
-        btmSign1 = new javax.swing.JButton();
+        btmSign = new javax.swing.JButton();
+        txtPass = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,8 +61,13 @@ public class frmSignUp extends javax.swing.JFrame {
         btmCancel.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         btmCancel.setText("CANCEL");
 
-        btmSign1.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        btmSign1.setText("SIGN UP");
+        btmSign.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        btmSign.setText("SIGN UP");
+        btmSign.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmSignActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,11 +79,11 @@ public class frmSignUp extends javax.swing.JFrame {
                 .addGap(238, 238, 238))
             .addGroup(layout.createSequentialGroup()
                 .addGap(147, 147, 147)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtPass))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -90,7 +95,7 @@ public class frmSignUp extends javax.swing.JFrame {
                             .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(btmSign1)
+                                .addComponent(btmSign)
                                 .addGap(53, 53, 53)
                                 .addComponent(btmCancel)))))
                 .addContainerGap(170, Short.MAX_VALUE))
@@ -105,13 +110,13 @@ public class frmSignUp extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -119,12 +124,32 @@ public class frmSignUp extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btmCancel)
-                    .addComponent(btmSign1))
-                .addContainerGap(105, Short.MAX_VALUE))
+                    .addComponent(btmSign))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btmSignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmSignActionPerformed
+        String nom = txtName.getText();
+        String pass = txtPass.getText();
+        String email = txtEmail.getText();
+        String age = txtAge.getText();
+
+        if (nom.isEmpty() || pass.isEmpty() || email.isEmpty() || age.isEmpty()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Siusplau, omple tots els camps.");
+            return;
+        }
+
+        CONEXION.Queries.signUp(nom, pass, email, age);
+
+        javax.swing.JOptionPane.showMessageDialog(this, "Usuari creat amb exit.");
+        this.dispose();
+        
+        frmLogIn login = new frmLogIn();
+        login.setVisible(false);
+    }//GEN-LAST:event_btmSignActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,7 +178,7 @@ public class frmSignUp extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btmCancel;
-    private javax.swing.JButton btmSign1;
+    private javax.swing.JButton btmSign;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -162,6 +187,6 @@ public class frmSignUp extends javax.swing.JFrame {
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtPass;
+    private javax.swing.JPasswordField txtPass;
     // End of variables declaration//GEN-END:variables
 }

@@ -52,6 +52,11 @@ public class frmLogIn extends javax.swing.JFrame {
         jLabel3.setText("LOG IN");
 
         btmSignup.setText("SIGNUP");
+        btmSignup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmSignupActionPerformed(evt);
+            }
+        });
 
         btmLogin.setText("LOGIN");
         btmLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -132,6 +137,13 @@ public class frmLogIn extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_btmLoginActionPerformed
+
+    private void btmSignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmSignupActionPerformed
+        // TODO add your handling code here:
+        frmSignUp signup = new frmSignUp();
+        signup.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btmSignupActionPerformed
 
     /**
      * @param args the command line arguments
