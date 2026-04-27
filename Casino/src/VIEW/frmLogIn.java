@@ -5,6 +5,7 @@
 package VIEW;
 
 import static CONTROLER.Casino.Users;
+import static CONTROLER.Casino.userActual;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,6 +21,7 @@ public class frmLogIn extends javax.swing.JFrame {
      */
     public frmLogIn() {
         initComponents();
+        this.getRootPane().setDefaultButton(btmLogin);
     }
 
     /**
@@ -120,21 +122,23 @@ public class frmLogIn extends javax.swing.JFrame {
         for (int i = 0; i < Users.size(); i++) {
             if (Users.get(i).getNom().equals(txtUsuari.getText()) && Users.get(i).getContrasenya().equals(txtPassword.getText())) {
                 found = true;
+                userActual = Users.get(i); 
 
                 frmMenu f = new frmMenu();
                 f.setVisible(true);
                 this.dispose();
 
                 break;
-
+                
             }
         }
+        System.out.println(userActual.toString());
         if (!found) {
             JOptionPane.showMessageDialog(null, "Usuari no trobat o incorrecte");
             txtUsuari.setText("");
             txtPassword.setText("");
-        }
-
+        }     
+        
 
     }//GEN-LAST:event_btmLoginActionPerformed
 

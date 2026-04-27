@@ -8,8 +8,10 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import CONTROLER.Casino;
 import CONTROLER.GestioFitxers;
+import MODEL.jocBlackjack;
 import java.io.File;
 import java.io.IOException;
+import java.util.Random;
 
 /**
  *
@@ -30,8 +32,8 @@ public class GestioFitxers {
             System.out.println("error");
             e.printStackTrace();
 
-        }
-    }
-    
+        }}
 
 }
+    
+

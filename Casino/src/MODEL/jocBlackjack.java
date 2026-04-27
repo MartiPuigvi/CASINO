@@ -11,32 +11,40 @@ import java.util.ArrayList;
  * @author nicod
  */
 public class jocBlackjack extends Joc {
-    
-    private ArrayList<Integer> cartasJugador;
-    private ArrayList<Integer> cartasDealer;
+
+    private ArrayList<Integer> cartesJugador = new ArrayList<>();
+    private ArrayList<Integer> cartesDealer = new ArrayList<>();
     private double aposta;
 
-    public jocBlackjack(ArrayList<Integer> cartasJugador, ArrayList<Integer> cartasDealer, double aposta, String nom) {
+    public jocBlackjack(double aposta, String nom) {
         super(nom);
-        this.cartasJugador = cartasJugador;
-        this.cartasDealer = cartasDealer;
+        this.cartesJugador = cartesJugador;
+        this.cartesDealer = cartesDealer;
         this.aposta = aposta;
     }
-    
-    public ArrayList<Integer> getCartasJugador() {
-        return cartasJugador;
+
+    public void cartaJugador(int carta) {
+        cartesJugador.add(carta);
     }
 
-    public void setCartasJugador(ArrayList<Integer> cartasJugador) {
-        this.cartasJugador = cartasJugador;
+    public void cartaDealer(int carta) {
+        cartesDealer.add(carta);
     }
 
-    public ArrayList<Integer> getCartasDealer() {
-        return cartasDealer;
+    public ArrayList<Integer> getCartesJugador() {
+        return cartesJugador;
     }
 
-    public void setCartasDealer(ArrayList<Integer> cartasDealer) {
-        this.cartasDealer = cartasDealer;
+    public void setCartesJugador(ArrayList<Integer> cartesJugador) {
+        this.cartesJugador = cartesJugador;
+    }
+
+    public ArrayList<Integer> getCartesDealer() {
+        return cartesDealer;
+    }
+
+    public void setCartesDealer(ArrayList<Integer> cartesDealer) {
+        this.cartesDealer = cartesDealer;
     }
 
     public double getAposta() {
@@ -49,8 +57,7 @@ public class jocBlackjack extends Joc {
 
     @Override
     public String toString() {
-        return "jocBlackjack{" + "cartasJugador=" + cartasJugador + ", cartasDealer=" + cartasDealer + ", aposta=" + aposta + '}';
+        return "jocBlackjack{" + "cartesJugador=" + cartesJugador + ", cartesDealer=" + cartesDealer + ", aposta=" + aposta + '}';
     }
-    
-    
+
 }

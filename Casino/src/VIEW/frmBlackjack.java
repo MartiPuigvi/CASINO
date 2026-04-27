@@ -4,19 +4,34 @@
  */
 package VIEW;
 
+import static CONTROLER.Casino.Users;
+import static CONTROLER.Casino.userActual;
+import MODEL.jocBlackjack;
+import java.util.Random;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author nicod i marti
  */
 public class frmBlackjack extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(frmBlackjack.class.getName());
+    private jocBlackjack bj;
+    private int totalDealer = 0;
+    private int totalJugador = 0;
 
     /**
      * Creates new form frmBlackjack
      */
     public frmBlackjack() {
         initComponents();
+        saldo();
+
+    }
+
+    public void saldo() {
+        lblSaldo.setText(String.valueOf(userActual.getSaldo()));
     }
 
     /**
@@ -28,25 +43,183 @@ public class frmBlackjack extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btmCarta = new javax.swing.JButton();
+        btmIniPartida = new javax.swing.JButton();
+        btmPlantar1 = new javax.swing.JButton();
+        txtApo = new javax.swing.JTextField();
+        lblSuma = new javax.swing.JLabel();
+        lblSaldo = new javax.swing.JLabel();
+        lblDealer = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btmCarta.setText("btmCarta");
+        btmCarta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmCartaActionPerformed(evt);
+            }
+        });
+
+        btmIniPartida.setText("btmIniPartida");
+        btmIniPartida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmIniPartidaActionPerformed(evt);
+            }
+        });
+
+        btmPlantar1.setText("btmPlantar");
+        btmPlantar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmPlantar1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(71, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btmIniPartida, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btmPlantar1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtApo, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(166, 166, 166)
+                                .addComponent(lblSuma, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblDealer, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btmCarta, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(63, 63, 63))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(113, 113, 113))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(lblSaldo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(lblSuma, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6))
+                            .addComponent(lblDealer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(txtApo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(56, 56, 56)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btmCarta, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btmPlantar1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btmIniPartida, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btmCartaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmCartaActionPerformed
+        if (bj == null) {
+            JOptionPane.showMessageDialog(this, "Inicia una partida primer");
+            return;
+        }
+
+        Random random = new Random();
+        int carta = random.nextInt(11) + 1;
+
+        bj.cartaJugador(carta);
+
+        System.out.println(bj.toString());
+        for (int c : bj.getCartesJugador()) {
+            totalJugador += c;
+        }
+
+        lblSuma.setText("Total: " + totalJugador);
+
+        if (totalJugador > 21) {
+            JOptionPane.showMessageDialog(this, "ets un calent t'has passat");
+        }
+
+
+    }//GEN-LAST:event_btmCartaActionPerformed
+
+    private void btmIniPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmIniPartidaActionPerformed
+        double aposta = Double.parseDouble(txtApo.getText());
+
+        if (userActual.getSaldo() < aposta) {
+            JOptionPane.showMessageDialog(null, "NO");
+            return;
+        } else {
+            userActual.setSaldo(userActual.getSaldo() - aposta);
+            saldo();
+        }
+
+        bj = new jocBlackjack(aposta, "Blackjack");
+
+        btmIniPartida.setVisible(false);
+        txtApo.setVisible(false);
+        System.out.println(bj.toString());
+
+    }//GEN-LAST:event_btmIniPartidaActionPerformed
+
+    private void btmPlantar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmPlantar1ActionPerformed
+        btmCarta.setEnabled(false);
+        if (bj == null) {
+            JOptionPane.showMessageDialog(null, "Inicia una partida primero");
+            return;
+        }
+
+        Random random = new Random();
+
+        while (totalDealer < 17) {
+
+            int carta = random.nextInt(11) + 1;
+            bj.cartaDealer(carta);
+
+            totalDealer = 0;
+            for (int c : bj.getCartesDealer()) {
+                totalDealer += c;
+            }
+            lblDealer.setText("Total: " + totalDealer);
+
+        }
+
+        finals();
+// TODO add your handling code here:
+    }//GEN-LAST:event_btmPlantar1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
+    public void finals() {
+        if (totalJugador > 21) {
+            JOptionPane.showMessageDialog(null, "Has perdido (te pasaste)");
+        } else if (totalDealer > 21) {
+            JOptionPane.showMessageDialog(null, "Has ganado (dealer se pasa)");
+            userActual.setSaldo(userActual.getSaldo() + bj.getAposta() * 2);
+        } else if (totalJugador > totalDealer) {
+            JOptionPane.showMessageDialog(null, "Has ganado");
+            userActual.setSaldo(userActual.getSaldo() + bj.getAposta() * 2);
+        } else if (totalJugador < totalDealer) {
+            JOptionPane.showMessageDialog(null, "Has perdido");
+        } else {
+            JOptionPane.showMessageDialog(null, "Empate");
+            userActual.setSaldo(userActual.getSaldo() + bj.getAposta());
+        }
+
+    }
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -70,5 +243,12 @@ public class frmBlackjack extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btmCarta;
+    private javax.swing.JButton btmIniPartida;
+    private javax.swing.JButton btmPlantar1;
+    private javax.swing.JLabel lblDealer;
+    private javax.swing.JLabel lblSaldo;
+    private javax.swing.JLabel lblSuma;
+    private javax.swing.JTextField txtApo;
     // End of variables declaration//GEN-END:variables
 }
