@@ -17,9 +17,10 @@ public class frmMenu extends javax.swing.JFrame {
     /**
      * Creates new form frmMenu
      */
-    public frmMenu() {
+    public frmMenu(boolean admin) {
         initComponents();
         saldo();
+        btmConf.setVisible(admin);
     }
 
     public void saldo(){
@@ -39,6 +40,7 @@ public class frmMenu extends javax.swing.JFrame {
         btmRuleta = new javax.swing.JButton();
         btmTragaPerras = new javax.swing.JButton();
         lblSaldo = new javax.swing.JLabel();
+        btmConf = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,17 +55,27 @@ public class frmMenu extends javax.swing.JFrame {
 
         btmTragaPerras.setText("TRAGA PERRASS");
 
+        btmConf.setText("CONFIG USER");
+        btmConf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmConfActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addGap(53, 53, 53)
-                .addComponent(btmBlackJack, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btmRuleta, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btmTragaPerras, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btmConf)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btmBlackJack, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btmRuleta, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btmTragaPerras, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(29, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -80,7 +92,9 @@ public class frmMenu extends javax.swing.JFrame {
                     .addComponent(btmTragaPerras, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btmBlackJack, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btmRuleta, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(129, 129, 129))
+                .addGap(66, 66, 66)
+                .addComponent(btmConf)
+                .addGap(40, 40, 40))
         );
 
         pack();
@@ -92,6 +106,12 @@ public class frmMenu extends javax.swing.JFrame {
                 this.dispose();        
 // TODO add your handling code here:
     }//GEN-LAST:event_btmBlackJackActionPerformed
+
+    private void btmConfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmConfActionPerformed
+        // TODO add your handling code here:
+        frmUsers u = new frmUsers();
+        u.setVisible(true);
+    }//GEN-LAST:event_btmConfActionPerformed
 
     /**
      * @param args the command line arguments
@@ -115,11 +135,12 @@ public class frmMenu extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new frmMenu().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new frmMenu(false).setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btmBlackJack;
+    private javax.swing.JButton btmConf;
     private javax.swing.JButton btmRuleta;
     private javax.swing.JButton btmTragaPerras;
     private javax.swing.JLabel lblSaldo;

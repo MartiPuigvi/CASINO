@@ -19,16 +19,14 @@ public class Usuari {
     private String Contrasenya;
     private LocalDate edat;
     private Double Saldo;
-    private Boolean admin;
-
-    public Usuari(int id, String nom, String email, String Contrasenya, LocalDate edat, Double Saldo, Boolean admin) {
+    
+    public Usuari(int id, String nom, String email, String Contrasenya, LocalDate edat, Double Saldo) {
         this.id = id;
         this.nom = nom;
         this.email = email;
         this.Contrasenya = Contrasenya;
         this.edat = edat;
         this.Saldo = Saldo;
-        this.admin = admin;
     }
 
     public int getId() {
@@ -79,17 +77,10 @@ public class Usuari {
         this.Saldo = Saldo;
     }
 
-    public Boolean getAdmin() {
-        return admin;
-    }
-
-    public void setAdmin(Boolean admin) {
-        this.admin = admin;
-    }
 
     @Override
     public String toString() {
-        return "Usuari{" + "id=" + id + ", nom=" + nom + ", email=" + email + ", Contrasenya=" + Contrasenya + ", edat=" + edat + ", Saldo=" + Saldo + ", admin=" + admin + '}';
+        return "Usuari{" + "id=" + id + ", nom=" + nom + ", email=" + email + ", Contrasenya=" + Contrasenya + ", edat=" + edat + ", Saldo=" + Saldo + '}';
     }
 
    
