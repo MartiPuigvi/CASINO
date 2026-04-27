@@ -4,6 +4,7 @@
  */
 package VIEW;
 
+import static CONTROLER.Casino.Admins;
 import static CONTROLER.Casino.Users;
 import javax.swing.JOptionPane;
 
@@ -114,23 +115,40 @@ public class frmLogIn extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btmLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmLoginActionPerformed
-        // TODO add your handling code here:
         boolean found = false;
+        String username = txtUsuari.getText();
+        String password = String.valueOf(txtPassword.getPassword());
 
-        for (int i = 0; i < Users.size(); i++) {
-            if (Users.get(i).getNom().equals(txtUsuari.getText()) && Users.get(i).getContrasenya().equals(txtPassword.getText())) {
+        for (int i = 0; i < CONTROLER.Casino.Admins.size(); i++) {
+            if (Admins.get(i).getNom().equals(username)
+                    && Admins.get(i).getContrasenya().equals(password)) {
+
                 found = true;
+                System.out.println("Login com a ADMIN: " + username);
 
-                frmMenu f = new frmMenu();
+                frmMenu f = new frmMenu(true);
                 f.setVisible(true);
                 this.dispose();
-
-                break;
-
+                return;
             }
         }
+
+        for (int i = 0; i < Users.size(); i++) {
+            if (Users.get(i).getNom().equals(username)
+                    && Users.get(i).getContrasenya().equals(password)) {
+
+                found = true;
+                System.out.println("Login com a USUARI: " + username);
+
+                frmMenu f = new frmMenu(false);
+                f.setVisible(true);
+                this.dispose();
+                break;
+            }
+        }
+
         if (!found) {
-            JOptionPane.showMessageDialog(null, "Usuari no trobat o incorrecte");
+            JOptionPane.showMessageDialog(null, "Usuari o Admin no trobat / contrasenya incorrecte");
             txtUsuari.setText("");
             txtPassword.setText("");
         }
@@ -140,9 +158,9 @@ public class frmLogIn extends javax.swing.JFrame {
 
     private void btmSignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmSignupActionPerformed
 
-                frmSignUp m = new frmSignUp();
-                m.setVisible(true);
-                this.dispose();
+        frmSignUp m = new frmSignUp();
+        m.setVisible(true);
+        this.dispose();
 
 
     }//GEN-LAST:event_btmSignupActionPerformed

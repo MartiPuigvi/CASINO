@@ -5,7 +5,9 @@
 package CONTROLER;
 
 import CONEXION.Connexio;
+import static CONEXION.Queries.adminAarrayList;
 import static CONEXION.Queries.usuariAaraylist;
+import MODEL.Admin;
 import MODEL.Usuari;
 import VIEW.frmLogIn;
 import VIEW.frmMenu;
@@ -25,10 +27,12 @@ public class Casino {
     public static String password = "Marti";
     public static String rutaFitxerLogActual;
     public static ArrayList<Usuari> Users = new ArrayList<Usuari>();
+    public static ArrayList<Admin> Admins = new ArrayList<Admin>();
 
     public static void main(String[] args) {
 
         usuariAaraylist();
+        adminAarrayList();
         GestioLog.creacioLog();
 
         Connexio c = new Connexio();
