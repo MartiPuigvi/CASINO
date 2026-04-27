@@ -9,6 +9,7 @@ import static CONEXION.Queries.adminAarrayList;
 import static CONEXION.Queries.usuariAaraylist;
 import MODEL.Admin;
 import MODEL.Usuari;
+import VIEW.frmBlackjack;
 import VIEW.frmLogIn;
 import VIEW.frmMenu;
 import java.util.ArrayList;
@@ -24,9 +25,11 @@ public class Casino {
      */
     public static String url = "jdbc:mysql://localhost:3306/casino";
     public static String user = "root";
-    public static String password = "Marti";
+    public static String password = "Nico1234";
     public static String rutaFitxerLogActual;
     public static ArrayList<Usuari> Users = new ArrayList<Usuari>();
+    public static Usuari userActual;
+
     public static ArrayList<Admin> Admins = new ArrayList<Admin>();
 
     public static void main(String[] args) {
@@ -38,12 +41,15 @@ public class Casino {
         Connexio c = new Connexio();
         c.connectar();
 
+           /*frmBlackjack f = new frmBlackjack();
+                f.setVisible(true);*/
+        
         frmLogIn f = new frmLogIn();
         f.setVisible(true);
         for (Usuari u : Users) {
             System.out.println(u);
         }
-
+        
     }
 
 }

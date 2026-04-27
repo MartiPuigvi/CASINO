@@ -4,6 +4,8 @@
  */
 package VIEW;
 
+import static CONTROLER.Casino.userActual;
+
 /**
  *
  * @author nicod
@@ -17,9 +19,14 @@ public class frmMenu extends javax.swing.JFrame {
      */
     public frmMenu(boolean admin) {
         initComponents();
+        saldo();
         btmConf.setVisible(admin);
     }
 
+    public void saldo(){
+        lblSaldo.setText(String.valueOf(userActual.getSaldo()));    
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,6 +39,7 @@ public class frmMenu extends javax.swing.JFrame {
         btmBlackJack = new javax.swing.JButton();
         btmRuleta = new javax.swing.JButton();
         btmTragaPerras = new javax.swing.JButton();
+        lblSaldo = new javax.swing.JLabel();
         btmConf = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -69,11 +77,17 @@ public class frmMenu extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btmTragaPerras, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(29, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(187, Short.MAX_VALUE)
+                .addGap(29, 29, 29)
+                .addComponent(lblSaldo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 158, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btmTragaPerras, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btmBlackJack, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -129,5 +143,6 @@ public class frmMenu extends javax.swing.JFrame {
     private javax.swing.JButton btmConf;
     private javax.swing.JButton btmRuleta;
     private javax.swing.JButton btmTragaPerras;
+    private javax.swing.JLabel lblSaldo;
     // End of variables declaration//GEN-END:variables
 }
