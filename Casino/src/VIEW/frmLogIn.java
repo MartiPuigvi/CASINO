@@ -7,6 +7,8 @@ package VIEW;
 import static CONTROLER.Casino.Admins;
 import static CONTROLER.Casino.Users;
 import static CONTROLER.Casino.userActual;
+import static CONTROLER.Casino.adminActual;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -126,8 +128,8 @@ public class frmLogIn extends javax.swing.JFrame {
                     && Admins.get(i).getContrasenya().equals(password)) {
 
                 found = true;
-                userActual = Users.get(i); 
                 System.out.println("Login com a ADMIN: " + username);
+                adminActual = Admins.get(i);
 
                 frmMenu f = new frmMenu(true);
                 f.setVisible(true);
@@ -136,17 +138,13 @@ public class frmLogIn extends javax.swing.JFrame {
             }
         }
 
-                break;
-                
-            }
-        }
-        System.out.println(userActual.toString());
         for (int i = 0; i < Users.size(); i++) {
             if (Users.get(i).getNom().equals(username)
                     && Users.get(i).getContrasenya().equals(password)) {
 
                 found = true;
                 System.out.println("Login com a USUARI: " + username);
+                userActual = Users.get(i);
 
                 frmMenu f = new frmMenu(false);
                 f.setVisible(true);
@@ -159,8 +157,8 @@ public class frmLogIn extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Usuari o Admin no trobat / contrasenya incorrecte");
             txtUsuari.setText("");
             txtPassword.setText("");
-        }     
-        
+        }
+
 
     }//GEN-LAST:event_btmLoginActionPerformed
 
