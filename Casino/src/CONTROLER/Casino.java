@@ -28,8 +28,9 @@ public class Casino {
     public static String password = "Marti";
     public static String rutaFitxerLogActual;
     public static ArrayList<Usuari> Users = new ArrayList<Usuari>();
-    public static Usuari userActual;
     public static ArrayList<Admin> Admins = new ArrayList<Admin>();
+    public static Usuari userActual;
+   public static Admin adminActual;
 
     public static void main(String[] args) {
 
@@ -46,6 +47,10 @@ public class Casino {
         f.setVisible(true);
         for (Usuari u : Users) {
             System.out.println(u);
+        }
+        
+         for (Admin s : Admins) {
+            System.out.println(s);
         }
         
     }

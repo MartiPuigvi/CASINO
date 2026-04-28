@@ -19,10 +19,19 @@ public class frmMenu extends javax.swing.JFrame {
      * Creates new form frmMenu
      */
     public frmMenu(boolean admin) {
+        /*System.out.println(userActual.toString());*/
         initComponents();
-        saldo();
-        btmConf.setVisible(admin);
-        GestioLog.escriureLog(userActual + " ha entrat al menu de jocs");
+
+        if (admin) {
+            btmConf.setVisible(true);
+            btmBlackJack.setVisible(false);
+            btmRuleta.setVisible(false);
+            btmTragaPerras.setVisible(false);
+
+        } else {
+            saldo();
+            btmConf.setVisible(false);
+        }
 
     }
 
@@ -124,6 +133,8 @@ public class frmMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         frmUsers u = new frmUsers();
         u.setVisible(true);
+        this.dispose();
+
     }//GEN-LAST:event_btmConfActionPerformed
 
     private void btmRuletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmRuletaActionPerformed

@@ -44,4 +44,11 @@ public class Admin {
         this.contrasenya = contrasenya;
     }
 
+    @Override
+    public String toString() {
+        return "Admin{" + "id=" + id + ", nom=" + nom + ", contrasenya=" + contrasenya + '}';
+    }
+
+    
+    
 }
