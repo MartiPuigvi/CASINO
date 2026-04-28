@@ -4,6 +4,9 @@
  */
 package VIEW;
 
+import static CONTROLER.Casino.userActual;
+import CONTROLER.GestioLog;
+
 /**
  *
  * @author nicod
@@ -17,6 +20,7 @@ public class frmTragaperras extends javax.swing.JFrame {
      */
     public frmTragaperras() {
         initComponents();
+        GestioLog.escriureLog(userActual + " esta jugant al Tragaperras");
     }
 
     /**

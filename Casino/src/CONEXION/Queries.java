@@ -178,4 +178,23 @@ public class Queries {
             e.printStackTrace();
         }
     }
+
+    public static void updateSaldo(int id, double nouSaldo) {
+        String sql = "UPDATE user SET saldo = ? WHERE id = ?";
+
+        try (Connection conn = DriverManager.getConnection(url, user, password); PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setDouble(1, nouSaldo);
+            ps.setInt(2, id);
+
+            int filesAfectades = ps.executeUpdate();
+
+            if (filesAfectades > 0) {
+                System.out.println("Saldo actualitzat a la base de dades correctament.");
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Error al actualitzar el saldo: " + e.getMessage());
+        }
+    }
 }

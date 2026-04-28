@@ -5,6 +5,7 @@
 package VIEW;
 
 import static CONTROLER.Casino.userActual;
+import CONTROLER.GestioLog;
 
 /**
  *
@@ -20,6 +21,7 @@ public class frmMenu extends javax.swing.JFrame {
     public frmMenu(boolean admin) {
         /*System.out.println(userActual.toString());*/
         initComponents();
+
         if (admin) {
             btmConf.setVisible(true);
             btmBlackJack.setVisible(false);
@@ -30,6 +32,7 @@ public class frmMenu extends javax.swing.JFrame {
             saldo();
             btmConf.setVisible(false);
         }
+
     }
 
     public void saldo() {
@@ -61,6 +64,11 @@ public class frmMenu extends javax.swing.JFrame {
         });
 
         btmRuleta.setText("RULETA");
+        btmRuleta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmRuletaActionPerformed(evt);
+            }
+        });
 
         btmTragaPerras.setText("TRAGA PERRASS");
         btmTragaPerras.addActionListener(new java.awt.event.ActionListener() {
@@ -129,8 +137,18 @@ public class frmMenu extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btmConfActionPerformed
 
+    private void btmRuletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmRuletaActionPerformed
+        // TODO add your handling code here:
+        frmRuleta r = new frmRuleta();
+        r.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btmRuletaActionPerformed
+
     private void btmTragaPerrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmTragaPerrasActionPerformed
         // TODO add your handling code here:
+        frmTragaperras t = new frmTragaperras();
+        t.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btmTragaPerrasActionPerformed
 
     /**
