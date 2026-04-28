@@ -11,22 +11,31 @@ import static CONTROLER.Casino.userActual;
  * @author nicod
  */
 public class frmMenu extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(frmMenu.class.getName());
 
     /**
      * Creates new form frmMenu
      */
     public frmMenu(boolean admin) {
+        /*System.out.println(userActual.toString());*/
         initComponents();
-        saldo();
-        btmConf.setVisible(admin);
+        if (admin) {
+            btmConf.setVisible(true);
+            btmBlackJack.setVisible(false);
+            btmRuleta.setVisible(false);
+            btmTragaPerras.setVisible(false);
+
+        } else {
+            saldo();
+            btmConf.setVisible(false);
+        }
     }
 
-    public void saldo(){
-        lblSaldo.setText(String.valueOf(userActual.getSaldo()));    
+    public void saldo() {
+        lblSaldo.setText(String.valueOf(userActual.getSaldo()));
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -54,6 +63,11 @@ public class frmMenu extends javax.swing.JFrame {
         btmRuleta.setText("RULETA");
 
         btmTragaPerras.setText("TRAGA PERRASS");
+        btmTragaPerras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmTragaPerrasActionPerformed(evt);
+            }
+        });
 
         btmConf.setText("CONFIG USER");
         btmConf.addActionListener(new java.awt.event.ActionListener() {
@@ -101,9 +115,9 @@ public class frmMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btmBlackJackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmBlackJackActionPerformed
-                 frmBlackjack f = new frmBlackjack();
-                f.setVisible(true);
-                this.dispose();        
+        frmBlackjack f = new frmBlackjack();
+        f.setVisible(true);
+        this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_btmBlackJackActionPerformed
 
@@ -111,7 +125,13 @@ public class frmMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         frmUsers u = new frmUsers();
         u.setVisible(true);
+        this.dispose();
+
     }//GEN-LAST:event_btmConfActionPerformed
+
+    private void btmTragaPerrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmTragaPerrasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btmTragaPerrasActionPerformed
 
     /**
      * @param args the command line arguments

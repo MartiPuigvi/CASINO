@@ -4,8 +4,8 @@
  */
 package VIEW;
 
-import static CONTROLER.Casino.Users;
 import static CONTROLER.Casino.userActual;
+import static CONTROLER.GestioFitxers.tornarMenuClient;
 import MODEL.jocBlackjack;
 import java.util.Random;
 import javax.swing.JOptionPane;
@@ -27,11 +27,18 @@ public class frmBlackjack extends javax.swing.JFrame {
     public frmBlackjack() {
         initComponents();
         saldo();
-
+        btmCarta.setVisible(false);
+        btmPlantar1.setVisible(false);
     }
 
     public void saldo() {
         lblSaldo.setText(String.valueOf(userActual.getSaldo()));
+    }
+
+    public void totalPartida() {
+        lblSuma.setText("Total: " + totalJugador);
+        lblDealer.setText("Total: " + totalDealer);
+
     }
 
     /**
@@ -50,6 +57,9 @@ public class frmBlackjack extends javax.swing.JFrame {
         lblSuma = new javax.swing.JLabel();
         lblSaldo = new javax.swing.JLabel();
         lblDealer = new javax.swing.JLabel();
+        lblInfo = new javax.swing.JLabel();
+        btmMenu = new javax.swing.JButton();
+        btmTornar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,13 +84,32 @@ public class frmBlackjack extends javax.swing.JFrame {
             }
         });
 
+        lblInfo.setBackground(new java.awt.Color(255, 255, 255));
+
+        btmMenu.setText("Menu");
+        btmMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmMenuActionPerformed(evt);
+            }
+        });
+
+        btmTornar.setText("tornar a jugar");
+        btmTornar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmTornarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(71, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(113, 113, 113))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
@@ -98,9 +127,14 @@ public class frmBlackjack extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btmCarta, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(63, 63, 63))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(113, 113, 113))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btmMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btmTornar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,34 +157,44 @@ public class frmBlackjack extends javax.swing.JFrame {
                     .addComponent(btmCarta, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btmPlantar1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btmIniPartida, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(185, Short.MAX_VALUE))
+                .addGap(35, 35, 35)
+                .addComponent(lblInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btmTornar, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btmMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btmCartaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmCartaActionPerformed
+        int carta;
         if (bj == null) {
             JOptionPane.showMessageDialog(this, "Inicia una partida primer");
             return;
         }
 
         Random random = new Random();
-        int carta = random.nextInt(11) + 1;
-
+        if (totalJugador >= 18) {
+            carta = random.nextInt(11) + 1;
+        } else {
+            carta = random.nextInt(10) + 2;
+        }
         bj.cartaJugador(carta);
 
         System.out.println(bj.toString());
+        totalJugador = 0;
         for (int c : bj.getCartesJugador()) {
             totalJugador += c;
         }
 
-        lblSuma.setText("Total: " + totalJugador);
+        totalPartida();
 
         if (totalJugador > 21) {
-            JOptionPane.showMessageDialog(this, "ets un calent t'has passat");
+            lblInfo.setText("Ets un primo t'has passat");
         }
-
 
     }//GEN-LAST:event_btmCartaActionPerformed
 
@@ -169,6 +213,8 @@ public class frmBlackjack extends javax.swing.JFrame {
 
         btmIniPartida.setVisible(false);
         txtApo.setVisible(false);
+        btmCarta.setVisible(true);
+        btmPlantar1.setVisible(true);
         System.out.println(bj.toString());
 
     }//GEN-LAST:event_btmIniPartidaActionPerformed
@@ -182,41 +228,66 @@ public class frmBlackjack extends javax.swing.JFrame {
 
         Random random = new Random();
 
-        while (totalDealer < 17) {
+        while (totalDealer < 18) {
+            int carta;
 
-            int carta = random.nextInt(11) + 1;
+            if (totalDealer >= 17) {
+                carta = random.nextInt(7) + 1;
+
+            } else {
+                carta = random.nextInt(11) + 1;
+            }
             bj.cartaDealer(carta);
 
             totalDealer = 0;
             for (int c : bj.getCartesDealer()) {
                 totalDealer += c;
             }
-            lblDealer.setText("Total: " + totalDealer);
+            System.out.println(bj.toString());
 
+            totalPartida();
         }
 
         finals();
-// TODO add your handling code here:
     }//GEN-LAST:event_btmPlantar1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void btmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmMenuActionPerformed
+        /* frmMenu s = new frmMenu();
+                s.setVisible(true);*/
+        tornarMenuClient();
+        this.dispose();
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btmMenuActionPerformed
+
+    private void btmTornarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmTornarActionPerformed
+        btmIniPartida.setVisible(true);
+        txtApo.setVisible(true);
+        btmCarta.setEnabled(true);
+        totalDealer = 0;
+        totalJugador = 0;
+        totalPartida();
+        lblInfo.setText("");
+        btmCarta.setVisible(false);
+        btmPlantar1.setVisible(false);
+// TODO add your handling code here:
+    }//GEN-LAST:event_btmTornarActionPerformed
+
     public void finals() {
-        if (totalJugador > 21) {
-            JOptionPane.showMessageDialog(null, "Has perdido (te pasaste)");
-        } else if (totalDealer > 21) {
-            JOptionPane.showMessageDialog(null, "Has ganado (dealer se pasa)");
+        if (totalDealer > 21) {
+            lblInfo.setText("Has guanyat pq el dealer s'ha pasat");
             userActual.setSaldo(userActual.getSaldo() + bj.getAposta() * 2);
         } else if (totalJugador > totalDealer) {
-            JOptionPane.showMessageDialog(null, "Has ganado");
+            lblInfo.setText("Has guanyat");
             userActual.setSaldo(userActual.getSaldo() + bj.getAposta() * 2);
         } else if (totalJugador < totalDealer) {
-            JOptionPane.showMessageDialog(null, "Has perdido");
+            lblInfo.setText("Has perdut");
         } else {
-            JOptionPane.showMessageDialog(null, "Empate");
+            lblInfo.setText("Empat");
             userActual.setSaldo(userActual.getSaldo() + bj.getAposta());
         }
+
+        saldo();
 
     }
 
@@ -245,8 +316,11 @@ public class frmBlackjack extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btmCarta;
     private javax.swing.JButton btmIniPartida;
+    private javax.swing.JButton btmMenu;
     private javax.swing.JButton btmPlantar1;
+    private javax.swing.JButton btmTornar;
     private javax.swing.JLabel lblDealer;
+    private javax.swing.JLabel lblInfo;
     private javax.swing.JLabel lblSaldo;
     private javax.swing.JLabel lblSuma;
     private javax.swing.JTextField txtApo;

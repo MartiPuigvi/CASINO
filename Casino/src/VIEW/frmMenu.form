@@ -80,8 +80,12 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="TRAGA PERRASS"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btmTragaPerrasActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblSaldo">
+    </Component>
     <Component class="javax.swing.JButton" name="btmConf">
       <Properties>
         <Property name="text" type="java.lang.String" value="CONFIG USER"/>

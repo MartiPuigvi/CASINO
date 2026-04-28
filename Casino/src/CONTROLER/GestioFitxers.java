@@ -7,8 +7,13 @@ package CONTROLER;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import CONTROLER.Casino;
+import static CONTROLER.Casino.Admins;
+import static CONTROLER.Casino.Users;
+import static CONTROLER.Casino.adminActual;
+import static CONTROLER.Casino.userActual;
 import CONTROLER.GestioFitxers;
 import MODEL.jocBlackjack;
+import VIEW.frmMenu;
 import java.io.File;
 import java.io.IOException;
 import java.util.Random;
@@ -32,8 +37,36 @@ public class GestioFitxers {
             System.out.println("error");
             e.printStackTrace();
 
-        }}
+        }
+    }
+
+    public static void tornarMenuAdmin() {
+        for (int i = 0; i < CONTROLER.Casino.Admins.size(); i++) {
+            if (Admins.get(i).getNom().equals(adminActual.getNom())
+                    && Admins.get(i).getContrasenya().equals(adminActual.getContrasenya())) {
+
+                frmMenu f = new frmMenu(true);
+                f.setVisible(true);
+                return;
+            }
+        }
+
+    }
+
+    public static void tornarMenuClient() {
+
+        for (int i = 0; i < Users.size(); i++) {
+            if (Users.get(i).getNom().equals(userActual.getNom())
+                    && Users.get(i).getContrasenya().equals(userActual.getContrasenya())) {
+
+                frmMenu f = new frmMenu(false);
+                f.setVisible(true);
+                break;
+
+            }
+
+        }
+
+    }
 
 }
-    
-
