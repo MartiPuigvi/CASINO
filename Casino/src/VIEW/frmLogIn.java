@@ -7,6 +7,7 @@ package VIEW;
 import static CONTROLER.Casino.Admins;
 import static CONTROLER.Casino.Users;
 import static CONTROLER.Casino.userActual;
+import CONTROLER.GestioLog;
 import javax.swing.JOptionPane;
 
 /**
@@ -23,6 +24,7 @@ public class frmLogIn extends javax.swing.JFrame {
     public frmLogIn() {
         initComponents();
         this.getRootPane().setDefaultButton(btmLogin);
+        GestioLog.escriureLog("Login iniciat");
     }
 
     /**
@@ -126,31 +128,31 @@ public class frmLogIn extends javax.swing.JFrame {
                     && Admins.get(i).getContrasenya().equals(password)) {
 
                 found = true;
-                userActual = Users.get(i); 
+                userActual = Users.get(i);
                 System.out.println("Login com a ADMIN: " + username);
 
                 frmMenu f = new frmMenu(true);
                 f.setVisible(true);
                 this.dispose();
+                GestioLog.escriureLog("Admin " + username + " ha iniciat sesio al sistema");
+
                 return;
             }
         }
 
-                break;
-                
-            }
-        }
-        System.out.println(userActual.toString());
         for (int i = 0; i < Users.size(); i++) {
             if (Users.get(i).getNom().equals(username)
                     && Users.get(i).getContrasenya().equals(password)) {
 
                 found = true;
+                userActual = Users.get(i);
                 System.out.println("Login com a USUARI: " + username);
 
                 frmMenu f = new frmMenu(false);
                 f.setVisible(true);
                 this.dispose();
+                GestioLog.escriureLog("Usuari " + username + " ha iniciat sesio al sistema");
+
                 break;
             }
         }
@@ -159,8 +161,8 @@ public class frmLogIn extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Usuari o Admin no trobat / contrasenya incorrecte");
             txtUsuari.setText("");
             txtPassword.setText("");
-        }     
-        
+        }
+
 
     }//GEN-LAST:event_btmLoginActionPerformed
 

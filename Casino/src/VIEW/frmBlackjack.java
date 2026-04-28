@@ -4,8 +4,10 @@
  */
 package VIEW;
 
+import CONEXION.Queries;
 import static CONTROLER.Casino.Users;
 import static CONTROLER.Casino.userActual;
+import CONTROLER.GestioLog;
 import MODEL.jocBlackjack;
 import java.util.Random;
 import javax.swing.JOptionPane;
@@ -27,6 +29,7 @@ public class frmBlackjack extends javax.swing.JFrame {
     public frmBlackjack() {
         initComponents();
         saldo();
+        GestioLog.escriureLog(userActual + " esta jugant a Blackjack");
 
     }
 
@@ -162,8 +165,12 @@ public class frmBlackjack extends javax.swing.JFrame {
             return;
         } else {
             userActual.setSaldo(userActual.getSaldo() - aposta);
+            Queries.updateSaldo(userActual.getId(), userActual.getSaldo());
+
             saldo();
         }
+        
+        GestioLog.escriureLog(userActual + " ha apostat: " + aposta);
 
         bj = new jocBlackjack(aposta, "Blackjack");
 
@@ -217,7 +224,8 @@ public class frmBlackjack extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Empate");
             userActual.setSaldo(userActual.getSaldo() + bj.getAposta());
         }
-
+        Queries.updateSaldo(userActual.getId(), userActual.getSaldo());
+        saldo();
     }
 
     public static void main(String args[]) {

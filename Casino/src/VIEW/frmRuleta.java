@@ -4,6 +4,9 @@
  */
 package VIEW;
 
+import static CONTROLER.Casino.userActual;
+import CONTROLER.GestioLog;
+
 /**
  *
  * @author nicod
@@ -17,6 +20,7 @@ public class frmRuleta extends javax.swing.JFrame {
      */
     public frmRuleta() {
         initComponents();
+        GestioLog.escriureLog(userActual + " esta jugant a la Ruleta");
     }
 
     /**

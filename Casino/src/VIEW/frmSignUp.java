@@ -4,6 +4,8 @@
  */
 package VIEW;
 
+import CONTROLER.GestioLog;
+
 /**
  *
  * @author nicod
@@ -17,6 +19,8 @@ public class frmSignUp extends javax.swing.JFrame {
      */
     public frmSignUp() {
         initComponents();
+        GestioLog.escriureLog("Signup iniciat");
+
     }
 
     /**
@@ -146,9 +150,10 @@ public class frmSignUp extends javax.swing.JFrame {
 
         javax.swing.JOptionPane.showMessageDialog(this, "Usuari creat amb exit.");
         this.dispose();
-        
+        GestioLog.escriureLog(txtName.getText() + " ha estat registrat al sistema");
+
         frmLogIn login = new frmLogIn();
-        login.setVisible(false);
+        login.setVisible(true);
     }//GEN-LAST:event_btmSignActionPerformed
 
     /**

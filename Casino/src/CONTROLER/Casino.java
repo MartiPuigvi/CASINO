@@ -25,11 +25,10 @@ public class Casino {
      */
     public static String url = "jdbc:mysql://localhost:3306/casino";
     public static String user = "root";
-    public static String password = "Nico1234";
+    public static String password = "Marti";
     public static String rutaFitxerLogActual;
     public static ArrayList<Usuari> Users = new ArrayList<Usuari>();
     public static Usuari userActual;
-
     public static ArrayList<Admin> Admins = new ArrayList<Admin>();
 
     public static void main(String[] args) {
@@ -37,12 +36,11 @@ public class Casino {
         usuariAaraylist();
         adminAarrayList();
         GestioLog.creacioLog();
-
+        GestioLog.escriureLog("Programa iniciat");
+        
         Connexio c = new Connexio();
         c.connectar();
 
-           /*frmBlackjack f = new frmBlackjack();
-                f.setVisible(true);*/
         
         frmLogIn f = new frmLogIn();
         f.setVisible(true);
