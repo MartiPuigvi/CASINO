@@ -32,7 +32,7 @@ public class Casino {
     public static ArrayList<Usuari> Users = new ArrayList<Usuari>();
     public static ArrayList<Admin> Admins = new ArrayList<Admin>();
     public static Usuari userActual;
-   public static Admin adminActual;
+    public static Admin adminActual;
 
     public static void main(String[] args) {
 
@@ -40,9 +40,10 @@ public class Casino {
         adminAarrayList();
         GestioLog.creacioLog();
         GestioLog.escriureLog("Programa iniciat");
-        
+
         Connexio c = new Connexio();
         c.connectar();
+
         
         frmLogIn f = new frmLogIn();
         f.setVisible(true);
@@ -54,11 +55,11 @@ public class Casino {
         for (Usuari u : Users) {
             System.out.println(u);
         }
-        
-         for (Admin s : Admins) {
+
+        for (Admin s : Admins) {
             System.out.println(s);
         }
-        
+
     }
 
 }

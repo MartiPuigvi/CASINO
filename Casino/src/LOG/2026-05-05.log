@@ -1,3 +1,72 @@
+09:32:22	Programa iniciat
+09:32:22	Login iniciat
+09:32:31	Usuari maria ha iniciat sesio al sistema
+09:32:33	Usuari{id=3, nom=maria, email=maria@gmail.com, Contrasenya=1234, edat=2006-09-22, Saldo=500.0} esta jugant a la Ruleta
+09:39:20	Programa iniciat
+09:39:21	Login iniciat
+09:39:29	Usuari maria ha iniciat sesio al sistema
+09:39:30	Usuari{id=3, nom=maria, email=maria@gmail.com, Contrasenya=1234, edat=2006-09-22, Saldo=500.0} esta jugant a la Ruleta
+09:40:26	Programa iniciat
+09:40:26	Login iniciat
+09:40:32	Usuari maria ha iniciat sesio al sistema
+09:40:33	Usuari{id=3, nom=maria, email=maria@gmail.com, Contrasenya=1234, edat=2006-09-22, Saldo=380.0} esta jugant a la Ruleta
+09:51:38	Programa iniciat
+09:51:39	Login iniciat
+09:51:42	Usuari maria ha iniciat sesio al sistema
+09:51:43	Usuari{id=3, nom=maria, email=maria@gmail.com, Contrasenya=1234, edat=2006-09-22, Saldo=380.0} esta jugant a la Ruleta
+09:56:45	Programa iniciat
+09:56:45	Login iniciat
+09:56:49	Usuari maria ha iniciat sesio al sistema
+09:56:50	Usuari{id=3, nom=maria, email=maria@gmail.com, Contrasenya=1234, edat=2006-09-22, Saldo=360.0} esta jugant a la Ruleta
+10:01:25	Programa iniciat
+10:01:25	Login iniciat
+10:01:28	Usuari maria ha iniciat sesio al sistema
+10:01:29	Usuari{id=3, nom=maria, email=maria@gmail.com, Contrasenya=1234, edat=2006-09-22, Saldo=330.0} esta jugant a la Ruleta
+10:03:50	Programa iniciat
+10:03:50	Login iniciat
+10:03:53	Usuari maria ha iniciat sesio al sistema
+10:03:54	Usuari{id=3, nom=maria, email=maria@gmail.com, Contrasenya=1234, edat=2006-09-22, Saldo=230.0} esta jugant a la Ruleta
+10:05:25	Programa iniciat
+10:05:25	Login iniciat
+10:05:28	Usuari maria ha iniciat sesio al sistema
+10:05:29	Usuari{id=3, nom=maria, email=maria@gmail.com, Contrasenya=1234, edat=2006-09-22, Saldo=230.0} esta jugant a la Ruleta
+10:07:15	Programa iniciat
+10:07:15	Login iniciat
+10:07:26	Usuari joako ha iniciat sesio al sistema
+10:07:27	Usuari{id=5, nom=joako, email=joaquin@gmail.com, Contrasenya=1111, edat=2006-02-01, Saldo=500.0} esta jugant a la Ruleta
+10:12:23	Programa iniciat
+10:12:23	Login iniciat
+10:12:31	Admin marti ha iniciat sesio al sistema
+10:12:48	Programa iniciat
+10:12:48	Login iniciat
+10:12:50	Usuari joako ha iniciat sesio al sistema
+10:12:51	Usuari{id=5, nom=joako, email=joaquin@gmail.com, Contrasenya=1111, edat=2006-02-01, Saldo=1.0E9} esta jugant a la Ruleta
+10:16:43	Programa iniciat
+10:16:43	Login iniciat
+10:16:53	Usuari maria ha iniciat sesio al sistema
+10:16:54	Usuari{id=3, nom=maria, email=maria@gmail.com, Contrasenya=1234, edat=2006-09-22, Saldo=210.0} esta jugant a la Ruleta
+10:18:07	Programa iniciat
+10:18:07	Login iniciat
+10:18:17	Signup iniciat
+10:18:54	Zeit ha estat registrat al sistema
+10:18:54	Login iniciat
+10:20:13	Usuari Zeit ha iniciat sesio al sistema
+10:20:16	Usuari{id=11, nom=Zeit, email=alan.arrua@cirvianum.cat, Contrasenya=Alanypo11, edat=2004-08-12, Saldo=500.0} esta jugant a la Ruleta
+10:20:58	Programa iniciat
+10:20:58	Login iniciat
+10:21:02	Admin marti ha iniciat sesio al sistema
+10:21:18	Programa iniciat
+10:21:18	Login iniciat
+10:21:26	Usuari Zeit ha iniciat sesio al sistema
+10:21:28	Usuari{id=11, nom=Zeit, email=alan.arrua@cirvianum.cat, Contrasenya=Alanypo11, edat=2004-08-12, Saldo=10000.0} esta jugant al Tragaperras
+10:21:32	Programa iniciat
+10:21:32	Login iniciat
+10:21:39	Usuari Zeit ha iniciat sesio al sistema
+10:21:40	Usuari{id=11, nom=Zeit, email=alan.arrua@cirvianum.cat, Contrasenya=Alanypo11, edat=2004-08-12, Saldo=10000.0} esta jugant a Blackjack
+10:21:47	Programa iniciat
+10:21:47	Login iniciat
+10:21:56	Usuari Zeit ha iniciat sesio al sistema
+10:21:57	Usuari{id=11, nom=Zeit, email=alan.arrua@cirvianum.cat, Contrasenya=Alanypo11, edat=2004-08-12, Saldo=10000.0} esta jugant a la Ruleta
 08:18:41	Programa iniciat
 08:18:42	Login iniciat
 08:18:55	Usuari juan ha iniciat sesio al sistema
