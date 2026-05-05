@@ -62,3 +62,11 @@
 10:39:12	Usuari juan ha iniciat sesio al sistema
 10:39:13	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=400.0} esta jugant a Blackjack
 10:39:16	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=300.0} ha apostat: 100.0
+11:00:12	Programa iniciat
+11:00:12	Login iniciat
+11:00:19	Usuari juan ha iniciat sesio al sistema
+11:00:20	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=300.0} esta jugant a Blackjack
+11:00:26	Programa iniciat
+11:00:27	Login iniciat
+11:00:29	Usuari juan ha iniciat sesio al sistema
+11:00:31	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=300.0} esta jugant a Blackjack
