@@ -4,49 +4,56 @@
  */
 package MODEL;
 
-/**�?.l.,p
+import java.util.Random;
+
+/**
+ * ´?.l.,p
  *
  * @author nicod
  */
 public class jocTrragaperras extends Joc {
-    
-    private String simbol1;
-    private String simbol2;
-    private String simbol3;
+
+    private String[] simbols = {"🍒", "🍋", "⭐", "💎"};
+    private String s1;
+    private String s2;
+    private String s3;
     private double aposta;
 
-    public jocTrragaperras(String simbol1, String simbol2, String simbol3, double aposta, String nom) {
+    public jocTrragaperras(double aposta, String nom) {
         super(nom);
-        this.simbol1 = simbol1;
-        this.simbol2 = simbol2;
-        this.simbol3 = simbol3;
         this.aposta = aposta;
     }
 
-
-
-    public String getSimbol1() {
-        return simbol1;
+    public String[] getSimbols() {
+        return simbols;
     }
 
-    public void setSimbol1(String simbol1) {
-        this.simbol1 = simbol1;
+    public void setSimbols(String[] simbols) {
+        this.simbols = simbols;
     }
 
-    public String getSimbol2() {
-        return simbol2;
+    public String getS1() {
+        return s1;
     }
 
-    public void setSimbol2(String simbol2) {
-        this.simbol2 = simbol2;
+    public void setS1(String s1) {
+        this.s1 = s1;
     }
 
-    public String getSimbol3() {
-        return simbol3;
+    public String getS2() {
+        return s2;
     }
 
-    public void setSimbol3(String simbol3) {
-        this.simbol3 = simbol3;
+    public void setS2(String s2) {
+        this.s2 = s2;
+    }
+
+    public String getS3() {
+        return s3;
+    }
+
+    public void setS3(String s3) {
+        this.s3 = s3;
     }
 
     public double getAposta() {
@@ -57,11 +64,42 @@ public class jocTrragaperras extends Joc {
         this.aposta = aposta;
     }
 
+    public void girar() {
+        Random random = new Random();
+
+        s1 = simbols[random.nextInt(simbols.length)];
+        s2 = simbols[random.nextInt(simbols.length)];
+        s3 = simbols[random.nextInt(simbols.length)];
+
+        if (s1.equals(s2) && s2.equals(s3)) {
+
+            if (Math.random() < 0.99) {
+                do {
+                    s3 = simbols[random.nextInt(simbols.length)];
+                } while (s3.equals(s1));
+            }
+        }
+
+        if (s1.equals(s2) || s1.equals(s3) || s2.equals(s3)) {
+        if (Math.random() < 0.90) {
+
+            do {
+                s1 = simbols[random.nextInt(simbols.length)];
+                s2 = simbols[random.nextInt(simbols.length)];
+                s3 = simbols[random.nextInt(simbols.length)];
+            } while (s1.equals(s2) || s1.equals(s3) || s2.equals(s3));
+            }
+        }
+    }
+
     @Override
     public String toString() {
-        return "jocTrragaperras{" + "simbol1=" + simbol1 + ", simbol2=" + simbol2 + ", simbol3=" + simbol3 + ", aposta=" + aposta + '}';
+        return "jocTrragaperras{" + "simbols=" + simbols + ", s1=" + s1 + ", s2=" + s2 + ", s3=" + s3 + ", aposta=" + aposta + '}';
     }
     
     
-
+    
+    
+    
+    
 }
