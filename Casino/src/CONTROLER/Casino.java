@@ -12,7 +12,9 @@ import MODEL.Usuari;
 import VIEW.frmBlackjack;
 import VIEW.frmLogIn;
 import VIEW.frmMenu;
+import VIEW.frmTragaperras;
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  *
@@ -25,7 +27,7 @@ public class Casino {
      */
     public static String url = "jdbc:mysql://localhost:3306/casino";
     public static String user = "root";
-    public static String password = "Marti";
+    public static String password = "Nico1234";
     public static String rutaFitxerLogActual;
     public static ArrayList<Usuari> Users = new ArrayList<Usuari>();
     public static ArrayList<Admin> Admins = new ArrayList<Admin>();
@@ -41,10 +43,14 @@ public class Casino {
         
         Connexio c = new Connexio();
         c.connectar();
-
         
         frmLogIn f = new frmLogIn();
         f.setVisible(true);
+        
+        /* frmTragaperras f = new frmTragaperras();
+        f.setVisible(true);*/
+        
+        
         for (Usuari u : Users) {
             System.out.println(u);
         }

@@ -4,15 +4,22 @@
  */
 package VIEW;
 
+import CONEXION.Queries;
 import static CONTROLER.Casino.userActual;
 import CONTROLER.GestioLog;
+import MODEL.jocTrragaperras;
+import java.util.Random;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author nicod
  */
 public class frmTragaperras extends javax.swing.JFrame {
-    
+
+    private jocTrragaperras tp;
+    private Double aposta = 0.0;
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(frmTragaperras.class.getName());
 
     /**
@@ -21,6 +28,15 @@ public class frmTragaperras extends javax.swing.JFrame {
     public frmTragaperras() {
         initComponents();
         GestioLog.escriureLog(userActual + " esta jugant al Tragaperras");
+        lbl1.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
+        lbl2.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
+        lbl3.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
+
+        saldo();
+    }
+        
+    public  void saldo() {
+        lblSaldo.setText(String.valueOf(userActual.getSaldo()));
     }
 
     /**
@@ -32,21 +48,198 @@ public class frmTragaperras extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lbl1 = new javax.swing.JLabel();
+        lbl3 = new javax.swing.JLabel();
+        lbl2 = new javax.swing.JLabel();
+        btmini = new javax.swing.JButton();
+        btm20 = new javax.swing.JButton();
+        btm50 = new javax.swing.JButton();
+        btm100 = new javax.swing.JButton();
+        btm200 = new javax.swing.JButton();
+        btm500 = new javax.swing.JButton();
+        lblSaldo1 = new javax.swing.JLabel();
+        lblSaldo = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        lbl1.setToolTipText("");
+
+        lbl3.setToolTipText("");
+
+        lbl2.setToolTipText("");
+
+        btmini.setText("btmini");
+        btmini.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btminiActionPerformed(evt);
+            }
+        });
+
+        btm20.setText("btm20");
+        btm20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btm20ActionPerformed(evt);
+            }
+        });
+
+        btm50.setText("btm50");
+        btm50.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btm50ActionPerformed(evt);
+            }
+        });
+
+        btm100.setText("btm100");
+        btm100.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btm100ActionPerformed(evt);
+            }
+        });
+
+        btm200.setText("btm200");
+        btm200.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btm200ActionPerformed(evt);
+            }
+        });
+
+        btm500.setText("btm500");
+        btm500.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btm500ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(350, 350, 350)
+                        .addComponent(lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(btm20)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btm50))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(145, 145, 145)
+                                .addComponent(btmini, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btm100)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btm200)
+                        .addGap(18, 18, 18)
+                        .addComponent(btm500)
+                        .addGap(141, 141, 141)
+                        .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(219, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(126, 126, 126)
+                    .addComponent(lbl3, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(663, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(727, Short.MAX_VALUE)
+                    .addComponent(lblSaldo1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(209, 209, 209)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btm20)
+                            .addComponent(btm50)
+                            .addComponent(btm100)
+                            .addComponent(btm200)
+                            .addComponent(btm500)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(55, 55, 55)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(lbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(68, 68, 68)
+                .addComponent(btmini, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(302, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(137, 137, 137)
+                    .addComponent(lbl3, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(420, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(lblSaldo1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(619, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btminiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btminiActionPerformed
+        
+         if (aposta <= 0) {
+            JOptionPane.showMessageDialog(null, "La aposta ha de ser major que 0");
+            aposta = 0.0;
+            return;
+        }
+
+        if (userActual.getSaldo() < aposta) {
+            JOptionPane.showMessageDialog(null, "No tens saldo");
+            aposta = 0.0;
+            return;
+        }
+        
+        userActual.setSaldo(userActual.getSaldo() - aposta);
+        Queries.updateSaldo(userActual.getId(), userActual.getSaldo());
+        
+        saldo();
+        
+        
+        tp = new jocTrragaperras(aposta, "Tragaperras");
+        tp.girar();
+        System.out.println(tp.toString());
+
+        lbl1.setText(tp.getS1());
+        lbl2.setText(tp.getS2());
+        lbl3.setText(tp.getS3());
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btminiActionPerformed
+
+    private void btm20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btm20ActionPerformed
+        aposta += 20;
+    }//GEN-LAST:event_btm20ActionPerformed
+
+    private void btm50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btm50ActionPerformed
+        aposta += 50;
+    }//GEN-LAST:event_btm50ActionPerformed
+
+    private void btm100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btm100ActionPerformed
+        aposta += 100;
+    }//GEN-LAST:event_btm100ActionPerformed
+
+    private void btm200ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btm200ActionPerformed
+        aposta += 200;
+    }//GEN-LAST:event_btm200ActionPerformed
+
+    private void btm500ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btm500ActionPerformed
+        aposta += 500;
+    }//GEN-LAST:event_btm500ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -74,5 +267,16 @@ public class frmTragaperras extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btm100;
+    private javax.swing.JButton btm20;
+    private javax.swing.JButton btm200;
+    private javax.swing.JButton btm50;
+    private javax.swing.JButton btm500;
+    private javax.swing.JButton btmini;
+    private javax.swing.JLabel lbl1;
+    private javax.swing.JLabel lbl2;
+    private javax.swing.JLabel lbl3;
+    private javax.swing.JLabel lblSaldo;
+    private javax.swing.JLabel lblSaldo1;
     // End of variables declaration//GEN-END:variables
 }
