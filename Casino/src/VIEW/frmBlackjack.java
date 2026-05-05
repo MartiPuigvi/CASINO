@@ -34,9 +34,11 @@ public class frmBlackjack extends javax.swing.JFrame {
 
         btmCarta.setVisible(false);
         btmPlantar1.setVisible(false);
+        btmTornar.setVisible(false);
+
     }
 
-    public void saldo() {
+    public  void saldo() {
         lblSaldo.setText(String.valueOf(userActual.getSaldo()));
     }
 
@@ -187,6 +189,7 @@ public class frmBlackjack extends javax.swing.JFrame {
             carta = random.nextInt(10) + 2;
         }
         bj.cartaJugador(carta);
+            btmPlantar1.setVisible(true);
 
         System.out.println(bj.toString());
         totalJugador = 0;
@@ -198,23 +201,38 @@ public class frmBlackjack extends javax.swing.JFrame {
 
         if (totalJugador > 21) {
             lblInfo.setText("Ets un primo t'has passat");
+            btmCarta.setVisible(false);
+            btmPlantar1.setVisible(false);
+            btmTornar.setVisible(true);
         }
 
     }//GEN-LAST:event_btmCartaActionPerformed
 
     private void btmIniPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmIniPartidaActionPerformed
-        double aposta = Double.parseDouble(txtApo.getText());
+        double aposta;
+
+        try {
+            aposta = Double.parseDouble(txtApo.getText());
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "no");
+            return;
+        }
+
+        if (aposta <= 0) {
+            JOptionPane.showMessageDialog(null, "La aposta ha de ser major que 0");
+            return;
+        }
 
         if (userActual.getSaldo() < aposta) {
-            JOptionPane.showMessageDialog(null, "NO");
+            JOptionPane.showMessageDialog(null, "No tens saldo");
             return;
-        } else {
-            userActual.setSaldo(userActual.getSaldo() - aposta);
-            Queries.updateSaldo(userActual.getId(), userActual.getSaldo());
-
-            saldo();
         }
-        
+
+        userActual.setSaldo(userActual.getSaldo() - aposta);
+        Queries.updateSaldo(userActual.getId(), userActual.getSaldo());
+
+        saldo();
+
         GestioLog.escriureLog(userActual + " ha apostat: " + aposta);
 
         bj = new jocBlackjack(aposta, "Blackjack");
@@ -222,13 +240,14 @@ public class frmBlackjack extends javax.swing.JFrame {
         btmIniPartida.setVisible(false);
         txtApo.setVisible(false);
         btmCarta.setVisible(true);
-        btmPlantar1.setVisible(true);
+        //btmPlantar1.setVisible(true);
         System.out.println(bj.toString());
 
     }//GEN-LAST:event_btmIniPartidaActionPerformed
 
     private void btmPlantar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmPlantar1ActionPerformed
         btmCarta.setEnabled(false);
+        btmPlantar1.setEnabled(false);
         if (bj == null) {
             JOptionPane.showMessageDialog(null, "Inicia una partida primero");
             return;
@@ -240,7 +259,7 @@ public class frmBlackjack extends javax.swing.JFrame {
             int carta;
 
             if (totalDealer >= 17) {
-                carta = random.nextInt(7) + 1;
+                carta = random.nextInt(6) + 1;
 
             } else {
                 carta = random.nextInt(11) + 1;
@@ -272,6 +291,9 @@ public class frmBlackjack extends javax.swing.JFrame {
         btmIniPartida.setVisible(true);
         txtApo.setVisible(true);
         btmCarta.setEnabled(true);
+        btmPlantar1.setEnabled(true);
+                    btmTornar.setVisible(false);
+
         totalDealer = 0;
         totalJugador = 0;
         totalPartida();
@@ -284,14 +306,18 @@ public class frmBlackjack extends javax.swing.JFrame {
     public void finals() {
         if (totalDealer > 21) {
             lblInfo.setText("Has guanyat pq el dealer s'ha pasat");
+            btmTornar.setVisible(true);
             userActual.setSaldo(userActual.getSaldo() + bj.getAposta() * 2);
         } else if (totalJugador > totalDealer) {
+            btmTornar.setVisible(true);
             lblInfo.setText("Has guanyat");
             userActual.setSaldo(userActual.getSaldo() + bj.getAposta() * 2);
         } else if (totalJugador < totalDealer) {
+            btmTornar.setVisible(true);
             lblInfo.setText("Has perdut");
         } else {
             lblInfo.setText("Empat");
+            btmTornar.setVisible(true);
             userActual.setSaldo(userActual.getSaldo() + bj.getAposta());
         }
         Queries.updateSaldo(userActual.getId(), userActual.getSaldo());

@@ -29,7 +29,9 @@ public class Queries {
         String sql = "SELECT id, username, password, email, age, saldo FROM user";
 
         try (
-                Connection conn = DriverManager.getConnection(url, user, password); Statement stmt = conn.createStatement(); ResultSet rs = stmt.executeQuery(sql)) {
+                Connection conn = DriverManager.getConnection(url, user, password); 
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery(sql)) {
 
             while (rs.next()) {
                 String nom = rs.getString("username");
@@ -88,7 +90,8 @@ public class Queries {
     public static void signUp(String username, String pass, String email, String age) {
         String sql = "INSERT INTO user (username, password, email, age) VALUES (?, ?, ?, ?)";
 
-        try (Connection conn = DriverManager.getConnection(url, user, password); java.sql.PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+        try (Connection conn = DriverManager.getConnection(url, user, password); 
+                java.sql.PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 
             ps.setString(1, username);
             ps.setString(2, pass);
@@ -112,7 +115,8 @@ public class Queries {
     public static void addUser(String username, String pass, String email, java.time.LocalDate age, Double saldo) {
         String sql = "INSERT INTO user (username, password, email, age, saldo) VALUES (?, ?, ?, ?, ?)";
 
-        try (Connection conn = DriverManager.getConnection(url, user, password); java.sql.PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+        try (Connection conn = DriverManager.getConnection(url, user, password);
+                java.sql.PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 
             ps.setString(1, username);
             ps.setString(2, pass);
@@ -136,7 +140,8 @@ public class Queries {
     public static void modUser(int id, String nouNom, String nouEmail, String novaPass, java.time.LocalDate novaEdat, double nouSaldo) {
         String sql = "UPDATE user SET username = ?, email = ?, password = ?, age = ?, saldo = ? WHERE id = ?";
 
-        try (Connection conn = DriverManager.getConnection(url, user, password); PreparedStatement ps = conn.prepareStatement(sql)) {
+        try (Connection conn = DriverManager.getConnection(url, user, password); 
+                PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setString(1, nouNom);
             ps.setString(2, nouEmail);

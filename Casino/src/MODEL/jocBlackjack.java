@@ -5,6 +5,7 @@
 package MODEL;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  *
@@ -59,5 +60,9 @@ public class jocBlackjack extends Joc {
     public String toString() {
         return "jocBlackjack{" + "cartesJugador=" + cartesJugador + ", cartesDealer=" + cartesDealer + ", aposta=" + aposta + '}';
     }
+    
+ 
+    
+    
 
 }

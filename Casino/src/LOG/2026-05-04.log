@@ -1,0 +1,51 @@
+09:25:07	Programa iniciat
+09:25:08	Login iniciat
+09:25:20	Usuari juan ha iniciat sesio al sistema
+09:25:28	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1.0} esta jugant a Blackjack
+09:49:12	Programa iniciat
+09:49:12	Login iniciat
+10:11:40	Programa iniciat
+10:11:40	Login iniciat
+10:11:47	Usuari juan ha iniciat sesio al sistema
+10:11:52	Programa iniciat
+10:11:53	Login iniciat
+10:12:04	Admin nico ha iniciat sesio al sistema
+10:12:27	Programa iniciat
+10:12:27	Login iniciat
+10:12:32	Usuari juan ha iniciat sesio al sistema
+10:12:37	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=500.0} esta jugant a Blackjack
+10:12:54	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=444.0} ha apostat: 56.0
+10:14:25	Programa iniciat
+10:14:28	Login iniciat
+10:14:51	Programa iniciat
+10:16:26	Programa iniciat
+10:16:26	Login iniciat
+10:16:29	Usuari juan ha iniciat sesio al sistema
+10:16:29	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1676.0} esta jugant a Blackjack
+10:16:31	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1664.0} ha apostat: 12.0
+10:16:46	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1652.0} ha apostat: 12.0
+10:17:40	Programa iniciat
+10:17:40	Login iniciat
+10:17:47	Usuari juan ha iniciat sesio al sistema
+10:17:48	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1652.0} esta jugant a Blackjack
+10:17:49	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1529.0} ha apostat: 123.0
+10:17:53	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1529.0} esta jugant a Blackjack
+10:17:57	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1406.0} ha apostat: 123.0
+10:18:12	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1529.0} ha apostat: 123.0
+10:18:14	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1406.0} ha apostat: 123.0
+10:18:16	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1283.0} ha apostat: 123.0
+10:18:33	Programa iniciat
+10:18:33	Login iniciat
+10:18:36	Usuari juan ha iniciat sesio al sistema
+10:18:37	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1283.0} esta jugant a Blackjack
+10:18:38	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1160.0} ha apostat: 123.0
+10:18:41	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1283.0} ha apostat: 123.0
+10:18:47	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1406.0} ha apostat: 123.0
+10:18:50	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1283.0} ha apostat: 123.0
+10:18:53	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1160.0} ha apostat: 123.0
+10:18:55	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1037.0} ha apostat: 123.0
+10:18:56	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=914.0} ha apostat: 123.0
+10:18:58	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=914.0} esta jugant a Blackjack
+10:19:02	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=891.0} ha apostat: 23.0
+10:19:05	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=891.0} esta jugant a Blackjack
+10:19:06	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=768.0} ha apostat: 123.0
