@@ -4,13 +4,21 @@
  */
 package CONEXION;
 
+import static CONEXION.Queries.historialRuleta;
 import static CONTROLER.Casino.Admins;
 import static CONTROLER.Casino.Users;
+import static CONTROLER.Casino.historialBlackjack;
+import static CONTROLER.Casino.historialRuleta;
+import static CONTROLER.Casino.historialTragaperras;
 import static CONTROLER.Casino.password;
 import static CONTROLER.Casino.url;
 import static CONTROLER.Casino.user;
 import MODEL.Admin;
 import MODEL.Usuari;
+import MODEL.partidaBlackjack;
+import MODEL.partidaRuleta;
+import MODEL.partidaRuleta.colorRuleta;
+import MODEL.partidaTragaperras;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -29,9 +37,7 @@ public class Queries {
         String sql = "SELECT id, username, password, email, age, saldo FROM user";
 
         try (
-                Connection conn = DriverManager.getConnection(url, user, password); 
-                Statement stmt = conn.createStatement();
-                ResultSet rs = stmt.executeQuery(sql)) {
+                Connection conn = DriverManager.getConnection(url, user, password); Statement stmt = conn.createStatement(); ResultSet rs = stmt.executeQuery(sql)) {
 
             while (rs.next()) {
                 String nom = rs.getString("username");
@@ -90,8 +96,7 @@ public class Queries {
     public static void signUp(String username, String pass, String email, String age) {
         String sql = "INSERT INTO user (username, password, email, age) VALUES (?, ?, ?, ?)";
 
-        try (Connection conn = DriverManager.getConnection(url, user, password); 
-                java.sql.PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+        try (Connection conn = DriverManager.getConnection(url, user, password); java.sql.PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 
             ps.setString(1, username);
             ps.setString(2, pass);
@@ -115,8 +120,7 @@ public class Queries {
     public static void addUser(String username, String pass, String email, java.time.LocalDate age, Double saldo) {
         String sql = "INSERT INTO user (username, password, email, age, saldo) VALUES (?, ?, ?, ?, ?)";
 
-        try (Connection conn = DriverManager.getConnection(url, user, password);
-                java.sql.PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+        try (Connection conn = DriverManager.getConnection(url, user, password); java.sql.PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 
             ps.setString(1, username);
             ps.setString(2, pass);
@@ -140,8 +144,7 @@ public class Queries {
     public static void modUser(int id, String nouNom, String nouEmail, String novaPass, java.time.LocalDate novaEdat, double nouSaldo) {
         String sql = "UPDATE user SET username = ?, email = ?, password = ?, age = ?, saldo = ? WHERE id = ?";
 
-        try (Connection conn = DriverManager.getConnection(url, user, password); 
-                PreparedStatement ps = conn.prepareStatement(sql)) {
+        try (Connection conn = DriverManager.getConnection(url, user, password); PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setString(1, nouNom);
             ps.setString(2, nouEmail);
@@ -179,7 +182,7 @@ public class Queries {
             }
 
         } catch (SQLException e) {
-            javax.swing.JOptionPane.showMessageDialog(null, "No es pot eliminar: l'usuari té dades vinculades al sistema.");
+            javax.swing.JOptionPane.showMessageDialog(null, "No es pot eliminar: l'usuari tï¿½ dades vinculades al sistema.");
             e.printStackTrace();
         }
     }
@@ -202,4 +205,127 @@ public class Queries {
             System.out.println("Error al actualitzar el saldo: " + e.getMessage());
         }
     }
+
+    public static void guardarPartidaBlackjack(String nomJugador, int totalJugador, int totalDealer, boolean guanyador) {
+        String sql = "INSERT INTO BLACKJACK (nomJugador, totalJugador, totalDealer, guanyador) VALUES (?, ?, ?, ?)";
+        try (Connection conn = DriverManager.getConnection(url, user, password); PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setString(1, nomJugador);
+            ps.setInt(2, totalJugador);
+            ps.setInt(3, totalDealer);
+            ps.setBoolean(4, guanyador);
+
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public static void guardarPartidaRuleta(String nomJugador, int numero, colorRuleta color, boolean esParell, String guanyador) {
+        String sql = "INSERT INTO RULETA (nomJugador, numero, color, esParell, guanyador) VALUES (?, ?, ?, ?, ?)";
+        try (Connection conn = DriverManager.getConnection(url, user, password); PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setString(1, nomJugador);
+            ps.setInt(2, numero);
+            ps.setString(3, color.name());
+            ps.setBoolean(4, esParell);
+            ps.setString(5, guanyador);
+
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void guardarPartidaTragaperras(String nomJugador, String simbol1, String simbol2, String simbol3, boolean guanyador) {
+        String sql = "INSERT INTO TRAGAPERRAS (nomJugador, simbol1, simbol2, simbol3, guanyador) VALUES (?, ?, ?, ?, ?)";
+        try (Connection conn = DriverManager.getConnection(url, user, password); PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setString(1, nomJugador);
+            ps.setString(2, simbol1);
+            ps.setString(3, simbol2);
+            ps.setString(4, simbol3);
+            ps.setBoolean(5, guanyador);
+
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void historialBlackjack() {
+        String sql = "SELECT idPartida, nomJugador, totalJugador, totalDealer, guanyador FROM BLACKJACK";
+
+        try (
+                Connection conn = DriverManager.getConnection(url, user, password); Statement stmt = conn.createStatement(); ResultSet rs = stmt.executeQuery(sql)) {
+
+            while (rs.next()) {
+                int idPartida = rs.getInt("idPartida");
+                String nomJugador = rs.getString("nomJugador");
+                int totalJugador = rs.getInt("totalJugador");
+                int totalDealer = rs.getInt("totalDealer");
+                boolean guanyador = rs.getBoolean("guanyador");
+
+                historialBlackjack.add(new partidaBlackjack(idPartida, nomJugador, totalJugador, totalDealer, guanyador));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void historialRuleta() {
+        String sql = "SELECT idPartida, nomJugador, numero, color, esParell, guanyador FROM RULETA";
+
+        try (Connection conn = DriverManager.getConnection(url, user, password); Statement stmt = conn.createStatement(); ResultSet rs = stmt.executeQuery(sql)) {
+
+            historialRuleta.clear();
+
+            while (rs.next()) {
+                int id = rs.getInt("idPartida");
+                String nom = rs.getString("nomJugador");
+                int num = rs.getInt("numero");
+
+                String colorText = rs.getString("color");
+                colorRuleta colorEnum = colorRuleta.valueOf(colorText);
+
+                boolean parell = rs.getBoolean("esParell");
+
+                String guanyaText = rs.getString("guanyador");
+
+                historialRuleta.add(new partidaRuleta(id, nom, num, colorEnum, parell, guanyaText));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void historialTragaperras() {
+        String sql = "SELECT idPartida, nomJugador, simbol1, simbol2, simbol3, guanyador FROM TRAGAPERRAS";
+
+        try (Connection conn = DriverManager.getConnection(url, user, password); Statement stmt = conn.createStatement(); ResultSet rs = stmt.executeQuery(sql)) {
+
+            historialTragaperras.clear();
+
+            while (rs.next()) {
+                int id = rs.getInt("idPartida");
+                String nom = rs.getString("nomJugador");
+
+                String simbol1 = rs.getString("simbol1");
+                String simbol2 = rs.getString("simbol2");
+                String simbol3 = rs.getString("simbol3");
+
+                boolean guanyador = rs.getBoolean("guanyador");
+                historialTragaperras.add(new partidaTragaperras(id, nom, simbol1, simbol2, simbol3, guanyador));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

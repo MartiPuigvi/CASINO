@@ -5,6 +5,7 @@
 package VIEW;
 
 import CONEXION.Queries;
+import static CONEXION.Queries.guardarPartidaTragaperras;
 import static CONTROLER.Casino.userActual;
 import CONTROLER.GestioLog;
 import MODEL.jocTrragaperras;
@@ -34,8 +35,8 @@ public class frmTragaperras extends javax.swing.JFrame {
 
         saldo();
     }
-        
-    public  void saldo() {
+
+    public void saldo() {
         lblSaldo.setText(String.valueOf(userActual.getSaldo()));
     }
 
@@ -191,8 +192,8 @@ public class frmTragaperras extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btminiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btminiActionPerformed
-        
-         if (aposta <= 0) {
+
+        if (aposta <= 0) {
             JOptionPane.showMessageDialog(null, "La aposta ha de ser major que 0");
             aposta = 0.0;
             return;
@@ -203,13 +204,12 @@ public class frmTragaperras extends javax.swing.JFrame {
             aposta = 0.0;
             return;
         }
-        
+
         userActual.setSaldo(userActual.getSaldo() - aposta);
         Queries.updateSaldo(userActual.getId(), userActual.getSaldo());
-        
+
         saldo();
-        
-        
+
         tp = new jocTrragaperras(aposta, "Tragaperras");
         tp.girar();
         System.out.println(tp.toString());
@@ -217,6 +217,7 @@ public class frmTragaperras extends javax.swing.JFrame {
         lbl1.setText(tp.getS1());
         lbl2.setText(tp.getS2());
         lbl3.setText(tp.getS3());
+
 
         // TODO add your handling code here:
     }//GEN-LAST:event_btminiActionPerformed

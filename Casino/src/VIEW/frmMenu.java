@@ -53,6 +53,7 @@ public class frmMenu extends javax.swing.JFrame {
         btmTragaPerras = new javax.swing.JButton();
         lblSaldo = new javax.swing.JLabel();
         btmConf = new javax.swing.JButton();
+        brmHistorial = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,6 +85,13 @@ public class frmMenu extends javax.swing.JFrame {
             }
         });
 
+        brmHistorial.setText("HISTORIAL PARTIDES");
+        brmHistorial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                brmHistorialActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -91,7 +99,10 @@ public class frmMenu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btmConf)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(brmHistorial)
+                        .addGap(18, 18, 18)
+                        .addComponent(btmConf))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btmBlackJack, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -115,7 +126,9 @@ public class frmMenu extends javax.swing.JFrame {
                     .addComponent(btmBlackJack, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btmRuleta, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(66, 66, 66)
-                .addComponent(btmConf)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btmConf)
+                    .addComponent(brmHistorial))
                 .addGap(40, 40, 40))
         );
 
@@ -151,6 +164,13 @@ public class frmMenu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btmTragaPerrasActionPerformed
 
+    private void brmHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brmHistorialActionPerformed
+        // TODO add your handling code here:
+        frmHistorial h = new frmHistorial();
+        h.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_brmHistorialActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -177,6 +197,7 @@ public class frmMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton brmHistorial;
     private javax.swing.JButton btmBlackJack;
     private javax.swing.JButton btmConf;
     private javax.swing.JButton btmRuleta;
