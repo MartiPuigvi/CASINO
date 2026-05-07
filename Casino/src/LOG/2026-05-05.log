@@ -241,3 +241,20 @@
 10:12:11	Login iniciat
 10:12:18	Usuari Joako ha iniciat sesio al sistema
 10:12:21	Usuari{id=5, nom=Joako, email=jgut@gmail.com, Contrasenya=1234, edat=2006-12-26, Saldo=1.0E20} esta jugant a Blackjack
+10:33:28	Programa iniciat
+10:33:28	Login iniciat
+10:33:38	Usuari juan ha iniciat sesio al sistema
+10:33:39	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=0.0} esta jugant a la Ruleta
+10:34:50	Programa iniciat
+10:34:51	Login iniciat
+10:34:54	Usuari juan ha iniciat sesio al sistema
+10:34:55	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=0.0} esta jugant a la Ruleta
+10:35:04	Programa iniciat
+10:35:04	Login iniciat
+10:35:08	Admin nico ha iniciat sesio al sistema
+10:35:17	Programa iniciat
+10:35:17	Login iniciat
+10:35:21	Usuari juan ha iniciat sesio al sistema
+10:35:22	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=10000.0} esta jugant a la Ruleta
+10:50:03	Programa iniciat
+10:50:03	Login iniciat
