@@ -19,8 +19,15 @@ import VIEW.frmBlackjack;
 import VIEW.frmLogIn;
 import VIEW.frmMenu;
 import VIEW.frmTragaperras;
+import com.formdev.flatlaf.FlatDarculaLaf;
+import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.FlatIntelliJLaf;
+import com.formdev.flatlaf.themes.FlatMacDarkLaf;
+import com.formdev.flatlaf.themes.FlatMacLightLaf;
+import java.awt.Font;
 import java.util.ArrayList;
 import java.util.Random;
+import javax.swing.UIManager;
 
 /**
  *
@@ -46,6 +53,17 @@ public class Casino {
 
     public static void main(String[] args) {
 
+        try {
+            UIManager.setLookAndFeel(new FlatIntelliJLaf());
+
+            UIManager.put("defaultFont", new Font("Segoe UI", Font.PLAIN, 13));
+            UIManager.put("Button.arc", 999);
+            UIManager.put("Component.arc", 12);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         usuariAaraylist();
         adminAarrayList();
         historialBlackjack();
@@ -61,8 +79,6 @@ public class Casino {
         frmLogIn f = new frmLogIn();
         f.setVisible(true);
 
-        /* frmTragaperras f = new frmTragaperras();
-        f.setVisible(true);*/
         for (Usuari u : Users) {
             System.out.println(u);
         }

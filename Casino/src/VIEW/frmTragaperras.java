@@ -29,17 +29,50 @@ public class frmTragaperras extends javax.swing.JFrame {
     public frmTragaperras() {
         initComponents();
         GestioLog.escriureLog(userActual + " esta jugant al Tragaperras");
-        lbl1.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
         lbl2.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
         lbl3.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
+        lbl1.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
+        btmSeguir.setVisible(false);
 
         saldo();
+        Aposta();
     }
 
     public void saldo() {
         lblSaldo.setText(String.valueOf(userActual.getSaldo()));
     }
 
+    public void Aposta() {
+        lblAposta.setText("Aposta actual: " + aposta);
+    }
+
+    public void btmApostaOff() {
+        btm20.setEnabled(false);
+        btm50.setEnabled(false);
+        btm100.setEnabled(false);
+        btm200.setEnabled(false);
+        btm500.setEnabled(false);
+    }
+
+    public void btmApostaOn() {
+        btm20.setEnabled(true);
+        btm50.setEnabled(true);
+        btm100.setEnabled(true);
+        btm200.setEnabled(true);
+        btm500.setEnabled(true);
+    }
+    
+    public void btmsoff(){
+    btmini.setEnabled(false);
+        btmSeguir.setEnabled(false);
+
+    }
+
+        public void btmsOn(){
+    btmini.setEnabled(true);
+        btmSeguir.setEnabled(true);
+
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -49,25 +82,28 @@ public class frmTragaperras extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lbl2 = new javax.swing.JLabel();
         lbl1 = new javax.swing.JLabel();
         lbl3 = new javax.swing.JLabel();
-        lbl2 = new javax.swing.JLabel();
         btmini = new javax.swing.JButton();
         btm20 = new javax.swing.JButton();
         btm50 = new javax.swing.JButton();
         btm100 = new javax.swing.JButton();
         btm200 = new javax.swing.JButton();
         btm500 = new javax.swing.JButton();
-        lblSaldo1 = new javax.swing.JLabel();
+        lblAposta = new javax.swing.JLabel();
         lblSaldo = new javax.swing.JLabel();
+        lblSaldo2 = new javax.swing.JLabel();
+        btmSeguir = new javax.swing.JButton();
+        lblInfo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        lbl2.setToolTipText("");
 
         lbl1.setToolTipText("");
 
         lbl3.setToolTipText("");
-
-        lbl2.setToolTipText("");
 
         btmini.setText("btmini");
         btmini.addActionListener(new java.awt.event.ActionListener() {
@@ -111,6 +147,13 @@ public class frmTragaperras extends javax.swing.JFrame {
             }
         });
 
+        btmSeguir.setText("btmSeguir");
+        btmSeguir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmSeguirActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -118,20 +161,24 @@ public class frmTragaperras extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(350, 350, 350)
-                        .addComponent(lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(125, 125, 125)
+                        .addComponent(lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(lbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(btm20)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btm50))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(145, 145, 145)
-                                .addComponent(btmini, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl3, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(102, 102, 102)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblSaldo2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblAposta, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btm20)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btm50)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btm100)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -139,18 +186,16 @@ public class frmTragaperras extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btm500)
                         .addGap(141, 141, 141)
-                        .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(219, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(126, 126, 126)
-                    .addComponent(lbl3, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(663, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(727, Short.MAX_VALUE)
-                    .addComponent(lblSaldo1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(209, 209, 209)))
+                        .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(145, 145, 145)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btmini, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btmSeguir, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(195, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -167,25 +212,24 @@ public class frmTragaperras extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(55, 55, 55)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(2, 2, 2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(lbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(68, 68, 68)
-                .addComponent(btmini, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblSaldo2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblAposta, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lbl3, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btmini, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btmSeguir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(302, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(137, 137, 137)
-                    .addComponent(lbl3, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(420, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(50, 50, 50)
-                    .addComponent(lblSaldo1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(619, Short.MAX_VALUE)))
         );
 
         pack();
@@ -193,15 +237,21 @@ public class frmTragaperras extends javax.swing.JFrame {
 
     private void btminiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btminiActionPerformed
 
+        lbl1.setText("");
+        lbl3.setText("");
+        lbl2.setText("");
+        btmsoff();
         if (aposta <= 0) {
             JOptionPane.showMessageDialog(null, "La aposta ha de ser major que 0");
             aposta = 0.0;
+            Aposta();
             return;
         }
 
         if (userActual.getSaldo() < aposta) {
             JOptionPane.showMessageDialog(null, "No tens saldo");
             aposta = 0.0;
+            Aposta();
             return;
         }
 
@@ -209,14 +259,34 @@ public class frmTragaperras extends javax.swing.JFrame {
         Queries.updateSaldo(userActual.getId(), userActual.getSaldo());
 
         saldo();
+        Aposta();
+        btmSeguir.setVisible(true);
 
         tp = new jocTrragaperras(aposta, "Tragaperras");
         tp.girar();
         System.out.println(tp.toString());
 
-        lbl1.setText(tp.getS1());
-        lbl2.setText(tp.getS2());
-        lbl3.setText(tp.getS3());
+        javax.swing.Timer timer1 = new javax.swing.Timer(2000, e -> {
+            lbl1.setText(tp.getS1());
+        });
+        timer1.setRepeats(false);
+        timer1.start();
+
+        javax.swing.Timer timer2 = new javax.swing.Timer(4000, e -> {
+            lbl2.setText(tp.getS2());
+        });
+        timer2.setRepeats(false);
+        timer2.start();
+
+        javax.swing.Timer timer3 = new javax.swing.Timer(6000, e -> {
+            lbl3.setText(tp.getS3());
+            win();
+btmsOn();
+
+        });
+        timer3.setRepeats(false);
+        timer3.start();
+        btmApostaOff();
 
 
         // TODO add your handling code here:
@@ -224,23 +294,62 @@ public class frmTragaperras extends javax.swing.JFrame {
 
     private void btm20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btm20ActionPerformed
         aposta += 20;
+        saldo();
+        Aposta();
     }//GEN-LAST:event_btm20ActionPerformed
 
     private void btm50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btm50ActionPerformed
         aposta += 50;
+        saldo();
+        Aposta();
     }//GEN-LAST:event_btm50ActionPerformed
 
     private void btm100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btm100ActionPerformed
         aposta += 100;
+        saldo();
+        Aposta();
     }//GEN-LAST:event_btm100ActionPerformed
 
     private void btm200ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btm200ActionPerformed
         aposta += 200;
+        saldo();
+        Aposta();
     }//GEN-LAST:event_btm200ActionPerformed
 
     private void btm500ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btm500ActionPerformed
         aposta += 500;
+        saldo();
+        Aposta();
     }//GEN-LAST:event_btm500ActionPerformed
+
+    private void btmSeguirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmSeguirActionPerformed
+        aposta = 0.0;
+        btmApostaOn();
+        btmini.setEnabled(true);
+        btmSeguir.setVisible(false);
+        saldo();
+        Aposta();
+                    lblInfo.setText("");
+
+    }//GEN-LAST:event_btmSeguirActionPerformed
+
+    private void win() {
+
+        if (tp.getS1().equals(tp.getS2()) && tp.getS2().equals(tp.getS3())) {
+            userActual.setSaldo(userActual.getSaldo() + tp.getAposta() * 20);
+            lblInfo.setText("Has gauanyat " + aposta * 20);
+
+        } else if (tp.getS1().equals(tp.getS2()) || tp.getS1().equals(tp.getS3()) || tp.getS2().equals(tp.getS3())) {
+            userActual.setSaldo(userActual.getSaldo() + tp.getAposta() * 2);
+            lblInfo.setText("Has gauanyat " + aposta * 2);
+
+        } else {
+            lblInfo.setText("");
+        }
+
+        Aposta();
+        saldo();
+    }
 
     /**
      * @param args the command line arguments
@@ -273,11 +382,14 @@ public class frmTragaperras extends javax.swing.JFrame {
     private javax.swing.JButton btm200;
     private javax.swing.JButton btm50;
     private javax.swing.JButton btm500;
+    private javax.swing.JButton btmSeguir;
     private javax.swing.JButton btmini;
     private javax.swing.JLabel lbl1;
     private javax.swing.JLabel lbl2;
     private javax.swing.JLabel lbl3;
+    private javax.swing.JLabel lblAposta;
+    private javax.swing.JLabel lblInfo;
     private javax.swing.JLabel lblSaldo;
-    private javax.swing.JLabel lblSaldo1;
+    private javax.swing.JLabel lblSaldo2;
     // End of variables declaration//GEN-END:variables
 }
