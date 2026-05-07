@@ -5,6 +5,7 @@
 package VIEW;
 
 import CONEXION.Queries;
+import static CONEXION.Queries.guardarPartidaTragaperras;
 import static CONTROLER.Casino.userActual;
 import CONTROLER.GestioLog;
 import MODEL.jocTrragaperras;
@@ -235,6 +236,7 @@ public class frmTragaperras extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btminiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btminiActionPerformed
+
         lbl1.setText("");
         lbl3.setText("");
         lbl2.setText("");
@@ -285,6 +287,7 @@ btmsOn();
         timer3.setRepeats(false);
         timer3.start();
         btmApostaOff();
+
 
         // TODO add your handling code here:
     }//GEN-LAST:event_btminiActionPerformed

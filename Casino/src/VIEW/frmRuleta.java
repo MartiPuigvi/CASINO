@@ -5,9 +5,11 @@
 package VIEW;
 
 import static CONTROLER.Casino.userActual;
+import static CONEXION.Queries.guardarPartidaBlackjack;
 import CONTROLER.GestioLog;
 import MODEL.casellaRuleta;
 import MODEL.jocRuleta;
+import MODEL.partidaRuleta.colorRuleta;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.JOptionPane;
@@ -64,10 +66,10 @@ public class frmRuleta extends javax.swing.JFrame {
                     valorText = (boolean) valor ? "Parell" : "Senar";
                 }
 
-                txtLlistaApostes.append("Aposta: " + diners + "€ al " + valorText + "\n");
+                txtLlistaApostes.append("Aposta: " + diners + "â‚¬ al " + valorText + "\n");
 
             } else {
-               
+
                 javax.swing.JOptionPane.showMessageDialog(this, "No tens prou saldo per fer aquesta aposta!");
             }
         }
@@ -887,62 +889,72 @@ public class frmRuleta extends javax.swing.JFrame {
         lblRuleta.setVisible(true);
         lblResultat.setText("Girant...");
 
-        javax.swing.Timer timer = new javax.swing.Timer(5000, new java.awt.event.ActionListener() {
-            @Override
-            public void actionPerformed(java.awt.event.ActionEvent e) {
-
-                int indexGuanyador = random.nextInt(tauler.size());
-                MODEL.casellaRuleta resultat = tauler.get(indexGuanyador);
-                lblResultat.setText(String.valueOf(resultat.getNumero()));
-
-                double totalPremi = 0;
-
-                for (ApostaRealitzada ap : apostesActives) {
-                    boolean guanya = false;
-                    double mult = 0;
-
-                    if (ap.tipus.equals("NUMERO")) {
-                        if (resultat.getNumero() == (int) ap.valor) {
-                            guanya = true;
-                            mult = 36;
-                        }
-                    } else if (ap.tipus.equals("COLOR")) {
-                        if (resultat.getColor().equalsIgnoreCase((String) ap.valor)) {
-                            guanya = true;
-                            mult = 2;
-                        }
-                    } else if (ap.tipus.equals("PARELL_SENAR")) {
-                        if (resultat.getNumero() != 0 && resultat.isParell() == (boolean) ap.valor) {
-                            guanya = true;
-                            mult = 2;
-                        }
-                    }
-
-                    if (guanya) {
-                        totalPremi += (ap.diners * mult);
-                    }
-                }
-
-                if (totalPremi > 0) {
-                    userActual.setSaldo(userActual.getSaldo() + totalPremi);
-                    CONEXION.Queries.updateSaldo(userActual.getId(), userActual.getSaldo());
-                    javax.swing.JOptionPane.showMessageDialog(null, "Número: " + resultat.getNumero() + " (" + resultat.getColor() + ")\nTOTAL GUANYAT: " + totalPremi + "€!");
-                } else {
-                    javax.swing.JOptionPane.showMessageDialog(null, "Resultat: " + resultat.getNumero() + ". No has guanyat res.");
-                }
-
-                lblRuleta.setVisible(false);
-
-                apostesActives.clear();
-                txtLlistaApostes.setText("");
-                saldo();
-                btmGirar.setEnabled(true);
-            }
-        });
-
+        javax.swing.Timer timer = new javax.swing.Timer(5000, e -> processarResultatRuleta());
         timer.setRepeats(false);
         timer.start();
     }//GEN-LAST:event_btmGirarActionPerformed
+
+    private void processarResultatRuleta() {
+        int indexGuanyador = random.nextInt(tauler.size());
+        casellaRuleta resultat = tauler.get(indexGuanyador);
+        lblResultat.setText(String.valueOf(resultat.getNumero()));
+
+        double totalPremi = 0;
+        String tipusGuanyador = "Perdut";
+
+        for (ApostaRealitzada ap : apostesActives) {
+            boolean guanyaApostaIndividual = false;
+            double mult = 0;
+
+            if (ap.tipus.equals("NUMERO") && resultat.getNumero() == (int) ap.valor) {
+                guanyaApostaIndividual = true;
+                mult = 36;
+                tipusGuanyador = "NÃºmero";
+            } else if (ap.tipus.equals("COLOR") && resultat.getColor().equalsIgnoreCase((String) ap.valor)) {
+                guanyaApostaIndividual = true;
+                mult = 2;
+                if (tipusGuanyador.equals("Perdut")) {
+                    tipusGuanyador = "Color";
+                }
+            } else if (ap.tipus.equals("PARELL_SENAR") && resultat.getNumero() != 0 && resultat.isParell() == (boolean) ap.valor) {
+                guanyaApostaIndividual = true;
+                mult = 2;
+                if (tipusGuanyador.equals("Perdut")) {
+                    tipusGuanyador = "Parell/Senar";
+                }
+            }
+
+            if (guanyaApostaIndividual) {
+                totalPremi += (ap.diners * mult);
+            }
+        }
+
+        MODEL.partidaRuleta.colorRuleta colorEnum = MODEL.partidaRuleta.colorRuleta.valueOf(resultat.getColor());
+        CONEXION.Queries.guardarPartidaRuleta(
+                userActual.getNom(),
+                resultat.getNumero(),
+                colorEnum,
+                resultat.isParell(),
+                tipusGuanyador
+        );
+
+        if (totalPremi > 0) {
+            userActual.setSaldo(userActual.getSaldo() + totalPremi);
+            CONEXION.Queries.updateSaldo(userActual.getId(), userActual.getSaldo());
+            javax.swing.JOptionPane.showMessageDialog(null,
+                    "NÃºmero: " + resultat.getNumero() + " (" + resultat.getColor() + ")\n"
+                    + "Has guanyat per: " + tipusGuanyador + "\n"
+                    + "TOTAL PREMI: " + totalPremi + "â‚¬!");
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(null, "Resultat: " + resultat.getNumero() + ". No has guanyat res.");
+        }
+
+        lblRuleta.setVisible(false);
+        apostesActives.clear();
+        txtLlistaApostes.setText("");
+        saldo();
+        btmGirar.setEnabled(true);
+    }
 
     /**
      * @param args the command line arguments

@@ -5,6 +5,8 @@
 package VIEW;
 
 import CONEXION.Queries;
+import static CONEXION.Queries.guardarPartidaBlackjack;
+import static CONEXION.Queries.updateSaldo;
 import static CONTROLER.Casino.Users;
 import static CONTROLER.Casino.userActual;
 import CONTROLER.GestioLog;
@@ -38,7 +40,7 @@ public class frmBlackjack extends javax.swing.JFrame {
 
     }
 
-    public  void saldo() {
+    public void saldo() {
         lblSaldo.setText(String.valueOf(userActual.getSaldo()));
     }
 
@@ -189,7 +191,7 @@ public class frmBlackjack extends javax.swing.JFrame {
             carta = random.nextInt(10) + 2;
         }
         bj.cartaJugador(carta);
-            btmPlantar1.setVisible(true);
+        btmPlantar1.setVisible(true);
 
         System.out.println(bj.toString());
         totalJugador = 0;
@@ -292,7 +294,7 @@ public class frmBlackjack extends javax.swing.JFrame {
         txtApo.setVisible(true);
         btmCarta.setEnabled(true);
         btmPlantar1.setEnabled(true);
-                    btmTornar.setVisible(false);
+        btmTornar.setVisible(false);
 
         totalDealer = 0;
         totalJugador = 0;
@@ -304,6 +306,7 @@ public class frmBlackjack extends javax.swing.JFrame {
     }//GEN-LAST:event_btmTornarActionPerformed
 
     public void finals() {
+        boolean guanyat = false;
         if (totalDealer > 21) {
             lblInfo.setText("Has guanyat pq el dealer s'ha pasat");
             btmTornar.setVisible(true);
@@ -320,8 +323,10 @@ public class frmBlackjack extends javax.swing.JFrame {
             btmTornar.setVisible(true);
             userActual.setSaldo(userActual.getSaldo() + bj.getAposta());
         }
-        Queries.updateSaldo(userActual.getId(), userActual.getSaldo());
+        updateSaldo(userActual.getId(), userActual.getSaldo());
         saldo();
+
+        guardarPartidaBlackjack(userActual.getNom(), totalJugador, totalDealer, guanyat);
 
     }
 
