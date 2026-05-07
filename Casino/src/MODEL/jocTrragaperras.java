@@ -4,6 +4,7 @@
  */
 package MODEL;
 
+import static CONTROLER.Casino.userActual;
 import java.util.Random;
 
 /**
@@ -65,41 +66,74 @@ public class jocTrragaperras extends Joc {
     }
 
     public void girar() {
+
+        /*Random random = new Random();
+
+    String simbol = simbols[random.nextInt(simbols.length)];
+
+    s1 = simbol;
+    s2 = simbol;
+    s3 = simbol;
+} */
         Random random = new Random();
 
-        s1 = simbols[random.nextInt(simbols.length)];
-        s2 = simbols[random.nextInt(simbols.length)];
-        s3 = simbols[random.nextInt(simbols.length)];
+        double r = Math.random();
 
-        if (s1.equals(s2) && s2.equals(s3)) {
+        if (r < 0.017) {
+            String s = simbols[random.nextInt(simbols.length)];
+            s1 = s;
+            s2 = s;
+            s3 = s;
+        } else if (r < 0.35) {
 
-            if (Math.random() < 0.99) {
-                do {
-                    s3 = simbols[random.nextInt(simbols.length)];
-                } while (s3.equals(s1));
+            int igual = random.nextInt(3);
+
+            String sim = simbols[random.nextInt(simbols.length)];
+
+            switch (igual) {
+
+                case 0:
+                    s1 = sim;
+                    s2 = sim;
+                    do {
+                        s3 = simbols[random.nextInt(simbols.length)];
+                    } while (s3.equals(sim));
+                    break;
+
+                case 1:
+                    s2 = sim;
+                    s3 = sim;
+                    do {
+                        s1 = simbols[random.nextInt(simbols.length)];
+                    } while (s1.equals(sim));
+                    break;
+
+                case 2:
+                    s1 = sim;
+                    s3 = sim;
+                    do {
+                        s2 = simbols[random.nextInt(simbols.length)];
+                    } while (s2.equals(sim));
+                    break;
             }
-        }
 
-        if (s1.equals(s2) || s1.equals(s3) || s2.equals(s3)) {
-        if (Math.random() < 0.90) {
+        } else {
+            s1 = simbols[random.nextInt(simbols.length)];
 
             do {
-                s1 = simbols[random.nextInt(simbols.length)];
                 s2 = simbols[random.nextInt(simbols.length)];
+            } while (s2.equals(s1));
+
+            do {
                 s3 = simbols[random.nextInt(simbols.length)];
-            } while (s1.equals(s2) || s1.equals(s3) || s2.equals(s3));
-            }
+            } while (s3.equals(s1) || s3.equals(s2));
         }
+
     }
 
     @Override
     public String toString() {
         return "jocTrragaperras{" + "simbols=" + simbols + ", s1=" + s1 + ", s2=" + s2 + ", s3=" + s3 + ", aposta=" + aposta + '}';
     }
-    
-    
-    
-    
-    
-    
+
 }
