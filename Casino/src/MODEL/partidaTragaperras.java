@@ -15,9 +15,9 @@ public class partidaTragaperras {
     private String simbol1;
     private String simbol2;
     private String simbol3;
-    private boolean guanyador;
+    private String guanyador;
 
-    public partidaTragaperras(int idPartida, String nomJugador, String simbol1, String simbol2, String simbol3, boolean guanyador) {
+    public partidaTragaperras(int idPartida, String nomJugador, String simbol1, String simbol2, String simbol3, String guanyador) {
         this.idPartida = idPartida;
         this.nomJugador = nomJugador;
         this.simbol1 = simbol1;
@@ -66,11 +66,11 @@ public class partidaTragaperras {
         this.simbol3 = simbol3;
     }
 
-    public boolean isGuanyador() {
+    public String isGuanyador() {
         return guanyador;
     }
 
-    public void setGuanyador(boolean guanyador) {
+    public void setGuanyador(String guanyador) {
         this.guanyador = guanyador;
     }
 

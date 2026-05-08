@@ -239,7 +239,7 @@ public class Queries {
         }
     }
 
-    public static void guardarPartidaTragaperras(String nomJugador, String simbol1, String simbol2, String simbol3, boolean guanyador) {
+    public static void guardarPartidaTragaperras(String nomJugador, String simbol1, String simbol2, String simbol3, String guanyador) {
         String sql = "INSERT INTO TRAGAPERRAS (nomJugador, simbol1, simbol2, simbol3, guanyador) VALUES (?, ?, ?, ?, ?)";
         try (Connection conn = DriverManager.getConnection(url, user, password); PreparedStatement ps = conn.prepareStatement(sql)) {
 
@@ -247,7 +247,7 @@ public class Queries {
             ps.setString(2, simbol1);
             ps.setString(3, simbol2);
             ps.setString(4, simbol3);
-            ps.setBoolean(5, guanyador);
+            ps.setString(5, guanyador);
 
             ps.executeUpdate();
 
@@ -319,7 +319,7 @@ public class Queries {
                 String simbol2 = rs.getString("simbol2");
                 String simbol3 = rs.getString("simbol3");
 
-                boolean guanyador = rs.getBoolean("guanyador");
+                String guanyador = rs.getString("guanyador");
                 historialTragaperras.add(new partidaTragaperras(id, nom, simbol1, simbol2, simbol3, guanyador));
             }
 

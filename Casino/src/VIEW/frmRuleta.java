@@ -6,6 +6,7 @@ package VIEW;
 
 import static CONTROLER.Casino.userActual;
 import static CONEXION.Queries.guardarPartidaBlackjack;
+import static CONEXION.Queries.guardarPartidaRuleta;
 import CONTROLER.GestioLog;
 import MODEL.casellaRuleta;
 import MODEL.jocRuleta;
@@ -894,67 +895,67 @@ public class frmRuleta extends javax.swing.JFrame {
         timer.start();
     }//GEN-LAST:event_btmGirarActionPerformed
 
-    private void processarResultatRuleta() {
-        int indexGuanyador = random.nextInt(tauler.size());
-        casellaRuleta resultat = tauler.get(indexGuanyador);
-        lblResultat.setText(String.valueOf(resultat.getNumero()));
+        private void processarResultatRuleta() {
+            int indexGuanyador = random.nextInt(tauler.size());
+            casellaRuleta resultat = tauler.get(indexGuanyador);
+            lblResultat.setText(String.valueOf(resultat.getNumero()));
 
-        double totalPremi = 0;
-        String tipusGuanyador = "Perdut";
+            double totalPremi = 0;
+            String tipusGuanyador = "Perdut";
 
-        for (ApostaRealitzada ap : apostesActives) {
-            boolean guanyaApostaIndividual = false;
-            double mult = 0;
+            for (ApostaRealitzada ap : apostesActives) {
+                boolean guanyaApostaIndividual = false;
+                double mult = 0;
 
-            if (ap.tipus.equals("NUMERO") && resultat.getNumero() == (int) ap.valor) {
-                guanyaApostaIndividual = true;
-                mult = 36;
-                tipusGuanyador = "Número";
-            } else if (ap.tipus.equals("COLOR") && resultat.getColor().equalsIgnoreCase((String) ap.valor)) {
-                guanyaApostaIndividual = true;
-                mult = 2;
-                if (tipusGuanyador.equals("Perdut")) {
-                    tipusGuanyador = "Color";
+                if (ap.tipus.equals("NUMERO") && resultat.getNumero() == (int) ap.valor) {
+                    guanyaApostaIndividual = true;
+                    mult = 36;
+                    tipusGuanyador = "Número";
+                } else if (ap.tipus.equals("COLOR") && resultat.getColor().equalsIgnoreCase((String) ap.valor)) {
+                    guanyaApostaIndividual = true;
+                    mult = 2;
+                    if (tipusGuanyador.equals("Perdut")) {
+                        tipusGuanyador = "Color";
+                    }
+                } else if (ap.tipus.equals("PARELL_SENAR") && resultat.getNumero() != 0 && resultat.isParell() == (boolean) ap.valor) {
+                    guanyaApostaIndividual = true;
+                    mult = 2;
+                    if (tipusGuanyador.equals("Perdut")) {
+                        tipusGuanyador = "Parell/Senar";
+                    }
                 }
-            } else if (ap.tipus.equals("PARELL_SENAR") && resultat.getNumero() != 0 && resultat.isParell() == (boolean) ap.valor) {
-                guanyaApostaIndividual = true;
-                mult = 2;
-                if (tipusGuanyador.equals("Perdut")) {
-                    tipusGuanyador = "Parell/Senar";
+
+                if (guanyaApostaIndividual) {
+                    totalPremi += (ap.diners * mult);
                 }
             }
 
-            if (guanyaApostaIndividual) {
-                totalPremi += (ap.diners * mult);
+            colorRuleta colorEnum = colorRuleta.valueOf(resultat.getColor());
+            guardarPartidaRuleta(
+                    userActual.getNom(),
+                    resultat.getNumero(),
+                    colorEnum,
+                    resultat.isParell(),
+                    tipusGuanyador
+            );
+
+            if (totalPremi > 0) {
+                userActual.setSaldo(userActual.getSaldo() + totalPremi);
+                CONEXION.Queries.updateSaldo(userActual.getId(), userActual.getSaldo());
+                javax.swing.JOptionPane.showMessageDialog(null,
+                        "Número: " + resultat.getNumero() + " (" + resultat.getColor() + ")\n"
+                        + "Has guanyat per: " + tipusGuanyador + "\n"
+                        + "TOTAL PREMI: " + totalPremi + "€!");
+            } else {
+                javax.swing.JOptionPane.showMessageDialog(null, "Resultat: " + resultat.getNumero() + ". No has guanyat res.");
             }
+
+            lblRuleta.setVisible(false);
+            apostesActives.clear();
+            txtLlistaApostes.setText("");
+            saldo();
+            btmGirar.setEnabled(true);
         }
-
-        MODEL.partidaRuleta.colorRuleta colorEnum = MODEL.partidaRuleta.colorRuleta.valueOf(resultat.getColor());
-        CONEXION.Queries.guardarPartidaRuleta(
-                userActual.getNom(),
-                resultat.getNumero(),
-                colorEnum,
-                resultat.isParell(),
-                tipusGuanyador
-        );
-
-        if (totalPremi > 0) {
-            userActual.setSaldo(userActual.getSaldo() + totalPremi);
-            CONEXION.Queries.updateSaldo(userActual.getId(), userActual.getSaldo());
-            javax.swing.JOptionPane.showMessageDialog(null,
-                    "Número: " + resultat.getNumero() + " (" + resultat.getColor() + ")\n"
-                    + "Has guanyat per: " + tipusGuanyador + "\n"
-                    + "TOTAL PREMI: " + totalPremi + "€!");
-        } else {
-            javax.swing.JOptionPane.showMessageDialog(null, "Resultat: " + resultat.getNumero() + ". No has guanyat res.");
-        }
-
-        lblRuleta.setVisible(false);
-        apostesActives.clear();
-        txtLlistaApostes.setText("");
-        saldo();
-        btmGirar.setEnabled(true);
-    }
 
     /**
      * @param args the command line arguments

@@ -6,6 +6,7 @@ package VIEW;
 
 import CONEXION.Queries;
 import static CONEXION.Queries.guardarPartidaTragaperras;
+import static CONEXION.Queries.historialTragaperras;
 import static CONTROLER.Casino.userActual;
 import CONTROLER.GestioLog;
 import MODEL.jocTrragaperras;
@@ -61,18 +62,19 @@ public class frmTragaperras extends javax.swing.JFrame {
         btm200.setEnabled(true);
         btm500.setEnabled(true);
     }
-    
-    public void btmsoff(){
-    btmini.setEnabled(false);
+
+    public void btmsoff() {
+        btmini.setEnabled(false);
         btmSeguir.setEnabled(false);
 
     }
 
-        public void btmsOn(){
-    btmini.setEnabled(true);
+    public void btmsOn() {
+        btmini.setEnabled(true);
         btmSeguir.setEnabled(true);
 
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -265,6 +267,7 @@ public class frmTragaperras extends javax.swing.JFrame {
         tp = new jocTrragaperras(aposta, "Tragaperras");
         tp.girar();
         System.out.println(tp.toString());
+            lblInfo.setText("");
 
         javax.swing.Timer timer1 = new javax.swing.Timer(2000, e -> {
             lbl1.setText(tp.getS1());
@@ -281,13 +284,12 @@ public class frmTragaperras extends javax.swing.JFrame {
         javax.swing.Timer timer3 = new javax.swing.Timer(6000, e -> {
             lbl3.setText(tp.getS3());
             win();
-btmsOn();
+            btmsOn();
 
         });
         timer3.setRepeats(false);
         timer3.start();
         btmApostaOff();
-
 
         // TODO add your handling code here:
     }//GEN-LAST:event_btminiActionPerformed
@@ -329,24 +331,40 @@ btmsOn();
         btmSeguir.setVisible(false);
         saldo();
         Aposta();
-                    lblInfo.setText("");
+        lblInfo.setText("");
 
     }//GEN-LAST:event_btmSeguirActionPerformed
 
     private void win() {
 
+        String tipusGuanyador = "Perdut";
+
         if (tp.getS1().equals(tp.getS2()) && tp.getS2().equals(tp.getS3())) {
             userActual.setSaldo(userActual.getSaldo() + tp.getAposta() * 20);
-            lblInfo.setText("Has gauanyat " + aposta * 20);
+            lblInfo.setText("Has gauanyat per trio " + aposta * 20);
+            tipusGuanyador = "Trio";
 
         } else if (tp.getS1().equals(tp.getS2()) || tp.getS1().equals(tp.getS3()) || tp.getS2().equals(tp.getS3())) {
             userActual.setSaldo(userActual.getSaldo() + tp.getAposta() * 2);
-            lblInfo.setText("Has gauanyat " + aposta * 2);
+            tipusGuanyador = "Parella";
+
+            lblInfo.setText("Has gauanyat per parella " + aposta * 2);
 
         } else {
-            lblInfo.setText("");
+            lblInfo.setText("Has perdut");
+            tipusGuanyador = "Perdut";
+
         }
 
+        guardarPartidaTragaperras(
+                userActual.getNom(),
+                tp.getS1(),
+                tp.getS2(),
+                tp.getS3(),
+                tipusGuanyador
+        );
+
+        historialTragaperras();
         Aposta();
         saldo();
     }
