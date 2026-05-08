@@ -108,3 +108,26 @@
 01:12:50	Login iniciat
 01:13:06	Usuari maria ha iniciat sesio al sistema
 01:13:08	Usuari{id=3, nom=maria, email=maria@gmail.com, Contrasenya=1234, edat=2006-09-22, Saldo=8370.0} esta jugant al Tragaperras
+01:24:54	Programa iniciat
+01:24:54	Login iniciat
+01:25:07	Admin marti ha iniciat sesio al sistema
+01:26:33	Programa iniciat
+01:26:33	Login iniciat
+01:26:41	Admin marti ha iniciat sesio al sistema
+01:26:59	Programa iniciat
+01:26:59	Login iniciat
+01:27:01	Admin marti ha iniciat sesio al sistema
+01:38:56	Programa iniciat
+01:38:56	Login iniciat
+01:38:59	Usuari juan ha iniciat sesio al sistema
+01:39:00	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=600.0} esta jugant al Tragaperras
+01:40:16	Programa iniciat
+01:40:16	Login iniciat
+01:40:52	Programa iniciat
+01:40:52	Login iniciat
+01:40:58	Usuari juan ha iniciat sesio al sistema
+01:40:59	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=200.0} esta jugant al Tragaperras
+01:41:29	Programa iniciat
+01:41:29	Login iniciat
+01:41:37	Usuari maria ha iniciat sesio al sistema
+01:41:38	Usuari{id=3, nom=maria, email=maria@gmail.com, Contrasenya=1234, edat=2006-09-22, Saldo=500.0} esta jugant al Tragaperras
