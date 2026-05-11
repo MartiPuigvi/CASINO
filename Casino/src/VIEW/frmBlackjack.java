@@ -7,13 +7,19 @@ package VIEW;
 import CONEXION.Queries;
 import static CONEXION.Queries.guardarPartidaBlackjack;
 import static CONEXION.Queries.updateSaldo;
-import static CONTROLER.Casino.Users;
 import static CONTROLER.Casino.userActual;
 import CONTROLER.GestioLog;
 import static CONTROLER.GestioFitxers.tornarMenuClient;
+import CONTROLER.estils;
 import MODEL.jocBlackjack;
+import java.awt.Color;
+import java.awt.Graphics;
+import javax.swing.JLabel;
 import java.util.Random;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.UIManager;
 
 /**
  *
@@ -30,25 +36,101 @@ public class frmBlackjack extends javax.swing.JFrame {
      * Creates new form frmBlackjack
      */
     public frmBlackjack() {
+        this.setUndecorated(true);
+        this.setContentPane(panelFondo);
+        panelFondo.setLayout(null);
+
         initComponents();
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
+        this.setVisible(true);
+        estils.border(jPanel1);
+        estils.border(jPanel2);
+        estils.border(jPanel3);
+
         saldo();
+        cartaOFF();
         GestioLog.escriureLog(userActual + " esta jugant a Blackjack");
 
-        btmCarta.setVisible(false);
-        btmPlantar1.setVisible(false);
-        btmTornar.setVisible(false);
+        JPanel2Off();
+        JPanel3Off();
+        txtApo.putClientProperty("JTextField.placeholderText", "Introdueix Aposta");
+        btmJocOff();
+        btmTornarOff();
+        estils.estilbuto(btmMenu);
+        estils.estilbuto(btmIniPartida);
+        estils.estilbuto(btmTornar);
+        estils.estilbuto(btmCarta);
+        estils.estilbuto(btmPlantar1);
 
-    }
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSaldo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSaldo.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
+        
+        }
 
     public void saldo() {
         lblSaldo.setText(String.valueOf(userActual.getSaldo()));
     }
 
     public void totalPartida() {
-        lblSuma.setText("Total: " + totalJugador);
-        lblDealer.setText("Total: " + totalDealer);
-
+        lblSum.setText("TOTAL: " + totalJugador);
+        lblDealer.setText("DEALER: " + totalDealer);
     }
+
+    private void JPanel2Off() {
+        jPanel2.setVisible(false);
+    }
+
+    private void JPanel2ON() {
+        jPanel2.setVisible(true);
+    }
+
+    private void JPanel3Off() {
+        jPanel3.setVisible(false);
+    }
+
+    private void JPanel3ON() {
+        jPanel3.setVisible(true);
+    }
+
+    private void ApostaOff() {
+        txtApo.setVisible(false);
+        btmIniPartida.setVisible(false);
+    }
+
+    private void ApostaOn() {
+        txtApo.setVisible(true);
+        btmIniPartida.setVisible(true);
+    }
+
+    private void btmJocOff() {
+        btmCarta.setVisible(false);
+        btmPlantar1.setVisible(false);
+    }
+
+    private void btmJocOn() {
+        btmCarta.setVisible(true);
+        btmPlantar1.setVisible(true);
+    }
+
+    private void btmTornarOn() {
+        btmTornar.setVisible(true);
+    }
+
+    private void btmTornarOff() {
+        btmTornar.setVisible(false);
+    }
+    JPanel panelFondo = new JPanel() {
+        @Override
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            // Carga la imagen
+            ImageIcon img = new ImageIcon(getClass().getResource("/Images/i.jpg"));
+            // La dibuja escalada al tamaño del panel
+            g.drawImage(img.getImage(), 0, 0, getWidth(), getHeight(), this);
+        }
+    };
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -60,127 +142,212 @@ public class frmBlackjack extends javax.swing.JFrame {
     private void initComponents() {
 
         btmCarta = new javax.swing.JButton();
-        btmIniPartida = new javax.swing.JButton();
         btmPlantar1 = new javax.swing.JButton();
-        txtApo = new javax.swing.JTextField();
-        lblSuma = new javax.swing.JLabel();
-        lblSaldo = new javax.swing.JLabel();
-        lblDealer = new javax.swing.JLabel();
-        lblInfo = new javax.swing.JLabel();
         btmMenu = new javax.swing.JButton();
+        jLayeredPane2 = new javax.swing.JLayeredPane();
+        lblCarta2 = new javax.swing.JLabel();
+        lblCarta1 = new javax.swing.JLabel();
+        lblCarta7 = new javax.swing.JLabel();
+        lblCarta3 = new javax.swing.JLabel();
+        lblCarta4 = new javax.swing.JLabel();
+        lblCarta5 = new javax.swing.JLabel();
+        lblCarta6 = new javax.swing.JLabel();
+        lblCarta8 = new javax.swing.JLabel();
+        lblCarta9 = new javax.swing.JLabel();
+        btmIniPartida = new javax.swing.JButton();
+        txtApo = new javax.swing.JTextField();
+        jPanel3 = new javax.swing.JPanel();
+        lblSum = new javax.swing.JLabel();
+        lblInfo = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        lblSaldo = new javax.swing.JLabel();
         btmTornar = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        lblDealer = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(212, 175, 55));
+        setMaximumSize(new java.awt.Dimension(1920, 1080));
+        setPreferredSize(new java.awt.Dimension(1920, 1080));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btmCarta.setText("btmCarta");
+        btmCarta.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
+        btmCarta.setText("➕ CARTA");
+        btmCarta.setActionCommand("🖐️CARTA");
+        btmCarta.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btmCarta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmCartaActionPerformed(evt);
             }
         });
+        getContentPane().add(btmCarta, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 310, 190, 70));
 
-        btmIniPartida.setText("btmIniPartida");
-        btmIniPartida.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmIniPartidaActionPerformed(evt);
-            }
-        });
-
-        btmPlantar1.setText("btmPlantar");
+        btmPlantar1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
+        btmPlantar1.setText("🖐️PLANTAR");
+        btmPlantar1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btmPlantar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmPlantar1ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmPlantar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 310, 190, 70));
 
-        lblInfo.setBackground(new java.awt.Color(255, 255, 255));
-
-        btmMenu.setText("Menu");
+        btmMenu.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
+        btmMenu.setText("☰ MENU");
         btmMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmMenuActionPerformed(evt);
             }
         });
+        getContentPane().add(btmMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 170, 62));
 
-        btmTornar.setText("tornar a jugar");
+        jLayeredPane2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblCarta2.setText("jLabel1");
+        jLayeredPane2.setLayer(lblCarta2, 1);
+        jLayeredPane2.add(lblCarta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 160, 233));
+
+        lblCarta1.setText("jLabel1");
+        jLayeredPane2.add(lblCarta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, 160, 233));
+
+        lblCarta7.setText("jLabel1");
+        jLayeredPane2.setLayer(lblCarta7, 6);
+        jLayeredPane2.add(lblCarta7, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 10, 160, 233));
+
+        lblCarta3.setText("jLabel1");
+        jLayeredPane2.setLayer(lblCarta3, 2);
+        jLayeredPane2.add(lblCarta3, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, 160, 233));
+
+        lblCarta4.setText("jLabel1");
+        jLayeredPane2.setLayer(lblCarta4, 3);
+        jLayeredPane2.add(lblCarta4, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 10, 160, 233));
+
+        lblCarta5.setText("jLabel1");
+        jLayeredPane2.setLayer(lblCarta5, 4);
+        jLayeredPane2.add(lblCarta5, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, 160, 233));
+
+        lblCarta6.setText("jLabel1");
+        jLayeredPane2.setLayer(lblCarta6, 5);
+        jLayeredPane2.add(lblCarta6, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 10, 160, 233));
+
+        lblCarta8.setText("jLabel1");
+        jLayeredPane2.setLayer(lblCarta8, 8);
+        jLayeredPane2.add(lblCarta8, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 10, 160, 233));
+
+        lblCarta9.setText("jLabel1");
+        jLayeredPane2.setLayer(lblCarta9, 10);
+        jLayeredPane2.add(lblCarta9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 10, 160, 233));
+
+        btmIniPartida.setBackground(new java.awt.Color(0, 0, 0));
+        btmIniPartida.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        btmIniPartida.setForeground(new java.awt.Color(212, 175, 55));
+        btmIniPartida.setText("INICIAR PARTIDA");
+        btmIniPartida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmIniPartidaActionPerformed(evt);
+            }
+        });
+        jLayeredPane2.setLayer(btmIniPartida, javax.swing.JLayeredPane.MODAL_LAYER);
+        jLayeredPane2.add(btmIniPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 210, 60));
+
+        txtApo.setBackground(new java.awt.Color(0, 0, 0));
+        txtApo.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        txtApo.setForeground(new java.awt.Color(212, 175, 55));
+        txtApo.setToolTipText("");
+        txtApo.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(212, 175, 55), 2, true), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
+        txtApo.setCaretColor(new java.awt.Color(255, 255, 255));
+        txtApo.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        txtApo.setMargin(new java.awt.Insets(10, 6, 2, 6));
+        txtApo.setName(""); // NOI18N
+        txtApo.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtApoFocusLost(evt);
+            }
+        });
+        txtApo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtApoActionPerformed(evt);
+            }
+        });
+        txtApo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApoKeyTyped(evt);
+            }
+        });
+        jLayeredPane2.setLayer(txtApo, javax.swing.JLayeredPane.PALETTE_LAYER);
+        jLayeredPane2.add(txtApo, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 25, 277, 50));
+
+        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblSum.setFont(new java.awt.Font("Georgia", 1, 24)); // NOI18N
+        lblSum.setForeground(new java.awt.Color(212, 175, 55));
+        jPanel3.add(lblSum, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 140, 40));
+
+        jLayeredPane2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 290, 220, 60));
+
+        lblInfo.setBackground(new java.awt.Color(255, 255, 255));
+        lblInfo.setFont(new java.awt.Font("Georgia", 1, 48)); // NOI18N
+        lblInfo.setForeground(new java.awt.Color(212, 175, 55));
+        lblInfo.setToolTipText("");
+        lblInfo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        jLayeredPane2.setLayer(lblInfo, 500);
+        jLayeredPane2.add(lblInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 440, 180));
+
+        getContentPane().add(jLayeredPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 480, 1920, 550));
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Georgia", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(212, 175, 55));
+        jLabel1.setText("SALDO");
+        jLabel1.setAlignmentX(0.5F);
+        jLabel1.setAlignmentY(0.0F);
+        jLabel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 1, 1, 1));
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, 370, -1));
+
+        lblSaldo.setFont(new java.awt.Font("Georgia", 1, 48)); // NOI18N
+        lblSaldo.setForeground(new java.awt.Color(212, 175, 55));
+        lblSaldo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSaldo.setText("jLabel2");
+        lblSaldo.setAlignmentX(0.5F);
+        lblSaldo.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 1, 1, 1));
+        lblSaldo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(lblSaldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 370, 70));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(587, 20, 370, 100));
+
+        btmTornar.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
+        btmTornar.setText("↻TORNAR A JUGAR");
         btmTornar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmTornarActionPerformed(evt);
             }
         });
+        getContentPane().add(btmTornar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 420, 330, 80));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(63, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(113, 113, 113))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btmIniPartida, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btmPlantar1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(txtApo, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btmCarta, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(166, 166, 166)
-                                .addComponent(lblSuma, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblDealer, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(71, 71, 71))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(80, 80, 80))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btmMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btmTornar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(80, 80, 80))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(lblSaldo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblDealer, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblSuma, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(6, 6, 6))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(txtApo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(56, 56, 56)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btmCarta, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btmPlantar1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btmIniPartida, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addComponent(lblInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(4, 4, 4)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btmTornar, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btmMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(23, Short.MAX_VALUE))
-        );
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setPreferredSize(new java.awt.Dimension(190, 50));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblDealer.setFont(new java.awt.Font("Georgia", 1, 24)); // NOI18N
+        lblDealer.setForeground(new java.awt.Color(212, 175, 55));
+        jPanel2.add(lblDealer, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 160, 40));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 430, 220, 60));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btmCartaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmCartaActionPerformed
         int carta;
+        JPanel3ON();
         if (bj == null) {
-            JOptionPane.showMessageDialog(this, "Inicia una partida primer");
+            JOptionPane.showMessageDialog(this, "No has iniciat partida");
             return;
         }
 
@@ -198,25 +365,24 @@ public class frmBlackjack extends javax.swing.JFrame {
         for (int c : bj.getCartesJugador()) {
             totalJugador += c;
         }
-
+        cartaImg();
         totalPartida();
-
+        
         if (totalJugador > 21) {
-            lblInfo.setText("Ets un primo t'has passat");
-            btmCarta.setVisible(false);
-            btmPlantar1.setVisible(false);
-            btmTornar.setVisible(true);
+            lblInfo.setText("T'HAS PASSAT");
+            btmJocOff();
+            btmTornarOn();
         }
 
     }//GEN-LAST:event_btmCartaActionPerformed
 
     private void btmIniPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmIniPartidaActionPerformed
-        double aposta;
-
+        double aposta = 0.0;
+        cartaOFF();
         try {
             aposta = Double.parseDouble(txtApo.getText());
         } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(null, "no");
+            JOptionPane.showMessageDialog(null, "El valor introduit no es correcte");
             return;
         }
 
@@ -229,7 +395,6 @@ public class frmBlackjack extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "No tens saldo");
             return;
         }
-
         userActual.setSaldo(userActual.getSaldo() - aposta);
         Queries.updateSaldo(userActual.getId(), userActual.getSaldo());
 
@@ -239,8 +404,7 @@ public class frmBlackjack extends javax.swing.JFrame {
 
         bj = new jocBlackjack(aposta, "Blackjack");
 
-        btmIniPartida.setVisible(false);
-        txtApo.setVisible(false);
+        ApostaOff();
         btmCarta.setVisible(true);
         //btmPlantar1.setVisible(true);
         System.out.println(bj.toString());
@@ -248,10 +412,10 @@ public class frmBlackjack extends javax.swing.JFrame {
     }//GEN-LAST:event_btmIniPartidaActionPerformed
 
     private void btmPlantar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmPlantar1ActionPerformed
-        btmCarta.setEnabled(false);
-        btmPlantar1.setEnabled(false);
+        btmJocOff();
+        JPanel2ON();
         if (bj == null) {
-            JOptionPane.showMessageDialog(null, "Inicia una partida primero");
+            JOptionPane.showMessageDialog(null, "No has iniciat partida");
             return;
         }
 
@@ -290,44 +454,153 @@ public class frmBlackjack extends javax.swing.JFrame {
     }//GEN-LAST:event_btmMenuActionPerformed
 
     private void btmTornarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmTornarActionPerformed
-        btmIniPartida.setVisible(true);
-        txtApo.setVisible(true);
-        btmCarta.setEnabled(true);
-        btmPlantar1.setEnabled(true);
-        btmTornar.setVisible(false);
 
+        ApostaOn();
+        btmTornarOff();
+        JPanel2Off();
+        JPanel3Off();
         totalDealer = 0;
         totalJugador = 0;
         totalPartida();
         lblInfo.setText("");
-        btmCarta.setVisible(false);
-        btmPlantar1.setVisible(false);
+        btmJocOff();
+        cartaOFF();
+
 // TODO add your handling code here:
     }//GEN-LAST:event_btmTornarActionPerformed
+
+    private void txtApoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtApoActionPerformed
+
+    private void txtApoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApoKeyTyped
+        char c = evt.getKeyChar();
+        String t = txtApo.getText();
+
+        if (!Character.isDigit(c) && c != '.') {
+            evt.consume();
+        } else if (c == '.' && t.contains(".")) {
+            evt.consume();
+        } else {
+            int i = t.indexOf('.');
+            if (i != -1 && t.length() - i > 2) {
+                evt.consume();
+            }
+
+
+}    }//GEN-LAST:event_txtApoKeyTyped
+
+    private void txtApoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtApoFocusLost
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtApoFocusLost
 
     public void finals() {
         boolean guanyat = false;
         if (totalDealer > 21) {
-            lblInfo.setText("Has guanyat pq el dealer s'ha pasat");
-            btmTornar.setVisible(true);
+            lblInfo.setText("HAS GUANYAT");
             userActual.setSaldo(userActual.getSaldo() + bj.getAposta() * 2);
         } else if (totalJugador > totalDealer) {
-            btmTornar.setVisible(true);
-            lblInfo.setText("Has guanyat");
+            lblInfo.setText("HAS GUANYAT");
             userActual.setSaldo(userActual.getSaldo() + bj.getAposta() * 2);
         } else if (totalJugador < totalDealer) {
-            btmTornar.setVisible(true);
-            lblInfo.setText("Has perdut");
+            lblInfo.setText("HAS PERDUT");
         } else {
-            lblInfo.setText("Empat");
-            btmTornar.setVisible(true);
+            lblInfo.setText("EMPAT");
             userActual.setSaldo(userActual.getSaldo() + bj.getAposta());
         }
+        btmTornarOn();
         updateSaldo(userActual.getId(), userActual.getSaldo());
         saldo();
 
         guardarPartidaBlackjack(userActual.getNom(), totalJugador, totalDealer, guanyat);
 
+    }
+
+    public void cartaOFF() {
+        jPanel2.setEnabled(false);
+        lblCarta1.setText("");
+        lblCarta2.setText("");
+        lblCarta3.setText("");
+        lblCarta4.setText("");
+        lblCarta5.setText("");
+        lblCarta6.setText("");
+        lblCarta7.setText("");
+        lblCarta8.setText("");
+        lblCarta9.setText("");
+        lblCarta1.setIcon(null);
+        lblCarta2.setIcon(null);
+        lblCarta3.setIcon(null);
+        lblCarta4.setIcon(null);
+        lblCarta5.setIcon(null);
+        lblCarta6.setIcon(null);
+        lblCarta7.setIcon(null);
+        lblCarta8.setIcon(null);
+        lblCarta9.setIcon(null);
+
+    }
+
+    public void cartaImg() {
+
+        JLabel[] cartes = {
+            lblCarta1,
+            lblCarta2,
+            lblCarta3,
+            lblCarta4,
+            lblCarta5,
+            lblCarta6,
+            lblCarta7,
+            lblCarta8,
+            lblCarta9
+
+        };
+        for (int i = 0; i < bj.getCartesJugador().size(); i++) {
+
+            int cart = bj.getCartesJugador().get(i);
+
+            ImageIcon icono = null;
+
+            switch (cart) {
+                case 1:
+                    icono = new ImageIcon(getClass().getResource("/Images/1.png"));
+                    break;
+                case 2:
+                    icono = new ImageIcon(getClass().getResource("/Images/2.png"));
+                    break;
+                case 3:
+                    icono = new ImageIcon(getClass().getResource("/Images/3.png"));
+                    break;
+                case 4:
+                    icono = new ImageIcon(getClass().getResource("/Images/4.png"));
+                    break;
+                case 5:
+                    icono = new ImageIcon(getClass().getResource("/Images/5.png"));
+                    break;
+                case 6:
+                    icono = new ImageIcon(getClass().getResource("/Images/6.png"));
+                    break;
+                case 7:
+                    icono = new ImageIcon(getClass().getResource("/Images/7.png"));
+                    break;
+                case 8:
+                    icono = new ImageIcon(getClass().getResource("/Images/8.png"));
+                    break;
+                case 9:
+                    icono = new ImageIcon(getClass().getResource("/Images/9.png"));
+                    break;
+                case 10:
+                    icono = new ImageIcon(getClass().getResource("/Images/10.png"));
+                    break;
+                case 11:
+                    icono = new ImageIcon(getClass().getResource("/Images/11.png"));
+                    break;
+                default:
+                    icono = null;
+                    break;
+            }
+
+            cartes[i].setIcon(icono);
+        }
     }
 
     public static void main(String args[]) {
@@ -358,10 +631,24 @@ public class frmBlackjack extends javax.swing.JFrame {
     private javax.swing.JButton btmMenu;
     private javax.swing.JButton btmPlantar1;
     private javax.swing.JButton btmTornar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLayeredPane jLayeredPane2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel lblCarta1;
+    private javax.swing.JLabel lblCarta2;
+    private javax.swing.JLabel lblCarta3;
+    private javax.swing.JLabel lblCarta4;
+    private javax.swing.JLabel lblCarta5;
+    private javax.swing.JLabel lblCarta6;
+    private javax.swing.JLabel lblCarta7;
+    private javax.swing.JLabel lblCarta8;
+    private javax.swing.JLabel lblCarta9;
     private javax.swing.JLabel lblDealer;
     private javax.swing.JLabel lblInfo;
     private javax.swing.JLabel lblSaldo;
-    private javax.swing.JLabel lblSuma;
+    private javax.swing.JLabel lblSum;
     private javax.swing.JTextField txtApo;
     // End of variables declaration//GEN-END:variables
 }

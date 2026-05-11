@@ -230,7 +230,7 @@ public class frmTragaperras extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btmini, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btmSeguir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btmSeguir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(302, Short.MAX_VALUE))
         );
 
@@ -247,6 +247,7 @@ public class frmTragaperras extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "La aposta ha de ser major que 0");
             aposta = 0.0;
             Aposta();
+            btmsOn();
             return;
         }
 
@@ -254,6 +255,7 @@ public class frmTragaperras extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "No tens saldo");
             aposta = 0.0;
             Aposta();
+            btmsOn();
             return;
         }
 
@@ -267,7 +269,7 @@ public class frmTragaperras extends javax.swing.JFrame {
         tp = new jocTrragaperras(aposta, "Tragaperras");
         tp.girar();
         System.out.println(tp.toString());
-            lblInfo.setText("");
+        lblInfo.setText("");
 
         javax.swing.Timer timer1 = new javax.swing.Timer(2000, e -> {
             lbl1.setText(tp.getS1());

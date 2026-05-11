@@ -112,7 +112,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btmini" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="btmSeguir" alignment="3" max="32767" attributes="0"/>
+                  <Component id="btmSeguir" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="302" max="32767" attributes="0"/>
           </Group>
