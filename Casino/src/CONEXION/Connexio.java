@@ -16,7 +16,7 @@ public class Connexio {
     public Connection connectar() {
         String url = "jdbc:mysql://localhost:3306/casino";
         String user = "root";
-        String password = "Nico1234";
+        String password = "Marti";
         
         Connection con = null;
         try (Connection conn = DriverManager.getConnection(url, user, password)) {

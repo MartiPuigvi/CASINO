@@ -63,7 +63,7 @@ public class frmBlackjack extends javax.swing.JFrame {
         estils.estilbuto(btmIniPartida);
         estils.estilbuto(btmTornar);
         estils.estilbuto(btmCarta);
-        estils.estilbuto(btmPlantar1);
+        estils.estilbuto(btmPlantar);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
@@ -109,12 +109,12 @@ public class frmBlackjack extends javax.swing.JFrame {
 
     private void btmJocOff() {
         btmCarta.setVisible(false);
-        btmPlantar1.setVisible(false);
+        btmPlantar.setVisible(false);
     }
 
     private void btmJocOn() {
         btmCarta.setVisible(true);
-        btmPlantar1.setVisible(true);
+        btmPlantar.setVisible(true);
     }
 
     private void btmTornarOn() {
@@ -129,9 +129,7 @@ public class frmBlackjack extends javax.swing.JFrame {
         @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
-            // Carga la imagen
-            ImageIcon img = new ImageIcon(getClass().getResource("/Images/i.jpg"));
-            // La dibuja escalada al tamaño del panel
+            ImageIcon img = new ImageIcon(getClass().getResource("/Images/fons_blackjack.jpg"));
             g.drawImage(img.getImage(), 0, 0, getWidth(), getHeight(), this);
         }
     };
@@ -146,7 +144,7 @@ public class frmBlackjack extends javax.swing.JFrame {
     private void initComponents() {
 
         btmCarta = new javax.swing.JButton();
-        btmPlantar1 = new javax.swing.JButton();
+        btmPlantar = new javax.swing.JButton();
         btmMenu = new javax.swing.JButton();
         jLayeredPane2 = new javax.swing.JLayeredPane();
         lblCarta2 = new javax.swing.JLabel();
@@ -187,15 +185,15 @@ public class frmBlackjack extends javax.swing.JFrame {
         });
         getContentPane().add(btmCarta, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 310, 190, 70));
 
-        btmPlantar1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
-        btmPlantar1.setText("🖐️PLANTAR");
-        btmPlantar1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btmPlantar1.addActionListener(new java.awt.event.ActionListener() {
+        btmPlantar.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
+        btmPlantar.setText("🖐️PLANTAR");
+        btmPlantar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btmPlantar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmPlantar1ActionPerformed(evt);
+                btmPlantarActionPerformed(evt);
             }
         });
-        getContentPane().add(btmPlantar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 310, 190, 70));
+        getContentPane().add(btmPlantar, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 310, 190, 70));
 
         btmMenu.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         btmMenu.setText("☰ MENU");
@@ -297,7 +295,7 @@ public class frmBlackjack extends javax.swing.JFrame {
         lblInfo.setToolTipText("");
         lblInfo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
         jLayeredPane2.setLayer(lblInfo, 500);
-        jLayeredPane2.add(lblInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 440, 180));
+        jLayeredPane2.add(lblInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 440, 180));
 
         getContentPane().add(jLayeredPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 480, 1920, 550));
 
@@ -363,7 +361,7 @@ public class frmBlackjack extends javax.swing.JFrame {
         }
         bj.cartaJugador(carta);
         escriureLog(userActual.getNom() + " ha demanat carta: " + carta);
-        btmPlantar1.setVisible(true);
+        btmPlantar.setVisible(true);
 
         System.out.println(bj.toString());
         totalJugador = 0;
@@ -417,7 +415,7 @@ public class frmBlackjack extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btmIniPartidaActionPerformed
 
-    private void btmPlantar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmPlantar1ActionPerformed
+    private void btmPlantarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmPlantarActionPerformed
         btmJocOff();
         JPanel2ON();
         if (bj == null) {
@@ -448,7 +446,7 @@ public class frmBlackjack extends javax.swing.JFrame {
         }
 
         finals();
-    }//GEN-LAST:event_btmPlantar1ActionPerformed
+    }//GEN-LAST:event_btmPlantarActionPerformed
 
     private void btmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmMenuActionPerformed
         /* frmMenu s = new frmMenu();
@@ -647,7 +645,7 @@ public class frmBlackjack extends javax.swing.JFrame {
     private javax.swing.JButton btmCarta;
     private javax.swing.JButton btmIniPartida;
     private javax.swing.JButton btmMenu;
-    private javax.swing.JButton btmPlantar1;
+    private javax.swing.JButton btmPlantar;
     private javax.swing.JButton btmTornar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLayeredPane jLayeredPane2;

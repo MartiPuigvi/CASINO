@@ -13,6 +13,7 @@ import static CONEXION.Queries.addUser;
 import static CONEXION.Queries.delUser;
 import static CONEXION.Queries.usuariAaraylist;
 import static CONTROLER.GestioFitxers.tornarMenuAdmin;
+import static CONTROLER.GestioLog.escriureLog;
 
 /**
  *
@@ -165,7 +166,7 @@ public class frmUsers extends javax.swing.JFrame {
             }
         });
 
-        btmMenu.setText("jButton1");
+        btmMenu.setText("MENU");
         btmMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmMenuActionPerformed(evt);
@@ -277,6 +278,8 @@ public class frmUsers extends javax.swing.JFrame {
 
     private void btmAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmAddActionPerformed
         // TODO add your handling code here:
+        escriureLog("Admin: Preparant formulari per afegir nou usuari");
+
         lblId.setVisible(true);
         lblNom.setVisible(true);
         lblPass.setVisible(true);
@@ -328,6 +331,8 @@ public class frmUsers extends javax.swing.JFrame {
 
                         modUser(idActual, nom, email, pass, edat, saldo);
 
+                        escriureLog("Admin: Usuari modificat (ID: " + idActual + ", Nom: " + nom + ")");
+
                         trobat = true;
                         break;
                     }
@@ -336,7 +341,7 @@ public class frmUsers extends javax.swing.JFrame {
 
             if (!trobat) {
                 addUser(nom, pass, email, edat, saldo);
-
+                escriureLog("Admin: Nou usuari creat directament (Nom: " + nom + ")");
                 txtId.setText("");
                 txtNom.setText("");
                 txtPass.setText("");
@@ -363,6 +368,7 @@ public class frmUsers extends javax.swing.JFrame {
             omplirTaulaUsers();
 
         } catch (Exception e) {
+            escriureLog("Admin: Error en guardar usuari (Format de dades incorrecte)");
             javax.swing.JOptionPane.showMessageDialog(null, "Error: Revisa que els nmeros i la data estiguin b.");
         }
 
@@ -389,8 +395,11 @@ public class frmUsers extends javax.swing.JFrame {
 
         if (fila != -1) {
             int id = (int) tblUsers.getValueAt(fila, 0);
+            String nomEliminat = tblUsers.getValueAt(fila, 1).toString();
 
             delUser(id);
+            
+            escriureLog("Admin: Usuari eliminat (ID: " + id + ", Nom: " + nomEliminat + ")");
 
             Users.clear();
             usuariAaraylist();
@@ -453,6 +462,7 @@ public class frmUsers extends javax.swing.JFrame {
     private void btmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmMenuActionPerformed
         tornarMenuAdmin();
         this.dispose();
+        escriureLog("Admin: Tancant gestió d'usuaris i tornant al menú");
 
 // TODO add your handling code here:
     }//GEN-LAST:event_btmMenuActionPerformed
