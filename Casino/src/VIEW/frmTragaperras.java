@@ -9,11 +9,16 @@ import static CONEXION.Queries.guardarPartidaTragaperras;
 import static CONEXION.Queries.historialTragaperras;
 import static CONEXION.Queries.updateSaldo;
 import static CONTROLER.Casino.userActual;
+import static CONTROLER.GestioFitxers.tornarMenuClient;
 import CONTROLER.GestioLog;
 import static CONTROLER.GestioLog.escriureLog;
 import MODEL.jocTrragaperras;
+import java.awt.Graphics;
 import java.util.Random;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -30,16 +35,23 @@ public class frmTragaperras extends javax.swing.JFrame {
      * Creates new form frmTragaperras
      */
     public frmTragaperras() {
+        this.setUndecorated(true);
+                this.setContentPane(Fondo);
+        Fondo.setLayout(null);
+
         initComponents();
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
+
         GestioLog.escriureLog(userActual + " esta jugant al Tragaperras");
         lblInfo.setFont(new java.awt.Font("Segoe UI Emoji", 12, 12));
         lbl2.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
         lbl3.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
         lbl1.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
         btmSeguir.setVisible(false);
-
+        imgOff();
         saldo();
         Aposta();
+        //jLabel2.setIcon(null);
     }
 
     public void saldo() {
@@ -78,6 +90,27 @@ public class frmTragaperras extends javax.swing.JFrame {
 
     }
 
+    private void imgOff() {
+        lbl1.setText("");
+        lbl2.setText("");
+        lbl3.setText("");
+        lbl1.setIcon(null);
+        lbl2.setIcon(null);
+        lbl3.setIcon(null);
+    }
+
+        JPanel Fondo = new JPanel() {
+        @Override
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            // Carga la imagen
+            ImageIcon img = new ImageIcon(getClass().getResource("/Images/fondo.png"));
+            // La dibuja escalada al tamaño del panel
+            g.drawImage(img.getImage(), 0, 0, getWidth(), getHeight(), this);
+        }
+    };
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -87,8 +120,8 @@ public class frmTragaperras extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl2 = new javax.swing.JLabel();
         lbl1 = new javax.swing.JLabel();
+        lbl2 = new javax.swing.JLabel();
         lbl3 = new javax.swing.JLabel();
         btmini = new javax.swing.JButton();
         btm20 = new javax.swing.JButton();
@@ -101,14 +134,20 @@ public class frmTragaperras extends javax.swing.JFrame {
         lblSaldo2 = new javax.swing.JLabel();
         btmSeguir = new javax.swing.JButton();
         lblInfo = new javax.swing.JLabel();
+        btmMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lbl1.setBackground(new java.awt.Color(255, 255, 255));
+        lbl1.setToolTipText("");
+        getContentPane().add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 480, 210, 174));
 
         lbl2.setToolTipText("");
-
-        lbl1.setToolTipText("");
+        getContentPane().add(lbl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 480, 210, 174));
 
         lbl3.setToolTipText("");
+        getContentPane().add(lbl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 480, 210, 174));
 
         btmini.setText("btmini");
         btmini.addActionListener(new java.awt.event.ActionListener() {
@@ -116,6 +155,7 @@ public class frmTragaperras extends javax.swing.JFrame {
                 btminiActionPerformed(evt);
             }
         });
+        getContentPane().add(btmini, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 80, 100, 40));
 
         btm20.setText("btm20");
         btm20.addActionListener(new java.awt.event.ActionListener() {
@@ -123,6 +163,7 @@ public class frmTragaperras extends javax.swing.JFrame {
                 btm20ActionPerformed(evt);
             }
         });
+        getContentPane().add(btm20, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 40, -1, -1));
 
         btm50.setText("btm50");
         btm50.addActionListener(new java.awt.event.ActionListener() {
@@ -130,6 +171,7 @@ public class frmTragaperras extends javax.swing.JFrame {
                 btm50ActionPerformed(evt);
             }
         });
+        getContentPane().add(btm50, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, -1, -1));
 
         btm100.setText("btm100");
         btm100.addActionListener(new java.awt.event.ActionListener() {
@@ -137,6 +179,7 @@ public class frmTragaperras extends javax.swing.JFrame {
                 btm100ActionPerformed(evt);
             }
         });
+        getContentPane().add(btm100, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 40, -1, -1));
 
         btm200.setText("btm200");
         btm200.addActionListener(new java.awt.event.ActionListener() {
@@ -144,6 +187,7 @@ public class frmTragaperras extends javax.swing.JFrame {
                 btm200ActionPerformed(evt);
             }
         });
+        getContentPane().add(btm200, new org.netbeans.lib.awtextra.AbsoluteConstraints(252, 40, -1, -1));
 
         btm500.setText("btm500");
         btm500.addActionListener(new java.awt.event.ActionListener() {
@@ -151,6 +195,10 @@ public class frmTragaperras extends javax.swing.JFrame {
                 btm500ActionPerformed(evt);
             }
         });
+        getContentPane().add(btm500, new org.netbeans.lib.awtextra.AbsoluteConstraints(342, 40, -1, -1));
+        getContentPane().add(lblAposta, new org.netbeans.lib.awtextra.AbsoluteConstraints(1145, 123, 147, 23));
+        getContentPane().add(lblSaldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(555, 30, 116, 33));
+        getContentPane().add(lblSaldo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1145, 82, 80, 23));
 
         btmSeguir.setText("btmSeguir");
         btmSeguir.addActionListener(new java.awt.event.ActionListener() {
@@ -158,99 +206,30 @@ public class frmTragaperras extends javax.swing.JFrame {
                 btmSeguirActionPerformed(evt);
             }
         });
+        getContentPane().add(btmSeguir, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 82, 115, 40));
+        getContentPane().add(lblInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(826, 30, 313, 38));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(125, 125, 125)
-                        .addComponent(lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbl3, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(102, 102, 102)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblSaldo2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblAposta, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btm20)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btm50)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btm100)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btm200)
-                        .addGap(18, 18, 18)
-                        .addComponent(btm500)
-                        .addGap(141, 141, 141)
-                        .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(145, 145, 145)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btmini, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btmSeguir, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(lblInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(195, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btm20)
-                            .addComponent(btm50)
-                            .addComponent(btm100)
-                            .addComponent(btm200)
-                            .addComponent(btm500)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(2, 2, 2)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblSaldo2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblAposta, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbl3, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btmini, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btmSeguir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(302, Short.MAX_VALUE))
-        );
+        btmMenu.setText("MENU");
+        btmMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmMenuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btmMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 75, 143, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btminiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btminiActionPerformed
+        imgOff();
 
-        lbl1.setText("");
-        lbl3.setText("");
-        lbl2.setText("");
         btmsoff();
         if (aposta <= 0) {
             JOptionPane.showMessageDialog(null, "La aposta ha de ser major que 0");
             aposta = 0.0;
             Aposta();
             escriureLog(userActual.getNom() + " ha intentat jugar sense apostar.");
+            btmsOn();
             return;
         }
 
@@ -259,6 +238,7 @@ public class frmTragaperras extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "No tens saldo");
             aposta = 0.0;
             Aposta();
+            btmsOn();
             return;
         }
 
@@ -276,19 +256,22 @@ public class frmTragaperras extends javax.swing.JFrame {
         lblInfo.setText("");
 
         javax.swing.Timer timer1 = new javax.swing.Timer(2000, e -> {
-            lbl1.setText(tp.getS1());
+            // lbl1.setText(tp.getS1());
+            iconaImg(lbl1, tp.getS1());
         });
         timer1.setRepeats(false);
         timer1.start();
 
         javax.swing.Timer timer2 = new javax.swing.Timer(4000, e -> {
-            lbl2.setText(tp.getS2());
+            // lbl2.setText(tp.getS2());
+            iconaImg(lbl2, tp.getS2());
         });
         timer2.setRepeats(false);
         timer2.start();
 
         javax.swing.Timer timer3 = new javax.swing.Timer(6000, e -> {
-            lbl3.setText(tp.getS3());
+            // lbl3.setText(tp.getS3());
+            iconaImg(lbl3, tp.getS3());
             win();
             btmsOn();
 
@@ -331,6 +314,7 @@ public class frmTragaperras extends javax.swing.JFrame {
     }//GEN-LAST:event_btm500ActionPerformed
 
     private void btmSeguirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmSeguirActionPerformed
+        imgOff();
         aposta = 0.0;
         btmApostaOn();
         btmini.setEnabled(true);
@@ -340,6 +324,13 @@ public class frmTragaperras extends javax.swing.JFrame {
         lblInfo.setText("");
 
     }//GEN-LAST:event_btmSeguirActionPerformed
+
+    private void btmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmMenuActionPerformed
+        tornarMenuClient();
+        this.dispose();
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_btmMenuActionPerformed
 
     private void win() {
 
@@ -379,6 +370,31 @@ public class frmTragaperras extends javax.swing.JFrame {
         saldo();
     }
 
+    public void iconaImg(JLabel label, String simbol) {
+
+        ImageIcon icono = null;
+
+        switch (simbol) {
+            case "🍒":
+                icono = new ImageIcon(getClass().getResource("/Images/cer.png"));
+                break;
+
+            case "🍋":
+                icono = new ImageIcon(getClass().getResource("/Images/lim.png"));
+                break;
+
+            case "⭐":
+                icono = new ImageIcon(getClass().getResource("/Images/star.png"));
+                break;
+
+            case "💎":
+                icono = new ImageIcon(getClass().getResource("/Images/dia.png"));
+                break;
+        }
+
+        label.setIcon(icono);
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -410,6 +426,7 @@ public class frmTragaperras extends javax.swing.JFrame {
     private javax.swing.JButton btm200;
     private javax.swing.JButton btm50;
     private javax.swing.JButton btm500;
+    private javax.swing.JButton btmMenu;
     private javax.swing.JButton btmSeguir;
     private javax.swing.JButton btmini;
     private javax.swing.JLabel lbl1;
