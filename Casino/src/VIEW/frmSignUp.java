@@ -4,7 +4,11 @@
  */
 package VIEW;
 
+import static CONTROLER.Casino.Admins;
+import static CONTROLER.Casino.Users;
 import CONTROLER.GestioLog;
+import MODEL.Admin;
+import MODEL.Usuari;
 
 /**
  *
@@ -144,6 +148,27 @@ public class frmSignUp extends javax.swing.JFrame {
         if (nom.isEmpty() || pass.isEmpty() || email.isEmpty() || age.isEmpty()) {
             javax.swing.JOptionPane.showMessageDialog(this, "Siusplau, omple tots els camps.");
             return;
+        }
+
+        for (Usuari u : Users) {
+            if (u.getNom().equals(nom)) {
+                javax.swing.JOptionPane.showMessageDialog(this, "nom incorrecte");
+                return;
+            }
+
+            if (u.getEmail().equals(email)) {
+                javax.swing.JOptionPane.showMessageDialog(this, "correu");
+                return;
+            }
+
+        }
+
+        for (Admin u : Admins) {
+            if (u.getNom().equals(nom)) {
+                javax.swing.JOptionPane.showMessageDialog(this, "nom admin");
+                return;
+            }
+
         }
 
         CONEXION.Queries.signUp(nom, pass, email, age);

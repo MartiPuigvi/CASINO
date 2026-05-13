@@ -40,7 +40,7 @@ public class Casino {
      */
     public static String url = "jdbc:mysql://localhost:3306/casino";
     public static String user = "root";
-    public static String password = "Marti";
+    public static String password = "Nico1234";
     public static String rutaFitxerLogActual;
     public static ArrayList<Usuari> Users = new ArrayList<Usuari>();
     public static ArrayList<Admin> Admins = new ArrayList<Admin>();
@@ -59,6 +59,8 @@ public class Casino {
             UIManager.put("defaultFont", new Font("Segoe UI", Font.PLAIN, 13));
             UIManager.put("Button.arc", 999);
             UIManager.put("Component.arc", 12);
+            
+            
 
         } catch (Exception e) {
             e.printStackTrace();
