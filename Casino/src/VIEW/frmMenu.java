@@ -6,6 +6,8 @@ package VIEW;
 
 import static CONTROLER.Casino.userActual;
 import CONTROLER.GestioLog;
+import java.awt.Graphics;
+import javax.swing.JPanel;
 
 /**
  *
@@ -14,12 +16,13 @@ import CONTROLER.GestioLog;
 public class frmMenu extends javax.swing.JFrame {
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(frmMenu.class.getName());
+    private java.awt.Image imatgeFons = new javax.swing.ImageIcon(getClass().getResource("/Images/fons_menu.png")).getImage();
 
     /**
      * Creates new form frmMenu
      */
     public frmMenu(boolean admin) {
-        /*System.out.println(userActual.toString());*/
+        this.setContentPane(crearPanellFons());
         initComponents();
 
         if (admin) {
@@ -27,16 +30,34 @@ public class frmMenu extends javax.swing.JFrame {
             btmBlackJack.setVisible(false);
             btmRuleta.setVisible(false);
             btmTragaPerras.setVisible(false);
+            btmHistorial.setVisible(true);
 
         } else {
             saldo();
             btmConf.setVisible(false);
+            btmHistorial.setVisible(false);
+
         }
 
     }
 
     public void saldo() {
         lblSaldo.setText(String.valueOf(userActual.getSaldo()));
+    }
+
+    private javax.swing.JPanel crearPanellFons() {
+        javax.swing.JPanel panell = new javax.swing.JPanel() {
+            @Override
+            protected void paintComponent(java.awt.Graphics g) {
+                super.paintComponent(g);
+                if (imatgeFons != null) {
+                    // El truc és fer servir getWidth() i getHeight() del panell
+                    // per estirar la imatge segons la mida de la finestra
+                    g.drawImage(imatgeFons, 0, 0, getWidth(), getHeight(), this);
+                }
+            }
+        };
+        return panell;
     }
 
     /**
@@ -53,25 +74,39 @@ public class frmMenu extends javax.swing.JFrame {
         btmTragaPerras = new javax.swing.JButton();
         lblSaldo = new javax.swing.JLabel();
         btmConf = new javax.swing.JButton();
-        brmHistorial = new javax.swing.JButton();
+        btmHistorial = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btmBlackJack.setText("BLACKJACK");
+        btmBlackJack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/bj_menu.png"))); // NOI18N
+        btmBlackJack.setBorder(null);
+        btmBlackJack.setBorderPainted(false);
+        btmBlackJack.setContentAreaFilled(false);
+        btmBlackJack.setMaximumSize(new java.awt.Dimension(586, 347));
+        btmBlackJack.setMinimumSize(new java.awt.Dimension(586, 347));
+        btmBlackJack.setPreferredSize(new java.awt.Dimension(586, 347));
         btmBlackJack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmBlackJackActionPerformed(evt);
             }
         });
 
-        btmRuleta.setText("RULETA");
+        btmRuleta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/rule_menu.png"))); // NOI18N
+        btmRuleta.setBorderPainted(false);
+        btmRuleta.setContentAreaFilled(false);
+        btmRuleta.setMinimumSize(new java.awt.Dimension(508, 337));
         btmRuleta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmRuletaActionPerformed(evt);
             }
         });
 
-        btmTragaPerras.setText("TRAGA PERRASS");
+        btmTragaPerras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/tp_menu.png"))); // NOI18N
+        btmTragaPerras.setBorderPainted(false);
+        btmTragaPerras.setContentAreaFilled(false);
+        btmTragaPerras.setMaximumSize(new java.awt.Dimension(586, 347));
+        btmTragaPerras.setMinimumSize(new java.awt.Dimension(586, 347));
+        btmTragaPerras.setPreferredSize(new java.awt.Dimension(586, 347));
         btmTragaPerras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmTragaPerrasActionPerformed(evt);
@@ -85,10 +120,10 @@ public class frmMenu extends javax.swing.JFrame {
             }
         });
 
-        brmHistorial.setText("HISTORIAL PARTIDES");
-        brmHistorial.addActionListener(new java.awt.event.ActionListener() {
+        btmHistorial.setText("HISTORIAL PARTIDES");
+        btmHistorial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                brmHistorialActionPerformed(evt);
+                btmHistorialActionPerformed(evt);
             }
         });
 
@@ -97,50 +132,51 @@ public class frmMenu extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(brmHistorial)
-                        .addGap(18, 18, 18)
-                        .addComponent(btmConf))
+                        .addGap(639, 639, 639)
+                        .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btmBlackJack, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btmRuleta, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btmTragaPerras, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(29, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64))
+                        .addGap(41, 41, 41)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btmBlackJack, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(476, 476, 476)
+                                .addComponent(btmTragaPerras, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(595, 595, 595)
+                                .addComponent(btmConf))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(433, 433, 433)
+                                .addComponent(btmHistorial))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(244, 244, 244)
+                                .addComponent(btmRuleta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(41, 41, 41))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(lblSaldo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 158, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btmTragaPerras, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btmBlackJack, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btmRuleta, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(66, 66, 66)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btmConf)
-                    .addComponent(brmHistorial))
-                .addGap(40, 40, 40))
+                .addGap(61, 61, 61)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btmBlackJack, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(btmTragaPerras, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(293, 293, 293)
+                        .addComponent(btmConf))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(293, 293, 293)
+                        .addComponent(btmHistorial))
+                    .addComponent(btmRuleta, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(44, 44, 44))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btmBlackJackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmBlackJackActionPerformed
-        frmBlackjack f = new frmBlackjack();
-        f.setVisible(true);
-        this.dispose();
-// TODO add your handling code here:
-    }//GEN-LAST:event_btmBlackJackActionPerformed
 
     private void btmConfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmConfActionPerformed
         // TODO add your handling code here:
@@ -164,12 +200,19 @@ public class frmMenu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btmTragaPerrasActionPerformed
 
-    private void brmHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brmHistorialActionPerformed
+    private void btmHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmHistorialActionPerformed
         // TODO add your handling code here:
         frmHistorial h = new frmHistorial();
         h.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_brmHistorialActionPerformed
+    }//GEN-LAST:event_btmHistorialActionPerformed
+
+    private void btmBlackJackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmBlackJackActionPerformed
+        frmBlackjack f = new frmBlackjack();
+        f.setVisible(true);
+        this.dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btmBlackJackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,10 +239,11 @@ public class frmMenu extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(() -> new frmMenu(false).setVisible(true));
     }
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton brmHistorial;
     private javax.swing.JButton btmBlackJack;
     private javax.swing.JButton btmConf;
+    private javax.swing.JButton btmHistorial;
     private javax.swing.JButton btmRuleta;
     private javax.swing.JButton btmTragaPerras;
     private javax.swing.JLabel lblSaldo;

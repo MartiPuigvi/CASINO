@@ -1,0 +1,81 @@
+12:57:00	Programa iniciat
+12:57:00	Login iniciat
+12:57:03	Signup iniciat
+12:57:33	mike ha estat registrat al sistema
+12:57:33	Login iniciat
+12:57:37	Usuari mike ha iniciat sesio al sistema
+12:57:44	Usuari{id=9, nom=mike, email=mikepancho@gmail.com, Contrasenya=1234, edat=2006-11-02, Saldo=500.0} esta jugant al Tragaperras
+12:58:08	Programa iniciat
+12:58:08	Login iniciat
+12:58:14	Usuari mike ha iniciat sesio al sistema
+12:58:15	Usuari{id=9, nom=mike, email=mikepancho@gmail.com, Contrasenya=1234, edat=2006-11-02, Saldo=300.0} esta jugant a la Ruleta
+12:59:07	Programa iniciat
+12:59:08	Login iniciat
+12:59:11	Admin marti ha iniciat sesio al sistema
+12:59:34	Programa iniciat
+12:59:35	Login iniciat
+12:59:40	Admin marti ha iniciat sesio al sistema
+01:00:01	Programa iniciat
+01:00:01	Login iniciat
+01:00:04	Usuari mike ha iniciat sesio al sistema
+01:01:12	Programa iniciat
+01:01:12	Login iniciat
+01:01:28	Usuari mike ha iniciat sesio al sistema
+01:01:31	Usuari{id=9, nom=mike, email=mikepancho@gmail.com, Contrasenya=1234, edat=2006-11-02, Saldo=10000.0} esta jugant a Blackjack
+01:01:35	Usuari{id=9, nom=mike, email=mikepancho@gmail.com, Contrasenya=1234, edat=2006-11-02, Saldo=9000.0} ha apostat: 1000.0
+01:01:36	mike ha demanat carta: 2
+01:01:39	mike ha demanat carta: 8
+01:01:41	mike ha demanat carta: 9
+01:01:43	mike es planta amb un total de: 19
+01:01:43	Dealer ha tret carta: 9
+01:01:43	Dealer ha tret carta: 7
+01:01:43	Dealer ha tret carta: 5
+01:01:43	Final Blackjack: mike perd per punts. Dealer: 21 - Jugador: 19
+01:01:49	Usuari{id=9, nom=mike, email=mikepancho@gmail.com, Contrasenya=1234, edat=2006-11-02, Saldo=8000.0} ha apostat: 1000.0
+01:01:50	mike ha demanat carta: 3
+01:01:51	mike es planta amb un total de: 3
+01:01:51	Dealer ha tret carta: 8
+01:01:51	Dealer ha tret carta: 1
+01:01:51	Dealer ha tret carta: 10
+01:01:51	Final Blackjack: mike perd per punts. Dealer: 19 - Jugador: 3
+01:01:53	Usuari{id=9, nom=mike, email=mikepancho@gmail.com, Contrasenya=1234, edat=2006-11-02, Saldo=7000.0} ha apostat: 1000.0
+01:01:54	mike ha demanat carta: 5
+01:01:54	mike ha demanat carta: 3
+01:01:55	mike ha demanat carta: 11
+01:01:56	mike es planta amb un total de: 19
+01:01:56	Dealer ha tret carta: 8
+01:01:56	Dealer ha tret carta: 2
+01:01:56	Dealer ha tret carta: 7
+01:01:56	Dealer ha tret carta: 4
+01:01:56	Final Blackjack: mike perd per punts. Dealer: 21 - Jugador: 19
+01:02:00	Usuari{id=9, nom=mike, email=mikepancho@gmail.com, Contrasenya=1234, edat=2006-11-02, Saldo=6000.0} ha apostat: 1000.0
+01:02:01	mike ha demanat carta: 6
+01:02:02	mike ha demanat carta: 11
+01:02:02	mike ha demanat carta: 5
+01:02:02	mike s'ha passat de 21 amb un total de: 22
+01:02:05	Usuari{id=9, nom=mike, email=mikepancho@gmail.com, Contrasenya=1234, edat=2006-11-02, Saldo=5000.0} ha apostat: 1000.0
+01:02:06	mike ha demanat carta: 8
+01:02:06	mike ha demanat carta: 9
+01:02:12	mike ha demanat carta: 3
+01:02:13	mike es planta amb un total de: 20
+01:02:13	Dealer ha tret carta: 3
+01:02:13	Dealer ha tret carta: 2
+01:02:13	Dealer ha tret carta: 1
+01:02:13	Dealer ha tret carta: 11
+01:02:13	Dealer ha tret carta: 3
+01:02:13	Final Blackjack: mike empata. Dealer: 20 - Jugador: 20
+01:02:18	Usuari{id=9, nom=mike, email=mikepancho@gmail.com, Contrasenya=1234, edat=2006-11-02, Saldo=5000.0} ha apostat: 1000.0
+01:02:19	mike ha demanat carta: 5
+01:02:19	mike ha demanat carta: 9
+01:02:20	mike ha demanat carta: 9
+01:02:20	mike s'ha passat de 21 amb un total de: 23
+01:02:21	Usuari{id=9, nom=mike, email=mikepancho@gmail.com, Contrasenya=1234, edat=2006-11-02, Saldo=4000.0} ha apostat: 1000.0
+01:02:22	mike ha demanat carta: 4
+01:02:22	mike ha demanat carta: 3
+01:02:23	mike ha demanat carta: 7
+01:02:24	mike ha demanat carta: 7
+01:02:24	mike es planta amb un total de: 21
+01:02:24	Dealer ha tret carta: 4
+01:02:24	Dealer ha tret carta: 9
+01:02:24	Dealer ha tret carta: 5
+01:02:24	Final Blackjack: mike guanya per punts. Dealer: 18 - Jugador: 21

@@ -10,6 +10,7 @@ import static CONEXION.Queries.updateSaldo;
 import static CONTROLER.Casino.userActual;
 import CONTROLER.GestioLog;
 import static CONTROLER.GestioFitxers.tornarMenuClient;
+import static CONTROLER.GestioLog.escriureLog;
 import CONTROLER.estils;
 import MODEL.jocBlackjack;
 import java.awt.Color;
@@ -48,6 +49,7 @@ public class frmBlackjack extends javax.swing.JFrame {
         estils.border(jPanel3);
 
         saldo();
+        escriureLog(userActual + " esta jugant a Blackjack");
         cartaOFF();
         GestioLog.escriureLog(userActual + " esta jugant a Blackjack");
 
@@ -359,6 +361,7 @@ public class frmBlackjack extends javax.swing.JFrame {
             carta = random.nextInt(10) + 2;
         }
         bj.cartaJugador(carta);
+        escriureLog(userActual.getNom() + " ha demanat carta: " + carta);
         btmPlantar1.setVisible(true);
 
         System.out.println(bj.toString());
@@ -372,6 +375,7 @@ public class frmBlackjack extends javax.swing.JFrame {
         if (totalJugador > 21) {
             lblInfo.setText("T'HAS PASSAT");
             btmJocOff();
+            escriureLog(userActual.getNom() + " s'ha passat de 21 amb un total de: " + totalJugador);
             btmTornarOn();
         }
 
@@ -419,7 +423,7 @@ public class frmBlackjack extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "No has iniciat partida");
             return;
         }
-
+        escriureLog(userActual.getNom() + " es planta amb un total de: " + totalJugador);
         Random random = new Random();
 
         while (totalDealer < 18) {
@@ -432,7 +436,7 @@ public class frmBlackjack extends javax.swing.JFrame {
                 carta = random.nextInt(11) + 1;
             }
             bj.cartaDealer(carta);
-
+            escriureLog("Dealer ha tret carta: " + carta);
             totalDealer = 0;
             for (int c : bj.getCartesDealer()) {
                 totalDealer += c;
@@ -500,15 +504,27 @@ public class frmBlackjack extends javax.swing.JFrame {
         boolean guanyat = false;
         if (totalDealer > 21) {
             lblInfo.setText("HAS GUANYAT");
+            guanyat = true;
+            btmTornar.setVisible(true);
             userActual.setSaldo(userActual.getSaldo() + bj.getAposta() * 2);
+            escriureLog("Final Blackjack: " + userActual.getNom() + " guanya (Dealer s'ha passat). Dealer: " + totalDealer + " - Jugador: " + totalJugador);
+        
         } else if (totalJugador > totalDealer) {
+            btmTornar.setVisible(true);
             lblInfo.setText("HAS GUANYAT");
+            guanyat = true;
             userActual.setSaldo(userActual.getSaldo() + bj.getAposta() * 2);
+            escriureLog("Final Blackjack: " + userActual.getNom() + " guanya per punts. Dealer: " + totalDealer + " - Jugador: " + totalJugador);
+        
         } else if (totalJugador < totalDealer) {
-            lblInfo.setText("HAS PERDUT");
+            btmTornar.setVisible(true);
+            lblInfo.setText("Has perdut");
+            escriureLog("Final Blackjack: " + userActual.getNom() + " perd per punts. Dealer: " + totalDealer + " - Jugador: " + totalJugador);
+        
         } else {
             lblInfo.setText("EMPAT");
             userActual.setSaldo(userActual.getSaldo() + bj.getAposta());
+            escriureLog("Final Blackjack: " + userActual.getNom() + " empata. Dealer: " + totalDealer + " - Jugador: " + totalJugador);
         }
         btmTornarOn();
         updateSaldo(userActual.getId(), userActual.getSaldo());

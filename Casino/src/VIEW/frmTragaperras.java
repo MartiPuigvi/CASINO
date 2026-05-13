@@ -7,9 +7,11 @@ package VIEW;
 import CONEXION.Queries;
 import static CONEXION.Queries.guardarPartidaTragaperras;
 import static CONEXION.Queries.historialTragaperras;
+import static CONEXION.Queries.updateSaldo;
 import static CONTROLER.Casino.userActual;
 import static CONTROLER.GestioFitxers.tornarMenuClient;
 import CONTROLER.GestioLog;
+import static CONTROLER.GestioLog.escriureLog;
 import MODEL.jocTrragaperras;
 import java.awt.Graphics;
 import java.util.Random;
@@ -41,6 +43,7 @@ public class frmTragaperras extends javax.swing.JFrame {
         this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
 
         GestioLog.escriureLog(userActual + " esta jugant al Tragaperras");
+        lblInfo.setFont(new java.awt.Font("Segoe UI Emoji", 12, 12));
         lbl2.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
         lbl3.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
         lbl1.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
@@ -225,11 +228,13 @@ public class frmTragaperras extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "La aposta ha de ser major que 0");
             aposta = 0.0;
             Aposta();
+            escriureLog(userActual.getNom() + " ha intentat jugar sense apostar.");
             btmsOn();
             return;
         }
 
         if (userActual.getSaldo() < aposta) {
+            escriureLog(userActual.getNom() + " no té saldo suficient per apostar " + aposta);
             JOptionPane.showMessageDialog(null, "No tens saldo");
             aposta = 0.0;
             Aposta();
@@ -237,8 +242,9 @@ public class frmTragaperras extends javax.swing.JFrame {
             return;
         }
 
+        escriureLog(userActual.getNom() + " realitza una aposta de " + aposta);
         userActual.setSaldo(userActual.getSaldo() - aposta);
-        Queries.updateSaldo(userActual.getId(), userActual.getSaldo());
+        updateSaldo(userActual.getId(), userActual.getSaldo());
 
         saldo();
         Aposta();
@@ -332,18 +338,22 @@ public class frmTragaperras extends javax.swing.JFrame {
 
         if (tp.getS1().equals(tp.getS2()) && tp.getS2().equals(tp.getS3())) {
             userActual.setSaldo(userActual.getSaldo() + tp.getAposta() * 20);
-            lblInfo.setText("Has gauanyat per trio " + aposta * 20);
-            tipusGuanyador = "Trio";
-
+            String simbolTrio = tp.getS1();
+            lblInfo.setText("Has gauanyat per trio " + simbolTrio + " " + aposta * 20);
+            tipusGuanyador = "Trio de " + simbolTrio;
+            escriureLog(userActual.getNom() + " ha guanyat un TRIO de " + simbolTrio + ". Premi: " + (aposta * 20));
+            
         } else if (tp.getS1().equals(tp.getS2()) || tp.getS1().equals(tp.getS3()) || tp.getS2().equals(tp.getS3())) {
             userActual.setSaldo(userActual.getSaldo() + tp.getAposta() * 2);
-            tipusGuanyador = "Parella";
-
-            lblInfo.setText("Has gauanyat per parella " + aposta * 2);
+            String simbolParella = (tp.getS1().equals(tp.getS2()) || tp.getS1().equals(tp.getS3())) ? tp.getS1() : tp.getS2();
+            tipusGuanyador = "Parella de " + simbolParella;
+            lblInfo.setText("Has gauanyat per parella de " + simbolParella + "  " + aposta * 2);
+            escriureLog(userActual.getNom() + " ha guanyat una PARELLA de " + simbolParella + ". Premi: " + (aposta * 2));
 
         } else {
             lblInfo.setText("Has perdut");
             tipusGuanyador = "Perdut";
+            escriureLog(userActual.getNom() + " ha perdut la jugada.");
 
         }
 

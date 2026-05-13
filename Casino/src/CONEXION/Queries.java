@@ -96,19 +96,23 @@ public class Queries {
     public static void signUp(String username, String pass, String email, String age) {
         String sql = "INSERT INTO user (username, password, email, age) VALUES (?, ?, ?, ?)";
 
+        java.time.format.DateTimeFormatter formatter = java.time.format.DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
         try (Connection conn = DriverManager.getConnection(url, user, password); java.sql.PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 
+            java.time.LocalDate dataLocal = java.time.LocalDate.parse(age.trim(), formatter);
+            
             ps.setString(1, username);
             ps.setString(2, pass);
             ps.setString(3, email);
-            ps.setDate(4, java.sql.Date.valueOf(age));
+            ps.setDate(4, java.sql.Date.valueOf(dataLocal));
 
             ps.executeUpdate();
 
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
                 int idGenerat = rs.getInt(1);
-                Users.add(new Usuari(idGenerat, username, email, pass, java.time.LocalDate.parse(age), 500.0
+                Users.add(new Usuari(idGenerat, username, email, pass, dataLocal, 500.0
                 ));
             }
 
