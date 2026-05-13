@@ -55,8 +55,32 @@ public class estils {
             pressedBorderColor: #D4AF37;
         """);
 
-button.setFocusPainted(false);
+        button.setFocusPainted(false);
     }
 
     
+    public static void borderTp(JPanel panel) {
+        // Configuraciones básicas
+        panel.setOpaque(false);
+        panel.setBorder(null);
+
+        panel.setBorder(new AbstractBorder() {
+            @Override
+            public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
+                Graphics2D g2 = (Graphics2D) g.create();
+                g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+                // Fondo Negro Redondeado (puedes cambiar el 40 por otro número para la curva)
+g2.setColor(new Color(25, 0, 35));
+g2.fillRoundRect(x, y, width, height, 40, 40);
+
+                // Borde Dorado
+                g2.setColor(new Color(212, 175, 55));
+                g2.setStroke(new BasicStroke(3));
+                g2.drawRoundRect(x + 1, y + 1, width - 2, height - 2, 40, 40);
+
+                g2.dispose();
+            }
+        });
+    }
 }
