@@ -363,7 +363,7 @@ public class frmUsers extends javax.swing.JFrame {
             omplirTaulaUsers();
 
         } catch (Exception e) {
-            javax.swing.JOptionPane.showMessageDialog(null, "Error: Revisa que els números i la data estiguin bé.");
+            javax.swing.JOptionPane.showMessageDialog(null, "Error: Revisa que els nmeros i la data estiguin b.");
         }
 
     }//GEN-LAST:event_btmSaveActionPerformed

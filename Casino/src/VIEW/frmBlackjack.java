@@ -37,8 +37,8 @@ public class frmBlackjack extends javax.swing.JFrame {
      */
     public frmBlackjack() {
         this.setUndecorated(true);
-        this.setContentPane(panelFondo);
-        panelFondo.setLayout(null);
+        this.setContentPane(Fondo);
+        Fondo.setLayout(null);
 
         initComponents();
         this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
@@ -121,7 +121,8 @@ public class frmBlackjack extends javax.swing.JFrame {
     private void btmTornarOff() {
         btmTornar.setVisible(false);
     }
-    JPanel panelFondo = new JPanel() {
+    
+    JPanel Fondo = new JPanel() {
         @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
