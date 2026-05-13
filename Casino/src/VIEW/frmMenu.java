@@ -24,6 +24,7 @@ public class frmMenu extends javax.swing.JFrame {
     public frmMenu(boolean admin) {
         this.setContentPane(crearPanellFons());
         initComponents();
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
 
         if (admin) {
             btmConf.setVisible(true);

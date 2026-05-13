@@ -1,0 +1,1530 @@
+11:57:55	Programa iniciat
+11:57:55	Login iniciat
+11:58:32	Programa iniciat
+11:58:33	Login iniciat
+11:58:36	Usuari juan ha iniciat sesio al sistema
+11:58:42	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=355.0} esta jugant a la Ruleta
+11:58:45	Programa iniciat
+11:58:46	Login iniciat
+11:58:49	Usuari juan ha iniciat sesio al sistema
+11:59:45	Programa iniciat
+11:59:45	Login iniciat
+11:59:48	Usuari juan ha iniciat sesio al sistema
+12:03:44	Programa iniciat
+12:03:45	Login iniciat
+12:03:48	Usuari juan ha iniciat sesio al sistema
+12:03:49	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=355.0} esta jugant al Tragaperras
+12:03:51	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=355.0} esta jugant a Blackjack
+12:03:51	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=355.0} esta jugant a Blackjack
+12:03:53	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=354.0} ha apostat: 1.0
+12:03:53	juan ha demanat carta: 2
+12:03:55	juan es planta amb un total de: 2
+12:03:55	Dealer ha tret carta: 4
+12:03:55	Dealer ha tret carta: 2
+12:03:55	Dealer ha tret carta: 3
+12:03:55	Dealer ha tret carta: 4
+12:03:55	Dealer ha tret carta: 11
+12:03:55	Final Blackjack: juan guanya (Dealer s'ha passat). Dealer: 24 - Jugador: 2
+12:03:57	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=355.0} ha apostat: 1.0
+12:03:58	juan ha demanat carta: 7
+12:03:58	juan ha demanat carta: 11
+12:03:58	juan ha demanat carta: 6
+12:03:58	juan s'ha passat de 21 amb un total de: 24
+12:04:03	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=355.0} esta jugant a Blackjack
+12:04:03	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=355.0} esta jugant a Blackjack
+12:04:05	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=354.0} ha apostat: 1.0
+12:04:06	juan ha demanat carta: 3
+12:04:06	juan ha demanat carta: 11
+12:04:07	juan es planta amb un total de: 14
+12:04:07	Dealer ha tret carta: 5
+12:04:07	Dealer ha tret carta: 7
+12:04:07	Dealer ha tret carta: 3
+12:04:07	Dealer ha tret carta: 9
+12:04:07	Final Blackjack: juan guanya (Dealer s'ha passat). Dealer: 24 - Jugador: 14
+12:04:12	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=343.0} ha apostat: 13.0
+12:04:12	juan ha demanat carta: 6
+12:04:13	juan es planta amb un total de: 6
+12:04:13	Dealer ha tret carta: 7
+12:04:13	Dealer ha tret carta: 11
+12:04:13	Final Blackjack: juan perd per punts. Dealer: 18 - Jugador: 6
+12:04:58	Programa iniciat
+12:04:58	Login iniciat
+12:05:06	Usuari juan ha iniciat sesio al sistema
+12:05:07	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=343.0} esta jugant al Tragaperras
+12:05:11	juan realitza una aposta de 20.0
+12:05:17	juan ha perdut la jugada.
+12:05:26	Programa iniciat
+12:05:27	Login iniciat
+12:05:34	Admin nico ha iniciat sesio al sistema
+12:07:42	Programa iniciat
+12:07:42	Login iniciat
+12:07:44	Usuari juan ha iniciat sesio al sistema
+12:07:45	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=323.0} esta jugant al Tragaperras
+12:07:47	juan realitza una aposta de 20.0
+12:08:27	Programa iniciat
+12:08:27	Login iniciat
+12:08:32	Usuari juan ha iniciat sesio al sistema
+12:08:33	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=303.0} esta jugant al Tragaperras
+12:08:36	juan realitza una aposta de 20.0
+12:08:41	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=283.0} esta jugant al Tragaperras
+12:08:42	juan ha guanyat una PARELLA de 🍋. Premi: 40.0
+12:08:43	juan realitza una aposta de 20.0
+12:08:49	juan ha perdut la jugada.
+12:11:19	Programa iniciat
+12:11:19	Login iniciat
+12:11:21	Usuari juan ha iniciat sesio al sistema
+12:11:22	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=303.0} esta jugant al Tragaperras
+12:11:25	juan realitza una aposta de 200.0
+12:11:31	juan ha guanyat una PARELLA de 💎. Premi: 400.0
+12:11:50	Programa iniciat
+12:11:50	Login iniciat
+12:11:52	Usuari juan ha iniciat sesio al sistema
+12:11:53	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=103.0} esta jugant al Tragaperras
+12:11:56	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=103.0} esta jugant al Tragaperras
+12:11:57	juan realitza una aposta de 20.0
+12:12:09	Programa iniciat
+12:12:09	Login iniciat
+12:12:13	Usuari juan ha iniciat sesio al sistema
+12:12:14	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=83.0} esta jugant al Tragaperras
+12:12:17	juan realitza una aposta de 20.0
+12:12:23	juan ha perdut la jugada.
+12:13:00	Programa iniciat
+12:13:01	Login iniciat
+12:13:03	Usuari juan ha iniciat sesio al sistema
+12:13:04	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=63.0} esta jugant al Tragaperras
+12:13:06	juan realitza una aposta de 20.0
+12:13:11	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=43.0} esta jugant al Tragaperras
+12:13:12	juan ha perdut la jugada.
+12:13:12	juan realitza una aposta de 20.0
+12:13:16	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=23.0} esta jugant al Tragaperras
+12:13:18	juan ha intentat jugar sense apostar.
+12:13:18	juan ha perdut la jugada.
+12:13:19	juan realitza una aposta de 20.0
+12:13:23	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=3.0} esta jugant al Tragaperras
+12:13:24	juan no té saldo suficient per apostar 20.0
+12:13:25	juan ha perdut la jugada.
+12:13:31	Programa iniciat
+12:13:31	Login iniciat
+12:13:42	Admin nico ha iniciat sesio al sistema
+12:13:58	Programa iniciat
+12:13:58	Login iniciat
+12:14:00	Usuari juan ha iniciat sesio al sistema
+12:14:03	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1.0000003E7} esta jugant al Tragaperras
+12:14:06	juan realitza una aposta de 20.0
+12:14:09	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999983.0} esta jugant al Tragaperras
+12:14:11	juan ha intentat jugar sense apostar.
+12:14:12	juan ha guanyat una PARELLA de 💎. Premi: 40.0
+12:14:13	juan realitza una aposta de 20.0
+12:14:18	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1.0000003E7} esta jugant al Tragaperras
+12:14:19	juan ha perdut la jugada.
+12:14:20	juan ha intentat jugar sense apostar.
+12:14:21	juan realitza una aposta de 20.0
+12:14:27	juan ha guanyat una PARELLA de ⭐. Premi: 40.0
+12:14:28	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1.0000023E7} esta jugant al Tragaperras
+12:14:29	juan ha intentat jugar sense apostar.
+12:14:30	juan realitza una aposta de 20.0
+12:14:34	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1.0000003E7} esta jugant al Tragaperras
+12:14:36	juan realitza una aposta de 20.0
+12:14:36	juan ha perdut la jugada.
+12:14:39	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999983.0} esta jugant al Tragaperras
+12:14:41	juan ha intentat jugar sense apostar.
+12:14:42	juan ha guanyat una PARELLA de 🍋. Premi: 40.0
+12:14:42	juan realitza una aposta de 20.0
+12:14:49	Programa iniciat
+12:14:49	Login iniciat
+12:14:53	Usuari juan ha iniciat sesio al sistema
+12:16:00	Programa iniciat
+12:16:01	Login iniciat
+12:16:53	Programa iniciat
+12:16:53	Login iniciat
+12:16:56	Usuari juan ha iniciat sesio al sistema
+12:16:58	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1.0000003E7} esta jugant al Tragaperras
+12:16:59	juan realitza una aposta de 20.0
+12:17:13	Programa iniciat
+12:17:14	Login iniciat
+12:17:26	Usuari juan ha iniciat sesio al sistema
+12:17:27	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999983.0} esta jugant al Tragaperras
+12:17:29	juan realitza una aposta de 20.0
+12:17:39	Programa iniciat
+12:17:39	Login iniciat
+12:17:42	Usuari juan ha iniciat sesio al sistema
+12:17:43	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999963.0} esta jugant al Tragaperras
+12:17:45	juan realitza una aposta de 20.0
+12:17:54	Programa iniciat
+12:17:54	Login iniciat
+12:17:56	Usuari juan ha iniciat sesio al sistema
+12:17:57	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999943.0} esta jugant al Tragaperras
+12:17:59	juan realitza una aposta de 20.0
+12:18:08	Programa iniciat
+12:18:08	Login iniciat
+12:18:10	Usuari juan ha iniciat sesio al sistema
+12:18:10	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999923.0} esta jugant al Tragaperras
+12:18:12	juan realitza una aposta de 20.0
+12:18:25	Programa iniciat
+12:18:26	Login iniciat
+12:18:28	Usuari juan ha iniciat sesio al sistema
+12:18:29	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999903.0} esta jugant al Tragaperras
+12:18:31	juan realitza una aposta de 20.0
+12:18:40	Programa iniciat
+12:18:40	Login iniciat
+12:18:42	Usuari juan ha iniciat sesio al sistema
+12:18:42	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999883.0} esta jugant al Tragaperras
+12:18:44	juan realitza una aposta de 20.0
+12:18:47	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999863.0} esta jugant al Tragaperras
+12:18:49	juan realitza una aposta de 20.0
+12:18:50	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999843.0} esta jugant al Tragaperras
+12:18:51	juan realitza una aposta de 20.0
+12:18:52	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999823.0} esta jugant al Tragaperras
+12:18:53	juan realitza una aposta de 20.0
+12:18:55	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999803.0} esta jugant al Tragaperras
+12:18:55	juan realitza una aposta de 20.0
+12:18:59	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999783.0} esta jugant al Tragaperras
+12:19:00	juan realitza una aposta de 20.0
+12:19:01	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999763.0} esta jugant al Tragaperras
+12:19:02	juan realitza una aposta de 20.0
+12:19:03	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999743.0} esta jugant al Tragaperras
+12:19:04	juan realitza una aposta de 20.0
+12:19:13	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999723.0} esta jugant al Tragaperras
+12:19:14	juan realitza una aposta de 20.0
+12:19:16	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999703.0} esta jugant al Tragaperras
+12:19:17	juan realitza una aposta de 20.0
+12:19:20	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999683.0} esta jugant al Tragaperras
+12:19:20	juan realitza una aposta de 20.0
+12:19:22	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999663.0} esta jugant a Blackjack
+12:19:22	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999663.0} esta jugant a Blackjack
+12:19:23	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999663.0} esta jugant al Tragaperras
+12:19:24	juan realitza una aposta de 20.0
+12:19:25	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999643.0} esta jugant al Tragaperras
+12:19:26	juan realitza una aposta de 20.0
+12:19:27	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999623.0} esta jugant a Blackjack
+12:19:27	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999623.0} esta jugant a Blackjack
+12:19:28	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999623.0} esta jugant al Tragaperras
+12:19:29	juan realitza una aposta de 20.0
+12:19:31	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999603.0} esta jugant al Tragaperras
+12:19:33	juan ha intentat jugar sense apostar.
+12:19:33	juan realitza una aposta de 20.0
+12:20:51	Programa iniciat
+12:20:51	Login iniciat
+12:20:53	Usuari juan ha iniciat sesio al sistema
+12:20:54	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999583.0} esta jugant al Tragaperras
+12:20:56	juan realitza una aposta de 20.0
+12:21:10	Programa iniciat
+12:21:10	Login iniciat
+12:21:12	Usuari juan ha iniciat sesio al sistema
+12:21:13	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999563.0} esta jugant al Tragaperras
+12:21:14	juan realitza una aposta de 20.0
+12:21:18	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999543.0} esta jugant al Tragaperras
+12:21:20	juan realitza una aposta de 20.0
+12:21:27	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999523.0} esta jugant al Tragaperras
+12:21:29	juan ha intentat jugar sense apostar.
+12:21:31	juan realitza una aposta de 20.0
+12:22:11	Programa iniciat
+12:22:11	Login iniciat
+12:22:13	Usuari juan ha iniciat sesio al sistema
+12:22:14	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999503.0} esta jugant al Tragaperras
+12:22:16	juan realitza una aposta de 20.0
+12:22:40	Programa iniciat
+12:22:40	Login iniciat
+12:22:43	Usuari juan ha iniciat sesio al sistema
+12:22:43	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999483.0} esta jugant al Tragaperras
+12:22:45	juan realitza una aposta de 20.0
+12:22:48	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999463.0} esta jugant al Tragaperras
+12:22:49	juan realitza una aposta de 20.0
+12:22:53	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999443.0} esta jugant al Tragaperras
+12:22:54	juan ha intentat jugar sense apostar.
+12:22:56	juan realitza una aposta de 20.0
+12:23:34	Programa iniciat
+12:23:34	Login iniciat
+12:23:36	Usuari juan ha iniciat sesio al sistema
+12:23:37	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999423.0} esta jugant al Tragaperras
+12:23:39	juan realitza una aposta de 20.0
+12:23:39	juan ha perdut la jugada.
+12:23:44	juan ha intentat jugar sense apostar.
+12:23:46	juan realitza una aposta de 20.0
+12:23:46	juan ha guanyat una PARELLA de ⭐. Premi: 40.0
+12:23:47	juan realitza una aposta de 20.0
+12:23:47	juan ha guanyat una PARELLA de ⭐. Premi: 40.0
+12:23:47	juan realitza una aposta de 20.0
+12:23:47	juan ha perdut la jugada.
+12:23:48	juan realitza una aposta de 20.0
+12:23:48	juan ha guanyat una PARELLA de ⭐. Premi: 40.0
+12:23:49	juan realitza una aposta de 20.0
+12:23:49	juan ha guanyat una PARELLA de 🍒. Premi: 40.0
+12:23:50	juan realitza una aposta de 20.0
+12:23:50	juan ha perdut la jugada.
+12:23:51	juan realitza una aposta de 20.0
+12:23:51	juan ha perdut la jugada.
+12:23:54	juan realitza una aposta de 20.0
+12:23:54	juan ha perdut la jugada.
+12:23:56	juan realitza una aposta de 20.0
+12:23:56	juan ha perdut la jugada.
+12:24:59	Programa iniciat
+12:25:00	Login iniciat
+12:25:01	Usuari juan ha iniciat sesio al sistema
+12:25:02	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999383.0} esta jugant al Tragaperras
+12:25:04	juan realitza una aposta de 20.0
+12:25:04	juan ha perdut la jugada.
+12:25:04	juan realitza una aposta de 20.0
+12:25:04	juan ha perdut la jugada.
+12:25:06	juan realitza una aposta de 20.0
+12:25:06	juan ha guanyat una PARELLA de 🍋. Premi: 40.0
+12:25:08	juan realitza una aposta de 20.0
+12:25:08	juan ha perdut la jugada.
+12:26:29	Programa iniciat
+12:26:30	Login iniciat
+12:26:32	Usuari juan ha iniciat sesio al sistema
+12:26:33	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999343.0} esta jugant al Tragaperras
+12:26:34	juan realitza una aposta de 20.0
+12:26:34	juan ha guanyat una PARELLA de ⭐. Premi: 40.0
+12:26:35	juan realitza una aposta de 20.0
+12:26:35	juan ha perdut la jugada.
+12:26:35	juan realitza una aposta de 20.0
+12:26:35	juan ha guanyat una PARELLA de 🍒. Premi: 40.0
+12:26:36	juan realitza una aposta de 20.0
+12:26:36	juan ha guanyat una PARELLA de 💎. Premi: 40.0
+12:27:38	Programa iniciat
+12:27:38	Login iniciat
+12:27:41	Usuari juan ha iniciat sesio al sistema
+12:27:42	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999343.0} esta jugant al Tragaperras
+12:27:44	juan realitza una aposta de 20.0
+12:27:44	juan ha guanyat una PARELLA de 🍒. Premi: 40.0
+12:27:46	juan realitza una aposta de 20.0
+12:27:46	juan ha perdut la jugada.
+12:27:50	juan realitza una aposta de 20.0
+12:27:50	juan ha perdut la jugada.
+12:27:51	juan realitza una aposta de 20.0
+12:27:51	juan ha perdut la jugada.
+12:27:54	juan realitza una aposta de 20.0
+12:27:54	juan ha guanyat una PARELLA de ⭐. Premi: 40.0
+12:27:55	juan realitza una aposta de 20.0
+12:27:55	juan ha perdut la jugada.
+12:27:55	juan realitza una aposta de 20.0
+12:27:55	juan ha perdut la jugada.
+12:27:57	juan realitza una aposta de 20.0
+12:27:57	juan ha perdut la jugada.
+12:27:58	juan realitza una aposta de 20.0
+12:27:58	juan ha guanyat una PARELLA de 🍒. Premi: 40.0
+12:27:59	juan realitza una aposta de 20.0
+12:27:59	juan ha perdut la jugada.
+12:28:01	juan realitza una aposta de 20.0
+12:28:01	juan ha perdut la jugada.
+12:28:06	juan realitza una aposta de 20.0
+12:28:06	juan ha guanyat una PARELLA de 🍋. Premi: 40.0
+12:28:07	juan realitza una aposta de 20.0
+12:28:07	juan ha perdut la jugada.
+12:28:09	juan realitza una aposta de 20.0
+12:28:09	juan ha guanyat una PARELLA de 💎. Premi: 40.0
+12:28:12	juan realitza una aposta de 20.0
+12:28:12	juan ha perdut la jugada.
+12:28:34	Programa iniciat
+12:28:34	Login iniciat
+12:28:36	Usuari juan ha iniciat sesio al sistema
+12:28:37	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9999243.0} esta jugant al Tragaperras
+12:28:38	juan realitza una aposta de 20.0
+12:28:38	juan ha perdut la jugada.
+12:28:41	juan realitza una aposta de 20.0
+12:28:41	juan ha perdut la jugada.
+12:28:42	juan realitza una aposta de 20.0
+12:28:42	juan ha perdut la jugada.
+12:28:43	juan realitza una aposta de 20.0
+12:28:43	juan ha perdut la jugada.
+12:28:43	juan realitza una aposta de 20.0
+12:28:43	juan ha perdut la jugada.
+12:28:44	juan realitza una aposta de 20.0
+12:28:44	juan ha perdut la jugada.
+12:28:44	juan realitza una aposta de 20.0
+12:28:44	juan ha perdut la jugada.
+12:28:53	juan realitza una aposta de 20.0
+12:28:53	juan ha guanyat una PARELLA de 🍋. Premi: 40.0
+12:28:54	juan realitza una aposta de 20.0
+12:28:54	juan ha guanyat una PARELLA de 🍒. Premi: 40.0
+12:28:56	juan realitza una aposta de 20.0
+12:28:56	juan ha guanyat una PARELLA de 💎. Premi: 40.0
+12:28:57	juan realitza una aposta de 20.0
+12:28:57	juan ha perdut la jugada.
+12:28:57	juan realitza una aposta de 20.0
+12:28:57	juan ha guanyat una PARELLA de 💎. Premi: 40.0
+12:28:58	juan realitza una aposta de 20.0
+12:28:58	juan ha guanyat una PARELLA de 🍋. Premi: 40.0
+12:28:58	juan realitza una aposta de 20.0
+12:28:58	juan ha perdut la jugada.
+12:28:59	juan realitza una aposta de 20.0
+12:28:59	juan ha perdut la jugada.
+12:29:00	juan realitza una aposta de 20.0
+12:29:00	juan ha perdut la jugada.
+12:29:00	juan realitza una aposta de 20.0
+12:29:00	juan ha perdut la jugada.
+12:29:00	juan realitza una aposta de 20.0
+12:29:00	juan ha perdut la jugada.
+12:29:01	juan realitza una aposta de 20.0
+12:29:01	juan ha perdut la jugada.
+12:29:05	juan realitza una aposta de 20.0
+12:29:05	juan ha perdut la jugada.
+12:29:08	juan realitza una aposta de 20.0
+12:29:08	juan ha perdut la jugada.
+12:29:08	juan realitza una aposta de 20.0
+12:29:08	juan ha perdut la jugada.
+12:29:11	juan realitza una aposta de 20.0
+12:29:11	juan ha guanyat una PARELLA de 🍋. Premi: 40.0
+12:29:13	juan realitza una aposta de 20.0
+12:29:13	juan ha perdut la jugada.
+12:29:15	juan realitza una aposta de 20.0
+12:29:15	juan ha guanyat una PARELLA de 🍒. Premi: 40.0
+12:34:58	Programa iniciat
+12:34:58	Login iniciat
+12:35:01	Usuari juan ha iniciat sesio al sistema
+12:35:04	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant a Blackjack
+12:35:04	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant a Blackjack
+12:35:19	Programa iniciat
+12:35:19	Login iniciat
+12:35:21	Usuari juan ha iniciat sesio al sistema
+12:35:27	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant a Blackjack
+12:35:27	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant a Blackjack
+12:35:46	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant a Blackjack
+12:35:46	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant a Blackjack
+12:35:48	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:41:27	Programa iniciat
+12:41:27	Login iniciat
+12:41:30	Usuari juan ha iniciat sesio al sistema
+12:41:31	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:41:33	juan ha intentat jugar sense apostar.
+12:42:38	Programa iniciat
+12:42:38	Login iniciat
+12:42:40	Usuari juan ha iniciat sesio al sistema
+12:42:41	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:42:44	juan ha intentat jugar sense apostar.
+12:44:23	Programa iniciat
+12:44:24	Login iniciat
+12:44:25	Usuari juan ha iniciat sesio al sistema
+12:44:26	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:44:29	juan ha intentat jugar sense apostar.
+12:44:37	Programa iniciat
+12:44:37	Login iniciat
+12:44:40	Usuari juan ha iniciat sesio al sistema
+12:44:40	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:44:43	juan ha intentat jugar sense apostar.
+12:45:33	Programa iniciat
+12:45:33	Login iniciat
+12:45:35	Usuari juan ha iniciat sesio al sistema
+12:45:36	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:45:39	juan ha intentat jugar sense apostar.
+12:47:22	Programa iniciat
+12:47:23	Login iniciat
+12:47:25	Usuari juan ha iniciat sesio al sistema
+12:47:26	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:47:26	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:47:27	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:47:27	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:47:27	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:47:27	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:47:59	Programa iniciat
+12:48:00	Login iniciat
+12:48:01	Usuari juan ha iniciat sesio al sistema
+12:48:03	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:48:06	juan ha intentat jugar sense apostar.
+12:48:16	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:50:07	Programa iniciat
+12:50:08	Login iniciat
+12:50:13	Usuari juan ha iniciat sesio al sistema
+12:50:13	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:50:43	Programa iniciat
+12:50:43	Login iniciat
+12:50:48	Usuari juan ha iniciat sesio al sistema
+12:50:49	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:51:07	juan ha intentat jugar sense apostar.
+12:51:20	Programa iniciat
+12:51:21	Login iniciat
+12:51:23	Usuari juan ha iniciat sesio al sistema
+12:51:24	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:51:28	juan ha intentat jugar sense apostar.
+12:51:38	Programa iniciat
+12:51:38	Login iniciat
+12:51:40	Usuari juan ha iniciat sesio al sistema
+12:51:41	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:51:54	Programa iniciat
+12:51:54	Login iniciat
+12:51:57	Usuari juan ha iniciat sesio al sistema
+12:51:58	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:52:01	juan ha intentat jugar sense apostar.
+12:52:40	Programa iniciat
+12:52:41	Login iniciat
+12:52:47	Usuari juan ha iniciat sesio al sistema
+12:52:47	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:53:48	Programa iniciat
+12:53:49	Login iniciat
+12:53:51	Usuari juan ha iniciat sesio al sistema
+12:53:52	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998983.0} esta jugant al Tragaperras
+12:53:54	juan ha intentat jugar sense apostar.
+12:53:55	juan ha intentat jugar sense apostar.
+12:54:06	juan realitza una aposta de 20.0
+12:54:06	juan ha perdut la jugada.
+12:54:35	Programa iniciat
+12:54:35	Login iniciat
+12:54:39	Usuari juan ha iniciat sesio al sistema
+12:54:40	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998963.0} esta jugant al Tragaperras
+12:54:43	juan ha intentat jugar sense apostar.
+12:55:05	Programa iniciat
+12:55:05	Login iniciat
+12:55:07	Usuari juan ha iniciat sesio al sistema
+12:55:07	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998963.0} esta jugant al Tragaperras
+12:55:09	juan ha intentat jugar sense apostar.
+12:57:05	Programa iniciat
+12:57:06	Login iniciat
+12:57:09	Usuari juan ha iniciat sesio al sistema
+12:57:10	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998963.0} esta jugant al Tragaperras
+12:57:11	juan ha intentat jugar sense apostar.
+12:57:28	Programa iniciat
+12:57:28	Login iniciat
+12:57:30	Usuari juan ha iniciat sesio al sistema
+12:57:30	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998963.0} esta jugant al Tragaperras
+12:57:32	juan ha intentat jugar sense apostar.
+12:57:36	juan ha intentat jugar sense apostar.
+12:58:12	Programa iniciat
+12:58:13	Login iniciat
+12:58:15	Usuari juan ha iniciat sesio al sistema
+12:58:16	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998963.0} esta jugant al Tragaperras
+12:58:18	juan ha intentat jugar sense apostar.
+12:58:31	Programa iniciat
+12:58:31	Login iniciat
+12:58:33	Usuari juan ha iniciat sesio al sistema
+12:58:34	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998963.0} esta jugant al Tragaperras
+12:58:37	juan ha intentat jugar sense apostar.
+12:59:30	Programa iniciat
+12:59:30	Login iniciat
+12:59:32	Usuari juan ha iniciat sesio al sistema
+12:59:33	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998963.0} esta jugant a la Ruleta
+12:59:36	Programa iniciat
+12:59:36	Login iniciat
+12:59:38	Usuari juan ha iniciat sesio al sistema
+12:59:39	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998963.0} esta jugant al Tragaperras
+12:59:41	juan ha intentat jugar sense apostar.
+12:59:55	Programa iniciat
+12:59:56	Login iniciat
+12:59:57	Usuari juan ha iniciat sesio al sistema
+12:59:58	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998963.0} esta jugant al Tragaperras
+01:00:05	juan realitza una aposta de 50.0
+01:00:05	juan ha perdut la jugada.
+01:00:47	Programa iniciat
+01:00:47	Login iniciat
+01:00:49	Usuari juan ha iniciat sesio al sistema
+01:00:50	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998913.0} esta jugant al Tragaperras
+01:00:53	juan ha intentat jugar sense apostar.
+01:01:06	Programa iniciat
+01:01:06	Login iniciat
+01:01:09	Usuari juan ha iniciat sesio al sistema
+01:01:11	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998913.0} esta jugant al Tragaperras
+01:01:29	Programa iniciat
+01:01:30	Login iniciat
+01:01:40	Programa iniciat
+01:01:40	Login iniciat
+01:01:43	Usuari juan ha iniciat sesio al sistema
+01:01:44	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998913.0} esta jugant al Tragaperras
+01:01:51	juan ha intentat jugar sense apostar.
+01:01:54	juan ha intentat jugar sense apostar.
+01:01:56	juan ha intentat jugar sense apostar.
+01:02:04	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998913.0} esta jugant a Blackjack
+01:02:04	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998913.0} esta jugant a Blackjack
+01:03:24	Programa iniciat
+01:03:25	Login iniciat
+01:03:27	Usuari juan ha iniciat sesio al sistema
+01:03:28	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998913.0} esta jugant al Tragaperras
+01:03:31	juan ha intentat jugar sense apostar.
+01:04:51	Programa iniciat
+01:04:51	Login iniciat
+01:04:53	Usuari juan ha iniciat sesio al sistema
+01:04:56	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998913.0} esta jugant al Tragaperras
+01:04:58	juan ha intentat jugar sense apostar.
+01:05:28	Programa iniciat
+01:05:29	Login iniciat
+01:05:31	Usuari juan ha iniciat sesio al sistema
+01:05:32	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998913.0} esta jugant al Tragaperras
+01:05:35	juan ha intentat jugar sense apostar.
+01:09:09	Programa iniciat
+01:09:09	Login iniciat
+01:09:11	Usuari juan ha iniciat sesio al sistema
+01:09:12	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998913.0} esta jugant al Tragaperras
+01:09:17	juan ha intentat jugar sense apostar.
+01:09:24	juan ha intentat jugar sense apostar.
+01:09:26	juan ha intentat jugar sense apostar.
+01:09:31	juan realitza una aposta de 90.0
+01:09:31	juan ha perdut la jugada.
+01:09:34	juan realitza una aposta de 90.0
+01:09:34	juan ha guanyat una PARELLA de ⭐. Premi: 180.0
+01:09:35	juan realitza una aposta de 90.0
+01:09:35	juan ha perdut la jugada.
+01:09:35	juan realitza una aposta de 90.0
+01:09:35	juan ha perdut la jugada.
+01:09:36	juan realitza una aposta de 90.0
+01:09:36	juan ha perdut la jugada.
+01:09:37	juan realitza una aposta de 90.0
+01:09:37	juan ha perdut la jugada.
+01:09:38	juan realitza una aposta de 90.0
+01:09:38	juan ha guanyat una PARELLA de 🍋. Premi: 180.0
+01:09:38	juan realitza una aposta de 90.0
+01:09:38	juan ha perdut la jugada.
+01:09:53	Programa iniciat
+01:09:54	Login iniciat
+01:10:03	Usuari juan ha iniciat sesio al sistema
+01:10:05	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998553.0} esta jugant al Tragaperras
+01:10:09	juan ha intentat jugar sense apostar.
+01:10:22	Programa iniciat
+01:10:22	Login iniciat
+01:10:25	Usuari juan ha iniciat sesio al sistema
+01:10:28	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998553.0} esta jugant al Tragaperras
+01:10:40	juan ha intentat jugar sense apostar.
+01:10:42	juan realitza una aposta de 20.0
+01:10:42	juan ha perdut la jugada.
+01:10:43	juan realitza una aposta de 20.0
+01:10:43	juan ha perdut la jugada.
+01:10:44	juan realitza una aposta de 20.0
+01:10:44	juan ha perdut la jugada.
+01:10:45	juan realitza una aposta de 20.0
+01:10:45	juan ha perdut la jugada.
+01:10:45	juan realitza una aposta de 20.0
+01:10:45	juan ha guanyat una PARELLA de 🍒. Premi: 40.0
+01:10:46	juan realitza una aposta de 20.0
+01:10:46	juan ha guanyat una PARELLA de 🍋. Premi: 40.0
+01:10:47	juan realitza una aposta de 20.0
+01:10:47	juan ha perdut la jugada.
+01:10:48	juan realitza una aposta de 20.0
+01:10:48	juan ha perdut la jugada.
+01:10:48	juan realitza una aposta de 20.0
+01:10:48	juan ha guanyat una PARELLA de ⭐. Premi: 40.0
+01:10:49	juan realitza una aposta de 20.0
+01:10:49	juan ha perdut la jugada.
+01:11:14	juan realitza una aposta de 20.0
+01:11:14	juan ha perdut la jugada.
+01:11:15	juan realitza una aposta de 20.0
+01:11:15	juan ha perdut la jugada.
+01:11:18	juan realitza una aposta de 20.0
+01:11:18	juan ha perdut la jugada.
+01:11:19	juan realitza una aposta de 20.0
+01:11:19	juan ha guanyat una PARELLA de ⭐. Premi: 40.0
+01:11:19	juan realitza una aposta de 20.0
+01:11:19	juan ha perdut la jugada.
+01:11:21	juan realitza una aposta de 20.0
+01:11:21	juan ha perdut la jugada.
+01:11:22	juan realitza una aposta de 20.0
+01:11:22	juan ha perdut la jugada.
+01:11:23	juan realitza una aposta de 20.0
+01:11:23	juan ha guanyat una PARELLA de 🍋. Premi: 40.0
+01:11:24	juan realitza una aposta de 20.0
+01:11:24	juan ha perdut la jugada.
+01:11:25	juan realitza una aposta de 20.0
+01:11:25	juan ha perdut la jugada.
+01:11:27	juan realitza una aposta de 20.0
+01:11:27	juan ha perdut la jugada.
+01:11:28	juan realitza una aposta de 20.0
+01:11:28	juan ha perdut la jugada.
+01:12:21	Programa iniciat
+01:12:21	Login iniciat
+01:12:24	Usuari juan ha iniciat sesio al sistema
+01:12:25	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998313.0} esta jugant al Tragaperras
+01:12:27	juan ha intentat jugar sense apostar.
+01:12:31	juan realitza una aposta de 40.0
+01:12:31	juan ha guanyat una PARELLA de ⭐. Premi: 80.0
+01:12:33	juan realitza una aposta de 40.0
+01:12:33	juan ha perdut la jugada.
+01:12:34	juan realitza una aposta de 40.0
+01:12:34	juan ha guanyat una PARELLA de ⭐. Premi: 80.0
+01:12:35	juan realitza una aposta de 40.0
+01:12:35	juan ha perdut la jugada.
+01:12:35	juan realitza una aposta de 40.0
+01:12:35	juan ha guanyat una PARELLA de 🍋. Premi: 80.0
+01:12:36	juan realitza una aposta de 40.0
+01:12:36	juan ha guanyat una PARELLA de 🍒. Premi: 80.0
+01:12:37	juan realitza una aposta de 40.0
+01:12:37	juan ha perdut la jugada.
+01:12:39	juan realitza una aposta de 40.0
+01:12:39	juan ha perdut la jugada.
+01:12:41	juan realitza una aposta de 40.0
+01:12:41	juan ha perdut la jugada.
+01:12:42	juan realitza una aposta de 40.0
+01:12:42	juan ha perdut la jugada.
+01:12:43	juan realitza una aposta de 40.0
+01:12:43	juan ha perdut la jugada.
+01:12:44	juan realitza una aposta de 40.0
+01:12:44	juan ha perdut la jugada.
+01:12:47	juan realitza una aposta de 40.0
+01:12:47	juan ha perdut la jugada.
+01:12:47	juan realitza una aposta de 40.0
+01:12:47	juan ha perdut la jugada.
+01:12:48	juan realitza una aposta de 40.0
+01:12:48	juan ha perdut la jugada.
+01:12:48	juan realitza una aposta de 40.0
+01:12:48	juan ha guanyat una PARELLA de ⭐. Premi: 80.0
+01:12:54	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998073.0} esta jugant a Blackjack
+01:12:54	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9998073.0} esta jugant a Blackjack
+01:13:54	Programa iniciat
+01:13:55	Login iniciat
+01:13:57	Usuari juan ha iniciat sesio al sistema
+01:13:57	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9997993.0} esta jugant al Tragaperras
+01:14:00	juan realitza una aposta de 20.0
+01:14:00	juan ha guanyat una PARELLA de 🍋. Premi: 40.0
+01:15:05	Programa iniciat
+01:15:05	Login iniciat
+01:15:07	Usuari juan ha iniciat sesio al sistema
+01:15:10	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9997973.0} esta jugant al Tragaperras
+01:15:12	juan ha intentat jugar sense apostar.
+01:15:15	juan ha intentat jugar sense apostar.
+01:15:16	juan realitza una aposta de 20.0
+01:15:16	juan ha perdut la jugada.
+01:15:18	juan realitza una aposta de 20.0
+01:15:18	juan ha perdut la jugada.
+01:15:18	juan realitza una aposta de 20.0
+01:15:18	juan ha perdut la jugada.
+01:15:21	juan realitza una aposta de 20.0
+01:15:21	juan ha perdut la jugada.
+01:15:22	juan realitza una aposta de 20.0
+01:15:22	juan ha perdut la jugada.
+01:16:25	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9997873.0} esta jugant al Tragaperras
+01:16:30	juan realitza una aposta de 100.0
+01:16:30	juan ha perdut la jugada.
+01:16:37	juan realitza una aposta de 100.0
+01:16:37	juan ha perdut la jugada.
+01:16:41	juan realitza una aposta de 100.0
+01:16:41	juan ha guanyat una PARELLA de 🍋. Premi: 200.0
+01:16:42	juan realitza una aposta de 100.0
+01:16:42	juan ha perdut la jugada.
+01:16:49	juan realitza una aposta de 100.0
+01:16:49	juan ha perdut la jugada.
+01:16:55	juan realitza una aposta de 100.0
+01:16:55	juan ha guanyat una PARELLA de ⭐. Premi: 200.0
+01:16:56	juan realitza una aposta de 100.0
+01:16:56	juan ha perdut la jugada.
+01:16:57	juan realitza una aposta de 100.0
+01:16:57	juan ha perdut la jugada.
+01:16:57	juan realitza una aposta de 100.0
+01:16:57	juan ha perdut la jugada.
+01:16:58	juan realitza una aposta de 100.0
+01:16:58	juan ha guanyat una PARELLA de 🍋. Premi: 200.0
+01:17:02	juan realitza una aposta de 100.0
+01:17:02	juan ha perdut la jugada.
+01:17:05	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9997373.0} esta jugant a la Ruleta
+01:17:21	juan ha apostat 100.0€ a: 12
+01:17:28	juan ha apostat 100.0€ a: Vermell
+01:17:36	La bola ha caigut al número: 9 (Vermell)
+01:17:41	RESULTAT: juan ha guanyat 200.0€
+01:17:46	juan ha apostat 100.0€ a: Vermell
+01:17:54	La bola ha caigut al número: 1 (Vermell)
+01:17:55	RESULTAT: juan ha guanyat 200.0€
+01:21:11	Programa iniciat
+01:21:12	Login iniciat
+01:21:13	Usuari juan ha iniciat sesio al sistema
+01:21:14	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9997473.0} esta jugant al Tragaperras
+01:25:30	Programa iniciat
+01:25:31	Login iniciat
+01:25:33	Usuari juan ha iniciat sesio al sistema
+01:25:36	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9997473.0} esta jugant a Blackjack
+01:25:36	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9997473.0} esta jugant a Blackjack
+01:30:39	Programa iniciat
+01:30:40	Login iniciat
+01:30:42	Usuari juan ha iniciat sesio al sistema
+01:32:08	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9997473.0} esta jugant al Tragaperras
+01:32:20	Programa iniciat
+01:32:20	Login iniciat
+01:32:22	Usuari juan ha iniciat sesio al sistema
+01:32:23	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9997473.0} esta jugant al Tragaperras
+01:32:24	juan ha intentat jugar sense apostar.
+01:32:26	juan realitza una aposta de 20.0
+01:32:26	juan ha perdut la jugada.
+01:32:39	juan realitza una aposta de 20.0
+01:32:39	juan ha guanyat una PARELLA de 🍋. Premi: 40.0
+01:33:58	Programa iniciat
+01:33:58	Login iniciat
+01:34:00	Usuari juan ha iniciat sesio al sistema
+01:34:01	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9997433.0} esta jugant al Tragaperras
+01:34:03	juan realitza una aposta de 20.0
+01:34:04	juan ha perdut la jugada.
+01:34:37	Programa iniciat
+01:34:38	Login iniciat
+01:34:40	Usuari juan ha iniciat sesio al sistema
+01:34:42	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9997413.0} esta jugant al Tragaperras
+01:34:44	juan realitza una aposta de 20.0
+01:34:44	juan ha guanyat una PARELLA de ⭐. Premi: 40.0
+01:38:27	Programa iniciat
+01:38:27	Login iniciat
+01:38:37	Usuari juan ha iniciat sesio al sistema
+01:38:41	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9997393.0} esta jugant al Tragaperras
+01:38:46	juan realitza una aposta de 500.0
+01:38:46	juan ha perdut la jugada.
+01:38:52	juan ha intentat jugar sense apostar.
+01:38:53	juan realitza una aposta de 100.0
+01:38:53	juan ha perdut la jugada.
+01:38:56	juan realitza una aposta de 100.0
+01:38:56	juan ha perdut la jugada.
+01:38:57	juan realitza una aposta de 100.0
+01:38:57	juan ha perdut la jugada.
+01:38:58	juan realitza una aposta de 100.0
+01:38:58	juan ha perdut la jugada.
+01:38:59	juan realitza una aposta de 100.0
+01:38:59	juan ha perdut la jugada.
+01:39:00	juan realitza una aposta de 100.0
+01:39:00	juan ha guanyat una PARELLA de ⭐. Premi: 200.0
+01:39:11	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9996493.0} esta jugant a Blackjack
+01:39:11	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=9996493.0} esta jugant a Blackjack
+01:39:30	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8996893.0} ha apostat: 999600.0
+01:39:31	juan ha demanat carta: 5
+01:39:33	juan ha demanat carta: 2
+01:39:34	juan ha demanat carta: 3
+01:39:35	juan ha demanat carta: 3
+01:39:36	juan ha demanat carta: 6
+01:39:37	juan es planta amb un total de: 19
+01:39:37	Dealer ha tret carta: 2
+01:39:37	Dealer ha tret carta: 2
+01:39:37	Dealer ha tret carta: 7
+01:39:37	Dealer ha tret carta: 6
+01:39:37	Dealer ha tret carta: 4
+01:39:37	Final Blackjack: juan perd per punts. Dealer: 21 - Jugador: 19
+01:39:42	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997293.0} ha apostat: 999600.0
+01:39:43	juan ha demanat carta: 11
+01:39:45	juan ha demanat carta: 9
+01:39:45	juan es planta amb un total de: 20
+01:39:45	Dealer ha tret carta: 4
+01:39:45	Dealer ha tret carta: 7
+01:39:45	Dealer ha tret carta: 5
+01:39:45	Dealer ha tret carta: 4
+01:39:45	Final Blackjack: juan empata. Dealer: 20 - Jugador: 20
+01:39:49	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997293.0} ha apostat: 999600.0
+01:39:49	juan ha demanat carta: 7
+01:39:50	juan ha demanat carta: 7
+01:39:51	juan ha demanat carta: 10
+01:39:51	juan s'ha passat de 21 amb un total de: 24
+01:39:53	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=6997693.0} ha apostat: 999600.0
+01:39:53	juan ha demanat carta: 9
+01:39:54	juan ha demanat carta: 4
+01:39:54	juan ha demanat carta: 9
+01:39:54	juan s'ha passat de 21 amb un total de: 22
+01:39:56	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=5998093.0} ha apostat: 999600.0
+01:39:57	juan ha demanat carta: 7
+01:39:57	juan ha demanat carta: 3
+01:39:58	juan ha demanat carta: 6
+01:39:59	juan ha demanat carta: 2
+01:40:00	juan es planta amb un total de: 18
+01:40:00	Dealer ha tret carta: 10
+01:40:00	Dealer ha tret carta: 10
+01:40:00	Final Blackjack: juan perd per punts. Dealer: 20 - Jugador: 18
+01:40:02	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=4998493.0} ha apostat: 999600.0
+01:40:02	juan ha demanat carta: 8
+01:40:03	juan ha demanat carta: 11
+01:40:04	juan es planta amb un total de: 19
+01:40:04	Dealer ha tret carta: 2
+01:40:04	Dealer ha tret carta: 3
+01:40:04	Dealer ha tret carta: 7
+01:40:04	Dealer ha tret carta: 8
+01:40:04	Final Blackjack: juan perd per punts. Dealer: 20 - Jugador: 19
+01:40:07	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=3998893.0} ha apostat: 999600.0
+01:40:07	juan ha demanat carta: 8
+01:40:08	juan ha demanat carta: 6
+01:40:09	juan ha demanat carta: 3
+01:40:10	juan es planta amb un total de: 17
+01:40:10	Dealer ha tret carta: 8
+01:40:10	Dealer ha tret carta: 11
+01:40:10	Final Blackjack: juan perd per punts. Dealer: 19 - Jugador: 17
+01:40:12	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=2999293.0} ha apostat: 999600.0
+01:40:13	juan ha demanat carta: 6
+01:40:13	juan ha demanat carta: 2
+01:40:14	juan ha demanat carta: 2
+01:40:15	juan ha demanat carta: 8
+01:40:16	juan es planta amb un total de: 18
+01:40:16	Dealer ha tret carta: 4
+01:40:16	Dealer ha tret carta: 11
+01:40:16	Dealer ha tret carta: 10
+01:40:16	Final Blackjack: juan guanya (Dealer s'ha passat). Dealer: 25 - Jugador: 18
+01:40:18	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=3998893.0} ha apostat: 999600.0
+01:40:19	juan ha demanat carta: 3
+01:40:19	juan ha demanat carta: 4
+01:40:20	juan ha demanat carta: 8
+01:40:21	juan ha demanat carta: 4
+01:40:22	juan es planta amb un total de: 19
+01:40:22	Dealer ha tret carta: 4
+01:40:22	Dealer ha tret carta: 11
+01:40:22	Dealer ha tret carta: 10
+01:40:22	Final Blackjack: juan guanya (Dealer s'ha passat). Dealer: 25 - Jugador: 19
+01:40:24	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=4998493.0} ha apostat: 999600.0
+01:40:25	juan ha demanat carta: 10
+01:40:25	juan ha demanat carta: 8
+01:40:26	juan es planta amb un total de: 18
+01:40:26	Dealer ha tret carta: 1
+01:40:26	Dealer ha tret carta: 9
+01:40:26	Dealer ha tret carta: 2
+01:40:26	Dealer ha tret carta: 8
+01:40:26	Final Blackjack: juan perd per punts. Dealer: 20 - Jugador: 18
+01:40:31	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=3998893.0} ha apostat: 999600.0
+01:40:32	juan ha demanat carta: 3
+01:40:32	juan ha demanat carta: 8
+01:40:33	juan ha demanat carta: 10
+01:40:33	juan ha demanat carta: 2
+01:40:33	juan s'ha passat de 21 amb un total de: 23
+01:40:36	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=2999293.0} ha apostat: 999600.0
+01:40:37	juan ha demanat carta: 2
+01:40:37	juan ha demanat carta: 9
+01:40:37	juan ha demanat carta: 9
+01:40:38	juan es planta amb un total de: 20
+01:40:38	Dealer ha tret carta: 3
+01:40:38	Dealer ha tret carta: 10
+01:40:38	Dealer ha tret carta: 1
+01:40:38	Dealer ha tret carta: 5
+01:40:38	Final Blackjack: juan guanya per punts. Dealer: 19 - Jugador: 20
+01:40:41	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=3998893.0} ha apostat: 999600.0
+01:40:41	juan ha demanat carta: 9
+01:40:42	juan ha demanat carta: 9
+01:40:42	juan ha demanat carta: 1
+01:40:44	juan ha demanat carta: 4
+01:40:44	juan s'ha passat de 21 amb un total de: 23
+01:40:45	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=2999293.0} ha apostat: 999600.0
+01:40:45	juan ha demanat carta: 6
+01:40:46	juan ha demanat carta: 7
+01:40:46	juan ha demanat carta: 6
+01:40:47	juan ha demanat carta: 8
+01:40:47	juan s'ha passat de 21 amb un total de: 27
+01:40:48	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1999693.0} ha apostat: 999600.0
+01:40:49	juan ha demanat carta: 3
+01:40:49	juan ha demanat carta: 2
+01:40:49	juan ha demanat carta: 9
+01:40:50	juan ha demanat carta: 9
+01:40:50	juan s'ha passat de 21 amb un total de: 23
+01:40:51	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1000093.0} ha apostat: 999600.0
+01:40:51	juan ha demanat carta: 8
+01:40:52	juan ha demanat carta: 7
+01:40:52	juan ha demanat carta: 6
+01:40:53	juan es planta amb un total de: 21
+01:40:53	Dealer ha tret carta: 7
+01:40:53	Dealer ha tret carta: 8
+01:40:53	Dealer ha tret carta: 8
+01:40:53	Final Blackjack: juan guanya (Dealer s'ha passat). Dealer: 23 - Jugador: 21
+01:40:58	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1999693.0} ha apostat: 999600.0
+01:40:59	juan ha demanat carta: 6
+01:41:00	juan ha demanat carta: 10
+01:41:01	juan ha demanat carta: 5
+01:41:02	juan es planta amb un total de: 21
+01:41:02	Dealer ha tret carta: 5
+01:41:02	Dealer ha tret carta: 11
+01:41:02	Dealer ha tret carta: 2
+01:41:02	Final Blackjack: juan guanya per punts. Dealer: 18 - Jugador: 21
+01:41:04	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=2999293.0} ha apostat: 999600.0
+01:41:05	juan ha demanat carta: 9
+01:41:06	juan ha demanat carta: 2
+01:41:07	juan ha demanat carta: 3
+01:41:07	juan ha demanat carta: 6
+01:41:08	juan es planta amb un total de: 20
+01:41:08	Dealer ha tret carta: 11
+01:41:08	Dealer ha tret carta: 9
+01:41:08	Final Blackjack: juan empata. Dealer: 20 - Jugador: 20
+01:41:11	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=2999293.0} ha apostat: 999600.0
+01:41:11	juan ha demanat carta: 10
+01:41:13	juan ha demanat carta: 2
+01:41:13	juan ha demanat carta: 8
+01:41:14	juan es planta amb un total de: 20
+01:41:14	Dealer ha tret carta: 5
+01:41:14	Dealer ha tret carta: 10
+01:41:14	Dealer ha tret carta: 9
+01:41:14	Final Blackjack: juan guanya (Dealer s'ha passat). Dealer: 24 - Jugador: 20
+01:41:16	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=3998893.0} ha apostat: 999600.0
+01:41:17	juan ha demanat carta: 10
+01:41:18	juan ha demanat carta: 11
+01:41:19	juan es planta amb un total de: 21
+01:41:19	Dealer ha tret carta: 9
+01:41:19	Dealer ha tret carta: 5
+01:41:19	Dealer ha tret carta: 5
+01:41:19	Final Blackjack: juan guanya per punts. Dealer: 19 - Jugador: 21
+01:41:21	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=4998493.0} ha apostat: 999600.0
+01:41:23	juan ha demanat carta: 3
+01:41:24	juan ha demanat carta: 6
+01:41:25	juan ha demanat carta: 6
+01:41:25	juan ha demanat carta: 4
+01:41:26	juan es planta amb un total de: 19
+01:41:26	Dealer ha tret carta: 3
+01:41:26	Dealer ha tret carta: 11
+01:41:26	Dealer ha tret carta: 10
+01:41:26	Final Blackjack: juan guanya (Dealer s'ha passat). Dealer: 24 - Jugador: 19
+01:41:29	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=5998093.0} ha apostat: 999600.0
+01:41:29	juan ha demanat carta: 10
+01:41:30	juan ha demanat carta: 9
+01:41:31	juan es planta amb un total de: 19
+01:41:31	Dealer ha tret carta: 11
+01:41:31	Dealer ha tret carta: 7
+01:41:31	Final Blackjack: juan guanya per punts. Dealer: 18 - Jugador: 19
+08:55:17	Programa iniciat
+08:55:17	Login iniciat
+08:55:20	Usuari juan ha iniciat sesio al sistema
+08:55:21	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997293.0} esta jugant al Tragaperras
+08:55:37	Programa iniciat
+08:55:37	Login iniciat
+08:55:40	Usuari juan ha iniciat sesio al sistema
+08:55:41	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997293.0} esta jugant al Tragaperras
+08:57:17	Programa iniciat
+08:57:17	Login iniciat
+08:57:24	Usuari juan ha iniciat sesio al sistema
+08:57:25	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997293.0} esta jugant al Tragaperras
+08:57:41	juan ha intentat jugar sense apostar.
+08:57:43	juan realitza una aposta de 20.0
+08:57:43	juan ha perdut la jugada.
+08:59:54	Programa iniciat
+08:59:54	Login iniciat
+08:59:56	Usuari juan ha iniciat sesio al sistema
+08:59:57	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997273.0} esta jugant al Tragaperras
+09:00:44	Programa iniciat
+09:00:44	Login iniciat
+09:00:46	Usuari juan ha iniciat sesio al sistema
+09:00:47	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997273.0} esta jugant al Tragaperras
+09:02:29	Programa iniciat
+09:02:29	Login iniciat
+09:02:31	Usuari juan ha iniciat sesio al sistema
+09:02:32	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997273.0} esta jugant al Tragaperras
+09:02:40	juan ha intentat jugar sense apostar.
+09:02:52	Programa iniciat
+09:02:52	Login iniciat
+09:02:54	Usuari juan ha iniciat sesio al sistema
+09:02:55	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997273.0} esta jugant al Tragaperras
+09:03:00	juan realitza una aposta de 20.0
+09:03:00	juan ha guanyat una PARELLA de 💎. Premi: 40.0
+09:03:13	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997293.0} esta jugant al Tragaperras
+09:13:02	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997293.0} esta jugant al Tragaperras
+09:14:03	Programa iniciat
+09:14:04	Login iniciat
+09:14:06	Usuari juan ha iniciat sesio al sistema
+09:14:07	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997253.0} esta jugant al Tragaperras
+09:15:06	Programa iniciat
+09:15:06	Login iniciat
+09:15:11	Usuari juan ha iniciat sesio al sistema
+09:15:11	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997253.0} esta jugant al Tragaperras
+09:17:21	Programa iniciat
+09:17:22	Login iniciat
+09:17:24	Usuari juan ha iniciat sesio al sistema
+09:17:25	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997253.0} esta jugant al Tragaperras
+09:18:08	Programa iniciat
+09:18:09	Login iniciat
+09:18:11	Usuari juan ha iniciat sesio al sistema
+09:18:12	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997253.0} esta jugant al Tragaperras
+09:18:16	juan realitza una aposta de 20.0
+09:18:16	juan ha perdut la jugada.
+09:18:20	juan realitza una aposta de 20.0
+09:18:20	juan ha guanyat una PARELLA de ⭐. Premi: 40.0
+09:18:21	juan realitza una aposta de 20.0
+09:18:21	juan ha perdut la jugada.
+09:18:23	juan realitza una aposta de 20.0
+09:18:23	juan ha perdut la jugada.
+09:18:24	juan realitza una aposta de 20.0
+09:18:24	juan ha guanyat una PARELLA de 🍋. Premi: 40.0
+09:18:25	juan realitza una aposta de 20.0
+09:18:25	juan ha guanyat una PARELLA de 🍋. Premi: 40.0
+09:18:25	juan realitza una aposta de 20.0
+09:18:25	juan ha perdut la jugada.
+09:18:26	juan realitza una aposta de 20.0
+09:18:26	juan ha guanyat una PARELLA de ⭐. Premi: 40.0
+09:18:27	juan realitza una aposta de 20.0
+09:18:27	juan ha perdut la jugada.
+09:18:27	juan realitza una aposta de 20.0
+09:18:27	juan ha perdut la jugada.
+09:18:28	juan realitza una aposta de 20.0
+09:18:28	juan ha perdut la jugada.
+09:18:28	juan realitza una aposta de 20.0
+09:18:28	juan ha perdut la jugada.
+09:18:29	juan realitza una aposta de 20.0
+09:18:29	juan ha perdut la jugada.
+09:18:30	juan realitza una aposta de 20.0
+09:18:30	juan ha guanyat una PARELLA de 🍋. Premi: 40.0
+09:18:30	juan realitza una aposta de 20.0
+09:18:30	juan ha perdut la jugada.
+09:19:22	Programa iniciat
+09:19:22	Login iniciat
+09:19:24	Usuari juan ha iniciat sesio al sistema
+09:19:25	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997153.0} esta jugant al Tragaperras
+09:20:24	Programa iniciat
+09:20:25	Login iniciat
+09:20:26	Usuari juan ha iniciat sesio al sistema
+09:20:27	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997153.0} esta jugant al Tragaperras
+09:21:50	Programa iniciat
+09:21:51	Login iniciat
+09:22:16	Programa iniciat
+09:22:17	Login iniciat
+09:22:19	Usuari juan ha iniciat sesio al sistema
+09:22:19	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997153.0} esta jugant al Tragaperras
+09:22:24	juan realitza una aposta de 370.0
+09:22:24	juan ha perdut la jugada.
+09:22:27	juan ha intentat jugar sense apostar.
+09:24:42	Programa iniciat
+09:24:42	Login iniciat
+09:24:44	Usuari juan ha iniciat sesio al sistema
+09:24:45	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7996783.0} esta jugant al Tragaperras
+09:25:41	Programa iniciat
+09:25:41	Login iniciat
+09:26:07	Programa iniciat
+09:26:07	Login iniciat
+09:26:09	Usuari juan ha iniciat sesio al sistema
+09:26:10	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7996783.0} esta jugant al Tragaperras
+09:26:16	juan realitza una aposta de 200.0
+09:26:16	juan ha perdut la jugada.
+09:26:18	juan realitza una aposta de 200.0
+09:26:18	juan ha guanyat una PARELLA de 🍒. Premi: 400.0
+09:26:19	juan realitza una aposta de 200.0
+09:26:19	juan ha perdut la jugada.
+09:26:20	juan realitza una aposta de 200.0
+09:26:20	juan ha guanyat una PARELLA de ⭐. Premi: 400.0
+09:26:20	juan realitza una aposta de 200.0
+09:26:20	juan ha perdut la jugada.
+09:26:21	juan realitza una aposta de 200.0
+09:26:21	juan ha perdut la jugada.
+09:26:21	juan realitza una aposta de 200.0
+09:26:21	juan ha perdut la jugada.
+09:26:24	juan realitza una aposta de 200.0
+09:26:24	juan ha perdut la jugada.
+09:26:28	juan realitza una aposta de 200.0
+09:26:28	juan ha perdut la jugada.
+09:26:29	juan realitza una aposta de 200.0
+09:26:29	juan ha perdut la jugada.
+09:26:29	juan realitza una aposta de 200.0
+09:26:29	juan ha guanyat una PARELLA de 🍋. Premi: 400.0
+09:26:30	juan realitza una aposta de 200.0
+09:26:30	juan ha perdut la jugada.
+09:26:31	juan realitza una aposta de 200.0
+09:26:31	juan ha perdut la jugada.
+09:26:31	juan realitza una aposta de 200.0
+09:26:31	juan ha perdut la jugada.
+09:26:32	juan realitza una aposta de 200.0
+09:26:32	juan ha perdut la jugada.
+09:26:32	juan realitza una aposta de 200.0
+09:26:32	juan ha perdut la jugada.
+09:26:33	juan realitza una aposta de 200.0
+09:26:33	juan ha guanyat un TRIO de ⭐. Premi: 4000.0
+09:26:34	juan realitza una aposta de 200.0
+09:26:34	juan ha guanyat una PARELLA de 💎. Premi: 400.0
+09:26:35	juan realitza una aposta de 200.0
+09:26:35	juan ha perdut la jugada.
+09:26:36	juan realitza una aposta de 200.0
+09:26:36	juan ha guanyat una PARELLA de 🍋. Premi: 400.0
+09:26:36	juan realitza una aposta de 200.0
+09:26:36	juan ha perdut la jugada.
+09:27:40	Programa iniciat
+09:27:41	Login iniciat
+09:27:44	Usuari juan ha iniciat sesio al sistema
+09:27:45	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998583.0} esta jugant a Blackjack
+09:27:45	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998583.0} esta jugant a Blackjack
+09:30:16	Programa iniciat
+09:30:16	Login iniciat
+09:30:18	Usuari juan ha iniciat sesio al sistema
+09:30:19	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998583.0} esta jugant al Tragaperras
+09:33:51	Programa iniciat
+09:33:51	Login iniciat
+09:34:00	Programa iniciat
+09:34:00	Login iniciat
+09:34:02	Usuari juan ha iniciat sesio al sistema
+09:34:03	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998583.0} esta jugant al Tragaperras
+09:34:58	Programa iniciat
+09:34:59	Login iniciat
+09:35:01	Usuari juan ha iniciat sesio al sistema
+09:35:02	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998583.0} esta jugant al Tragaperras
+09:35:48	Programa iniciat
+09:35:48	Login iniciat
+09:35:50	Usuari juan ha iniciat sesio al sistema
+09:35:51	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998583.0} esta jugant al Tragaperras
+09:35:51	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998583.0} esta jugant al Tragaperras
+09:35:52	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998583.0} esta jugant al Tragaperras
+09:35:52	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998583.0} esta jugant al Tragaperras
+09:35:52	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998583.0} esta jugant al Tragaperras
+09:35:52	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998583.0} esta jugant al Tragaperras
+09:35:53	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998583.0} esta jugant al Tragaperras
+09:36:18	Programa iniciat
+09:36:18	Login iniciat
+09:36:20	Usuari juan ha iniciat sesio al sistema
+09:36:22	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998583.0} esta jugant al Tragaperras
+09:37:30	Programa iniciat
+09:37:31	Login iniciat
+09:37:32	Usuari juan ha iniciat sesio al sistema
+09:37:33	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998583.0} esta jugant al Tragaperras
+09:37:36	juan realitza una aposta de 200.0
+09:37:36	juan ha guanyat una PARELLA de 🍋. Premi: 400.0
+09:38:30	Programa iniciat
+09:38:30	Login iniciat
+09:38:32	Usuari juan ha iniciat sesio al sistema
+09:38:33	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998383.0} esta jugant al Tragaperras
+09:39:36	Programa iniciat
+09:39:37	Login iniciat
+09:39:38	Usuari juan ha iniciat sesio al sistema
+09:39:39	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998383.0} esta jugant al Tragaperras
+09:40:03	Programa iniciat
+09:40:03	Login iniciat
+09:40:05	Usuari juan ha iniciat sesio al sistema
+09:40:06	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998383.0} esta jugant al Tragaperras
+09:42:36	Programa iniciat
+09:42:36	Login iniciat
+09:42:38	Usuari juan ha iniciat sesio al sistema
+09:42:39	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998383.0} esta jugant al Tragaperras
+09:43:22	Programa iniciat
+09:43:23	Login iniciat
+09:43:25	Usuari juan ha iniciat sesio al sistema
+09:43:25	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7998383.0} esta jugant al Tragaperras
+09:43:33	juan realitza una aposta de 520.0
+09:43:33	juan ha perdut la jugada.
+09:45:45	Programa iniciat
+09:45:45	Login iniciat
+09:45:48	Usuari juan ha iniciat sesio al sistema
+09:45:49	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997863.0} esta jugant al Tragaperras
+09:46:08	Programa iniciat
+09:46:09	Login iniciat
+09:46:10	Usuari juan ha iniciat sesio al sistema
+09:46:11	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997863.0} esta jugant al Tragaperras
+09:49:07	Programa iniciat
+09:49:07	Login iniciat
+09:49:09	Usuari juan ha iniciat sesio al sistema
+09:49:09	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997863.0} esta jugant al Tragaperras
+09:50:50	Programa iniciat
+09:50:50	Login iniciat
+09:50:52	Usuari juan ha iniciat sesio al sistema
+09:50:53	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997863.0} esta jugant al Tragaperras
+09:51:07	Programa iniciat
+09:51:07	Login iniciat
+09:51:09	Usuari juan ha iniciat sesio al sistema
+09:51:09	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997863.0} esta jugant al Tragaperras
+09:51:29	Programa iniciat
+09:51:29	Login iniciat
+09:51:31	Usuari juan ha iniciat sesio al sistema
+09:51:32	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997863.0} esta jugant al Tragaperras
+09:51:55	Programa iniciat
+09:51:55	Login iniciat
+09:51:57	Usuari juan ha iniciat sesio al sistema
+09:51:57	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997863.0} esta jugant al Tragaperras
+09:52:46	Programa iniciat
+09:52:46	Login iniciat
+09:52:48	Usuari juan ha iniciat sesio al sistema
+09:52:49	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997863.0} esta jugant al Tragaperras
+09:53:38	Programa iniciat
+09:53:38	Login iniciat
+09:53:40	Usuari juan ha iniciat sesio al sistema
+09:53:41	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997863.0} esta jugant al Tragaperras
+09:54:20	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=7997863.0} esta jugant al Tragaperras
+09:54:36	juan realitza una aposta de 1000.0
+09:54:36	juan ha perdut la jugada.
+09:54:40	juan realitza una aposta de 1000.0
+09:54:40	juan ha guanyat una PARELLA de 🍋. Premi: 2000.0
+09:54:43	juan realitza una aposta de 1000.0
+09:54:43	juan ha guanyat una PARELLA de 🍋. Premi: 2000.0
+09:54:44	juan realitza una aposta de 1000.0
+09:54:44	juan ha guanyat una PARELLA de 💎. Premi: 2000.0
+09:54:44	juan realitza una aposta de 1000.0
+09:54:44	juan ha perdut la jugada.
+09:54:45	juan realitza una aposta de 1000.0
+09:54:45	juan ha guanyat una PARELLA de 🍋. Premi: 2000.0
+09:54:46	juan realitza una aposta de 1000.0
+09:54:46	juan ha guanyat una PARELLA de 💎. Premi: 2000.0
+09:54:46	juan realitza una aposta de 1000.0
+09:54:46	juan ha perdut la jugada.
+09:54:47	juan realitza una aposta de 1000.0
+09:54:47	juan ha guanyat una PARELLA de ⭐. Premi: 2000.0
+09:54:47	juan realitza una aposta de 1000.0
+09:54:47	juan ha perdut la jugada.
+09:54:47	juan realitza una aposta de 1000.0
+09:54:47	juan ha guanyat una PARELLA de ⭐. Premi: 2000.0
+09:54:48	juan realitza una aposta de 1000.0
+09:54:48	juan ha perdut la jugada.
+09:54:48	juan realitza una aposta de 1000.0
+09:54:48	juan ha perdut la jugada.
+09:54:49	juan realitza una aposta de 1000.0
+09:54:49	juan ha perdut la jugada.
+09:54:49	juan realitza una aposta de 1000.0
+09:54:49	juan ha guanyat una PARELLA de 💎. Premi: 2000.0
+09:54:49	juan realitza una aposta de 1000.0
+09:54:49	juan ha guanyat una PARELLA de ⭐. Premi: 2000.0
+09:54:50	juan realitza una aposta de 1000.0
+09:54:50	juan ha perdut la jugada.
+09:54:50	juan realitza una aposta de 1000.0
+09:54:50	juan ha guanyat una PARELLA de 💎. Premi: 2000.0
+09:54:51	juan realitza una aposta de 1000.0
+09:54:51	juan ha perdut la jugada.
+09:54:51	juan realitza una aposta de 1000.0
+09:54:51	juan ha perdut la jugada.
+09:54:52	juan realitza una aposta de 1000.0
+09:54:52	juan ha perdut la jugada.
+09:54:52	juan realitza una aposta de 1000.0
+09:54:52	juan ha guanyat un TRIO de ⭐. Premi: 20000.0
+09:54:52	juan realitza una aposta de 1000.0
+09:54:52	juan ha guanyat una PARELLA de 🍒. Premi: 2000.0
+09:54:52	juan realitza una aposta de 1000.0
+09:54:52	juan ha perdut la jugada.
+09:54:53	juan realitza una aposta de 1000.0
+09:54:53	juan ha guanyat una PARELLA de 💎. Premi: 2000.0
+09:54:53	juan realitza una aposta de 1000.0
+09:54:53	juan ha guanyat una PARELLA de 🍒. Premi: 2000.0
+09:54:53	juan realitza una aposta de 1000.0
+09:54:53	juan ha perdut la jugada.
+09:54:53	juan realitza una aposta de 1000.0
+09:54:53	juan ha guanyat una PARELLA de 🍒. Premi: 2000.0
+09:54:53	juan realitza una aposta de 1000.0
+09:54:53	juan ha perdut la jugada.
+09:54:54	juan realitza una aposta de 1000.0
+09:54:54	juan ha perdut la jugada.
+09:54:54	juan realitza una aposta de 1000.0
+09:54:54	juan ha guanyat una PARELLA de ⭐. Premi: 2000.0
+09:54:54	juan realitza una aposta de 1000.0
+09:54:54	juan ha perdut la jugada.
+09:54:54	juan realitza una aposta de 1000.0
+09:54:54	juan ha guanyat una PARELLA de 🍋. Premi: 2000.0
+09:54:55	juan realitza una aposta de 1000.0
+09:54:55	juan ha perdut la jugada.
+09:54:55	juan realitza una aposta de 1000.0
+09:54:55	juan ha guanyat una PARELLA de 🍋. Premi: 2000.0
+09:54:55	juan realitza una aposta de 1000.0
+09:54:55	juan ha perdut la jugada.
+09:54:55	juan realitza una aposta de 1000.0
+09:54:55	juan ha guanyat una PARELLA de 💎. Premi: 2000.0
+09:54:55	juan realitza una aposta de 1000.0
+09:54:55	juan ha guanyat una PARELLA de 🍒. Premi: 2000.0
+09:54:56	juan realitza una aposta de 1000.0
+09:54:56	juan ha perdut la jugada.
+09:54:56	juan realitza una aposta de 1000.0
+09:54:56	juan ha perdut la jugada.
+09:54:56	juan realitza una aposta de 1000.0
+09:54:56	juan ha perdut la jugada.
+09:54:56	juan realitza una aposta de 1000.0
+09:54:56	juan ha guanyat una PARELLA de 💎. Premi: 2000.0
+09:54:56	juan realitza una aposta de 1000.0
+09:54:56	juan ha guanyat una PARELLA de 💎. Premi: 2000.0
+09:54:57	juan realitza una aposta de 1000.0
+09:54:57	juan ha guanyat una PARELLA de 🍋. Premi: 2000.0
+09:54:57	juan realitza una aposta de 1000.0
+09:54:57	juan ha perdut la jugada.
+09:54:57	juan realitza una aposta de 1000.0
+09:54:57	juan ha perdut la jugada.
+09:54:57	juan realitza una aposta de 1000.0
+09:54:57	juan ha perdut la jugada.
+09:54:57	juan realitza una aposta de 1000.0
+09:54:57	juan ha perdut la jugada.
+09:54:58	juan realitza una aposta de 1000.0
+09:54:58	juan ha perdut la jugada.
+09:54:58	juan realitza una aposta de 1000.0
+09:54:58	juan ha perdut la jugada.
+09:54:58	juan realitza una aposta de 1000.0
+09:54:58	juan ha guanyat un TRIO de 💎. Premi: 20000.0
+09:54:58	juan realitza una aposta de 1000.0
+09:54:58	juan ha guanyat una PARELLA de 🍋. Premi: 2000.0
+09:54:58	juan realitza una aposta de 1000.0
+09:54:58	juan ha perdut la jugada.
+09:54:59	juan realitza una aposta de 1000.0
+09:54:59	juan ha guanyat una PARELLA de 💎. Premi: 2000.0
+09:54:59	juan realitza una aposta de 1000.0
+09:54:59	juan ha guanyat una PARELLA de 🍋. Premi: 2000.0
+09:54:59	juan realitza una aposta de 1000.0
+09:54:59	juan ha guanyat una PARELLA de 🍋. Premi: 2000.0
+09:54:59	juan realitza una aposta de 1000.0
+09:54:59	juan ha perdut la jugada.
+09:55:03	juan realitza una aposta de 1000.0
+09:55:03	juan ha guanyat un TRIO de ⭐. Premi: 20000.0
+09:55:03	juan realitza una aposta de 1000.0
+09:55:03	juan ha perdut la jugada.
+09:57:42	Programa iniciat
+09:57:42	Login iniciat
+09:57:46	Usuari juan ha iniciat sesio al sistema
+09:57:47	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8050863.0} esta jugant al Tragaperras
+09:59:43	Programa iniciat
+09:59:43	Login iniciat
+09:59:45	Usuari juan ha iniciat sesio al sistema
+09:59:46	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8050863.0} esta jugant al Tragaperras
+10:00:09	Programa iniciat
+10:00:10	Login iniciat
+10:00:11	Usuari juan ha iniciat sesio al sistema
+10:00:12	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8050863.0} esta jugant al Tragaperras
+10:00:15	juan realitza una aposta de 200.0
+10:00:15	juan ha guanyat una PARELLA de 🍋. Premi: 400.0
+10:01:27	Programa iniciat
+10:01:27	Login iniciat
+10:01:30	Usuari juan ha iniciat sesio al sistema
+10:01:30	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8050663.0} esta jugant al Tragaperras
+10:01:32	juan realitza una aposta de 200.0
+10:01:32	juan ha perdut la jugada.
+10:01:34	juan realitza una aposta de 200.0
+10:01:34	juan ha perdut la jugada.
+10:01:35	juan realitza una aposta de 200.0
+10:01:35	juan ha perdut la jugada.
+10:01:35	juan realitza una aposta de 200.0
+10:01:35	juan ha guanyat una PARELLA de ⭐. Premi: 400.0
+10:01:35	juan realitza una aposta de 200.0
+10:01:35	juan ha perdut la jugada.
+10:01:36	juan realitza una aposta de 200.0
+10:01:36	juan ha guanyat una PARELLA de ⭐. Premi: 400.0
+10:04:19	Programa iniciat
+10:04:20	Login iniciat
+10:04:22	Usuari juan ha iniciat sesio al sistema
+10:04:23	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8049863.0} esta jugant al Tragaperras
+10:04:26	juan realitza una aposta de 70.0
+10:04:26	juan ha guanyat una PARELLA de 💎. Premi: 140.0
+10:04:32	juan ha guanyat una PARELLA de 💎. Premi: 140.0
+10:05:04	Programa iniciat
+10:05:04	Login iniciat
+10:05:07	Usuari juan ha iniciat sesio al sistema
+10:05:07	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8049793.0} esta jugant al Tragaperras
+10:05:10	juan realitza una aposta de 150.0
+10:05:10	juan ha guanyat una PARELLA de ⭐. Premi: 300.0
+10:05:16	juan ha guanyat una PARELLA de ⭐. Premi: 0.0
+10:05:16	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8050243.0} esta jugant al Tragaperras
+10:05:18	juan realitza una aposta de 150.0
+10:05:18	juan ha perdut la jugada.
+10:05:24	juan ha perdut la jugada.
+10:05:33	juan realitza una aposta de 100.0
+10:05:33	juan ha guanyat una PARELLA de 💎. Premi: 200.0
+10:05:39	juan ha guanyat una PARELLA de 💎. Premi: 200.0
+10:05:42	juan realitza una aposta de 100.0
+10:05:42	juan ha perdut la jugada.
+10:05:44	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8050293.0} esta jugant al Tragaperras
+10:05:48	juan ha perdut la jugada.
+10:06:59	Programa iniciat
+10:06:59	Login iniciat
+10:07:02	Usuari juan ha iniciat sesio al sistema
+10:07:03	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8050293.0} esta jugant al Tragaperras
+10:07:05	juan realitza una aposta de 300.0
+10:07:11	juan ha perdut la jugada.
+10:07:55	Programa iniciat
+10:07:55	Login iniciat
+10:07:58	Usuari juan ha iniciat sesio al sistema
+10:07:58	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8049993.0} esta jugant al Tragaperras
+10:08:00	juan realitza una aposta de 200.0
+10:08:06	juan ha perdut la jugada.
+10:08:09	juan realitza una aposta de 200.0
+10:08:15	juan ha perdut la jugada.
+10:09:07	Programa iniciat
+10:09:07	Login iniciat
+10:09:09	Usuari juan ha iniciat sesio al sistema
+10:09:10	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8049593.0} esta jugant al Tragaperras
+10:09:12	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8049593.0} esta jugant al Tragaperras
+10:09:13	juan realitza una aposta de 200.0
+10:09:19	juan ha perdut la jugada.
+10:09:25	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8049393.0} esta jugant al Tragaperras
+10:18:50	Programa iniciat
+10:18:51	Login iniciat
+10:18:53	Usuari juan ha iniciat sesio al sistema
+10:18:56	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8049393.0} esta jugant al Tragaperras
+10:18:58	juan realitza una aposta de 200.0
+10:19:04	juan ha perdut la jugada.
+10:20:47	Programa iniciat
+10:20:48	Login iniciat
+10:20:49	Usuari juan ha iniciat sesio al sistema
+10:20:50	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8049193.0} esta jugant al Tragaperras
+10:20:52	juan realitza una aposta de 200.0
+10:20:58	juan ha perdut la jugada.
+10:22:16	Programa iniciat
+10:22:16	Login iniciat
+10:22:18	Usuari juan ha iniciat sesio al sistema
+10:22:19	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8048993.0} esta jugant al Tragaperras
+10:22:21	juan realitza una aposta de 200.0
+10:22:27	juan ha guanyat una PARELLA de ⭐. Premi: 400.0
+10:24:25	Programa iniciat
+10:24:26	Login iniciat
+10:24:27	Usuari juan ha iniciat sesio al sistema
+10:24:28	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8048793.0} esta jugant al Tragaperras
+10:24:29	juan realitza una aposta de 200.0
+10:24:36	juan ha perdut la jugada.
+10:24:40	juan ha intentat jugar sense apostar.
+10:24:40	juan realitza una aposta de 200.0
+10:24:46	juan ha guanyat una PARELLA de 🍒. Premi: 400.0
+10:25:22	Programa iniciat
+10:25:22	Login iniciat
+10:25:25	Usuari juan ha iniciat sesio al sistema
+10:25:25	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8048393.0} esta jugant al Tragaperras
+10:25:29	juan realitza una aposta de 200.0
+10:25:36	juan ha guanyat una PARELLA de 🍋. Premi: 400.0
+10:27:30	Programa iniciat
+10:27:30	Login iniciat
+10:27:32	Usuari juan ha iniciat sesio al sistema
+10:27:32	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8048193.0} esta jugant al Tragaperras
+10:27:34	juan realitza una aposta de 200.0
+10:27:40	juan ha perdut la jugada.
+10:28:25	Programa iniciat
+10:28:25	Login iniciat
+10:28:27	Usuari juan ha iniciat sesio al sistema
+10:28:28	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8047993.0} esta jugant al Tragaperras
+10:28:30	juan realitza una aposta de 200.0
+10:28:36	juan ha guanyat una PARELLA de ⭐. Premi: 400.0
+10:29:38	Programa iniciat
+10:29:38	Login iniciat
+10:29:44	Usuari juan ha iniciat sesio al sistema
+10:29:44	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8047793.0} esta jugant al Tragaperras
+10:29:46	juan realitza una aposta de 200.0
+10:29:52	juan ha perdut la jugada.
+10:30:03	Programa iniciat
+10:30:03	Login iniciat
+10:30:07	Usuari juan ha iniciat sesio al sistema
+10:30:08	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8047593.0} esta jugant al Tragaperras
+10:30:09	juan realitza una aposta de 200.0
+10:30:15	juan ha perdut la jugada.
+10:30:22	Programa iniciat
+10:30:23	Login iniciat
+10:30:24	Usuari juan ha iniciat sesio al sistema
+10:30:25	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8047393.0} esta jugant al Tragaperras
+10:30:27	juan realitza una aposta de 200.0
+10:30:33	juan ha perdut la jugada.
+10:32:28	Programa iniciat
+10:32:28	Login iniciat
+10:32:30	Usuari juan ha iniciat sesio al sistema
+10:32:31	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8047193.0} esta jugant al Tragaperras
+10:32:33	juan realitza una aposta de 20.0
+10:32:39	juan ha perdut la jugada.
+10:33:31	Programa iniciat
+10:33:31	Login iniciat
+10:33:33	Usuari juan ha iniciat sesio al sistema
+10:33:34	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8047173.0} esta jugant al Tragaperras
+10:33:35	juan realitza una aposta de 200.0
+10:33:41	juan ha perdut la jugada.
+10:34:44	Programa iniciat
+10:34:45	Login iniciat
+10:34:46	Usuari juan ha iniciat sesio al sistema
+10:34:48	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8046973.0} esta jugant al Tragaperras
+10:34:50	juan realitza una aposta de 70.0
+10:34:56	juan ha perdut la jugada.
+10:35:52	Programa iniciat
+10:35:53	Login iniciat
+10:35:59	Usuari juan ha iniciat sesio al sistema
+10:36:00	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8046903.0} esta jugant al Tragaperras
+10:36:02	juan realitza una aposta de 200.0
+10:36:08	juan ha perdut la jugada.
+10:36:38	Programa iniciat
+10:36:38	Login iniciat
+10:36:40	Usuari juan ha iniciat sesio al sistema
+10:36:41	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8046703.0} esta jugant al Tragaperras
+10:36:42	juan realitza una aposta de 200.0
+10:36:48	juan ha guanyat una PARELLA de ⭐. Premi: 400.0
+10:37:17	Programa iniciat
+10:37:18	Login iniciat
+10:37:20	Usuari juan ha iniciat sesio al sistema
+10:37:21	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8046503.0} esta jugant al Tragaperras
+10:37:29	juan realitza una aposta de 200.0
+10:37:35	juan ha perdut la jugada.
+10:38:15	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8047193.0} esta jugant a la Ruleta
+10:38:19	Programa iniciat
+10:38:20	Login iniciat
+10:38:21	Usuari juan ha iniciat sesio al sistema
+10:38:24	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8046303.0} esta jugant a Blackjack
+10:38:24	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8046303.0} esta jugant a Blackjack
+10:38:31	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8046302.0} ha apostat: 1.0
+10:38:32	juan ha demanat carta: 7
+10:38:33	juan ha demanat carta: 6
+10:38:34	juan ha demanat carta: 2
+10:38:35	juan es planta amb un total de: 15
+10:38:35	Dealer ha tret carta: 6
+10:38:35	Dealer ha tret carta: 5
+10:38:35	Dealer ha tret carta: 10
+10:38:35	Final Blackjack: juan perd per punts. Dealer: 21 - Jugador: 15
+10:38:43	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8046302.0} esta jugant al Tragaperras
+10:38:51	juan realitza una aposta de 20.0
+10:38:57	juan ha perdut la jugada.
+10:39:43	Programa iniciat
+10:39:43	Login iniciat
+10:39:46	Usuari juan ha iniciat sesio al sistema
+10:39:47	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8046282.0} esta jugant al Tragaperras
+10:39:49	juan realitza una aposta de 200.0
+10:39:55	juan ha guanyat una PARELLA de 💎. Premi: 400.0
+10:40:06	juan realitza una aposta de 200.0
+10:40:12	juan ha perdut la jugada.
+10:40:14	juan realitza una aposta de 200.0
+10:40:20	juan ha perdut la jugada.
+10:40:27	Programa iniciat
+10:40:28	Login iniciat
+10:40:30	Usuari juan ha iniciat sesio al sistema
+10:40:31	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8046082.0} esta jugant al Tragaperras
+10:40:34	juan realitza una aposta de 200.0
+10:40:40	juan ha guanyat una PARELLA de 💎. Premi: 400.0
+10:40:50	juan ha intentat jugar sense apostar.
+10:40:53	juan realitza una aposta de 200.0
+10:40:59	juan ha perdut la jugada.
+10:41:01	juan realitza una aposta de 200.0
+10:41:07	juan ha perdut la jugada.
+10:41:39	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045882.0} esta jugant a la Ruleta
