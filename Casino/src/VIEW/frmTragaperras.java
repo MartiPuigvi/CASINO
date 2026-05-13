@@ -12,10 +12,13 @@ import static CONTROLER.Casino.userActual;
 import static CONTROLER.GestioFitxers.tornarMenuClient;
 import CONTROLER.GestioLog;
 import static CONTROLER.GestioLog.escriureLog;
+import CONTROLER.estils;
+import static CONTROLER.estils.estilbuto;
 import MODEL.jocTrragaperras;
 import java.awt.Graphics;
 import java.util.Random;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -36,14 +39,13 @@ public class frmTragaperras extends javax.swing.JFrame {
      */
     public frmTragaperras() {
         this.setUndecorated(true);
-                this.setContentPane(Fondo);
+        this.setContentPane(Fondo);
         Fondo.setLayout(null);
 
         initComponents();
         this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
 
         GestioLog.escriureLog(userActual + " esta jugant al Tragaperras");
-        lblInfo.setFont(new java.awt.Font("Segoe UI Emoji", 12, 12));
         lbl2.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
         lbl3.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
         lbl1.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
@@ -51,7 +53,13 @@ public class frmTragaperras extends javax.swing.JFrame {
         imgOff();
         saldo();
         Aposta();
-        //jLabel2.setIcon(null);
+        infoOff();
+        estils.borderTp(jPanel1);
+        estils.borderTp(jPanel3);
+        estils.borderTp(jPanel5);
+
+        estils.estilbuto(btmMenu);
+
     }
 
     public void saldo() {
@@ -59,7 +67,7 @@ public class frmTragaperras extends javax.swing.JFrame {
     }
 
     public void Aposta() {
-        lblAposta.setText("Aposta actual: " + aposta);
+        lblAposta.setText("$ " + aposta);
     }
 
     public void btmApostaOff() {
@@ -67,7 +75,6 @@ public class frmTragaperras extends javax.swing.JFrame {
         btm50.setEnabled(false);
         btm100.setEnabled(false);
         btm200.setEnabled(false);
-        btm500.setEnabled(false);
     }
 
     public void btmApostaOn() {
@@ -75,18 +82,19 @@ public class frmTragaperras extends javax.swing.JFrame {
         btm50.setEnabled(true);
         btm100.setEnabled(true);
         btm200.setEnabled(true);
-        btm500.setEnabled(true);
     }
 
     public void btmsoff() {
         btmini.setEnabled(false);
         btmSeguir.setEnabled(false);
+        btmMenu.setEnabled(false);
 
     }
 
     public void btmsOn() {
         btmini.setEnabled(true);
         btmSeguir.setEnabled(true);
+        btmMenu.setEnabled(true);
 
     }
 
@@ -99,18 +107,40 @@ public class frmTragaperras extends javax.swing.JFrame {
         lbl3.setIcon(null);
     }
 
-        JPanel Fondo = new JPanel() {
+    private void lbl6Off() {
+        lbl6.setText("");
+        lbl6.setIcon(null);
+    }
+
+    private void lbl7Off() {
+        lbl7.setText("");
+        lbl7.setIcon(null);
+    }
+
+    private void lbl8Off() {
+        lbl8.setText("");
+        lbl8.setIcon(null);
+    }
+
+    private void infoOff() {
+        jPanel5.setVisible(false);
+    }
+
+    private void infoOn() {
+        jPanel5.setVisible(true);
+    }
+
+    JPanel Fondo = new JPanel() {
         @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
             // Carga la imagen
-            ImageIcon img = new ImageIcon(getClass().getResource("/Images/fondo.png"));
+            ImageIcon img = new ImageIcon(getClass().getResource("/Images/ini.png"));
             // La dibuja escalada al tamaño del panel
             g.drawImage(img.getImage(), 0, 0, getWidth(), getHeight(), this);
         }
     };
-    
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -121,109 +151,265 @@ public class frmTragaperras extends javax.swing.JFrame {
     private void initComponents() {
 
         lbl1 = new javax.swing.JLabel();
-        lbl2 = new javax.swing.JLabel();
+        lbl6 = new javax.swing.JLabel();
         lbl3 = new javax.swing.JLabel();
         btmini = new javax.swing.JButton();
         btm20 = new javax.swing.JButton();
         btm50 = new javax.swing.JButton();
         btm100 = new javax.swing.JButton();
         btm200 = new javax.swing.JButton();
-        btm500 = new javax.swing.JButton();
-        lblAposta = new javax.swing.JLabel();
-        lblSaldo = new javax.swing.JLabel();
-        lblSaldo2 = new javax.swing.JLabel();
         btmSeguir = new javax.swing.JButton();
-        lblInfo = new javax.swing.JLabel();
         btmMenu = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        lblSaldo1 = new javax.swing.JLabel();
+        lblAposta = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        lblSaldo = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        lblSaldo3 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        lblSaldo2 = new javax.swing.JLabel();
+        lblInfo = new javax.swing.JLabel();
+        lbl2 = new javax.swing.JLabel();
+        lbl8 = new javax.swing.JLabel();
+        lbl7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbl1.setBackground(new java.awt.Color(255, 255, 255));
         lbl1.setToolTipText("");
-        getContentPane().add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 480, 210, 174));
+        lbl1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(345, 365, 210, 174));
 
-        lbl2.setToolTipText("");
-        getContentPane().add(lbl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 480, 210, 174));
+        lbl6.setToolTipText("");
+        lbl6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(lbl6, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 280, 210, 350));
 
         lbl3.setToolTipText("");
-        getContentPane().add(lbl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 480, 210, 174));
+        lbl3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(lbl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 365, 210, 174));
 
-        btmini.setText("btmini");
+        btmini.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/JUGAR.png"))); // NOI18N
         btmini.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btminiActionPerformed(evt);
             }
         });
-        getContentPane().add(btmini, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 80, 100, 40));
+        getContentPane().add(btmini, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 740, 320, 80));
 
-        btm20.setText("btm20");
+        btm20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/20.png"))); // NOI18N
         btm20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btm20ActionPerformed(evt);
             }
         });
-        getContentPane().add(btm20, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 40, -1, -1));
+        getContentPane().add(btm20, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 720, 100, 100));
 
-        btm50.setText("btm50");
+        btm50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/50.png"))); // NOI18N
         btm50.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btm50ActionPerformed(evt);
             }
         });
-        getContentPane().add(btm50, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, -1, -1));
+        getContentPane().add(btm50, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 720, 100, 100));
 
-        btm100.setText("btm100");
+        btm100.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/100.png"))); // NOI18N
         btm100.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btm100ActionPerformed(evt);
             }
         });
-        getContentPane().add(btm100, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 40, -1, -1));
+        getContentPane().add(btm100, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 720, 100, 100));
 
-        btm200.setText("btm200");
+        btm200.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/200.png"))); // NOI18N
         btm200.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btm200ActionPerformed(evt);
             }
         });
-        getContentPane().add(btm200, new org.netbeans.lib.awtextra.AbsoluteConstraints(252, 40, -1, -1));
+        getContentPane().add(btm200, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 720, 100, 100));
 
-        btm500.setText("btm500");
-        btm500.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btm500ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btm500, new org.netbeans.lib.awtextra.AbsoluteConstraints(342, 40, -1, -1));
-        getContentPane().add(lblAposta, new org.netbeans.lib.awtextra.AbsoluteConstraints(1145, 123, 147, 23));
-        getContentPane().add(lblSaldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(555, 30, 116, 33));
-        getContentPane().add(lblSaldo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1145, 82, 80, 23));
-
-        btmSeguir.setText("btmSeguir");
+        btmSeguir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/inici.png"))); // NOI18N
         btmSeguir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmSeguirActionPerformed(evt);
             }
         });
-        getContentPane().add(btmSeguir, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 82, 115, 40));
-        getContentPane().add(lblInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(826, 30, 313, 38));
+        getContentPane().add(btmSeguir, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 745, 240, 70));
 
-        btmMenu.setText("MENU");
+        btmMenu.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
+        btmMenu.setText("☰ MENU");
         btmMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmMenuActionPerformed(evt);
             }
         });
-        getContentPane().add(btmMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 75, 143, 50));
+        getContentPane().add(btmMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 75, 160, 60));
+
+        jPanel1.setBackground(new java.awt.Color(51, 0, 51));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Georgia", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(212, 175, 55));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("APOSTA");
+        jLabel1.setAlignmentX(0.5F);
+        jLabel1.setAlignmentY(0.0F);
+        jLabel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 1, 1, 1));
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, -1));
+
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1920, 1080));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Georgia", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(212, 175, 55));
+        jLabel2.setText("SALDO");
+        jLabel2.setAlignmentX(0.5F);
+        jLabel2.setAlignmentY(0.0F);
+        jLabel2.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 1, 1, 1));
+        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 110, -1));
+
+        lblSaldo1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        lblSaldo1.setForeground(new java.awt.Color(212, 175, 55));
+        lblSaldo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSaldo1.setText("lblSaldo");
+        lblSaldo1.setAlignmentX(0.5F);
+        lblSaldo1.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 1, 1, 1));
+        lblSaldo1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel2.add(lblSaldo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 31, 290, 60));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 30, 290, 100));
+
+        lblAposta.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        lblAposta.setForeground(new java.awt.Color(212, 175, 55));
+        lblAposta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAposta.setText("lblAposta");
+        lblAposta.setAlignmentX(0.5F);
+        lblAposta.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 1, 1, 1));
+        lblAposta.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(lblAposta, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 260, 60));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 150, 260, 100));
+
+        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel3.setPreferredSize(new java.awt.Dimension(1920, 1080));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Georgia", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(212, 175, 55));
+        jLabel3.setText("SALDO");
+        jLabel3.setAlignmentX(0.5F);
+        jLabel3.setAlignmentY(0.0F);
+        jLabel3.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 1, 1, 1));
+        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 110, -1));
+
+        lblSaldo.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        lblSaldo.setForeground(new java.awt.Color(212, 175, 55));
+        lblSaldo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSaldo.setText("lblSaldo");
+        lblSaldo.setAlignmentX(0.5F);
+        lblSaldo.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 1, 1, 1));
+        lblSaldo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel3.add(lblSaldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 31, 290, 60));
+
+        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel4.setPreferredSize(new java.awt.Dimension(1920, 1080));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setFont(new java.awt.Font("Georgia", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(212, 175, 55));
+        jLabel4.setText("SALDO");
+        jLabel4.setAlignmentX(0.5F);
+        jLabel4.setAlignmentY(0.0F);
+        jLabel4.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 1, 1, 1));
+        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 110, -1));
+
+        lblSaldo3.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        lblSaldo3.setForeground(new java.awt.Color(212, 175, 55));
+        lblSaldo3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSaldo3.setText("lblSaldo");
+        lblSaldo3.setAlignmentX(0.5F);
+        lblSaldo3.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 1, 1, 1));
+        lblSaldo3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel4.add(lblSaldo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 31, 290, 60));
+
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 30, 290, 100));
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 30, 290, 100));
+
+        jPanel5.setBackground(new java.awt.Color(51, 0, 51));
+        jPanel5.setPreferredSize(new java.awt.Dimension(1920, 1080));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel6.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel6.setPreferredSize(new java.awt.Dimension(1920, 1080));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel6.setFont(new java.awt.Font("Georgia", 1, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(212, 175, 55));
+        jLabel6.setText("SALDO");
+        jLabel6.setAlignmentX(0.5F);
+        jLabel6.setAlignmentY(0.0F);
+        jLabel6.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 1, 1, 1));
+        jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel6.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 110, -1));
+
+        lblSaldo2.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        lblSaldo2.setForeground(new java.awt.Color(212, 175, 55));
+        lblSaldo2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSaldo2.setText("lblSaldo");
+        lblSaldo2.setAlignmentX(0.5F);
+        lblSaldo2.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 1, 1, 1));
+        lblSaldo2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel6.add(lblSaldo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 31, 290, 60));
+
+        jPanel5.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 30, 290, 100));
+
+        lblInfo.setFont(new java.awt.Font("Segoe UI Symbol", 1, 36)); // NOI18N
+        lblInfo.setForeground(new java.awt.Color(212, 175, 55));
+        lblInfo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblInfo.setText("lblinfo");
+        lblInfo.setAlignmentX(0.5F);
+        lblInfo.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 1, 1, 1));
+        lblInfo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel5.add(lblInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 70));
+
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 580, 690, 80));
+
+        lbl2.setToolTipText("");
+        lbl2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(lbl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(655, 365, 210, 174));
+
+        lbl8.setToolTipText("");
+        lbl8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(lbl8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, 210, 350));
+
+        lbl7.setToolTipText("");
+        lbl7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(lbl7, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 280, 210, 350));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btminiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btminiActionPerformed
         imgOff();
-
+        infoOff();
         btmsoff();
+        btmSeguir.setVisible(false);
         if (aposta <= 0) {
             JOptionPane.showMessageDialog(null, "La aposta ha de ser major que 0");
             aposta = 0.0;
@@ -253,10 +439,14 @@ public class frmTragaperras extends javax.swing.JFrame {
         tp = new jocTrragaperras(aposta, "Tragaperras");
         tp.girar();
         System.out.println(tp.toString());
-        lblInfo.setText("");
+
+        iconaImg(lbl7, "gif");
+        iconaImg(lbl6, "gif");
+        iconaImg(lbl8, "gif");
 
         javax.swing.Timer timer1 = new javax.swing.Timer(2000, e -> {
             // lbl1.setText(tp.getS1());
+            lbl8Off();
             iconaImg(lbl1, tp.getS1());
         });
         timer1.setRepeats(false);
@@ -264,20 +454,25 @@ public class frmTragaperras extends javax.swing.JFrame {
 
         javax.swing.Timer timer2 = new javax.swing.Timer(4000, e -> {
             // lbl2.setText(tp.getS2());
+            lbl6Off();
             iconaImg(lbl2, tp.getS2());
+
         });
         timer2.setRepeats(false);
         timer2.start();
 
         javax.swing.Timer timer3 = new javax.swing.Timer(6000, e -> {
             // lbl3.setText(tp.getS3());
+            lbl7Off();
             iconaImg(lbl3, tp.getS3());
             win();
             btmsOn();
+            infoOn();
 
         });
         timer3.setRepeats(false);
         timer3.start();
+
         btmApostaOff();
 
         // TODO add your handling code here:
@@ -307,14 +502,16 @@ public class frmTragaperras extends javax.swing.JFrame {
         Aposta();
     }//GEN-LAST:event_btm200ActionPerformed
 
-    private void btm500ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btm500ActionPerformed
-        aposta += 500;
-        saldo();
-        Aposta();
-    }//GEN-LAST:event_btm500ActionPerformed
+    private void btmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmMenuActionPerformed
+        tornarMenuClient();
+        this.dispose();
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_btmMenuActionPerformed
 
     private void btmSeguirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmSeguirActionPerformed
         imgOff();
+        infoOff();
         aposta = 0.0;
         btmApostaOn();
         btmini.setEnabled(true);
@@ -322,15 +519,7 @@ public class frmTragaperras extends javax.swing.JFrame {
         saldo();
         Aposta();
         lblInfo.setText("");
-
     }//GEN-LAST:event_btmSeguirActionPerformed
-
-    private void btmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmMenuActionPerformed
-        tornarMenuClient();
-        this.dispose();
-
-// TODO add your handling code here:
-    }//GEN-LAST:event_btmMenuActionPerformed
 
     private void win() {
 
@@ -339,15 +528,15 @@ public class frmTragaperras extends javax.swing.JFrame {
         if (tp.getS1().equals(tp.getS2()) && tp.getS2().equals(tp.getS3())) {
             userActual.setSaldo(userActual.getSaldo() + tp.getAposta() * 20);
             String simbolTrio = tp.getS1();
-            lblInfo.setText("Has gauanyat per trio " + simbolTrio + " " + aposta * 20);
+            lblInfo.setText("Has gauanyat per trio de" + simbolTrio);
             tipusGuanyador = "Trio de " + simbolTrio;
             escriureLog(userActual.getNom() + " ha guanyat un TRIO de " + simbolTrio + ". Premi: " + (aposta * 20));
-            
+
         } else if (tp.getS1().equals(tp.getS2()) || tp.getS1().equals(tp.getS3()) || tp.getS2().equals(tp.getS3())) {
             userActual.setSaldo(userActual.getSaldo() + tp.getAposta() * 2);
             String simbolParella = (tp.getS1().equals(tp.getS2()) || tp.getS1().equals(tp.getS3())) ? tp.getS1() : tp.getS2();
             tipusGuanyador = "Parella de " + simbolParella;
-            lblInfo.setText("Has gauanyat per parella de " + simbolParella + "  " + aposta * 2);
+            lblInfo.setText("Has gauanyat per parella de " + simbolParella);
             escriureLog(userActual.getNom() + " ha guanyat una PARELLA de " + simbolParella + ". Premi: " + (aposta * 2));
 
         } else {
@@ -390,6 +579,9 @@ public class frmTragaperras extends javax.swing.JFrame {
             case "💎":
                 icono = new ImageIcon(getClass().getResource("/Images/dia.png"));
                 break;
+            case "gif":
+                icono = new ImageIcon(getClass().getResource("/Images/gifbo.gif"));
+                break;
         }
 
         label.setIcon(icono);
@@ -425,16 +617,31 @@ public class frmTragaperras extends javax.swing.JFrame {
     private javax.swing.JButton btm20;
     private javax.swing.JButton btm200;
     private javax.swing.JButton btm50;
-    private javax.swing.JButton btm500;
     private javax.swing.JButton btmMenu;
     private javax.swing.JButton btmSeguir;
     private javax.swing.JButton btmini;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JLabel lbl1;
     private javax.swing.JLabel lbl2;
     private javax.swing.JLabel lbl3;
+    private javax.swing.JLabel lbl6;
+    private javax.swing.JLabel lbl7;
+    private javax.swing.JLabel lbl8;
     private javax.swing.JLabel lblAposta;
     private javax.swing.JLabel lblInfo;
     private javax.swing.JLabel lblSaldo;
+    private javax.swing.JLabel lblSaldo1;
     private javax.swing.JLabel lblSaldo2;
+    private javax.swing.JLabel lblSaldo3;
     // End of variables declaration//GEN-END:variables
 }

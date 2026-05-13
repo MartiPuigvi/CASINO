@@ -25,6 +25,7 @@ public class frmMenu extends javax.swing.JFrame {
     public frmMenu(boolean admin) {
         //this.setUndecorated(true);
         initComponents();
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
 
         this.setContentPane(Fondo);
         Fondo.setLayout(null);
