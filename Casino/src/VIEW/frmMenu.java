@@ -30,7 +30,6 @@ public class frmMenu extends javax.swing.JFrame {
         this.setContentPane(Fondo);
         Fondo.setLayout(null);
 
-        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         estils.border(jPanel2);
 
         Fondo.add(btmBlackJack);
@@ -93,7 +92,7 @@ public class frmMenu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btmBlackJack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/blakjack_menu.png"))); // NOI18N
+        btmBlackJack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/blakjack_menu (1).png"))); // NOI18N
         btmBlackJack.setBorder(null);
         btmBlackJack.setBorderPainted(false);
         btmBlackJack.setContentAreaFilled(false);
@@ -104,9 +103,9 @@ public class frmMenu extends javax.swing.JFrame {
                 btmBlackJackActionPerformed(evt);
             }
         });
-        getContentPane().add(btmBlackJack, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, -1, -1));
+        getContentPane().add(btmBlackJack, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 250, 250));
 
-        btmRuleta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ruleta_menu.png"))); // NOI18N
+        btmRuleta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ruleta_menu (1).png"))); // NOI18N
         btmRuleta.setBorderPainted(false);
         btmRuleta.setContentAreaFilled(false);
         btmRuleta.setPreferredSize(new java.awt.Dimension(400, 400));
@@ -115,9 +114,9 @@ public class frmMenu extends javax.swing.JFrame {
                 btmRuletaActionPerformed(evt);
             }
         });
-        getContentPane().add(btmRuleta, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 180, -1, -1));
+        getContentPane().add(btmRuleta, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 210, 250, 250));
 
-        btmTragaPerras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/tragaperras_menu.png"))); // NOI18N
+        btmTragaPerras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/tragaperras_menu (1).png"))); // NOI18N
         btmTragaPerras.setBorderPainted(false);
         btmTragaPerras.setContentAreaFilled(false);
         btmTragaPerras.setMaximumSize(new java.awt.Dimension(586, 347));
@@ -128,7 +127,7 @@ public class frmMenu extends javax.swing.JFrame {
                 btmTragaPerrasActionPerformed(evt);
             }
         });
-        getContentPane().add(btmTragaPerras, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 180, -1, -1));
+        getContentPane().add(btmTragaPerras, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 210, 250, 250));
 
         btmConf.setText("CONFIG USER");
         btmConf.addActionListener(new java.awt.event.ActionListener() {

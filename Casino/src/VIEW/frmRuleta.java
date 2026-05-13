@@ -7,6 +7,7 @@ package VIEW;
 import static CONTROLER.Casino.userActual;
 import static CONEXION.Queries.guardarPartidaBlackjack;
 import static CONEXION.Queries.guardarPartidaRuleta;
+import static CONTROLER.GestioFitxers.tornarMenuClient;
 import CONTROLER.GestioLog;
 import static CONTROLER.GestioLog.escriureLog;
 import MODEL.ApostaRealitzada;
@@ -38,13 +39,9 @@ public class frmRuleta extends javax.swing.JFrame {
         this.setUndecorated(true);
         initComponents();
 
-        this.setContentPane(Fondo);
-        Fondo.setLayout(null);
 
         this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
 
-        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
-        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         prepararTauler();
         saldo();
         GestioLog.escriureLog(userActual + " esta jugant a la Ruleta");
@@ -113,14 +110,6 @@ public class frmRuleta extends javax.swing.JFrame {
             tauler.add(novaCasella);
         }
     }
-    JPanel Fondo = new JPanel() {
-        @Override
-        protected void paintComponent(Graphics g) {
-            super.paintComponent(g);
-            ImageIcon img = new ImageIcon(getClass().getResource("/Images/fons_rulet.png"));
-            g.drawImage(img.getImage(), 0, 0, getWidth(), getHeight(), this);
-        }
-    };
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -179,6 +168,7 @@ public class frmRuleta extends javax.swing.JFrame {
         txtLlistaApostes = new javax.swing.JTextArea();
         lblRuleta = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        btmMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -619,6 +609,14 @@ public class frmRuleta extends javax.swing.JFrame {
         jLabel2.setText("APOSTES:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 99, -1, -1));
 
+        btmMenu.setText("MENU");
+        btmMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmMenuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btmMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 280, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -794,6 +792,12 @@ public class frmRuleta extends javax.swing.JFrame {
         timer.start();
     }//GEN-LAST:event_btmGirarActionPerformed
 
+    private void btmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmMenuActionPerformed
+        // TODO add your handling code here:
+        tornarMenuClient();
+        this.dispose();
+    }//GEN-LAST:event_btmMenuActionPerformed
+
     private void processarResultatRuleta() {
         int indexGuanyador = random.nextInt(tauler.size());
         casellaRuleta resultat = tauler.get(indexGuanyador);
@@ -888,6 +892,7 @@ public class frmRuleta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btmGirar;
+    private javax.swing.JButton btmMenu;
     private javax.swing.JButton btmNegre;
     private javax.swing.JButton btmNum0;
     private javax.swing.JButton btmNum1;

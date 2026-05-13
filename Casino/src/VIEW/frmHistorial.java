@@ -5,6 +5,9 @@
 package VIEW;
 
 import static CONTROLER.GestioLog.escriureLog;
+import java.awt.Graphics;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
 
 /**
  *
@@ -19,6 +22,14 @@ public class frmHistorial extends javax.swing.JFrame {
      */
     public frmHistorial() {
         initComponents();
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
+        this.setContentPane(Fondo);
+        Fondo.setLayout(null);
+
+        Fondo.add(btmBlackjack);
+        Fondo.add(btmRuleta);
+        Fondo.add(btmTragaperras);
+
     }
 
     /**
@@ -30,75 +41,61 @@ public class frmHistorial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btmHistorialBlackjack = new javax.swing.JButton();
-        brmRuleta = new javax.swing.JButton();
+        btmBlackjack = new javax.swing.JButton();
+        btmRuleta = new javax.swing.JButton();
         btmTragaperras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btmHistorialBlackjack.setText("BLACK JACK");
-        btmHistorialBlackjack.addActionListener(new java.awt.event.ActionListener() {
+        btmBlackjack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/historial_blackjack1 (1).png"))); // NOI18N
+        btmBlackjack.setBorderPainted(false);
+        btmBlackjack.setContentAreaFilled(false);
+        btmBlackjack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmHistorialBlackjackActionPerformed(evt);
+                btmBlackjackActionPerformed(evt);
             }
         });
+        getContentPane().add(btmBlackjack, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, -1, -1));
 
-        brmRuleta.setText("RULETA");
-        brmRuleta.addActionListener(new java.awt.event.ActionListener() {
+        btmRuleta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/historial_ruleta (1) (1).png"))); // NOI18N
+        btmRuleta.setBorderPainted(false);
+        btmRuleta.setContentAreaFilled(false);
+        btmRuleta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                brmRuletaActionPerformed(evt);
+                btmRuletaActionPerformed(evt);
             }
         });
+        getContentPane().add(btmRuleta, new org.netbeans.lib.awtextra.AbsoluteConstraints(635, 200, -1, -1));
 
-        btmTragaperras.setText("TRAGAPERRAS");
+        btmTragaperras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/historial_tragaperras (1).png"))); // NOI18N
+        btmTragaperras.setBorderPainted(false);
+        btmTragaperras.setContentAreaFilled(false);
         btmTragaperras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmTragaperrasActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addComponent(btmHistorialBlackjack)
-                .addGap(18, 18, 18)
-                .addComponent(brmRuleta)
-                .addGap(29, 29, 29)
-                .addComponent(btmTragaperras)
-                .addContainerGap(19, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(122, 122, 122)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btmHistorialBlackjack)
-                    .addComponent(brmRuleta)
-                    .addComponent(btmTragaperras))
-                .addContainerGap(155, Short.MAX_VALUE))
-        );
+        getContentPane().add(btmTragaperras, new org.netbeans.lib.awtextra.AbsoluteConstraints(915, 200, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btmHistorialBlackjackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmHistorialBlackjackActionPerformed
+    private void btmBlackjackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmBlackjackActionPerformed
         // TODO add your handling code here:
         frmPartidaBlackjack p = new frmPartidaBlackjack();
         p.setVisible(true);
         this.dispose();
         escriureLog("Admin: Accés a l'historial de partides de Blackjack");
-    }//GEN-LAST:event_btmHistorialBlackjackActionPerformed
+    }//GEN-LAST:event_btmBlackjackActionPerformed
 
-    private void brmRuletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brmRuletaActionPerformed
+    private void btmRuletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmRuletaActionPerformed
         // TODO add your handling code here:
         frmPartidaRuleta r = new frmPartidaRuleta();
         r.setVisible(true);
         this.dispose();
         escriureLog("Admin: Accés a l'historial de partides de Ruleta");
-    }//GEN-LAST:event_brmRuletaActionPerformed
+    }//GEN-LAST:event_btmRuletaActionPerformed
 
     private void btmTragaperrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmTragaperrasActionPerformed
         // TODO add your handling code here:
@@ -107,6 +104,15 @@ public class frmHistorial extends javax.swing.JFrame {
         this.dispose();
         escriureLog("Admin: Accés a l'historial de partides de Tragaperras");
     }//GEN-LAST:event_btmTragaperrasActionPerformed
+
+    JPanel Fondo = new JPanel() {
+        @Override
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            ImageIcon img = new ImageIcon(getClass().getResource("/Images/fondo_historial.png"));
+            g.drawImage(img.getImage(), 0, 0, getWidth(), getHeight(), this);
+        }
+    };
 
     /**
      * @param args the command line arguments
@@ -134,8 +140,8 @@ public class frmHistorial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton brmRuleta;
-    private javax.swing.JButton btmHistorialBlackjack;
+    private javax.swing.JButton btmBlackjack;
+    private javax.swing.JButton btmRuleta;
     private javax.swing.JButton btmTragaperras;
     // End of variables declaration//GEN-END:variables
 }

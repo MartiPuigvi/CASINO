@@ -1895,3 +1895,74 @@
 10:41:01	juan realitza una aposta de 200.0
 10:41:07	juan ha perdut la jugada.
 10:41:39	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045882.0} esta jugant a la Ruleta
+11:16:05	Programa iniciat
+11:16:05	Login iniciat
+11:16:08	Usuari juan ha iniciat sesio al sistema
+11:16:09	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1004800.0} esta jugant al Tragaperras
+11:24:21	Programa iniciat
+11:24:21	Login iniciat
+11:24:24	Usuari juan ha iniciat sesio al sistema
+11:24:25	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1004800.0} esta jugant a Blackjack
+11:24:25	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1004800.0} esta jugant a Blackjack
+11:24:30	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1003800.0} ha apostat: 1000.0
+11:24:31	juan ha demanat carta: 5
+11:24:31	juan ha demanat carta: 5
+11:24:32	juan ha demanat carta: 9
+11:24:33	juan es planta amb un total de: 19
+11:24:33	Dealer ha tret carta: 10
+11:24:33	Dealer ha tret carta: 11
+11:24:33	Final Blackjack: juan perd per punts. Dealer: 21 - Jugador: 19
+11:25:44	Programa iniciat
+11:25:44	Login iniciat
+11:25:46	Usuari juan ha iniciat sesio al sistema
+11:25:47	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=1003800.0} esta jugant al Tragaperras
+11:25:51	juan realitza una aposta de 200.0
+11:25:57	juan ha perdut la jugada.
+11:25:59	juan realitza una aposta de 200.0
+11:26:05	juan ha perdut la jugada.
+11:26:07	juan realitza una aposta de 200.0
+11:26:13	juan ha guanyat una PARELLA de ⭐. Premi: 400.0
+11:34:20	Programa iniciat
+11:34:20	Login iniciat
+11:34:28	Admin nico ha iniciat sesio al sistema
+11:35:36	Programa iniciat
+11:35:37	Login iniciat
+11:35:40	Admin nico ha iniciat sesio al sistema
+11:36:57	Programa iniciat
+11:36:57	Login iniciat
+11:37:00	Admin nico ha iniciat sesio al sistema
+11:39:05	Programa iniciat
+11:39:05	Login iniciat
+11:39:07	Admin nico ha iniciat sesio al sistema
+11:40:34	Programa iniciat
+11:40:34	Login iniciat
+11:40:36	Admin nico ha iniciat sesio al sistema
+11:46:55	Programa iniciat
+11:46:56	Login iniciat
+11:47:00	Admin nico ha iniciat sesio al sistema
+11:47:08	Programa iniciat
+11:47:09	Login iniciat
+11:47:13	Admin nico ha iniciat sesio al sistema
+11:50:58	Programa iniciat
+11:50:58	Login iniciat
+11:51:01	Admin nico ha iniciat sesio al sistema
+11:55:06	Programa iniciat
+11:55:07	Login iniciat
+11:55:09	Admin nico ha iniciat sesio al sistema
+11:55:55	Programa iniciat
+11:55:56	Login iniciat
+11:55:59	Admin nico ha iniciat sesio al sistema
+11:56:14	Programa iniciat
+11:56:15	Login iniciat
+11:56:21	Admin nico ha iniciat sesio al sistema
+11:56:24	Admin: Accés a l'historial de partides de Blackjack
+11:58:37	Programa iniciat
+11:58:38	Login iniciat
+11:58:40	Admin nico ha iniciat sesio al sistema
+11:58:54	Programa iniciat
+11:58:55	Login iniciat
+11:58:57	Admin nico ha iniciat sesio al sistema
+11:59:48	Programa iniciat
+11:59:49	Login iniciat
+11:59:55	Admin nico ha iniciat sesio al sistema
+12:00:01	Admin: Accés a l'historial de partides de Ruleta

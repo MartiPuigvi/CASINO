@@ -49,7 +49,7 @@ public class frmTragaperras extends javax.swing.JFrame {
         lbl2.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
         lbl3.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
         lbl1.setFont(new java.awt.Font("Segoe UI Emoji", 24, 24));
-        btmSeguir.setVisible(false);
+        btmIni.setVisible(false);
         imgOff();
         saldo();
         Aposta();
@@ -86,14 +86,14 @@ public class frmTragaperras extends javax.swing.JFrame {
 
     public void btmsoff() {
         btmini.setEnabled(false);
-        btmSeguir.setEnabled(false);
+        btmIni.setEnabled(false);
         btmMenu.setEnabled(false);
 
     }
 
     public void btmsOn() {
         btmini.setEnabled(true);
-        btmSeguir.setEnabled(true);
+        btmIni.setEnabled(true);
         btmMenu.setEnabled(true);
 
     }
@@ -134,9 +134,7 @@ public class frmTragaperras extends javax.swing.JFrame {
         @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
-            // Carga la imagen
             ImageIcon img = new ImageIcon(getClass().getResource("/Images/ini.png"));
-            // La dibuja escalada al tamaño del panel
             g.drawImage(img.getImage(), 0, 0, getWidth(), getHeight(), this);
         }
     };
@@ -158,7 +156,7 @@ public class frmTragaperras extends javax.swing.JFrame {
         btm50 = new javax.swing.JButton();
         btm100 = new javax.swing.JButton();
         btm200 = new javax.swing.JButton();
-        btmSeguir = new javax.swing.JButton();
+        btmIni = new javax.swing.JButton();
         btmMenu = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -237,13 +235,13 @@ public class frmTragaperras extends javax.swing.JFrame {
         });
         getContentPane().add(btm200, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 720, 100, 100));
 
-        btmSeguir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/inici.png"))); // NOI18N
-        btmSeguir.addActionListener(new java.awt.event.ActionListener() {
+        btmIni.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/inici.png"))); // NOI18N
+        btmIni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmSeguirActionPerformed(evt);
+                btmIniActionPerformed(evt);
             }
         });
-        getContentPane().add(btmSeguir, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 745, 240, 70));
+        getContentPane().add(btmIni, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 745, 240, 70));
 
         btmMenu.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         btmMenu.setText("☰ MENU");
@@ -409,7 +407,7 @@ public class frmTragaperras extends javax.swing.JFrame {
         imgOff();
         infoOff();
         btmsoff();
-        btmSeguir.setVisible(false);
+        btmIni.setVisible(false);
         if (aposta <= 0) {
             JOptionPane.showMessageDialog(null, "La aposta ha de ser major que 0");
             aposta = 0.0;
@@ -434,7 +432,7 @@ public class frmTragaperras extends javax.swing.JFrame {
 
         saldo();
         Aposta();
-        btmSeguir.setVisible(true);
+        btmIni.setVisible(true);
 
         tp = new jocTrragaperras(aposta, "Tragaperras");
         tp.girar();
@@ -445,7 +443,6 @@ public class frmTragaperras extends javax.swing.JFrame {
         iconaImg(lbl8, "gif");
 
         javax.swing.Timer timer1 = new javax.swing.Timer(2000, e -> {
-            // lbl1.setText(tp.getS1());
             lbl8Off();
             iconaImg(lbl1, tp.getS1());
         });
@@ -453,7 +450,6 @@ public class frmTragaperras extends javax.swing.JFrame {
         timer1.start();
 
         javax.swing.Timer timer2 = new javax.swing.Timer(4000, e -> {
-            // lbl2.setText(tp.getS2());
             lbl6Off();
             iconaImg(lbl2, tp.getS2());
 
@@ -462,7 +458,6 @@ public class frmTragaperras extends javax.swing.JFrame {
         timer2.start();
 
         javax.swing.Timer timer3 = new javax.swing.Timer(6000, e -> {
-            // lbl3.setText(tp.getS3());
             lbl7Off();
             iconaImg(lbl3, tp.getS3());
             win();
@@ -509,17 +504,17 @@ public class frmTragaperras extends javax.swing.JFrame {
 // TODO add your handling code here:
     }//GEN-LAST:event_btmMenuActionPerformed
 
-    private void btmSeguirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmSeguirActionPerformed
+    private void btmIniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmIniActionPerformed
         imgOff();
         infoOff();
         aposta = 0.0;
         btmApostaOn();
         btmini.setEnabled(true);
-        btmSeguir.setVisible(false);
+        btmIni.setVisible(false);
         saldo();
         Aposta();
         lblInfo.setText("");
-    }//GEN-LAST:event_btmSeguirActionPerformed
+    }//GEN-LAST:event_btmIniActionPerformed
 
     private void win() {
 
@@ -617,8 +612,8 @@ public class frmTragaperras extends javax.swing.JFrame {
     private javax.swing.JButton btm20;
     private javax.swing.JButton btm200;
     private javax.swing.JButton btm50;
+    private javax.swing.JButton btmIni;
     private javax.swing.JButton btmMenu;
-    private javax.swing.JButton btmSeguir;
     private javax.swing.JButton btmini;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
