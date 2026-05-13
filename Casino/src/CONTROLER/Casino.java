@@ -59,7 +59,8 @@ public class Casino {
             UIManager.put("defaultFont", new Font("Segoe UI", Font.PLAIN, 13));
             UIManager.put("Button.arc", 999);
             UIManager.put("Component.arc", 12);
-
+            UIManager.put("PasswordField.showRevealButton", true);
+            
         } catch (Exception e) {
             e.printStackTrace();
         }

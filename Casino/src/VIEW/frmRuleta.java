@@ -8,6 +8,8 @@ import static CONTROLER.Casino.userActual;
 import static CONEXION.Queries.guardarPartidaBlackjack;
 import static CONEXION.Queries.guardarPartidaRuleta;
 import CONTROLER.GestioLog;
+import static CONTROLER.GestioLog.escriureLog;
+import MODEL.ApostaRealitzada;
 import MODEL.casellaRuleta;
 import MODEL.jocRuleta;
 import MODEL.partidaRuleta.colorRuleta;
@@ -66,6 +68,8 @@ public class frmRuleta extends javax.swing.JFrame {
                 if (tipus.equals("PARELL_SENAR")) {
                     valorText = (boolean) valor ? "Parell" : "Senar";
                 }
+
+                escriureLog(userActual.getNom() + " ha apostat " + diners + "€ a: " + valorText);
 
                 txtLlistaApostes.append("Aposta: " + diners + "€ al " + valorText + "\n");
 
@@ -163,6 +167,7 @@ public class frmRuleta extends javax.swing.JFrame {
         lblResultat.setText("jLabel1");
 
         btmNum1.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum1.setForeground(new java.awt.Color(255, 255, 255));
         btmNum1.setText("1");
         btmNum1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,6 +185,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmNum3.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum3.setForeground(new java.awt.Color(255, 255, 255));
         btmNum3.setText("3");
         btmNum3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -197,6 +203,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmNum5.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum5.setForeground(new java.awt.Color(255, 255, 255));
         btmNum5.setText("5");
         btmNum5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,6 +221,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmNum7.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum7.setForeground(new java.awt.Color(255, 255, 255));
         btmNum7.setText("7");
         btmNum7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -231,6 +239,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmNum9.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum9.setForeground(new java.awt.Color(255, 255, 255));
         btmNum9.setText("9");
         btmNum9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -257,6 +266,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmNum12.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum12.setForeground(new java.awt.Color(255, 255, 255));
         btmNum12.setText("12");
         btmNum12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -274,6 +284,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmNum14.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum14.setForeground(new java.awt.Color(255, 255, 255));
         btmNum14.setText("14");
         btmNum14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -291,6 +302,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmNum16.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum16.setForeground(new java.awt.Color(255, 255, 255));
         btmNum16.setText("16");
         btmNum16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -308,6 +320,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmNum18.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum18.setForeground(new java.awt.Color(255, 255, 255));
         btmNum18.setText("18");
         btmNum18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -324,6 +337,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmNum19.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum19.setForeground(new java.awt.Color(255, 255, 255));
         btmNum19.setText("19");
         btmNum19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -341,6 +355,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmNum21.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum21.setForeground(new java.awt.Color(255, 255, 255));
         btmNum21.setText("21");
         btmNum21.setToolTipText("");
         btmNum21.addActionListener(new java.awt.event.ActionListener() {
@@ -359,6 +374,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmNum23.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum23.setForeground(new java.awt.Color(255, 255, 255));
         btmNum23.setText("23");
         btmNum23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -376,6 +392,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmNum25.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum25.setForeground(new java.awt.Color(255, 255, 255));
         btmNum25.setText("25");
         btmNum25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -393,6 +410,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmNum27.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum27.setForeground(new java.awt.Color(255, 255, 255));
         btmNum27.setText("27");
         btmNum27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -428,6 +446,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmNum30.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum30.setForeground(new java.awt.Color(255, 255, 255));
         btmNum30.setText("30");
         btmNum30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -445,6 +464,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmNum32.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum32.setForeground(new java.awt.Color(255, 255, 255));
         btmNum32.setText("32");
         btmNum32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -453,6 +473,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmNum34.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum34.setForeground(new java.awt.Color(255, 255, 255));
         btmNum34.setText("34");
         btmNum34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -470,6 +491,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmNum36.setBackground(new java.awt.Color(255, 0, 0));
+        btmNum36.setForeground(new java.awt.Color(255, 255, 255));
         btmNum36.setText("36");
         btmNum36.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -502,6 +524,7 @@ public class frmRuleta extends javax.swing.JFrame {
         });
 
         btmVermell.setBackground(new java.awt.Color(255, 0, 0));
+        btmVermell.setForeground(new java.awt.Color(255, 255, 255));
         btmVermell.setText("VERMELL");
         btmVermell.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -895,67 +918,72 @@ public class frmRuleta extends javax.swing.JFrame {
         timer.start();
     }//GEN-LAST:event_btmGirarActionPerformed
 
-        private void processarResultatRuleta() {
-            int indexGuanyador = random.nextInt(tauler.size());
-            casellaRuleta resultat = tauler.get(indexGuanyador);
-            lblResultat.setText(String.valueOf(resultat.getNumero()));
+    private void processarResultatRuleta() {
+        int indexGuanyador = random.nextInt(tauler.size());
+        casellaRuleta resultat = tauler.get(indexGuanyador);
+        lblResultat.setText(String.valueOf(resultat.getNumero()));
 
-            double totalPremi = 0;
-            String tipusGuanyador = "Perdut";
+        escriureLog("La bola ha caigut al número: " + resultat.getNumero() + " (" + resultat.getColor() + ")");
 
-            for (ApostaRealitzada ap : apostesActives) {
-                boolean guanyaApostaIndividual = false;
-                double mult = 0;
+        double totalPremi = 0;
+        String tipusGuanyador = "Perdut";
 
-                if (ap.tipus.equals("NUMERO") && resultat.getNumero() == (int) ap.valor) {
-                    guanyaApostaIndividual = true;
-                    mult = 36;
-                    tipusGuanyador = "Número";
-                } else if (ap.tipus.equals("COLOR") && resultat.getColor().equalsIgnoreCase((String) ap.valor)) {
-                    guanyaApostaIndividual = true;
-                    mult = 2;
-                    if (tipusGuanyador.equals("Perdut")) {
-                        tipusGuanyador = "Color";
-                    }
-                } else if (ap.tipus.equals("PARELL_SENAR") && resultat.getNumero() != 0 && resultat.isParell() == (boolean) ap.valor) {
-                    guanyaApostaIndividual = true;
-                    mult = 2;
-                    if (tipusGuanyador.equals("Perdut")) {
-                        tipusGuanyador = "Parell/Senar";
-                    }
+        for (ApostaRealitzada ap : apostesActives) {
+            boolean guanyaApostaIndividual = false;
+            double mult = 0;
+
+            if (ap.tipus.equals("NUMERO") && resultat.getNumero() == (int) ap.valor) {
+                guanyaApostaIndividual = true;
+                mult = 36;
+                tipusGuanyador = "Número";
+            } else if (ap.tipus.equals("COLOR") && resultat.getColor().equalsIgnoreCase((String) ap.valor)) {
+                guanyaApostaIndividual = true;
+                mult = 2;
+                if (tipusGuanyador.equals("Perdut")) {
+                    tipusGuanyador = "Color";
                 }
-
-                if (guanyaApostaIndividual) {
-                    totalPremi += (ap.diners * mult);
+            } else if (ap.tipus.equals("PARELL_SENAR") && resultat.getNumero() != 0 && resultat.isParell() == (boolean) ap.valor) {
+                guanyaApostaIndividual = true;
+                mult = 2;
+                if (tipusGuanyador.equals("Perdut")) {
+                    tipusGuanyador = "Parell/Senar";
                 }
             }
 
-            colorRuleta colorEnum = colorRuleta.valueOf(resultat.getColor());
-            guardarPartidaRuleta(
-                    userActual.getNom(),
-                    resultat.getNumero(),
-                    colorEnum,
-                    resultat.isParell(),
-                    tipusGuanyador
-            );
-
-            if (totalPremi > 0) {
-                userActual.setSaldo(userActual.getSaldo() + totalPremi);
-                CONEXION.Queries.updateSaldo(userActual.getId(), userActual.getSaldo());
-                javax.swing.JOptionPane.showMessageDialog(null,
-                        "Número: " + resultat.getNumero() + " (" + resultat.getColor() + ")\n"
-                        + "Has guanyat per: " + tipusGuanyador + "\n"
-                        + "TOTAL PREMI: " + totalPremi + "€!");
-            } else {
-                javax.swing.JOptionPane.showMessageDialog(null, "Resultat: " + resultat.getNumero() + ". No has guanyat res.");
+            if (guanyaApostaIndividual) {
+                totalPremi += (ap.diners * mult);
             }
-
-            lblRuleta.setVisible(false);
-            apostesActives.clear();
-            txtLlistaApostes.setText("");
-            saldo();
-            btmGirar.setEnabled(true);
         }
+
+        colorRuleta colorEnum = colorRuleta.valueOf(resultat.getColor());
+        guardarPartidaRuleta(
+                userActual.getNom(),
+                resultat.getNumero(),
+                colorEnum,
+                resultat.isParell(),
+                tipusGuanyador
+        );
+
+        if (totalPremi > 0) {
+            userActual.setSaldo(userActual.getSaldo() + totalPremi);
+            CONEXION.Queries.updateSaldo(userActual.getId(), userActual.getSaldo());
+            javax.swing.JOptionPane.showMessageDialog(null,
+                    "Número: " + resultat.getNumero() + " (" + resultat.getColor() + ")\n"
+                    + "Has guanyat per: " + tipusGuanyador + "\n"
+                    + "TOTAL PREMI: " + totalPremi + "€!");
+            escriureLog("RESULTAT: " + userActual.getNom() + " ha guanyat " + totalPremi + "€");
+
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(null, "Resultat: " + resultat.getNumero() + ". No has guanyat res.");
+            escriureLog("RESULTAT: " + userActual.getNom() + " no ha guanyat res.");
+        }
+
+        lblRuleta.setVisible(false);
+        apostesActives.clear();
+        txtLlistaApostes.setText("");
+        saldo();
+        btmGirar.setEnabled(true);
+    }
 
     /**
      * @param args the command line arguments
@@ -980,19 +1008,6 @@ public class frmRuleta extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new frmRuleta().setVisible(true));
-    }
-
-    class ApostaRealitzada {
-
-        String tipus;
-        Object valor;
-        double diners;
-
-        public ApostaRealitzada(String tipus, Object valor, double diners) {
-            this.tipus = tipus;
-            this.valor = valor;
-            this.diners = diners;
-        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -13,7 +13,7 @@ import javax.swing.table.DefaultTableModel;
  * @author Marti Puigvi Serra
  */
 public class frmPartidaTragaperras extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(frmPartidaTragaperras.class.getName());
 
     /**
@@ -21,10 +21,11 @@ public class frmPartidaTragaperras extends javax.swing.JFrame {
      */
     public frmPartidaTragaperras() {
         initComponents();
+        tblTragaperras.setFont(new java.awt.Font("Segoe UI Symbol", java.awt.Font.PLAIN, 14));
         omplirPartidaTragaperras();
     }
-    
-     public void omplirPartidaTragaperras() {
+
+    public void omplirPartidaTragaperras() {
         tblTragaperras.clearSelection();
         String col[] = {"PARTIDA", "JUGADOR", "SIMBOL1", "SIMBOL2", "SIMBOL3", "GUANYADOR"};
         DefaultTableModel tableModel = new DefaultTableModel(col, historialTragaperras.size());
@@ -78,8 +79,8 @@ public class frmPartidaTragaperras extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 562, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
