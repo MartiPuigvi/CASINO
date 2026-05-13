@@ -4,6 +4,8 @@
  */
 package VIEW;
 
+import static CONTROLER.GestioLog.escriureLog;
+
 /**
  *
  * @author Marti Puigvi Serra
@@ -87,6 +89,7 @@ public class frmHistorial extends javax.swing.JFrame {
         frmPartidaBlackjack p = new frmPartidaBlackjack();
         p.setVisible(true);
         this.dispose();
+        escriureLog("Admin: Accés a l'historial de partides de Blackjack");
     }//GEN-LAST:event_btmHistorialBlackjackActionPerformed
 
     private void brmRuletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brmRuletaActionPerformed
@@ -94,6 +97,7 @@ public class frmHistorial extends javax.swing.JFrame {
         frmPartidaRuleta r = new frmPartidaRuleta();
         r.setVisible(true);
         this.dispose();
+        escriureLog("Admin: Accés a l'historial de partides de Ruleta");
     }//GEN-LAST:event_brmRuletaActionPerformed
 
     private void btmTragaperrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmTragaperrasActionPerformed
@@ -101,6 +105,7 @@ public class frmHistorial extends javax.swing.JFrame {
         frmPartidaTragaperras t = new frmPartidaTragaperras();
         t.setVisible(true);
         this.dispose();
+        escriureLog("Admin: Accés a l'historial de partides de Tragaperras");
     }//GEN-LAST:event_btmTragaperrasActionPerformed
 
     /**

@@ -6,7 +6,9 @@ package VIEW;
 
 import static CONTROLER.Casino.userActual;
 import CONTROLER.GestioLog;
+import CONTROLER.estils;
 import java.awt.Graphics;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 /**
@@ -16,21 +18,36 @@ import javax.swing.JPanel;
 public class frmMenu extends javax.swing.JFrame {
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(frmMenu.class.getName());
-    private java.awt.Image imatgeFons = new javax.swing.ImageIcon(getClass().getResource("/Images/fons_menu.png")).getImage();
 
     /**
      * Creates new form frmMenu
      */
     public frmMenu(boolean admin) {
-        this.setContentPane(crearPanellFons());
+        //this.setUndecorated(true);
         initComponents();
 
+        this.setContentPane(Fondo);
+        Fondo.setLayout(null);
+
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
+        estils.border(jPanel2);
+
+        Fondo.add(btmBlackJack);
+        Fondo.add(btmRuleta);
+        Fondo.add(btmTragaPerras);
+        Fondo.add(jPanel2);
+        Fondo.add(btmConf);
+        Fondo.add(btmHistorial);
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
+      
         if (admin) {
             btmConf.setVisible(true);
             btmBlackJack.setVisible(false);
             btmRuleta.setVisible(false);
             btmTragaPerras.setVisible(false);
             btmHistorial.setVisible(true);
+            jPanel2.setVisible(false);
 
         } else {
             saldo();
@@ -45,20 +62,14 @@ public class frmMenu extends javax.swing.JFrame {
         lblSaldo.setText(String.valueOf(userActual.getSaldo()));
     }
 
-    private javax.swing.JPanel crearPanellFons() {
-        javax.swing.JPanel panell = new javax.swing.JPanel() {
-            @Override
-            protected void paintComponent(java.awt.Graphics g) {
-                super.paintComponent(g);
-                if (imatgeFons != null) {
-                    // El truc és fer servir getWidth() i getHeight() del panell
-                    // per estirar la imatge segons la mida de la finestra
-                    g.drawImage(imatgeFons, 0, 0, getWidth(), getHeight(), this);
-                }
-            }
-        };
-        return panell;
-    }
+    JPanel Fondo = new JPanel() {
+        @Override
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            ImageIcon img = new ImageIcon(getClass().getResource("/Images/menu.png"));
+            g.drawImage(img.getImage(), 0, 0, getWidth(), getHeight(), this);
+        }
+    };
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -72,46 +83,51 @@ public class frmMenu extends javax.swing.JFrame {
         btmBlackJack = new javax.swing.JButton();
         btmRuleta = new javax.swing.JButton();
         btmTragaPerras = new javax.swing.JButton();
-        lblSaldo = new javax.swing.JLabel();
         btmConf = new javax.swing.JButton();
         btmHistorial = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        lblSaldo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btmBlackJack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/bj_menu.png"))); // NOI18N
+        btmBlackJack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/blakjack_menu.png"))); // NOI18N
         btmBlackJack.setBorder(null);
         btmBlackJack.setBorderPainted(false);
         btmBlackJack.setContentAreaFilled(false);
         btmBlackJack.setMaximumSize(new java.awt.Dimension(586, 347));
         btmBlackJack.setMinimumSize(new java.awt.Dimension(586, 347));
-        btmBlackJack.setPreferredSize(new java.awt.Dimension(586, 347));
         btmBlackJack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmBlackJackActionPerformed(evt);
             }
         });
+        getContentPane().add(btmBlackJack, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, -1, -1));
 
-        btmRuleta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/rule_menu.png"))); // NOI18N
+        btmRuleta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ruleta_menu.png"))); // NOI18N
         btmRuleta.setBorderPainted(false);
         btmRuleta.setContentAreaFilled(false);
-        btmRuleta.setMinimumSize(new java.awt.Dimension(508, 337));
+        btmRuleta.setPreferredSize(new java.awt.Dimension(400, 400));
         btmRuleta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmRuletaActionPerformed(evt);
             }
         });
+        getContentPane().add(btmRuleta, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 180, -1, -1));
 
-        btmTragaPerras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/tp_menu.png"))); // NOI18N
+        btmTragaPerras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/tragaperras_menu.png"))); // NOI18N
         btmTragaPerras.setBorderPainted(false);
         btmTragaPerras.setContentAreaFilled(false);
         btmTragaPerras.setMaximumSize(new java.awt.Dimension(586, 347));
         btmTragaPerras.setMinimumSize(new java.awt.Dimension(586, 347));
-        btmTragaPerras.setPreferredSize(new java.awt.Dimension(586, 347));
+        btmTragaPerras.setPreferredSize(new java.awt.Dimension(400, 400));
         btmTragaPerras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmTragaPerrasActionPerformed(evt);
             }
         });
+        getContentPane().add(btmTragaPerras, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 180, -1, -1));
 
         btmConf.setText("CONFIG USER");
         btmConf.addActionListener(new java.awt.event.ActionListener() {
@@ -119,6 +135,7 @@ public class frmMenu extends javax.swing.JFrame {
                 btmConfActionPerformed(evt);
             }
         });
+        getContentPane().add(btmConf, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 630, -1, -1));
 
         btmHistorial.setText("HISTORIAL PARTIDES");
         btmHistorial.addActionListener(new java.awt.event.ActionListener() {
@@ -126,54 +143,31 @@ public class frmMenu extends javax.swing.JFrame {
                 btmHistorialActionPerformed(evt);
             }
         });
+        getContentPane().add(btmHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 630, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(639, 639, 639)
-                        .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btmBlackJack, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(476, 476, 476)
-                                .addComponent(btmTragaPerras, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(595, 595, 595)
-                                .addComponent(btmConf))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(433, 433, 433)
-                                .addComponent(btmHistorial))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(244, 244, 244)
-                                .addComponent(btmRuleta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(41, 41, 41))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(lblSaldo)
-                .addGap(61, 61, 61)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btmBlackJack, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(btmTragaPerras, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(293, 293, 293)
-                        .addComponent(btmConf))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(293, 293, 293)
-                        .addComponent(btmHistorial))
-                    .addComponent(btmRuleta, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44))
-        );
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1920, 1080));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Georgia", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(212, 175, 55));
+        jLabel1.setText("SALDO");
+        jLabel1.setAlignmentX(0.5F);
+        jLabel1.setAlignmentY(0.0F);
+        jLabel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 1, 1, 1));
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, -1));
+
+        lblSaldo.setFont(new java.awt.Font("Georgia", 1, 48)); // NOI18N
+        lblSaldo.setForeground(new java.awt.Color(212, 175, 55));
+        lblSaldo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSaldo.setText("jLabel2");
+        lblSaldo.setAlignmentX(0.5F);
+        lblSaldo.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 1, 1, 1));
+        lblSaldo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel2.add(lblSaldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 370, 70));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(587, 20, 370, 100));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -200,19 +194,19 @@ public class frmMenu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btmTragaPerrasActionPerformed
 
-    private void btmHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmHistorialActionPerformed
-        // TODO add your handling code here:
-        frmHistorial h = new frmHistorial();
-        h.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_btmHistorialActionPerformed
-
     private void btmBlackJackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmBlackJackActionPerformed
         frmBlackjack f = new frmBlackjack();
         f.setVisible(true);
         this.dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_btmBlackJackActionPerformed
+
+    private void btmHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmHistorialActionPerformed
+        // TODO add your handling code here:
+        frmHistorial h = new frmHistorial();
+        h.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btmHistorialActionPerformed
 
     /**
      * @param args the command line arguments
@@ -246,6 +240,8 @@ public class frmMenu extends javax.swing.JFrame {
     private javax.swing.JButton btmHistorial;
     private javax.swing.JButton btmRuleta;
     private javax.swing.JButton btmTragaPerras;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblSaldo;
     // End of variables declaration//GEN-END:variables
 }

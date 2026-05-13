@@ -13,9 +13,12 @@ import MODEL.ApostaRealitzada;
 import MODEL.casellaRuleta;
 import MODEL.jocRuleta;
 import MODEL.partidaRuleta.colorRuleta;
+import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.Random;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -32,7 +35,16 @@ public class frmRuleta extends javax.swing.JFrame {
      * Creates new form frmRuleta
      */
     public frmRuleta() {
+        this.setUndecorated(true);
         initComponents();
+
+        this.setContentPane(Fondo);
+        Fondo.setLayout(null);
+
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
+
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         prepararTauler();
         saldo();
         GestioLog.escriureLog(userActual + " esta jugant a la Ruleta");
@@ -44,7 +56,7 @@ public class frmRuleta extends javax.swing.JFrame {
     }
 
     private void mostrarPopUpAposta(String tipus, Object valor) {
-        String[] fitxes = {"5", "10", "20", "50", "100"};
+        String[] fitxes = {"20", "50", "100", "200", "500"};
         String tria = (String) javax.swing.JOptionPane.showInputDialog(
                 this,
                 "Quant apostes a " + (tipus.equals("PARELL_SENAR") ? ((boolean) valor ? "Parell" : "Senar") : valor) + "?",
@@ -101,6 +113,14 @@ public class frmRuleta extends javax.swing.JFrame {
             tauler.add(novaCasella);
         }
     }
+    JPanel Fondo = new JPanel() {
+        @Override
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            ImageIcon img = new ImageIcon(getClass().getResource("/Images/fons_rulet.png"));
+            g.drawImage(img.getImage(), 0, 0, getWidth(), getHeight(), this);
+        }
+    };
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -161,19 +181,24 @@ public class frmRuleta extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblSaldo.setText("jLabel1");
+        getContentPane().add(lblSaldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1103, 116, 81, -1));
 
         lblResultat.setText("jLabel1");
+        getContentPane().add(lblResultat, new org.netbeans.lib.awtextra.AbsoluteConstraints(1103, 183, 48, -1));
 
         btmNum1.setBackground(new java.awt.Color(255, 0, 0));
         btmNum1.setForeground(new java.awt.Color(255, 255, 255));
         btmNum1.setText("1");
+        btmNum1.setBorderPainted(false);
         btmNum1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmNum1ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum1, new org.netbeans.lib.awtextra.AbsoluteConstraints(66, 376, 55, 33));
 
         btmNum2.setBackground(new java.awt.Color(0, 0, 0));
         btmNum2.setForeground(new java.awt.Color(255, 255, 255));
@@ -183,6 +208,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum2ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum2, new org.netbeans.lib.awtextra.AbsoluteConstraints(127, 376, 55, 33));
 
         btmNum3.setBackground(new java.awt.Color(255, 0, 0));
         btmNum3.setForeground(new java.awt.Color(255, 255, 255));
@@ -192,6 +218,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum3ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum3, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 376, 55, 33));
 
         btmNum4.setBackground(new java.awt.Color(0, 0, 0));
         btmNum4.setForeground(new java.awt.Color(255, 255, 255));
@@ -201,6 +228,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum4ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum4, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 376, 55, 33));
 
         btmNum5.setBackground(new java.awt.Color(255, 0, 0));
         btmNum5.setForeground(new java.awt.Color(255, 255, 255));
@@ -210,6 +238,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum5ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 376, 55, 33));
 
         btmNum6.setBackground(new java.awt.Color(0, 0, 0));
         btmNum6.setForeground(new java.awt.Color(255, 255, 255));
@@ -219,6 +248,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum6ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum6, new org.netbeans.lib.awtextra.AbsoluteConstraints(371, 376, 55, 33));
 
         btmNum7.setBackground(new java.awt.Color(255, 0, 0));
         btmNum7.setForeground(new java.awt.Color(255, 255, 255));
@@ -228,6 +258,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum7ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum7, new org.netbeans.lib.awtextra.AbsoluteConstraints(432, 376, 55, 33));
 
         btmNum8.setBackground(new java.awt.Color(0, 0, 0));
         btmNum8.setForeground(new java.awt.Color(255, 255, 255));
@@ -237,6 +268,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum8ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum8, new org.netbeans.lib.awtextra.AbsoluteConstraints(493, 376, 55, 33));
 
         btmNum9.setBackground(new java.awt.Color(255, 0, 0));
         btmNum9.setForeground(new java.awt.Color(255, 255, 255));
@@ -246,6 +278,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum9ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum9, new org.netbeans.lib.awtextra.AbsoluteConstraints(554, 376, 55, 33));
 
         btmNum10.setBackground(new java.awt.Color(0, 0, 0));
         btmNum10.setForeground(new java.awt.Color(255, 255, 255));
@@ -255,6 +288,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum10ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum10, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 376, 55, 33));
 
         btmNum11.setBackground(new java.awt.Color(0, 0, 0));
         btmNum11.setForeground(new java.awt.Color(255, 255, 255));
@@ -264,6 +298,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum11ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum11, new org.netbeans.lib.awtextra.AbsoluteConstraints(676, 376, 55, 33));
 
         btmNum12.setBackground(new java.awt.Color(255, 0, 0));
         btmNum12.setForeground(new java.awt.Color(255, 255, 255));
@@ -273,6 +308,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum12ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum12, new org.netbeans.lib.awtextra.AbsoluteConstraints(737, 376, 55, 33));
 
         btmNum13.setBackground(new java.awt.Color(0, 0, 0));
         btmNum13.setForeground(new java.awt.Color(255, 255, 255));
@@ -282,6 +318,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum13ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum13, new org.netbeans.lib.awtextra.AbsoluteConstraints(798, 376, 55, 33));
 
         btmNum14.setBackground(new java.awt.Color(255, 0, 0));
         btmNum14.setForeground(new java.awt.Color(255, 255, 255));
@@ -291,6 +328,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum14ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum14, new org.netbeans.lib.awtextra.AbsoluteConstraints(859, 376, 55, 33));
 
         btmNum15.setBackground(new java.awt.Color(0, 0, 0));
         btmNum15.setForeground(new java.awt.Color(255, 255, 255));
@@ -300,6 +338,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum15ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum15, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 376, 55, 33));
 
         btmNum16.setBackground(new java.awt.Color(255, 0, 0));
         btmNum16.setForeground(new java.awt.Color(255, 255, 255));
@@ -309,6 +348,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum16ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum16, new org.netbeans.lib.awtextra.AbsoluteConstraints(981, 376, 55, 33));
 
         btmNum17.setBackground(new java.awt.Color(0, 0, 0));
         btmNum17.setForeground(new java.awt.Color(255, 255, 255));
@@ -318,6 +358,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum17ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum17, new org.netbeans.lib.awtextra.AbsoluteConstraints(1042, 376, 55, 33));
 
         btmNum18.setBackground(new java.awt.Color(255, 0, 0));
         btmNum18.setForeground(new java.awt.Color(255, 255, 255));
@@ -327,6 +368,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum18ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum18, new org.netbeans.lib.awtextra.AbsoluteConstraints(1103, 376, 55, 33));
 
         btmNum0.setBackground(new java.awt.Color(0, 255, 51));
         btmNum0.setText("0");
@@ -335,6 +377,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum0ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum0, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 376, 55, 33));
 
         btmNum19.setBackground(new java.awt.Color(255, 0, 0));
         btmNum19.setForeground(new java.awt.Color(255, 255, 255));
@@ -344,6 +387,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum19ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum19, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 421, 55, 33));
 
         btmNum20.setBackground(new java.awt.Color(0, 0, 0));
         btmNum20.setForeground(new java.awt.Color(255, 255, 255));
@@ -353,6 +397,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum20ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum20, new org.netbeans.lib.awtextra.AbsoluteConstraints(66, 421, 55, 33));
 
         btmNum21.setBackground(new java.awt.Color(255, 0, 0));
         btmNum21.setForeground(new java.awt.Color(255, 255, 255));
@@ -363,6 +408,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum21ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum21, new org.netbeans.lib.awtextra.AbsoluteConstraints(127, 421, 55, 33));
 
         btmNum22.setBackground(new java.awt.Color(0, 0, 0));
         btmNum22.setForeground(new java.awt.Color(255, 255, 255));
@@ -372,6 +418,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum22ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum22, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 421, 55, 33));
 
         btmNum23.setBackground(new java.awt.Color(255, 0, 0));
         btmNum23.setForeground(new java.awt.Color(255, 255, 255));
@@ -381,6 +428,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum23ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum23, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 421, 55, 33));
 
         btmNum24.setBackground(new java.awt.Color(0, 0, 0));
         btmNum24.setForeground(new java.awt.Color(255, 255, 255));
@@ -390,6 +438,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum24ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum24, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 421, 55, 33));
 
         btmNum25.setBackground(new java.awt.Color(255, 0, 0));
         btmNum25.setForeground(new java.awt.Color(255, 255, 255));
@@ -399,6 +448,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum25ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum25, new org.netbeans.lib.awtextra.AbsoluteConstraints(371, 421, 55, 33));
 
         btmNum26.setBackground(new java.awt.Color(0, 0, 0));
         btmNum26.setForeground(new java.awt.Color(255, 255, 255));
@@ -408,6 +458,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum26ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum26, new org.netbeans.lib.awtextra.AbsoluteConstraints(432, 421, 55, 33));
 
         btmNum27.setBackground(new java.awt.Color(255, 0, 0));
         btmNum27.setForeground(new java.awt.Color(255, 255, 255));
@@ -417,6 +468,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum27ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum27, new org.netbeans.lib.awtextra.AbsoluteConstraints(493, 421, 55, 33));
 
         btmNum33.setBackground(new java.awt.Color(0, 0, 0));
         btmNum33.setForeground(new java.awt.Color(255, 255, 255));
@@ -426,6 +478,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum33ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum33, new org.netbeans.lib.awtextra.AbsoluteConstraints(859, 421, 55, 33));
 
         btmNum28.setBackground(new java.awt.Color(0, 0, 0));
         btmNum28.setForeground(new java.awt.Color(255, 255, 255));
@@ -435,6 +488,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum28ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum28, new org.netbeans.lib.awtextra.AbsoluteConstraints(554, 421, 55, 33));
 
         btmNum29.setBackground(new java.awt.Color(0, 0, 0));
         btmNum29.setForeground(new java.awt.Color(255, 255, 255));
@@ -444,6 +498,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum29ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum29, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 421, 55, 33));
 
         btmNum30.setBackground(new java.awt.Color(255, 0, 0));
         btmNum30.setForeground(new java.awt.Color(255, 255, 255));
@@ -453,6 +508,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum30ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum30, new org.netbeans.lib.awtextra.AbsoluteConstraints(676, 421, 55, 33));
 
         btmNum31.setBackground(new java.awt.Color(0, 0, 0));
         btmNum31.setForeground(new java.awt.Color(255, 255, 255));
@@ -462,6 +518,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum31ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum31, new org.netbeans.lib.awtextra.AbsoluteConstraints(737, 421, 55, 33));
 
         btmNum32.setBackground(new java.awt.Color(255, 0, 0));
         btmNum32.setForeground(new java.awt.Color(255, 255, 255));
@@ -471,6 +528,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum32ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum32, new org.netbeans.lib.awtextra.AbsoluteConstraints(798, 421, 55, 33));
 
         btmNum34.setBackground(new java.awt.Color(255, 0, 0));
         btmNum34.setForeground(new java.awt.Color(255, 255, 255));
@@ -480,6 +538,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum34ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum34, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 421, 55, 33));
 
         btmNum35.setBackground(new java.awt.Color(0, 0, 0));
         btmNum35.setForeground(new java.awt.Color(255, 255, 255));
@@ -489,6 +548,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum35ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum35, new org.netbeans.lib.awtextra.AbsoluteConstraints(981, 421, 55, 33));
 
         btmNum36.setBackground(new java.awt.Color(255, 0, 0));
         btmNum36.setForeground(new java.awt.Color(255, 255, 255));
@@ -498,6 +558,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNum36ActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNum36, new org.netbeans.lib.awtextra.AbsoluteConstraints(1042, 421, 55, 33));
 
         btmParell.setText("PARELL");
         btmParell.addActionListener(new java.awt.event.ActionListener() {
@@ -505,6 +566,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmParellActionPerformed(evt);
             }
         });
+        getContentPane().add(btmParell, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 525, -1, -1));
 
         btmSenar.setText("SENAR");
         btmSenar.setToolTipText("");
@@ -513,6 +575,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmSenarActionPerformed(evt);
             }
         });
+        getContentPane().add(btmSenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 525, -1, -1));
 
         btmNegre.setBackground(new java.awt.Color(0, 0, 0));
         btmNegre.setForeground(new java.awt.Color(255, 255, 255));
@@ -522,6 +585,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmNegreActionPerformed(evt);
             }
         });
+        getContentPane().add(btmNegre, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 484, -1, -1));
 
         btmVermell.setBackground(new java.awt.Color(255, 0, 0));
         btmVermell.setForeground(new java.awt.Color(255, 255, 255));
@@ -531,6 +595,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmVermellActionPerformed(evt);
             }
         });
+        getContentPane().add(btmVermell, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 484, -1, -1));
 
         btmGirar.setText("GIRAR");
         btmGirar.addActionListener(new java.awt.event.ActionListener() {
@@ -538,210 +603,21 @@ public class frmRuleta extends javax.swing.JFrame {
                 btmGirarActionPerformed(evt);
             }
         });
+        getContentPane().add(btmGirar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1103, 245, -1, -1));
 
         txtLlistaApostes.setEditable(false);
         txtLlistaApostes.setColumns(20);
         txtLlistaApostes.setRows(5);
         jScrollPane1.setViewportView(txtLlistaApostes);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(9, 153, -1, -1));
+
         lblRuleta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ruleta.gif"))); // NOI18N
+        getContentPane().add(lblRuleta, new org.netbeans.lib.awtextra.AbsoluteConstraints(478, 29, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel2.setText("APOSTES:");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(5, 5, 5)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btmNegre)
-                            .addComponent(btmParell))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btmSenar)
-                            .addComponent(btmVermell)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btmNum19, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum20, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum21, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum22, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btmNum0, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addComponent(jLabel2)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btmNum23, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum24, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum25, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum26, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum27, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum28, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum29, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum30, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum31, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btmNum4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum5, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum7, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum8, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum9, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum10, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum11, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum12, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btmNum32, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum33, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum34, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum35, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum36, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btmNum13, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum14, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum15, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum16, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum17, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btmNum18, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(26, 26, 26))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(235, 235, 235)
-                                .addComponent(lblRuleta)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btmGirar)
-                                    .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblResultat, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addGap(0, 55, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(99, 99, 99)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(137, 137, 137))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lblSaldo)
-                                .addGap(51, 51, 51)
-                                .addComponent(lblResultat)
-                                .addGap(46, 46, 46)
-                                .addComponent(btmGirar)
-                                .addGap(108, 108, 108))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(lblRuleta)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btmNum4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum6, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum7, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum8, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum9, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum10, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum11, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum12, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum13, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum14, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum15, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum16, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum17, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum18, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btmNum23, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum24, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum25, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum26, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum27, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum28, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum29, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum30, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum31, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum32, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum33, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum35, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum36, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum34, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btmNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum0, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btmNum19, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum20, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum21, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btmNum22, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btmNegre)
-                    .addComponent(btmVermell))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btmSenar)
-                    .addComponent(btmParell))
-                .addContainerGap(15, Short.MAX_VALUE))
-        );
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 99, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

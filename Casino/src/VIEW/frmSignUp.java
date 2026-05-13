@@ -7,6 +7,7 @@ package VIEW;
 import static CONTROLER.Casino.Admins;
 import static CONTROLER.Casino.Users;
 import CONTROLER.GestioLog;
+import static CONTROLER.GestioLog.escriureLog;
 import MODEL.Admin;
 import MODEL.Usuari;
 
@@ -27,7 +28,6 @@ public class frmSignUp extends javax.swing.JFrame {
         txtPass.putClientProperty("JTextField.placeholderText", "Password");
         txtAge.putClientProperty("JTextField.placeholderText", "DD-MM-YYYY");
         txtEmail.putClientProperty("JTextField.placeholderText", "Email");
-        
 
         txtPass.putClientProperty("JTextField.showRevealButton", true);
         GestioLog.escriureLog("Signup iniciat");
@@ -154,19 +154,24 @@ public class frmSignUp extends javax.swing.JFrame {
         String email = txtEmail.getText();
         String age = txtAge.getText();
 
+        escriureLog("Intent de registre per a l'usuari: " + nom);
+
         if (nom.isEmpty() || pass.isEmpty() || email.isEmpty() || age.isEmpty()) {
             javax.swing.JOptionPane.showMessageDialog(this, "Siusplau, omple tots els camps.");
+            escriureLog("Error registre: Camps buits detectats.");
             return;
         }
 
         for (Usuari u : Users) {
             if (u.getNom().equals(nom)) {
                 javax.swing.JOptionPane.showMessageDialog(this, "nom incorrecte");
+                escriureLog("Error registre: El nom '" + nom + "' ja està en ús.");
                 return;
             }
 
             if (u.getEmail().equals(email)) {
                 javax.swing.JOptionPane.showMessageDialog(this, "correu");
+                escriureLog("Error registre: L'email '" + email + "' ja està en ús.");
                 return;
             }
 
@@ -175,6 +180,7 @@ public class frmSignUp extends javax.swing.JFrame {
         for (Admin u : Admins) {
             if (u.getNom().equals(nom)) {
                 javax.swing.JOptionPane.showMessageDialog(this, "nom admin");
+                escriureLog("Error registre: Intent de suplentació de nom d'admin: " + nom);
                 return;
             }
 
@@ -184,7 +190,7 @@ public class frmSignUp extends javax.swing.JFrame {
 
         javax.swing.JOptionPane.showMessageDialog(this, "Usuari creat amb exit.");
         this.dispose();
-        GestioLog.escriureLog(txtName.getText() + " ha estat registrat al sistema");
+        escriureLog(txtName.getText() + " ha estat registrat al sistema");
 
         frmLogIn login = new frmLogIn();
         login.setVisible(true);
@@ -195,6 +201,7 @@ public class frmSignUp extends javax.swing.JFrame {
         frmLogIn l = new frmLogIn();
         l.setVisible(true);
         this.dispose();
+        escriureLog("L'usuari ha cancel·lat el registre");
     }//GEN-LAST:event_btmCancelActionPerformed
 
     /**
