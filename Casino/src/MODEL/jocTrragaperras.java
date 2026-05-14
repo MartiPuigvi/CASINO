@@ -67,14 +67,6 @@ public class jocTrragaperras extends Joc {
 
     public void girar() {
 
-        /*Random random = new Random();
-
-    String simbol = simbols[random.nextInt(simbols.length)];
-
-    s1 = simbol;
-    s2 = simbol;
-    s3 = simbol;
-} */
         Random random = new Random();
 
         double r = Math.random();

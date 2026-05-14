@@ -46,9 +46,11 @@ public class frmRuleta extends javax.swing.JFrame {
     public frmRuleta() {
         this.setUndecorated(true);
 
+
         this.setContentPane(Fondo);
         Fondo.setLayout(null);
         initComponents();
+
         this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         estilbutoRule(btmMenu);
         borderRule(jPanel3);
@@ -213,6 +215,8 @@ public class frmRuleta extends javax.swing.JFrame {
         btmGirar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtLlistaApostes = new javax.swing.JTextArea();
+        lblRuleta = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         btmMenu = new javax.swing.JButton();
         lblrule = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -1200,6 +1204,14 @@ public class frmRuleta extends javax.swing.JFrame {
         lblrule1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/rule.gif"))); // NOI18N
         getContentPane().add(lblrule1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 80, -1, -1));
 
+        btmMenu.setText("MENU");
+        btmMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmMenuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btmMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 280, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1429,6 +1441,7 @@ public class frmRuleta extends javax.swing.JFrame {
     }//GEN-LAST:event_btmGirarActionPerformed
 
     private void btmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmMenuActionPerformed
+        // TODO add your handling code here:
 
         tornarMenuClient();
         this.dispose();
