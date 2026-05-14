@@ -4,19 +4,14 @@
  */
 package CONTROLER;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import CONTROLER.Casino;
+
 import static CONTROLER.Casino.Admins;
 import static CONTROLER.Casino.Users;
 import static CONTROLER.Casino.adminActual;
 import static CONTROLER.Casino.userActual;
-import CONTROLER.GestioFitxers;
-import MODEL.jocBlackjack;
 import VIEW.frmMenu;
 import java.io.File;
 import java.io.IOException;
-import java.util.Random;
 
 /**
  *

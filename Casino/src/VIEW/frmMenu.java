@@ -129,21 +129,26 @@ public class frmMenu extends javax.swing.JFrame {
         });
         getContentPane().add(btmTragaPerras, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 210, 250, 250));
 
-        btmConf.setText("CONFIG USER");
+        btmConf.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/menu_config.png"))); // NOI18N
+        btmConf.setToolTipText("");
+        btmConf.setBorderPainted(false);
+        btmConf.setContentAreaFilled(false);
         btmConf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmConfActionPerformed(evt);
             }
         });
-        getContentPane().add(btmConf, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 630, -1, -1));
+        getContentPane().add(btmConf, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 210, -1, -1));
 
-        btmHistorial.setText("HISTORIAL PARTIDES");
+        btmHistorial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/menu_historial.png"))); // NOI18N
+        btmHistorial.setBorderPainted(false);
+        btmHistorial.setContentAreaFilled(false);
         btmHistorial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmHistorialActionPerformed(evt);
             }
         });
-        getContentPane().add(btmHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 630, -1, -1));
+        getContentPane().add(btmHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setPreferredSize(new java.awt.Dimension(1920, 1080));
