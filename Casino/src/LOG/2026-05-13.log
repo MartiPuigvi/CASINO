@@ -1966,3 +1966,159 @@
 11:59:49	Login iniciat
 11:59:55	Admin nico ha iniciat sesio al sistema
 12:00:01	Admin: Accés a l'historial de partides de Ruleta
+10:46:13	Programa iniciat
+10:46:14	Login iniciat
+10:46:37	Programa iniciat
+10:46:37	Login iniciat
+10:46:45	Usuari juan ha iniciat sesio al sistema
+10:46:57	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045882.0} esta jugant al Tragaperras
+10:47:03	juan realitza una aposta de 200.0
+10:47:09	juan ha perdut la jugada.
+10:47:15	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045682.0} esta jugant a Blackjack
+10:47:15	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045682.0} esta jugant a Blackjack
+10:47:17	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045681.0} ha apostat: 1.0
+10:47:18	juan ha demanat carta: 6
+10:47:19	juan ha demanat carta: 7
+10:47:19	juan ha demanat carta: 10
+10:47:19	juan s'ha passat de 21 amb un total de: 23
+10:47:22	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045681.0} esta jugant a la Ruleta
+10:48:37	Programa iniciat
+10:48:37	Login iniciat
+10:48:39	Usuari juan ha iniciat sesio al sistema
+10:48:40	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045681.0} esta jugant a la Ruleta
+10:49:25	Programa iniciat
+10:49:25	Login iniciat
+10:49:26	Usuari juan ha iniciat sesio al sistema
+10:49:27	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045681.0} esta jugant a la Ruleta
+10:54:18	Programa iniciat
+10:54:19	Login iniciat
+10:54:21	Usuari juan ha iniciat sesio al sistema
+10:54:21	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045681.0} esta jugant a la Ruleta
+10:54:27	juan ha apostat 200.0€ a: 8
+10:54:34	juan ha apostat 200.0€ a: 33
+11:08:41	Programa iniciat
+11:08:41	Login iniciat
+11:08:57	Usuari juan ha iniciat sesio al sistema
+11:08:58	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045281.0} esta jugant al Tragaperras
+11:09:03	juan realitza una aposta de 200.0
+11:09:09	juan ha perdut la jugada.
+11:09:16	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:24:28	Programa iniciat
+11:24:29	Login iniciat
+11:24:30	Usuari juan ha iniciat sesio al sistema
+11:24:31	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:24:47	Programa iniciat
+11:24:47	Login iniciat
+11:24:49	Usuari juan ha iniciat sesio al sistema
+11:24:50	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:25:47	Programa iniciat
+11:25:48	Login iniciat
+11:25:50	Usuari juan ha iniciat sesio al sistema
+11:25:51	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:27:14	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:30:07	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:32:43	Programa iniciat
+11:32:43	Login iniciat
+11:32:46	Usuari juan ha iniciat sesio al sistema
+11:32:47	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:33:09	Programa iniciat
+11:33:09	Login iniciat
+11:33:11	Usuari juan ha iniciat sesio al sistema
+11:33:12	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:33:31	Programa iniciat
+11:33:31	Login iniciat
+11:33:33	Usuari juan ha iniciat sesio al sistema
+11:33:34	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:33:39	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:33:53	Programa iniciat
+11:33:54	Login iniciat
+11:33:55	Usuari juan ha iniciat sesio al sistema
+11:33:56	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:34:13	Programa iniciat
+11:34:13	Login iniciat
+11:34:15	Usuari juan ha iniciat sesio al sistema
+11:34:16	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:34:30	Programa iniciat
+11:34:31	Login iniciat
+11:34:33	Usuari juan ha iniciat sesio al sistema
+11:34:34	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:34:46	Programa iniciat
+11:34:47	Login iniciat
+11:34:48	Usuari juan ha iniciat sesio al sistema
+11:34:49	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:35:26	Programa iniciat
+11:35:27	Login iniciat
+11:35:28	Usuari juan ha iniciat sesio al sistema
+11:35:29	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:35:40	Programa iniciat
+11:35:41	Login iniciat
+11:35:42	Usuari juan ha iniciat sesio al sistema
+11:35:43	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:36:09	Programa iniciat
+11:36:09	Login iniciat
+11:36:10	Usuari juan ha iniciat sesio al sistema
+11:36:11	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:37:27	Programa iniciat
+11:37:27	Login iniciat
+11:37:29	Usuari juan ha iniciat sesio al sistema
+11:37:30	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:37:52	Programa iniciat
+11:37:52	Login iniciat
+11:37:54	Usuari juan ha iniciat sesio al sistema
+11:37:55	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:38:09	Programa iniciat
+11:38:10	Login iniciat
+11:38:11	Usuari juan ha iniciat sesio al sistema
+11:38:12	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:39:39	Programa iniciat
+11:39:39	Login iniciat
+11:39:41	Usuari juan ha iniciat sesio al sistema
+11:39:42	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:40:07	Programa iniciat
+11:40:07	Login iniciat
+11:40:09	Usuari juan ha iniciat sesio al sistema
+11:40:10	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:40:36	Programa iniciat
+11:40:36	Login iniciat
+11:40:38	Usuari juan ha iniciat sesio al sistema
+11:40:39	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:41:13	Programa iniciat
+11:41:13	Login iniciat
+11:41:15	Usuari juan ha iniciat sesio al sistema
+11:41:16	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:43:52	Programa iniciat
+11:43:53	Login iniciat
+11:43:55	Usuari juan ha iniciat sesio al sistema
+11:43:55	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:44:13	Programa iniciat
+11:44:14	Login iniciat
+11:44:17	Usuari juan ha iniciat sesio al sistema
+11:44:17	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:46:04	Programa iniciat
+11:46:04	Login iniciat
+11:46:07	Usuari juan ha iniciat sesio al sistema
+11:46:08	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:46:33	Programa iniciat
+11:46:33	Login iniciat
+11:46:35	Usuari juan ha iniciat sesio al sistema
+11:46:36	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:56:27	Programa iniciat
+11:56:28	Login iniciat
+11:56:30	Usuari juan ha iniciat sesio al sistema
+11:56:31	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:56:52	Programa iniciat
+11:56:52	Login iniciat
+11:56:54	Usuari juan ha iniciat sesio al sistema
+11:56:55	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:58:16	Programa iniciat
+11:58:16	Login iniciat
+11:58:18	Usuari juan ha iniciat sesio al sistema
+11:58:19	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:59:10	Programa iniciat
+11:59:10	Login iniciat
+11:59:12	Usuari juan ha iniciat sesio al sistema
+11:59:13	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
+11:59:44	Programa iniciat
+11:59:45	Login iniciat
+11:59:47	Usuari juan ha iniciat sesio al sistema
+11:59:47	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8045081.0} esta jugant a la Ruleta
