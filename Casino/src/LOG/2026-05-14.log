@@ -738,3 +738,120 @@
 10:11:52	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8042411.0} esta jugant a la Ruleta
 10:11:54	juan ha apostat 20.0€ a: 9
 10:11:58	juan ha apostat 20.0€ a: 7
+10:17:28	Programa iniciat
+10:17:28	Login iniciat
+10:17:30	Usuari juan ha iniciat sesio al sistema
+10:17:31	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8042371.0} esta jugant a la Ruleta
+10:17:38	juan ha apostat 100.0€ a: 14
+10:17:43	juan ha apostat 500.0€ a: 29
+10:17:45	juan ha apostat 20.0€ a: 14
+10:17:48	juan ha apostat 20.0€ a: 9
+10:17:50	juan ha apostat 20.0€ a: 22
+10:17:52	juan ha apostat 20.0€ a: Parell
+10:17:53	juan ha apostat 20.0€ a: Vermell
+10:17:55	juan ha apostat 20.0€ a: 0
+10:17:57	juan ha apostat 20.0€ a: Senar
+10:17:58	juan ha apostat 20.0€ a: Negre
+10:18:04	La bola ha caigut al número: 15 (Negre)
+10:18:08	RESULTAT: juan ha guanyat 80.0€
+10:21:42	Programa iniciat
+10:21:43	Login iniciat
+10:21:44	Usuari juan ha iniciat sesio al sistema
+10:21:45	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8041691.0} esta jugant a la Ruleta
+10:21:46	juan ha apostat 20.0€ a: 18
+10:21:51	juan ha apostat 20.0€ a: 11
+10:22:07	La bola ha caigut al número: 16 (Vermell)
+10:22:08	RESULTAT: juan no ha guanyat res.
+10:29:50	Programa iniciat
+10:29:50	Login iniciat
+10:29:52	Usuari juan ha iniciat sesio al sistema
+10:29:53	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8041651.0} esta jugant a la Ruleta
+10:33:28	Programa iniciat
+10:33:28	Login iniciat
+10:33:30	Usuari juan ha iniciat sesio al sistema
+10:33:31	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8041651.0} esta jugant a la Ruleta
+10:33:32	juan ha apostat 20.0€ a: 9
+10:33:34	juan ha apostat 20.0€ a: 23
+10:33:36	juan ha apostat 20.0€ a: 22
+10:33:42	La bola ha caigut al número: 21 (Vermell)
+10:33:43	RESULTAT: juan no ha guanyat res.
+10:34:48	Programa iniciat
+10:34:49	Login iniciat
+10:34:50	Usuari juan ha iniciat sesio al sistema
+10:34:51	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8041591.0} esta jugant a la Ruleta
+10:34:53	juan ha apostat 20.0€ a: 15
+10:35:00	La bola ha caigut al número: 16 (Vermell)
+10:35:01	RESULTAT: juan no ha guanyat res.
+10:35:03	juan ha apostat 20.0€ a: 15
+10:35:08	La bola ha caigut al número: 6 (Negre)
+10:35:10	RESULTAT: juan no ha guanyat res.
+10:35:40	Programa iniciat
+10:35:40	Login iniciat
+10:35:41	Usuari juan ha iniciat sesio al sistema
+10:35:42	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8041551.0} esta jugant a la Ruleta
+10:35:43	juan ha apostat 20.0€ a: 18
+10:35:51	Programa iniciat
+10:35:52	Login iniciat
+10:35:53	Usuari juan ha iniciat sesio al sistema
+10:35:54	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8041531.0} esta jugant a la Ruleta
+10:35:55	juan ha apostat 20.0€ a: 21
+10:36:01	La bola ha caigut al número: 1 (Vermell)
+10:36:02	RESULTAT: juan no ha guanyat res.
+10:36:29	Programa iniciat
+10:36:30	Login iniciat
+10:36:31	Usuari juan ha iniciat sesio al sistema
+10:36:32	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8041511.0} esta jugant a la Ruleta
+10:36:33	juan ha apostat 20.0€ a: 18
+10:36:39	La bola ha caigut al número: 12 (Vermell)
+10:36:41	RESULTAT: juan no ha guanyat res.
+10:37:46	Programa iniciat
+10:37:46	Login iniciat
+10:37:48	Usuari juan ha iniciat sesio al sistema
+10:37:48	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8041491.0} esta jugant a la Ruleta
+10:37:50	juan ha apostat 20.0€ a: 15
+10:37:56	La bola ha caigut al número: 36 (Vermell)
+10:37:57	RESULTAT: juan no ha guanyat res.
+10:40:51	Programa iniciat
+10:40:51	Login iniciat
+10:40:54	Usuari juan ha iniciat sesio al sistema
+10:40:55	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8041471.0} esta jugant a la Ruleta
+10:40:56	juan ha apostat 20.0€ a: 18
+10:41:02	La bola ha caigut al número: 27 (Vermell)
+10:41:03	RESULTAT: juan no ha guanyat res.
+10:44:42	Programa iniciat
+10:44:42	Login iniciat
+10:44:44	Usuari juan ha iniciat sesio al sistema
+10:44:44	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8041451.0} esta jugant a la Ruleta
+10:44:46	juan ha apostat 20.0€ a: 18
+10:44:52	La bola ha caigut al número: 35 (Negre)
+10:44:54	RESULTAT: juan no ha guanyat res.
+10:45:03	Programa iniciat
+10:45:04	Login iniciat
+10:45:06	Usuari juan ha iniciat sesio al sistema
+10:45:06	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8041431.0} esta jugant a la Ruleta
+10:45:08	juan ha apostat 20.0€ a: 21
+10:45:13	La bola ha caigut al número: 22 (Negre)
+10:45:15	RESULTAT: juan no ha guanyat res.
+10:45:48	Programa iniciat
+10:45:49	Login iniciat
+10:45:51	Usuari juan ha iniciat sesio al sistema
+10:45:52	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8041411.0} esta jugant a la Ruleta
+10:45:54	juan ha apostat 20.0€ a: 12
+10:45:56	juan ha apostat 20.0€ a: 0
+10:45:58	juan ha apostat 20.0€ a: Negre
+10:46:10	La bola ha caigut al número: 15 (Negre)
+10:46:12	RESULTAT: juan ha guanyat 40.0€
+10:46:13	juan ha apostat 20.0€ a: 12
+10:46:33	Programa iniciat
+10:46:34	Login iniciat
+10:46:43	Usuari juan ha iniciat sesio al sistema
+10:46:45	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8041371.0} esta jugant a la Ruleta
+10:46:49	juan ha apostat 20.0€ a: 16
+10:46:52	juan ha apostat 100.0€ a: 16
+10:46:55	juan ha apostat 200.0€ a: Negre
+10:46:58	juan ha apostat 500.0€ a: Parell
+10:47:04	La bola ha caigut al número: 19 (Vermell)
+10:47:11	RESULTAT: juan no ha guanyat res.
+10:47:14	juan ha apostat 20.0€ a: 3
+10:47:21	La bola ha caigut al número: 1 (Vermell)
+10:47:24	RESULTAT: juan no ha guanyat res.

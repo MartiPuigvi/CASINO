@@ -18,6 +18,7 @@ import MODEL.ApostaRealitzada;
 import MODEL.casellaRuleta;
 import MODEL.jocRuleta;
 import MODEL.partidaRuleta.colorRuleta;
+import java.awt.Button;
 import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.Random;
@@ -37,6 +38,7 @@ public class frmRuleta extends javax.swing.JFrame {
     private ArrayList<casellaRuleta> tauler = new ArrayList<>();
     private Random random = new Random();
     private ArrayList<ApostaRealitzada> apostesActives = new ArrayList<>();
+    private JButton[] btmNums;
 
     /**
      * Creates new form frmRuleta
@@ -51,88 +53,22 @@ public class frmRuleta extends javax.swing.JFrame {
         estilbutoRule(btmMenu);
         borderRule(jPanel3);
         estilbutoRule2(btmGirar);
-        botoInvi(btmNum0);
-        botoInvi(btmNum1);
-        botoInvi(btmNum2);
-        botoInvi(btmNum3);
-        botoInvi(btmNum4);
-        botoInvi(btmNum5);
-        botoInvi(btmNum6);
-        botoInvi(btmNum7);
-        botoInvi(btmNum8);
-        botoInvi(btmNum9);
-        botoInvi(btmNum10);
-        botoInvi(btmNum11);
-        botoInvi(btmNum12);
-        botoInvi(btmNum13);
-        botoInvi(btmNum14);
-        botoInvi(btmNum15);
-        botoInvi(btmNum16);
-        botoInvi(btmNum17);
-        botoInvi(btmNum18);
-        botoInvi(btmNum19);
-        botoInvi(btmNum20);
-        botoInvi(btmNum21);
-        botoInvi(btmNum22);
-        botoInvi(btmNum23);
-        botoInvi(btmNum24);
-        botoInvi(btmNum25);
-        botoInvi(btmNum26);
-        botoInvi(btmNum27);
-        botoInvi(btmNum28);
-        botoInvi(btmNum29);
-        botoInvi(btmNum30);
-        botoInvi(btmNum31);
-        botoInvi(btmNum32);
-        botoInvi(btmNum33);
-        botoInvi(btmNum34);
-        botoInvi(btmNum35);
-        botoInvi(btmNum36);
-        botoInvi(btmNum37);
-        botoInvi(btmNum38);
-        botoInvi(btmNum39);
-        botoInvi(btmNum40);
-        botoInvi(btmNum41);
-        botoInvi(btmNum42);
-        botoInvi(btmNum43);
-        botoInvi(btmNum44);
-        botoInvi(btmNum45);
-        botoInvi(btmNum46);
-        botoInvi(btmNum47);
-        botoInvi(btmNum48);
-        botoInvi(btmNum49);
-        botoInvi(btmNum50);
-        botoInvi(btmNum51);
-        botoInvi(btmNum52);
-        botoInvi(btmNum53);
-        botoInvi(btmNum54);
-        botoInvi(btmNum55);
-        botoInvi(btmNum56);
-        botoInvi(btmNum57);
-        botoInvi(btmNum58);
-        botoInvi(btmNum59);
-        botoInvi(btmNum60);
-        botoInvi(btmNum61);
-        botoInvi(btmNum62);
-        botoInvi(btmNum63);
-        botoInvi(btmNum64);
-        botoInvi(btmNum65);
-        botoInvi(btmNum66);
-        botoInvi(btmNum67);
-        botoInvi(btmNum68);
-        botoInvi(btmNum69);
-        botoInvi(btmNum70);
-        botoInvi(btmNum71);
-        botoInvi(btmNum72);
-        botoInvi(btmNum73);
-        botoInvi(btmSenar);
-        botoInvi(btmParell);
-        botoInvi(btmNegre);
-        botoInvi(btmVermell);
-        botoInvi(btmSenar1);
-        botoInvi(btmParell1);
-        botoInvi(btmNegre1);
-        botoInvi(btmVermell1);
+
+        btmNums = new JButton[]{
+            btmNum1, btmNum2, btmNum3, btmNum4, btmNum5, btmNum6, btmNum7, btmNum8, btmNum9, btmNum10,
+            btmNum11, btmNum12, btmNum13, btmNum14, btmNum15, btmNum16, btmNum17, btmNum18, btmNum19, btmNum20,
+            btmNum21, btmNum22, btmNum23, btmNum24, btmNum25, btmNum26, btmNum27, btmNum28, btmNum29, btmNum30,
+            btmNum31, btmNum32, btmNum33, btmNum34, btmNum35, btmNum36, btmNum37, btmNum38, btmNum39, btmNum40,
+            btmNum41, btmNum42, btmNum43, btmNum44, btmNum45, btmNum46, btmNum47, btmNum48, btmNum49, btmNum50,
+            btmNum51, btmNum52, btmNum53, btmNum54, btmNum55, btmNum56, btmNum57, btmNum58, btmNum59, btmNum60,
+            btmNum61, btmNum62, btmNum63, btmNum64, btmNum65, btmNum66, btmNum67, btmNum68, btmNum69, btmNum70,
+            btmNum71, btmNum72, btmNum73, btmSenar, btmParell, btmNegre, btmVermell, btmSenar1, btmParell1, btmNegre1,
+            btmVermell1, btmNum0
+        };
+
+        for (int i = 0; i < btmNums.length; i++) {
+            botoInvi(btmNums[i]);
+        }
 
         prepararTauler();
         saldo();
@@ -1268,40 +1204,51 @@ public class frmRuleta extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btmNum0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum0ActionPerformed
-        fitxaNum(btmNum55);
-
         mostrarPopUpAposta("NUMERO", 0);
+                fitxaNum(btmNum55);
     }//GEN-LAST:event_btmNum0ActionPerformed
 
     private void btmNum1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum1ActionPerformed
-mostrarPopUpAposta("NUMERO", 1);
-fitxaNum(btmNum37);
-        mostrarPopUpAposta("NUMERO", 1);    }//GEN-LAST:event_btmNum1ActionPerformed
+        mostrarPopUpAposta("NUMERO", 1);
+        fitxaNum(btmNum37);
+           }//GEN-LAST:event_btmNum1ActionPerformed
 
 
     private void btmNum2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum2ActionPerformed
+        mostrarPopUpAposta("NUMERO", 2);
         fitxaNum(btmNum38);
-        mostrarPopUpAposta("NUMERO", 2);    }//GEN-LAST:event_btmNum2ActionPerformed
+
+}//GEN-LAST:event_btmNum2ActionPerformed
 
     private void btmNum3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum3ActionPerformed
-        mostrarPopUpAposta("NUMERO", 3);    }//GEN-LAST:event_btmNum3ActionPerformed
+        mostrarPopUpAposta("NUMERO", 3);
+        fitxaNum(btmNum39);
+}//GEN-LAST:event_btmNum3ActionPerformed
 
     private void btmNum4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum4ActionPerformed
-        mostrarPopUpAposta("NUMERO", 4);    }//GEN-LAST:event_btmNum4ActionPerformed
+        mostrarPopUpAposta("NUMERO", 4);
+        fitxaNum(btmNum40);
+}//GEN-LAST:event_btmNum4ActionPerformed
 
     private void btmNum5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum5ActionPerformed
-        mostrarPopUpAposta("NUMERO", 5);    }//GEN-LAST:event_btmNum5ActionPerformed
+        mostrarPopUpAposta("NUMERO", 5);
+        fitxaNum(btmNum41);
+}//GEN-LAST:event_btmNum5ActionPerformed
 
     private void btmNum6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum6ActionPerformed
-        mostrarPopUpAposta("NUMERO", 6);    }//GEN-LAST:event_btmNum6ActionPerformed
+        mostrarPopUpAposta("NUMERO", 6);
+        fitxaNum(btmNum42);
+ }//GEN-LAST:event_btmNum6ActionPerformed
 
     private void btmNum7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum7ActionPerformed
         mostrarPopUpAposta("NUMERO", 7);
-                fitxaNum(btmNum43);
+        fitxaNum(btmNum43);
     }//GEN-LAST:event_btmNum7ActionPerformed
 
     private void btmNum8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum8ActionPerformed
-        mostrarPopUpAposta("NUMERO", 8);    }//GEN-LAST:event_btmNum8ActionPerformed
+        mostrarPopUpAposta("NUMERO", 8);
+        fitxaNum(btmNum44);
+}//GEN-LAST:event_btmNum8ActionPerformed
 
     private void btmNum9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum9ActionPerformed
         mostrarPopUpAposta("NUMERO", 9);
@@ -1473,7 +1420,8 @@ fitxaNum(btmNum37);
         btmGirar.setEnabled(false);
         lblrule.setVisible(true);
         lblrule.setIcon(icon);
-
+        btmMenu.setEnabled(false);
+        btmsEnabledOff();
         javax.swing.Timer timer = new javax.swing.Timer(5000, e -> processarResultatRuleta());
         timer.setRepeats(false);
         timer.start();
@@ -1717,50 +1665,32 @@ fitxaNum(btmNum37);
         txtLlistaApostes.setText("");
         saldo();
         btmGirar.setEnabled(true);
+        btmMenu.setEnabled(true);
+        btmsEnabledOn();
+
+    }
+
+    private void numEnabled() {
     }
 
     public void numOff() {
-        btmNum37.setIcon(null);
-        btmNum38.setIcon(null);
-        btmNum39.setIcon(null);
-        btmNum40.setIcon(null);
-        btmNum41.setIcon(null);
-        btmNum42.setIcon(null);
-        btmNum43.setIcon(null);
-        btmNum44.setIcon(null);
-        btmNum45.setIcon(null);
-        btmNum46.setIcon(null);
-        btmNum47.setIcon(null);
-        btmNum48.setIcon(null);
-        btmNum49.setIcon(null);
-        btmNum50.setIcon(null);
-        btmNum51.setIcon(null);
-        btmNum52.setIcon(null);
-        btmNum53.setIcon(null);
-        btmNum54.setIcon(null);
-        btmNum55.setIcon(null);
-        btmNum56.setIcon(null);
-        btmNum57.setIcon(null);
-        btmNum58.setIcon(null);
-        btmNum59.setIcon(null);
-        btmNum60.setIcon(null);
-        btmNum61.setIcon(null);
-        btmNum62.setIcon(null);
-        btmNum63.setIcon(null);
-        btmNum64.setIcon(null);
-        btmNum65.setIcon(null);
-        btmNum66.setIcon(null);
-        btmNum67.setIcon(null);
-        btmNum68.setIcon(null);
-        btmNum69.setIcon(null);
-        btmNum70.setIcon(null);
-        btmNum71.setIcon(null);
-        btmNum72.setIcon(null);
-        btmNum73.setIcon(null);
-        btmVermell1.setIcon(null);
-        btmNegre1.setIcon(null);
-        btmSenar1.setIcon(null);
-        btmParell1.setIcon(null);
+
+        for (int i = 0; i < btmNums.length; i++) {
+            btmNums[i].setIcon(null);
+        }
+    }
+
+    private void btmsEnabledOff() {
+        for (int i = 0; i < btmNums.length; i++) {
+            btmNums[i].setDisabledIcon(btmNums[i].getIcon());
+            btmNums[i].setEnabled(false);
+        }
+    }
+
+    private void btmsEnabledOn() {
+        for (int i = 0; i < btmNums.length; i++) {
+            btmNums[i].setEnabled(true);
+        }
     }
 
     public void ruletaImg(JLabel label, int numero) {
