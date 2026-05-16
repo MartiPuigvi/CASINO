@@ -46,7 +46,6 @@ public class frmRuleta extends javax.swing.JFrame {
     public frmRuleta() {
         this.setUndecorated(true);
 
-
         this.setContentPane(Fondo);
         Fondo.setLayout(null);
         initComponents();
@@ -57,16 +56,11 @@ public class frmRuleta extends javax.swing.JFrame {
         estilbutoRule2(btmGirar);
 
         btmNums = new JButton[]{
-            btmNum1, btmNum2, btmNum3, btmNum4, btmNum5, btmNum6, btmNum7, btmNum8, btmNum9, btmNum10,
+            btmNum0, btmNum1, btmNum2, btmNum3, btmNum4, btmNum5, btmNum6, btmNum7, btmNum8, btmNum9, btmNum10,
             btmNum11, btmNum12, btmNum13, btmNum14, btmNum15, btmNum16, btmNum17, btmNum18, btmNum19, btmNum20,
             btmNum21, btmNum22, btmNum23, btmNum24, btmNum25, btmNum26, btmNum27, btmNum28, btmNum29, btmNum30,
-            btmNum31, btmNum32, btmNum33, btmNum34, btmNum35, btmNum36, btmNum37, btmNum38, btmNum39, btmNum40,
-            btmNum41, btmNum42, btmNum43, btmNum44, btmNum45, btmNum46, btmNum47, btmNum48, btmNum49, btmNum50,
-            btmNum51, btmNum52, btmNum53, btmNum54, btmNum55, btmNum56, btmNum57, btmNum58, btmNum59, btmNum60,
-            btmNum61, btmNum62, btmNum63, btmNum64, btmNum65, btmNum66, btmNum67, btmNum68, btmNum69, btmNum70,
-            btmNum71, btmNum72, btmNum73, btmSenar, btmParell, btmNegre, btmVermell, btmSenar1, btmParell1, btmNegre1,
-            btmVermell1, btmNum0
-        };
+            btmNum31, btmNum32, btmNum33, btmNum34, btmNum35, btmNum36, btmSenar, btmParell, btmNegre, btmVermell
+            };
 
         for (int i = 0; i < btmNums.length; i++) {
             botoInvi(btmNums[i]);
@@ -81,7 +75,7 @@ public class frmRuleta extends javax.swing.JFrame {
         lblSaldo1.setText("SALDO: " + userActual.getSaldo());
     }
 
-    private void mostrarPopUpAposta(String tipus, Object valor) {
+    private void mostrarPopUpAposta(String tipus, Object valor, JButton boto) {
         String[] fitxes = {"20", "50", "100", "200", "500"};
         String tria = (String) javax.swing.JOptionPane.showInputDialog(
                 this,
@@ -91,6 +85,7 @@ public class frmRuleta extends javax.swing.JFrame {
                 null,
                 fitxes,
                 fitxes[0]);
+       
 
         if (tria != null) {
             double diners = Double.parseDouble(tria);
@@ -110,6 +105,9 @@ public class frmRuleta extends javax.swing.JFrame {
                 escriureLog(userActual.getNom() + " ha apostat " + diners + "€ a: " + valorText);
 
                 txtLlistaApostes.append("APOSTA: " + diners + "€ al " + valorText + "\n");
+                fitxaNum(boto);
+                
+
             } else {
 
                 javax.swing.JOptionPane.showMessageDialog(this, "No tens prou saldo per fer aquesta aposta!");
@@ -215,8 +213,6 @@ public class frmRuleta extends javax.swing.JFrame {
         btmGirar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtLlistaApostes = new javax.swing.JTextArea();
-        lblRuleta = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         btmMenu = new javax.swing.JButton();
         lblrule = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -225,47 +221,6 @@ public class frmRuleta extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         lblSaldo3 = new javax.swing.JLabel();
-        btmNum37 = new javax.swing.JButton();
-        btmNum38 = new javax.swing.JButton();
-        btmNum39 = new javax.swing.JButton();
-        btmNum40 = new javax.swing.JButton();
-        btmNum41 = new javax.swing.JButton();
-        btmNum42 = new javax.swing.JButton();
-        btmNum43 = new javax.swing.JButton();
-        btmNum44 = new javax.swing.JButton();
-        btmNum45 = new javax.swing.JButton();
-        btmNum46 = new javax.swing.JButton();
-        btmNum47 = new javax.swing.JButton();
-        btmNum48 = new javax.swing.JButton();
-        btmNum49 = new javax.swing.JButton();
-        btmNum50 = new javax.swing.JButton();
-        btmNum51 = new javax.swing.JButton();
-        btmNum52 = new javax.swing.JButton();
-        btmNum53 = new javax.swing.JButton();
-        btmNum54 = new javax.swing.JButton();
-        btmNum55 = new javax.swing.JButton();
-        btmNum56 = new javax.swing.JButton();
-        btmNum57 = new javax.swing.JButton();
-        btmNum58 = new javax.swing.JButton();
-        btmNum59 = new javax.swing.JButton();
-        btmNum60 = new javax.swing.JButton();
-        btmNum61 = new javax.swing.JButton();
-        btmNum62 = new javax.swing.JButton();
-        btmNum63 = new javax.swing.JButton();
-        btmNum64 = new javax.swing.JButton();
-        btmNum65 = new javax.swing.JButton();
-        btmNum66 = new javax.swing.JButton();
-        btmNum67 = new javax.swing.JButton();
-        btmNum68 = new javax.swing.JButton();
-        btmNum69 = new javax.swing.JButton();
-        btmNum70 = new javax.swing.JButton();
-        btmNum71 = new javax.swing.JButton();
-        btmNum72 = new javax.swing.JButton();
-        btmNum73 = new javax.swing.JButton();
-        btmParell1 = new javax.swing.JButton();
-        btmSenar1 = new javax.swing.JButton();
-        btmNegre1 = new javax.swing.JButton();
-        btmVermell1 = new javax.swing.JButton();
         lblrule1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -792,635 +747,177 @@ public class frmRuleta extends javax.swing.JFrame {
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 10, 300, 60));
 
-        btmNum37.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum37.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum37.setText("1");
-        btmNum37.setBorder(null);
-        btmNum37.setBorderPainted(false);
-        btmNum37.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum37ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum37, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 605, 113, 87));
-
-        btmNum38.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum38.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum38.setBorder(null);
-        btmNum38.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum38ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum38, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 515, 113, 87));
-
-        btmNum39.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum39.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum39.setBorder(null);
-        btmNum39.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum39ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum39, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 423, 113, 89));
-
-        btmNum40.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum40.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum40.setBorder(null);
-        btmNum40.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum40ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum40, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 605, 113, 87));
-
-        btmNum41.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum41.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum41.setBorder(null);
-        btmNum41.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum41ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum41, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 515, 113, 87));
-
-        btmNum42.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum42.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum42.setBorder(null);
-        btmNum42.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum42ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum42, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 423, 113, 88));
-
-        btmNum43.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum43.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum43.setBorder(null);
-        btmNum43.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum43ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum43, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 605, 113, 87));
-
-        btmNum44.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum44.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum44.setBorder(null);
-        btmNum44.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum44ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum44, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 515, 113, 87));
-
-        btmNum45.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum45.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum45.setBorder(null);
-        btmNum45.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum45ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum45, new org.netbeans.lib.awtextra.AbsoluteConstraints(371, 423, 113, 88));
-
-        btmNum46.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum46.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum46.setBorder(null);
-        btmNum46.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum46ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum46, new org.netbeans.lib.awtextra.AbsoluteConstraints(489, 605, 111, 87));
-
-        btmNum47.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum47.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum47.setBorder(null);
-        btmNum47.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum47ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum47, new org.netbeans.lib.awtextra.AbsoluteConstraints(489, 515, 113, 87));
-
-        btmNum48.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum48.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum48.setBorder(null);
-        btmNum48.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum48ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum48, new org.netbeans.lib.awtextra.AbsoluteConstraints(489, 423, 113, 88));
-
-        btmNum49.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum49.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum49.setBorder(null);
-        btmNum49.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum49ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum49, new org.netbeans.lib.awtextra.AbsoluteConstraints(606, 605, 109, 87));
-
-        btmNum50.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum50.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum50.setBorder(null);
-        btmNum50.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum50ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum50, new org.netbeans.lib.awtextra.AbsoluteConstraints(606, 515, 109, 87));
-
-        btmNum51.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum51.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum51.setBorder(null);
-        btmNum51.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum51ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum51, new org.netbeans.lib.awtextra.AbsoluteConstraints(606, 423, 109, 88));
-
-        btmNum52.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum52.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum52.setBorder(null);
-        btmNum52.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum52ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum52, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 605, 110, 87));
-
-        btmNum53.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum53.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum53.setBorder(null);
-        btmNum53.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum53ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum53, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 515, 110, 87));
-
-        btmNum54.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum54.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum54.setBorder(null);
-        btmNum54.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum54ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum54, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 423, 110, 88));
-
-        btmNum55.setBackground(new java.awt.Color(0, 255, 51));
-        btmNum55.setBorder(null);
-        btmNum55.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum55ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum55, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 423, 110, 270));
-
-        btmNum56.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum56.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum56.setBorder(null);
-        btmNum56.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum56ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum56, new org.netbeans.lib.awtextra.AbsoluteConstraints(833, 605, 110, 87));
-
-        btmNum57.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum57.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum57.setBorder(null);
-        btmNum57.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum57ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum57, new org.netbeans.lib.awtextra.AbsoluteConstraints(833, 515, 110, 87));
-
-        btmNum58.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum58.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum58.setToolTipText("");
-        btmNum58.setBorder(null);
-        btmNum58.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum58ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum58, new org.netbeans.lib.awtextra.AbsoluteConstraints(833, 423, 110, 88));
-
-        btmNum59.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum59.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum59.setBorder(null);
-        btmNum59.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum59ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum59, new org.netbeans.lib.awtextra.AbsoluteConstraints(945, 605, 113, 87));
-
-        btmNum60.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum60.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum60.setBorder(null);
-        btmNum60.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum60ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum60, new org.netbeans.lib.awtextra.AbsoluteConstraints(945, 515, 113, 87));
-
-        btmNum61.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum61.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum61.setBorder(null);
-        btmNum61.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum61ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum61, new org.netbeans.lib.awtextra.AbsoluteConstraints(945, 423, 113, 88));
-
-        btmNum62.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum62.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum62.setBorder(null);
-        btmNum62.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum62ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum62, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 605, 110, 87));
-
-        btmNum63.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum63.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum63.setBorder(null);
-        btmNum63.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum63ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum63, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 515, 110, 87));
-
-        btmNum64.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum64.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum64.setBorder(null);
-        btmNum64.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum64ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum64, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 423, 110, 88));
-
-        btmNum65.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum65.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum65.setBorder(null);
-        btmNum65.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum65ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum65, new org.netbeans.lib.awtextra.AbsoluteConstraints(1288, 423, 107, 88));
-
-        btmNum66.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum66.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum66.setBorder(null);
-        btmNum66.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum66ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum66, new org.netbeans.lib.awtextra.AbsoluteConstraints(1175, 605, 110, 87));
-
-        btmNum67.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum67.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum67.setBorder(null);
-        btmNum67.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum67ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum67, new org.netbeans.lib.awtextra.AbsoluteConstraints(1175, 515, 110, 87));
-
-        btmNum68.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum68.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum68.setBorder(null);
-        btmNum68.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum68ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum68, new org.netbeans.lib.awtextra.AbsoluteConstraints(1175, 423, 110, 88));
-
-        btmNum69.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum69.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum69.setBorder(null);
-        btmNum69.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum69ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum69, new org.netbeans.lib.awtextra.AbsoluteConstraints(1288, 605, 107, 87));
-
-        btmNum70.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum70.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum70.setBorder(null);
-        btmNum70.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum70ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum70, new org.netbeans.lib.awtextra.AbsoluteConstraints(1288, 515, 107, 87));
-
-        btmNum71.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum71.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum71.setBorder(null);
-        btmNum71.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum71ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum71, new org.netbeans.lib.awtextra.AbsoluteConstraints(1398, 605, 110, 87));
-
-        btmNum72.setBackground(new java.awt.Color(0, 0, 0));
-        btmNum72.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum72.setBorder(null);
-        btmNum72.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum72ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum72, new org.netbeans.lib.awtextra.AbsoluteConstraints(1398, 515, 110, 87));
-
-        btmNum73.setBackground(new java.awt.Color(255, 0, 0));
-        btmNum73.setForeground(new java.awt.Color(255, 255, 255));
-        btmNum73.setBorder(null);
-        btmNum73.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNum73ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNum73, new org.netbeans.lib.awtextra.AbsoluteConstraints(1398, 423, 110, 88));
-
-        btmParell1.setBorder(null);
-        btmParell1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmParell1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmParell1, new org.netbeans.lib.awtextra.AbsoluteConstraints(833, 697, 340, 130));
-
-        btmSenar1.setToolTipText("");
-        btmSenar1.setBorder(null);
-        btmSenar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmSenar1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmSenar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1175, 697, 330, 130));
-
-        btmNegre1.setBackground(new java.awt.Color(0, 0, 0));
-        btmNegre1.setForeground(new java.awt.Color(255, 255, 255));
-        btmNegre1.setBorder(null);
-        btmNegre1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmNegre1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmNegre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(489, 697, 340, 130));
-
-        btmVermell1.setBackground(new java.awt.Color(255, 0, 0));
-        btmVermell1.setForeground(new java.awt.Color(255, 255, 255));
-        btmVermell1.setBorder(null);
-        btmVermell1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmVermell1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmVermell1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 697, 345, 130));
-
         lblrule1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/rule.gif"))); // NOI18N
         getContentPane().add(lblrule1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 80, -1, -1));
-
-        btmMenu.setText("MENU");
-        btmMenu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmMenuActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btmMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 280, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btmNum0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum0ActionPerformed
-        mostrarPopUpAposta("NUMERO", 0);
-                fitxaNum(btmNum55);
+        mostrarPopUpAposta("NUMERO", 0, btmNum0);
     }//GEN-LAST:event_btmNum0ActionPerformed
 
     private void btmNum1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum1ActionPerformed
-        mostrarPopUpAposta("NUMERO", 1);
-        fitxaNum(btmNum37);
+        mostrarPopUpAposta("NUMERO", 1, btmNum1);
            }//GEN-LAST:event_btmNum1ActionPerformed
 
 
     private void btmNum2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum2ActionPerformed
-        mostrarPopUpAposta("NUMERO", 2);
-        fitxaNum(btmNum38);
+        mostrarPopUpAposta("NUMERO", 2, btmNum2);
 
 }//GEN-LAST:event_btmNum2ActionPerformed
 
     private void btmNum3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum3ActionPerformed
-        mostrarPopUpAposta("NUMERO", 3);
-        fitxaNum(btmNum39);
+        mostrarPopUpAposta("NUMERO", 3, btmNum3);
 }//GEN-LAST:event_btmNum3ActionPerformed
 
     private void btmNum4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum4ActionPerformed
-        mostrarPopUpAposta("NUMERO", 4);
-        fitxaNum(btmNum40);
+        mostrarPopUpAposta("NUMERO", 4, btmNum4);
 }//GEN-LAST:event_btmNum4ActionPerformed
 
     private void btmNum5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum5ActionPerformed
-        mostrarPopUpAposta("NUMERO", 5);
-        fitxaNum(btmNum41);
+        mostrarPopUpAposta("NUMERO", 5, btmNum5);
 }//GEN-LAST:event_btmNum5ActionPerformed
 
     private void btmNum6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum6ActionPerformed
-        mostrarPopUpAposta("NUMERO", 6);
-        fitxaNum(btmNum42);
+        mostrarPopUpAposta("NUMERO", 6, btmNum6);
  }//GEN-LAST:event_btmNum6ActionPerformed
 
     private void btmNum7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum7ActionPerformed
-        mostrarPopUpAposta("NUMERO", 7);
-        fitxaNum(btmNum43);
+        mostrarPopUpAposta("NUMERO", 7, btmNum7);
     }//GEN-LAST:event_btmNum7ActionPerformed
 
     private void btmNum8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum8ActionPerformed
-        mostrarPopUpAposta("NUMERO", 8);
-        fitxaNum(btmNum44);
+        mostrarPopUpAposta("NUMERO", 8, btmNum8);
 }//GEN-LAST:event_btmNum8ActionPerformed
 
     private void btmNum9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum9ActionPerformed
-        mostrarPopUpAposta("NUMERO", 9);
-        fitxaNum(btmNum45);
+        mostrarPopUpAposta("NUMERO", 9, btmNum9);
     }//GEN-LAST:event_btmNum9ActionPerformed
 
     private void btmNum10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum10ActionPerformed
-        mostrarPopUpAposta("NUMERO", 10);
-        fitxaNum(btmNum46);
+        mostrarPopUpAposta("NUMERO", 10, btmNum10);
     }//GEN-LAST:event_btmNum10ActionPerformed
 
     private void btmNum11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum11ActionPerformed
-        mostrarPopUpAposta("NUMERO", 11);
-        fitxaNum(btmNum47);
+        mostrarPopUpAposta("NUMERO", 11, btmNum11);
     }//GEN-LAST:event_btmNum11ActionPerformed
 
     private void btmNum12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum12ActionPerformed
-        mostrarPopUpAposta("NUMERO", 12);
-        fitxaNum(btmNum48);
+        mostrarPopUpAposta("NUMERO", 12, btmNum12);
     }//GEN-LAST:event_btmNum12ActionPerformed
 
     private void btmNum13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum13ActionPerformed
-        mostrarPopUpAposta("NUMERO", 13);
-        fitxaNum(btmNum49);
+        mostrarPopUpAposta("NUMERO", 13, btmNum13);
 
     }//GEN-LAST:event_btmNum13ActionPerformed
 
     private void btmNum14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum14ActionPerformed
-        mostrarPopUpAposta("NUMERO", 14);
-        fitxaNum(btmNum50);
+        mostrarPopUpAposta("NUMERO", 14, btmNum14);
     }//GEN-LAST:event_btmNum14ActionPerformed
 
     private void btmNum15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum15ActionPerformed
-        mostrarPopUpAposta("NUMERO", 15);
-        fitxaNum(btmNum51);
+        mostrarPopUpAposta("NUMERO", 15, btmNum15);
     }//GEN-LAST:event_btmNum15ActionPerformed
 
     private void btmNum16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum16ActionPerformed
-        mostrarPopUpAposta("NUMERO", 16);
-        fitxaNum(btmNum52);
+        mostrarPopUpAposta("NUMERO", 16, btmNum16);
     }//GEN-LAST:event_btmNum16ActionPerformed
 
     private void btmNum17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum17ActionPerformed
-        mostrarPopUpAposta("NUMERO", 17);
-        fitxaNum(btmNum53);
+        mostrarPopUpAposta("NUMERO", 17, btmNum17);
     }//GEN-LAST:event_btmNum17ActionPerformed
 
     private void btmNum18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum18ActionPerformed
-        mostrarPopUpAposta("NUMERO", 18);
-        fitxaNum(btmNum54);
+        mostrarPopUpAposta("NUMERO", 18, btmNum18);
     }//GEN-LAST:event_btmNum18ActionPerformed
 
     private void btmNum19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum19ActionPerformed
-        mostrarPopUpAposta("NUMERO", 19);
-        fitxaNum(btmNum56);
+        mostrarPopUpAposta("NUMERO", 19, btmNum19);
     }//GEN-LAST:event_btmNum19ActionPerformed
 
     private void btmNum20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum20ActionPerformed
-        mostrarPopUpAposta("NUMERO", 20);
-        fitxaNum(btmNum57);
+        mostrarPopUpAposta("NUMERO", 20, btmNum20);
     }//GEN-LAST:event_btmNum20ActionPerformed
 
     private void btmNum21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum21ActionPerformed
-        mostrarPopUpAposta("NUMERO", 21);
-        fitxaNum(btmNum58);
+        mostrarPopUpAposta("NUMERO", 21, btmNum21);
     }//GEN-LAST:event_btmNum21ActionPerformed
 
     private void btmNum22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum22ActionPerformed
-        mostrarPopUpAposta("NUMERO", 22);
-        fitxaNum(btmNum59);
+        mostrarPopUpAposta("NUMERO", 22, btmNum22);
     }//GEN-LAST:event_btmNum22ActionPerformed
 
     private void btmNum23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum23ActionPerformed
-        mostrarPopUpAposta("NUMERO", 23);
-        fitxaNum(btmNum60);
+        mostrarPopUpAposta("NUMERO", 23, btmNum23);
     }//GEN-LAST:event_btmNum23ActionPerformed
 
     private void btmNum24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum24ActionPerformed
-        mostrarPopUpAposta("NUMERO", 24);
-        fitxaNum(btmNum61);
+        mostrarPopUpAposta("NUMERO", 24, btmNum24);
     }//GEN-LAST:event_btmNum24ActionPerformed
 
     private void btmNum25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum25ActionPerformed
-        mostrarPopUpAposta("NUMERO", 25);
-        fitxaNum(btmNum62);
+        mostrarPopUpAposta("NUMERO", 25, btmNum25);
     }//GEN-LAST:event_btmNum25ActionPerformed
 
     private void btmNum26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum26ActionPerformed
-        mostrarPopUpAposta("NUMERO", 26);
-        fitxaNum(btmNum63);
+        mostrarPopUpAposta("NUMERO", 26, btmNum26);
     }//GEN-LAST:event_btmNum26ActionPerformed
 
     private void btmNum27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum27ActionPerformed
-        mostrarPopUpAposta("NUMERO", 27);
-        fitxaNum(btmNum64);
+        mostrarPopUpAposta("NUMERO", 27, btmNum27);
     }//GEN-LAST:event_btmNum27ActionPerformed
 
     private void btmNum28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum28ActionPerformed
-        mostrarPopUpAposta("NUMERO", 28);
-        fitxaNum(btmNum66);
+        mostrarPopUpAposta("NUMERO", 28, btmNum28);
     }//GEN-LAST:event_btmNum28ActionPerformed
 
     private void btmNum29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum29ActionPerformed
-        mostrarPopUpAposta("NUMERO", 29);
-        fitxaNum(btmNum67);
+        mostrarPopUpAposta("NUMERO", 29, btmNum29);
     }//GEN-LAST:event_btmNum29ActionPerformed
 
     private void btmNum30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum30ActionPerformed
-        mostrarPopUpAposta("NUMERO", 30);
-        fitxaNum(btmNum68);
+        mostrarPopUpAposta("NUMERO", 30, btmNum30);
     }//GEN-LAST:event_btmNum30ActionPerformed
 
     private void btmNum31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum31ActionPerformed
-        mostrarPopUpAposta("NUMERO", 31);
-        fitxaNum(btmNum69);
+        mostrarPopUpAposta("NUMERO", 31, btmNum31);
     }//GEN-LAST:event_btmNum31ActionPerformed
 
     private void btmNum32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum32ActionPerformed
-        mostrarPopUpAposta("NUMERO", 32);
-        fitxaNum(btmNum70);
+        mostrarPopUpAposta("NUMERO", 32, btmNum32);
     }//GEN-LAST:event_btmNum32ActionPerformed
 
     private void btmNum33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum33ActionPerformed
-        mostrarPopUpAposta("NUMERO", 33);
-        fitxaNum(btmNum65);
+        mostrarPopUpAposta("NUMERO", 33, btmNum33);
     }//GEN-LAST:event_btmNum33ActionPerformed
 
     private void btmNum34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum34ActionPerformed
-        mostrarPopUpAposta("NUMERO", 34);
-        fitxaNum(btmNum71);
+        mostrarPopUpAposta("NUMERO", 34, btmNum34);
     }//GEN-LAST:event_btmNum34ActionPerformed
 
     private void btmNum35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum35ActionPerformed
-        mostrarPopUpAposta("NUMERO", 35);
-        fitxaNum(btmNum72);
+        mostrarPopUpAposta("NUMERO", 35, btmNum35);
     }//GEN-LAST:event_btmNum35ActionPerformed
 
     private void btmNum36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum36ActionPerformed
-        mostrarPopUpAposta("NUMERO", 36);
-        fitxaNum(btmNum73);
+        mostrarPopUpAposta("NUMERO", 36, btmNum36);
     }//GEN-LAST:event_btmNum36ActionPerformed
 
     private void btmParellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmParellActionPerformed
-        mostrarPopUpAposta("PARELL_SENAR", true);
-        fitxaNum(btmParell1);
+        mostrarPopUpAposta("PARELL_SENAR", true, btmParell);
     }//GEN-LAST:event_btmParellActionPerformed
 
     private void btmSenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmSenarActionPerformed
-        mostrarPopUpAposta("PARELL_SENAR", false);
-        fitxaNum(btmSenar1);
+        mostrarPopUpAposta("PARELL_SENAR", false, btmSenar);
     }//GEN-LAST:event_btmSenarActionPerformed
 
     private void btmNegreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNegreActionPerformed
-        mostrarPopUpAposta("COLOR", "Negre");
-        fitxaNum(btmNegre1);
+        mostrarPopUpAposta("COLOR", "Negre", btmNegre);
     }//GEN-LAST:event_btmNegreActionPerformed
 
     private void btmVermellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmVermellActionPerformed
-        mostrarPopUpAposta("COLOR", "Vermell");
-        fitxaNum(btmVermell1);
+        mostrarPopUpAposta("COLOR", "Vermell", btmVermell);
     }//GEN-LAST:event_btmVermellActionPerformed
 
     private void btmGirarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmGirarActionPerformed
@@ -1428,188 +925,22 @@ public class frmRuleta extends javax.swing.JFrame {
             javax.swing.JOptionPane.showMessageDialog(this, "No hi ha cap aposta feta!");
             return;
         }
-        ImageIcon icon = new ImageIcon(getClass().getResource("/Images/rule.gif"));
+        ImageIcon icon = new ImageIcon(getClass().getResource("/Images/rule2.gif"));
         btmGirar.setEnabled(false);
         lblrule.setVisible(true);
         lblrule.setIcon(icon);
         btmMenu.setEnabled(false);
         btmsEnabledOff();
-        javax.swing.Timer timer = new javax.swing.Timer(5000, e -> processarResultatRuleta());
+        javax.swing.Timer timer = new javax.swing.Timer(4000, e -> processarResultatRuleta());
         timer.setRepeats(false);
         timer.start();
 
     }//GEN-LAST:event_btmGirarActionPerformed
 
     private void btmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmMenuActionPerformed
-        // TODO add your handling code here:
-
         tornarMenuClient();
         this.dispose();
     }//GEN-LAST:event_btmMenuActionPerformed
-
-    private void btmNum37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum37ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum37ActionPerformed
-
-    private void btmNum38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum38ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum38ActionPerformed
-
-    private void btmNum39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum39ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum39ActionPerformed
-
-    private void btmNum40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum40ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum40ActionPerformed
-
-    private void btmNum41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum41ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum41ActionPerformed
-
-    private void btmNum42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum42ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum42ActionPerformed
-
-    private void btmNum43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum43ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum43ActionPerformed
-
-    private void btmNum44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum44ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum44ActionPerformed
-
-    private void btmNum45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum45ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum45ActionPerformed
-
-    private void btmNum46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum46ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum46ActionPerformed
-
-    private void btmNum47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum47ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum47ActionPerformed
-
-    private void btmNum48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum48ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum48ActionPerformed
-
-    private void btmNum49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum49ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum49ActionPerformed
-
-    private void btmNum50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum50ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum50ActionPerformed
-
-    private void btmNum51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum51ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum51ActionPerformed
-
-    private void btmNum52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum52ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum52ActionPerformed
-
-    private void btmNum53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum53ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum53ActionPerformed
-
-    private void btmNum54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum54ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum54ActionPerformed
-
-    private void btmNum55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum55ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum55ActionPerformed
-
-    private void btmNum56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum56ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum56ActionPerformed
-
-    private void btmNum57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum57ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum57ActionPerformed
-
-    private void btmNum58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum58ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum58ActionPerformed
-
-    private void btmNum59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum59ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum59ActionPerformed
-
-    private void btmNum60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum60ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum60ActionPerformed
-
-    private void btmNum61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum61ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum61ActionPerformed
-
-    private void btmNum62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum62ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum62ActionPerformed
-
-    private void btmNum63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum63ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum63ActionPerformed
-
-    private void btmNum64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum64ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum64ActionPerformed
-
-    private void btmNum65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum65ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum65ActionPerformed
-
-    private void btmNum66ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum66ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum66ActionPerformed
-
-    private void btmNum67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum67ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum67ActionPerformed
-
-    private void btmNum68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum68ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum68ActionPerformed
-
-    private void btmNum69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum69ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum69ActionPerformed
-
-    private void btmNum70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum70ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum70ActionPerformed
-
-    private void btmNum71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum71ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum71ActionPerformed
-
-    private void btmNum72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum72ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum72ActionPerformed
-
-    private void btmNum73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNum73ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNum73ActionPerformed
-
-    private void btmParell1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmParell1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmParell1ActionPerformed
-
-    private void btmSenar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmSenar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmSenar1ActionPerformed
-
-    private void btmNegre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmNegre1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmNegre1ActionPerformed
-
-    private void btmVermell1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmVermell1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btmVermell1ActionPerformed
 
     private void processarResultatRuleta() {
 
@@ -1893,7 +1224,6 @@ public class frmRuleta extends javax.swing.JFrame {
     private javax.swing.JButton btmGirar;
     private javax.swing.JButton btmMenu;
     private javax.swing.JButton btmNegre;
-    private javax.swing.JButton btmNegre1;
     private javax.swing.JButton btmNum0;
     private javax.swing.JButton btmNum1;
     private javax.swing.JButton btmNum10;
@@ -1925,55 +1255,15 @@ public class frmRuleta extends javax.swing.JFrame {
     private javax.swing.JButton btmNum34;
     private javax.swing.JButton btmNum35;
     private javax.swing.JButton btmNum36;
-    private javax.swing.JButton btmNum37;
-    private javax.swing.JButton btmNum38;
-    private javax.swing.JButton btmNum39;
     private javax.swing.JButton btmNum4;
-    private javax.swing.JButton btmNum40;
-    private javax.swing.JButton btmNum41;
-    private javax.swing.JButton btmNum42;
-    private javax.swing.JButton btmNum43;
-    private javax.swing.JButton btmNum44;
-    private javax.swing.JButton btmNum45;
-    private javax.swing.JButton btmNum46;
-    private javax.swing.JButton btmNum47;
-    private javax.swing.JButton btmNum48;
-    private javax.swing.JButton btmNum49;
     private javax.swing.JButton btmNum5;
-    private javax.swing.JButton btmNum50;
-    private javax.swing.JButton btmNum51;
-    private javax.swing.JButton btmNum52;
-    private javax.swing.JButton btmNum53;
-    private javax.swing.JButton btmNum54;
-    private javax.swing.JButton btmNum55;
-    private javax.swing.JButton btmNum56;
-    private javax.swing.JButton btmNum57;
-    private javax.swing.JButton btmNum58;
-    private javax.swing.JButton btmNum59;
     private javax.swing.JButton btmNum6;
-    private javax.swing.JButton btmNum60;
-    private javax.swing.JButton btmNum61;
-    private javax.swing.JButton btmNum62;
-    private javax.swing.JButton btmNum63;
-    private javax.swing.JButton btmNum64;
-    private javax.swing.JButton btmNum65;
-    private javax.swing.JButton btmNum66;
-    private javax.swing.JButton btmNum67;
-    private javax.swing.JButton btmNum68;
-    private javax.swing.JButton btmNum69;
     private javax.swing.JButton btmNum7;
-    private javax.swing.JButton btmNum70;
-    private javax.swing.JButton btmNum71;
-    private javax.swing.JButton btmNum72;
-    private javax.swing.JButton btmNum73;
     private javax.swing.JButton btmNum8;
     private javax.swing.JButton btmNum9;
     private javax.swing.JButton btmParell;
-    private javax.swing.JButton btmParell1;
     private javax.swing.JButton btmSenar;
-    private javax.swing.JButton btmSenar1;
     private javax.swing.JButton btmVermell;
-    private javax.swing.JButton btmVermell1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel3;

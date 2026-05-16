@@ -7,6 +7,7 @@ package VIEW;
 import static CONTROLER.Casino.userActual;
 import CONTROLER.GestioLog;
 import CONTROLER.estils;
+import static CONTROLER.estils.estilbuto;
 import java.awt.Graphics;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
@@ -25,13 +26,14 @@ public class frmMenu extends javax.swing.JFrame {
     public frmMenu(boolean admin) {
         //this.setUndecorated(true);
         initComponents();
+
         this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
 
         this.setContentPane(Fondo);
         Fondo.setLayout(null);
-
+        estilbuto(jButton1);
         estils.border(jPanel2);
-
+        Fondo.add(jButton1);
         Fondo.add(btmBlackJack);
         Fondo.add(btmRuleta);
         Fondo.add(btmTragaPerras);
@@ -40,7 +42,7 @@ public class frmMenu extends javax.swing.JFrame {
         Fondo.add(btmHistorial);
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
-      
+
         if (admin) {
             btmConf.setVisible(true);
             btmBlackJack.setVisible(false);
@@ -85,6 +87,7 @@ public class frmMenu extends javax.swing.JFrame {
         btmTragaPerras = new javax.swing.JButton();
         btmConf = new javax.swing.JButton();
         btmHistorial = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         lblSaldo = new javax.swing.JLabel();
@@ -150,6 +153,15 @@ public class frmMenu extends javax.swing.JFrame {
         });
         getContentPane().add(btmHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, -1, -1));
 
+        jButton1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        jButton1.setText("LOGIN");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 220, 70));
+
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setPreferredSize(new java.awt.Dimension(1920, 1080));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -213,6 +225,14 @@ public class frmMenu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btmHistorialActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        frmLogIn h = new frmLogIn();
+        h.setVisible(true);
+        this.dispose();
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -245,6 +265,7 @@ public class frmMenu extends javax.swing.JFrame {
     private javax.swing.JButton btmHistorial;
     private javax.swing.JButton btmRuleta;
     private javax.swing.JButton btmTragaPerras;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblSaldo;

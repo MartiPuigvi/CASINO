@@ -24,7 +24,10 @@ public class frmLogIn extends javax.swing.JFrame {
      * Creates new form frmValidator
      */
     public frmLogIn() {
+        adminActual = null;
+        userActual= null;
         initComponents();
+
         this.getRootPane().setDefaultButton(btmLogin);
         txtUsuari.putClientProperty("JTextField.placeholderText", "Username");
         txtPassword.putClientProperty("JTextField.placeholderText", "Password");

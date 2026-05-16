@@ -1,0 +1,11 @@
+11:59:26	Programa iniciat
+11:59:26	Login iniciat
+11:59:28	Usuari juan ha iniciat sesio al sistema
+11:59:29	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8040611.0} esta jugant a la Ruleta
+11:59:33	juan ha apostat 20.0€ a: 18
+12:02:58	Programa iniciat
+12:02:58	Login iniciat
+12:03:00	Usuari juan ha iniciat sesio al sistema
+12:03:01	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8040591.0} esta jugant a la Ruleta
+12:03:02	juan ha apostat 20.0€ a: 15
+12:03:09	juan ha apostat 20.0€ a: 12
