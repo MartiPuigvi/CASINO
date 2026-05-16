@@ -1026,3 +1026,53 @@
 10:47:14	juan ha apostat 20.0€ a: 3
 10:47:21	La bola ha caigut al número: 1 (Vermell)
 10:47:24	RESULTAT: juan no ha guanyat res.
+11:00:14	Programa iniciat
+11:00:14	Login iniciat
+11:00:22	Usuari juan ha iniciat sesio al sistema
+11:00:37	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8040531.0} esta jugant al Tragaperras
+11:00:38	juan realitza una aposta de 200.0
+11:00:44	juan ha perdut la jugada.
+11:00:51	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8040331.0} esta jugant a la Ruleta
+11:00:52	juan ha apostat 20.0€ a: 12
+11:00:58	La bola ha caigut al número: 24 (Negre)
+11:00:59	RESULTAT: juan no ha guanyat res.
+11:01:08	Programa iniciat
+11:01:08	Login iniciat
+11:01:10	Usuari juan ha iniciat sesio al sistema
+11:01:11	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8040311.0} esta jugant a la Ruleta
+11:01:12	juan ha apostat 20.0€ a: 15
+11:01:18	La bola ha caigut al número: 3 (Vermell)
+11:01:19	RESULTAT: juan no ha guanyat res.
+11:01:22	juan ha apostat 20.0€ a: 21
+11:01:27	La bola ha caigut al número: 35 (Negre)
+11:01:28	RESULTAT: juan no ha guanyat res.
+11:05:12	Programa iniciat
+11:05:12	Login iniciat
+11:05:14	Usuari juan ha iniciat sesio al sistema
+11:05:19	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8040271.0} esta jugant a Blackjack
+11:05:19	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8040271.0} esta jugant a Blackjack
+11:05:21	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8040271.0} esta jugant a la Ruleta
+11:05:23	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8040271.0} esta jugant al Tragaperras
+11:05:26	Programa iniciat
+11:05:26	Login iniciat
+11:05:29	Admin nico ha iniciat sesio al sistema
+11:05:37	Admin: Accés a l'historial de partides de Blackjack
+11:05:41	Admin: Tancant gestió d'usuaris i tornant al menú
+11:05:44	Admin: Accés a l'historial de partides de Tragaperras
+11:05:54	Programa iniciat
+11:05:55	Login iniciat
+11:05:57	Usuari juan ha iniciat sesio al sistema
+11:05:59	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8040271.0} esta jugant a la Ruleta
+11:06:06	juan ha apostat 20.0€ a: 12
+11:06:07	juan ha apostat 20.0€ a: 27
+11:06:09	juan ha apostat 20.0€ a: 17
+11:06:10	juan ha apostat 20.0€ a: 22
+11:06:11	juan ha apostat 20.0€ a: 32
+11:06:13	juan ha apostat 20.0€ a: 34
+11:06:14	juan ha apostat 20.0€ a: 6
+11:06:15	juan ha apostat 20.0€ a: 4
+11:06:24	La bola ha caigut al número: 1 (Vermell)
+11:06:28	RESULTAT: juan no ha guanyat res.
+11:06:33	juan ha apostat 500.0€ a: Vermell
+11:06:39	La bola ha caigut al número: 21 (Vermell)
+11:06:44	RESULTAT: juan ha guanyat 1000.0€
