@@ -4,7 +4,9 @@
  */
 package VIEW;
 
+import static CONTROLER.GestioFitxers.tornarMenuAdmin;
 import static CONTROLER.GestioLog.escriureLog;
+import static CONTROLER.estils.estilbuto;
 import java.awt.Graphics;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
@@ -25,8 +27,8 @@ public class frmHistorial extends javax.swing.JFrame {
         this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         this.setContentPane(Fondo);
         Fondo.setLayout(null);
-
         Fondo.add(btmBlackjack);
+        Fondo.add(btmMenu);
         Fondo.add(btmRuleta);
         Fondo.add(btmTragaperras);
 
@@ -44,6 +46,7 @@ public class frmHistorial extends javax.swing.JFrame {
         btmBlackjack = new javax.swing.JButton();
         btmRuleta = new javax.swing.JButton();
         btmTragaperras = new javax.swing.JButton();
+        btmMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -78,6 +81,16 @@ public class frmHistorial extends javax.swing.JFrame {
         });
         getContentPane().add(btmTragaperras, new org.netbeans.lib.awtextra.AbsoluteConstraints(915, 200, -1, -1));
 
+        btmMenu.setFont(new java.awt.Font("Segoe UI Symbol", 1, 24)); // NOI18N
+        btmMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/iconmenu (1).png"))); // NOI18N
+        btmMenu.setContentAreaFilled(false);
+        btmMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmMenuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btmMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 150, 150));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -104,6 +117,11 @@ public class frmHistorial extends javax.swing.JFrame {
         this.dispose();
         escriureLog("Admin: Accés a l'historial de partides de Tragaperras");
     }//GEN-LAST:event_btmTragaperrasActionPerformed
+
+    private void btmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmMenuActionPerformed
+tornarMenuAdmin();
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btmMenuActionPerformed
 
     JPanel Fondo = new JPanel() {
         @Override
@@ -141,6 +159,7 @@ public class frmHistorial extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btmBlackjack;
+    private javax.swing.JButton btmMenu;
     private javax.swing.JButton btmRuleta;
     private javax.swing.JButton btmTragaperras;
     // End of variables declaration//GEN-END:variables

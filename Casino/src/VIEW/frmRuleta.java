@@ -5,27 +5,22 @@
 package VIEW;
 
 import static CONTROLER.Casino.userActual;
-import static CONEXION.Queries.guardarPartidaBlackjack;
 import static CONEXION.Queries.guardarPartidaRuleta;
 import static CONTROLER.GestioFitxers.tornarMenuClient;
 import CONTROLER.GestioLog;
 import static CONTROLER.GestioLog.escriureLog;
-import CONTROLER.estils;
 import static CONTROLER.estils.borderRule;
 import static CONTROLER.estils.estilbutoRule;
 import static CONTROLER.estils.estilbutoRule2;
 import MODEL.ApostaRealitzada;
 import MODEL.casellaRuleta;
-import MODEL.jocRuleta;
 import MODEL.partidaRuleta.colorRuleta;
-import java.awt.Button;
 import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**

@@ -15,7 +15,6 @@ import java.awt.*;
 public class estils {
 
     public static void border(JPanel panel) {
-        // Configuraciones básicas
         panel.setOpaque(false);
         panel.setBorder(null);
 
@@ -25,11 +24,9 @@ public class estils {
                 Graphics2D g2 = (Graphics2D) g.create();
                 g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-                // Fondo Negro Redondeado (puedes cambiar el 40 por otro número para la curva)
                 g2.setColor(Color.BLACK);
                 g2.fillRoundRect(x, y, width, height, 40, 40);
 
-                // Borde Dorado
                 g2.setColor(new Color(212, 175, 55));
                 g2.setStroke(new BasicStroke(3));
                 g2.drawRoundRect(x + 1, y + 1, width - 2, height - 2, 40, 40);
@@ -61,7 +58,6 @@ public class estils {
     }
 
     public static void borderTp(JPanel panel) {
-        // Configuraciones básicas
         panel.setOpaque(false);
         panel.setBorder(null);
 
@@ -71,11 +67,9 @@ public class estils {
                 Graphics2D g2 = (Graphics2D) g.create();
                 g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-                // Fondo Negro Redondeado (puedes cambiar el 40 por otro número para la curva)
                 g2.setColor(new Color(25, 0, 35));
                 g2.fillRoundRect(x, y, width, height, 40, 40);
 
-                // Borde Dorado
                 g2.setColor(new Color(212, 175, 55));
                 g2.setStroke(new BasicStroke(3));
                 g2.drawRoundRect(x + 1, y + 1, width - 2, height - 2, 40, 40);
@@ -90,13 +84,10 @@ public class estils {
             arc:999;
             background: #072807;
             foreground: #D4AF37;
-
             borderWidth: 2;
             borderColor: #D4AF37;
-
             hoverBackground: #191919;
             pressedBackground: #2D2D2D;
-
             hoverBorderColor: #D4AF37;
             pressedBorderColor: #D4AF37;
         """);
@@ -109,13 +100,10 @@ public class estils {
             arc:999;
             background: #007b00;
             foreground: #D4AF37;
-
             borderWidth: 2;
             borderColor: #D4AF37;
-
             hoverBackground: #191919;
             pressedBackground: #2D2D2D;
-
             hoverBorderColor: #D4AF37;
             pressedBorderColor: #D4AF37;
         """);
@@ -134,11 +122,9 @@ public class estils {
                 Graphics2D g2 = (Graphics2D) g.create();
                 g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-                // Fondo Negro Redondeado (puedes cambiar el 40 por otro número para la curva)
                 g2.setColor(new Color(7, 40, 7));
                 g2.fillRoundRect(x, y, width, height, 40, 40);
 
-                // Borde Dorado
                 g2.setColor(new Color(212, 175, 55));
                 g2.setStroke(new BasicStroke(3));
                 g2.drawRoundRect(x + 1, y + 1, width - 2, height - 2, 40, 40);
