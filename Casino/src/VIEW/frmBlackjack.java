@@ -13,14 +13,12 @@ import static CONTROLER.GestioFitxers.tornarMenuClient;
 import static CONTROLER.GestioLog.escriureLog;
 import CONTROLER.estils;
 import MODEL.jocBlackjack;
-import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JLabel;
 import java.util.Random;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.UIManager;
 
 
 /**

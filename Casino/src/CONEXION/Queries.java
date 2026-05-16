@@ -4,7 +4,6 @@
  */
 package CONEXION;
 
-import static CONEXION.Queries.historialRuleta;
 import static CONTROLER.Casino.Admins;
 import static CONTROLER.Casino.Users;
 import static CONTROLER.Casino.historialBlackjack;

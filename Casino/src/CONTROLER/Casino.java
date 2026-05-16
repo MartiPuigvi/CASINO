@@ -15,18 +15,10 @@ import MODEL.Usuari;
 import MODEL.partidaBlackjack;
 import MODEL.partidaRuleta;
 import MODEL.partidaTragaperras;
-import VIEW.frmBlackjack;
 import VIEW.frmLogIn;
-import VIEW.frmMenu;
-import VIEW.frmTragaperras;
-import com.formdev.flatlaf.FlatDarculaLaf;
-import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatIntelliJLaf;
-import com.formdev.flatlaf.themes.FlatMacDarkLaf;
-import com.formdev.flatlaf.themes.FlatMacLightLaf;
 import java.awt.Font;
 import java.util.ArrayList;
-import java.util.Random;
 import javax.swing.UIManager;
 
 /**

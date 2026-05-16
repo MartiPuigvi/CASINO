@@ -4,7 +4,6 @@
  */
 package VIEW;
 
-import CONEXION.Queries;
 import static CONEXION.Queries.guardarPartidaTragaperras;
 import static CONEXION.Queries.historialTragaperras;
 import static CONEXION.Queries.updateSaldo;
@@ -13,12 +12,9 @@ import static CONTROLER.GestioFitxers.tornarMenuClient;
 import CONTROLER.GestioLog;
 import static CONTROLER.GestioLog.escriureLog;
 import CONTROLER.estils;
-import static CONTROLER.estils.estilbuto;
 import MODEL.jocTrragaperras;
 import java.awt.Graphics;
-import java.util.Random;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;

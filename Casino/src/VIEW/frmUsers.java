@@ -6,9 +6,7 @@ package VIEW;
 
 import static CONEXION.Queries.modUser;
 import static CONTROLER.Casino.Users;
-import MODEL.Usuari;
 import javax.swing.table.DefaultTableModel;
-import CONEXION.Queries;
 import static CONEXION.Queries.addUser;
 import static CONEXION.Queries.delUser;
 import static CONEXION.Queries.usuariAaraylist;

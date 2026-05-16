@@ -5,7 +5,6 @@
 package VIEW;
 
 import static CONTROLER.Casino.userActual;
-import CONTROLER.GestioLog;
 import CONTROLER.estils;
 import static CONTROLER.estils.estilbuto;
 import java.awt.Graphics;
