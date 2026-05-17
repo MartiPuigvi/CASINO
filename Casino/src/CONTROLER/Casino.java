@@ -23,7 +23,7 @@ import javax.swing.UIManager;
 
 /**
  *
- * @author Marti Puigvi Serra
+ * @author Projecte Final Nico i Marti
  */
 public class Casino {
 
