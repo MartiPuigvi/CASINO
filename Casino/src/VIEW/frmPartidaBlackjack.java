@@ -24,7 +24,9 @@ public class frmPartidaBlackjack extends javax.swing.JFrame {
         omplirPartidaBlackjack();
         
     }
-    
+    /**
+     * Omple la taula amb les dades de la partida del Blackjack
+     */
     public void omplirPartidaBlackjack() {
         tblBlackjack.clearSelection();
         String col[] = {"PARTIDA", "JUGADOR", "TOTAL JUGADOR", "TOTAL DEALER", "GUANYADOR"};

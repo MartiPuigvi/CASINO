@@ -58,10 +58,16 @@ public class frmTragaperras extends javax.swing.JFrame {
 
     }
 
+    /**
+     * Actualitzen el text de la pantalla amb els diners de l'usuari.
+     */
     public void saldo() {
         lblSaldo.setText(String.valueOf(userActual.getSaldo()));
     }
 
+    /**
+     * Actualitzen el text de la pantalla la quantitat apostada.
+     */
     public void Aposta() {
         lblAposta.setText("$ " + aposta);
     }
@@ -398,7 +404,12 @@ public class frmTragaperras extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Executa la jugada. Valida si hi ha saldo, resta l'aposta a la base dedades, activa uns GIFs que giren i 
+     * programa tres temporitzadors per mostrar el resultat final dels rodets.
+     * @param evt 
+     */
     private void btminiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btminiActionPerformed
         imgOff();
         infoOff();
@@ -512,6 +523,9 @@ public class frmTragaperras extends javax.swing.JFrame {
         lblInfo.setText("");
     }//GEN-LAST:event_btmIniActionPerformed
 
+    /**
+     * Comprova el resultat de la tirada: un trio multiplica l'aposta x20, una parella x2 i, si es perd, es notifica.
+     */
     private void win() {
 
         String tipusGuanyador = "Perdut";
@@ -550,6 +564,11 @@ public class frmTragaperras extends javax.swing.JFrame {
         saldo();
     }
 
+    /**
+     * Canvia la imatge de l'etiqueta corresponent segons el símbol obtingut.
+     * @param label
+     * @param simbol 
+     */
     public void iconaImg(JLabel label, String simbol) {
 
         ImageIcon icono = null;

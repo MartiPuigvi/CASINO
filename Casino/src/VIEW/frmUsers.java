@@ -45,6 +45,9 @@ public class frmUsers extends javax.swing.JFrame {
 
     }
 
+    /**
+     * Buida la taula, recorre la llista en memòria d'usuaris i insereix cada registre amb els seus camps.
+     */
     public void omplirTaulaUsers() {
         tblUsers.clearSelection();
         String col[] = {"ID", "NOM", "CONTRASENYA", "EMAIL", "EDAT", "SALDO"};
@@ -274,6 +277,10 @@ public class frmUsers extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Mostra els camps de text buits i les seves etiquetes per permetre a l'administrador introduir les dades d'un nou usuari.
+     * @param evt 
+     */
     private void btmAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmAddActionPerformed
         // TODO add your handling code here:
         escriureLog("Admin: Preparant formulari per afegir nou usuari");
@@ -304,6 +311,12 @@ public class frmUsers extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btmAddActionPerformed
 
+    /**
+     * Recull el contingut del formulari. Si el camp ID conté un número, cerca
+     * l'usuari a la llista, actualitza les seves dades i crida a modUser(). Si
+     * està buit, crida a addUser(). Després, torna a amagar el formulari i refresca la taula.
+     * @param evt 
+     */
     private void btmSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmSaveActionPerformed
 
         try {
@@ -372,6 +385,10 @@ public class frmUsers extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btmSaveActionPerformed
 
+    /**
+     * Detecta la fila seleccionada a la taula, extreu el seu ID, elimina l'usuari, recarrega la llista global i actualitza la vista.
+     * @param evt 
+     */
     private void btmDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmDelActionPerformed
         // TODO add your handling code here:
         lblId.setVisible(false);
@@ -408,6 +425,10 @@ public class frmUsers extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btmDelActionPerformed
 
+    /**
+     * Fa visibles tots els camps i el botó de desar perquè l'usuari pugui modificar la selecció.
+     * @param evt 
+     */
     private void btmModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmModActionPerformed
         // TODO add your handling code here:
         lblId.setVisible(true);
@@ -427,6 +448,11 @@ public class frmUsers extends javax.swing.JFrame {
         btmSave.setVisible(true);
     }//GEN-LAST:event_btmModActionPerformed
 
+    /**
+     * Quan l'administrador fa clic en una fila de la taula, es fan visibles els camps del formulari i s'omplen automàticament amb la informació de
+     * l'usuari seleccionat per poder editar-lo directament.
+     * @param evt 
+     */
     private void tblUsersMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblUsersMousePressed
         // TODO add your handling code here:
         int fila = tblUsers.getSelectedRow();

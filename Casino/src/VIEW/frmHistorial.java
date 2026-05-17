@@ -93,7 +93,12 @@ public class frmHistorial extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Obre l'historial de Blackjack, tanca la finestra actual i ho registra al
+     * log.
+     *
+     * @param evt
+     */
     private void btmBlackjackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmBlackjackActionPerformed
         // TODO add your handling code here:
         frmPartidaBlackjack p = new frmPartidaBlackjack();
@@ -102,6 +107,12 @@ public class frmHistorial extends javax.swing.JFrame {
         escriureLog("Admin: Accés a l'historial de partides de Blackjack");
     }//GEN-LAST:event_btmBlackjackActionPerformed
 
+    /**
+     * Obre l'historial de Ruleta, tanca la finestra actual i ho registra al
+     * log.
+     *
+     * @param evt
+     */
     private void btmRuletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmRuletaActionPerformed
         // TODO add your handling code here:
         frmPartidaRuleta r = new frmPartidaRuleta();
@@ -110,6 +121,12 @@ public class frmHistorial extends javax.swing.JFrame {
         escriureLog("Admin: Accés a l'historial de partides de Ruleta");
     }//GEN-LAST:event_btmRuletaActionPerformed
 
+    /**
+     * Obre l'historial del Tragaperras, tanca la finestra actual i ho registra
+     * al log.
+     *
+     * @param evt
+     */
     private void btmTragaperrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmTragaperrasActionPerformed
         // TODO add your handling code here:
         frmPartidaTragaperras t = new frmPartidaTragaperras();
@@ -117,9 +134,13 @@ public class frmHistorial extends javax.swing.JFrame {
         this.dispose();
         escriureLog("Admin: Accés a l'historial de partides de Tragaperras");
     }//GEN-LAST:event_btmTragaperrasActionPerformed
-
+    
+    /**
+     * Redirigeix l'administrador de tornada al menú principal i tanca la finestra.
+     * @param evt 
+     */
     private void btmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmMenuActionPerformed
-tornarMenuAdmin();
+        tornarMenuAdmin();
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btmMenuActionPerformed
 

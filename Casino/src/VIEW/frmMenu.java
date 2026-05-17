@@ -58,7 +58,10 @@ public class frmMenu extends javax.swing.JFrame {
         }
 
     }
-
+    
+    /**
+     * Actualitza el text de l'etiqueta de la interfície amb el saldo actual de l'usuari connectat.
+     */
     public void saldo() {
         lblSaldo.setText(String.valueOf(userActual.getSaldo()));
     }
@@ -187,7 +190,11 @@ public class frmMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Obre la finestra de gestió d'usuaris i tanca la finestra actual del menú.
+     * @param evt 
+     */
     private void btmConfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmConfActionPerformed
         // TODO add your handling code here:
         frmUsers u = new frmUsers();
@@ -196,6 +203,10 @@ public class frmMenu extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btmConfActionPerformed
 
+    /**
+     * Obre la finestra de joc de la Ruleta i tanca el menú principal.
+     * @param evt 
+     */
     private void btmRuletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmRuletaActionPerformed
         // TODO add your handling code here:
         frmRuleta r = new frmRuleta();
@@ -203,6 +214,10 @@ public class frmMenu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btmRuletaActionPerformed
 
+    /**
+     * Obre la finestra de joc del Tragaperras i tanca el menú principal.
+     * @param evt 
+     */
     private void btmTragaPerrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmTragaPerrasActionPerformed
         // TODO add your handling code here:
         frmTragaperras t = new frmTragaperras();
@@ -210,6 +225,10 @@ public class frmMenu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btmTragaPerrasActionPerformed
 
+    /**
+     * Obre la finestra de joc del Blackjack i tanca el menú principal.
+     * @param evt 
+     */
     private void btmBlackJackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmBlackJackActionPerformed
         frmBlackjack f = new frmBlackjack();
         f.setVisible(true);
@@ -217,13 +236,21 @@ public class frmMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btmBlackJackActionPerformed
 
+    /**
+     * Obre la finestra de l'historial de partides i tanca el menú principal.
+     * @param evt 
+     */
     private void btmHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmHistorialActionPerformed
         // TODO add your handling code here:
         frmHistorial h = new frmHistorial();
         h.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btmHistorialActionPerformed
-
+    
+    /**
+     * Tanca la sessió actual i torna a obrir la finestra d'inici de sessió.
+     * @param evt 
+     */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         frmLogIn h = new frmLogIn();
         h.setVisible(true);

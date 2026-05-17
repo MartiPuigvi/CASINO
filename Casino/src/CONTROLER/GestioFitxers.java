@@ -18,6 +18,11 @@ import java.io.IOException;
  * @author Marti Puigvi Serra
  */
 public class GestioFitxers {
+    
+    /**
+     * Crea un fitxer físic al disc si aquest no existeix.
+     * @param text 
+     */
 
     public static void creacioFitxer(String text) {
 
@@ -34,6 +39,10 @@ public class GestioFitxers {
 
         }
     }
+    
+    /**
+     * Valida l'administrador actual i torna a obrir el menú principal en mode admin.
+     */
 
     public static void tornarMenuAdmin() {
         for (int i = 0; i < CONTROLER.Casino.Admins.size(); i++) {
@@ -48,6 +57,10 @@ public class GestioFitxers {
 
     }
 
+    /**
+     * Valida l'usuari actual i torna a obrir el menú principal en mode client.
+     */
+    
     public static void tornarMenuClient() {
 
         for (int i = 0; i < Users.size(); i++) {
@@ -62,8 +75,5 @@ public class GestioFitxers {
 
         }
 
-    }
-
-        
-    
+    }   
 }

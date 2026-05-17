@@ -16,7 +16,10 @@ import java.time.format.DateTimeFormatter;
  * @author nicod
  */
 public class GestioLog {
-
+    
+    /**
+     * Crea el fitxer físic de log diari utilitzant la data actual del sistema.
+     */
     public static void creacioLog() {
         
         DateTimeFormatter formater = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -27,6 +30,11 @@ public class GestioLog {
         creacioFitxer(rutaCompleta);
     }
 
+    /**
+     * Escriu una línia de text a l'historial del fitxer de log actual.
+     * Cada registre s'autocompleta automàticament amb l'hora exacta.
+     * @param text 
+     */
     public static void escriureLog(String text) {
 
         try {

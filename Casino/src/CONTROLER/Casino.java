@@ -23,16 +23,14 @@ import javax.swing.UIManager;
 
 /**
  *
- * @author Marti Puigvi Serra
+ * @author Projecte Final Nico i Marti
  */
 public class Casino {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static String url = "jdbc:mysql://localhost:3306/casino";
     public static String user = "root";
-    public static String password = "Nico1234";
+    public static String password = "Marti";
     public static String rutaFitxerLogActual;
     public static ArrayList<Usuari> Users = new ArrayList<Usuari>();
     public static ArrayList<Admin> Admins = new ArrayList<Admin>();

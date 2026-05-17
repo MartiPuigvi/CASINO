@@ -148,6 +148,10 @@ public class frmSignUp extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Valida els camps, comprova que l'usuari/email no existeixi i fa el registre.
+     * @param evt 
+     */
     private void btmSignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmSignActionPerformed
         String nom = txtName.getText();
         String pass = txtPass.getText();
@@ -196,6 +200,10 @@ public class frmSignUp extends javax.swing.JFrame {
         login.setVisible(true);
     }//GEN-LAST:event_btmSignActionPerformed
 
+    /**
+     * Cancela el procés i torna a la pantalla de Login.
+     * @param evt 
+     */
     private void btmCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmCancelActionPerformed
         // TODO add your handling code here:
         frmLogIn l = new frmLogIn();

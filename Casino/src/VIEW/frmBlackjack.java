@@ -69,11 +69,19 @@ public class frmBlackjack extends javax.swing.JFrame {
         lblSaldo.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
         
         }
-
+    
+    /**
+     * Actualitza l'etiqueta de text de la interfície amb el saldo actual del jugador.
+     */
+    
     public void saldo() {
         lblSaldo.setText(String.valueOf(userActual.getSaldo()));
     }
 
+    /**
+     * Mostra els totals de punts actuals del jugador i del dealer a la pantalla.
+     */
+    
     public void totalPartida() {
         lblSum.setText("TOTAL: " + totalJugador);
         lblDealer.setText("DEALER: " + totalDealer);
@@ -343,6 +351,12 @@ public class frmBlackjack extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    /**
+     * Demana una carta random, recalcula la puntuació, 
+     * actualitza les imatges i comprova si el jugador ha superat els 21 punts.
+     * @param evt 
+     */
     private void btmCartaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmCartaActionPerformed
         int carta;
         JPanel3ON();
@@ -378,6 +392,11 @@ public class frmBlackjack extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btmCartaActionPerformed
 
+    /**
+     * Valida l'import de l'aposta introduït, en descompta el valor del saldo del jugador i posa en marxa la lògica de joc.
+     * @param evt 
+     */
+    
     private void btmIniPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmIniPartidaActionPerformed
         double aposta = 0.0;
         cartaOFF();
@@ -413,6 +432,11 @@ public class frmBlackjack extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btmIniPartidaActionPerformed
 
+    /**
+     * Finalitza el torn del jugador i executa la partida del crupier fins que arriba com a mínim a 18 punts.
+     * @param evt 
+     */
+    
     private void btmPlantarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmPlantarActionPerformed
         btmJocOff();
         JPanel2ON();
@@ -446,6 +470,8 @@ public class frmBlackjack extends javax.swing.JFrame {
         finals();
     }//GEN-LAST:event_btmPlantarActionPerformed
 
+ 
+    
     private void btmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmMenuActionPerformed
         /* frmMenu s = new frmMenu();
                 s.setVisible(true);*/
@@ -454,7 +480,12 @@ public class frmBlackjack extends javax.swing.JFrame {
 
         // TODO add your handling code here:
     }//GEN-LAST:event_btmMenuActionPerformed
-
+    
+    /**
+     * Restableix l'estat visual i els valors numèrics per poder començar una nova ronda des de zero.
+     * @param evt 
+     */
+    
     private void btmTornarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmTornarActionPerformed
 
         ApostaOn();
@@ -497,6 +528,10 @@ public class frmBlackjack extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtApoFocusLost
 
+    /**
+     * Avalua el resultat final de la partida, calcula i paga els premis, actualitza la base de dades i registra la partida a l'historial.
+     */
+    
     public void finals() {
         boolean guanyat = false;
         if (totalDealer > 21) {
@@ -530,6 +565,10 @@ public class frmBlackjack extends javax.swing.JFrame {
         guardarPartidaBlackjack(userActual.getNom(), totalJugador, totalDealer, guanyat);
 
     }
+    
+    /**
+     * Amaga i neteja per complet totes les imatges i textos de les cartes en pantalla.
+     */
 
     public void cartaOFF() {
         jPanel2.setEnabled(false);
@@ -554,6 +593,9 @@ public class frmBlackjack extends javax.swing.JFrame {
 
     }
 
+    /**
+     * Assigna de forma dinàmica les imatges que corresponen a cada una de les cartes que té actualment la mà del jugador.
+     */
     public void cartaImg() {
 
         JLabel[] cartes = {
