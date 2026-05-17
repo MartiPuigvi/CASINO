@@ -55,7 +55,7 @@ public class frmRuleta extends javax.swing.JFrame {
             btmNum11, btmNum12, btmNum13, btmNum14, btmNum15, btmNum16, btmNum17, btmNum18, btmNum19, btmNum20,
             btmNum21, btmNum22, btmNum23, btmNum24, btmNum25, btmNum26, btmNum27, btmNum28, btmNum29, btmNum30,
             btmNum31, btmNum32, btmNum33, btmNum34, btmNum35, btmNum36, btmSenar, btmParell, btmNegre, btmVermell
-            };
+        };
 
         for (int i = 0; i < btmNums.length; i++) {
             botoInvi(btmNums[i]);
@@ -65,11 +65,21 @@ public class frmRuleta extends javax.swing.JFrame {
         saldo();
         GestioLog.escriureLog(userActual + " esta jugant a la Ruleta");
     }
+    
+    /**
+     * Actualitza el component visual del text per mostrar el saldo actual
+     */
 
     public void saldo() {
         lblSaldo1.setText("SALDO: " + userActual.getSaldo());
     }
 
+    /**
+     * Obre el popup per triar la quantitat a apostar, comprova si hi ha saldo suficient, resta els diners i registra l'aposta.
+     * @param tipus
+     * @param valor
+     * @param boto 
+     */
     private void mostrarPopUpAposta(String tipus, Object valor, JButton boto) {
         String[] fitxes = {"20", "50", "100", "200", "500"};
         String tria = (String) javax.swing.JOptionPane.showInputDialog(
@@ -80,7 +90,6 @@ public class frmRuleta extends javax.swing.JFrame {
                 null,
                 fitxes,
                 fitxes[0]);
-       
 
         if (tria != null) {
             double diners = Double.parseDouble(tria);
@@ -101,7 +110,6 @@ public class frmRuleta extends javax.swing.JFrame {
 
                 txtLlistaApostes.append("APOSTA: " + diners + "€ al " + valorText + "\n");
                 fitxaNum(boto);
-                
 
             } else {
 
@@ -123,7 +131,9 @@ public class frmRuleta extends javax.swing.JFrame {
         label.setIcon(icon);
 
     }
-
+    /**
+     * Genera de forma lògica les 37 caselles de la ruleta assignant a cada número el seu color oficial.
+     */
     private void prepararTauler() {
         int[] vermells = {1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36};
 
@@ -146,6 +156,9 @@ public class frmRuleta extends javax.swing.JFrame {
         }
 
     }
+    /**
+     * Sobreescriu el dibuix per defecte del panell per carregar i ajustar la imatge de fons de la ruleta.
+     */
     JPanel Fondo = new JPanel() {
         @Override
         protected void paintComponent(Graphics g) {
@@ -742,7 +755,7 @@ public class frmRuleta extends javax.swing.JFrame {
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 10, 300, 60));
 
-        lblrule1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/rule.gif"))); // NOI18N
+        lblrule1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/rule2.gif"))); // NOI18N
         getContentPane().add(lblrule1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 80, -1, -1));
 
         pack();

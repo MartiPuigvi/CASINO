@@ -23,7 +23,10 @@ public class frmPartidaRuleta extends javax.swing.JFrame {
         initComponents();
         omplirPartidaRuleta();
     }
-
+    
+    /**
+     * Omple la taula amb les dades de la partida de la Ruleta
+     */
     public void omplirPartidaRuleta() {
         tblRuleta.clearSelection();
         String col[] = {"PARTIDA", "JUGADOR", "NUMERO", "COLOR", "PARELL", "GUANYADOR"};

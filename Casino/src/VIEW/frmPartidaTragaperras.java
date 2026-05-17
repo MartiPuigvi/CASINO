@@ -24,7 +24,10 @@ public class frmPartidaTragaperras extends javax.swing.JFrame {
         tblTragaperras.setFont(new java.awt.Font("Segoe UI Symbol", java.awt.Font.PLAIN, 14));
         omplirPartidaTragaperras();
     }
-
+    
+    /**
+     * Omple la taula amb les dades de la partida del Tragaperras
+     */
     public void omplirPartidaTragaperras() {
         tblTragaperras.clearSelection();
         String col[] = {"PARTIDA", "JUGADOR", "SIMBOL1", "SIMBOL2", "SIMBOL3", "GUANYADOR"};

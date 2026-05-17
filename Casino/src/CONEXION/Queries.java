@@ -31,6 +31,11 @@ import java.time.LocalDate;
  * @author nicod
  */
 public class Queries {
+    
+    
+    /**
+     * Carrega tots els usuaris de la base de dades i els afegeix a l'ArrayList de usauris.
+     */
 
     public static void usuariAaraylist() {
         String sql = "SELECT id, username, password, email, age, saldo FROM user";
@@ -53,6 +58,10 @@ public class Queries {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * Carrega tots els usuaris de la base de dades i els afegeix a l'ArrayList de admin.
+     */
 
     public static void adminAarraylist() {
         String sql = "SELECT id, username, password FROM admin";
@@ -91,7 +100,14 @@ public class Queries {
             e.printStackTrace();
         }
     }
-
+    
+    /**
+     * Registra un nou usuari a la base de dades i l'afegeix a la llista global.
+     * @param username Nom del usuari
+     * @param pass Contrasenya de l'usuari
+     * @param email Correu electrònic
+     * @param age Data de neixament
+     */
     public static void signUp(String username, String pass, String email, String age) {
         String sql = "INSERT INTO user (username, password, email, age) VALUES (?, ?, ?, ?)";
 
@@ -119,7 +135,15 @@ public class Queries {
             System.out.println("Error SQL al registre: " + e.getMessage());
         }
     }
-
+    
+    /**
+     * Afegeix un usuari directament a la base de dades i a l'ArrayList dels usuaris.
+     * @param username
+     * @param pass
+     * @param email
+     * @param age
+     * @param saldo 
+     */
     public static void addUser(String username, String pass, String email, java.time.LocalDate age, Double saldo) {
         String sql = "INSERT INTO user (username, password, email, age, saldo) VALUES (?, ?, ?, ?, ?)";
 
@@ -143,7 +167,16 @@ public class Queries {
             System.out.println("Error SQL al registre: " + e.getMessage());
         }
     }
-
+    
+    /**
+     * Modifica les dades d'un usuari existent a la base de dades utilitzant el seu ID.
+     * @param id
+     * @param nouNom
+     * @param nouEmail
+     * @param novaPass
+     * @param novaEdat
+     * @param nouSaldo 
+     */
     public static void modUser(int id, String nouNom, String nouEmail, String novaPass, java.time.LocalDate novaEdat, double nouSaldo) {
         String sql = "UPDATE user SET username = ?, email = ?, password = ?, age = ?, saldo = ? WHERE id = ?";
 
@@ -169,6 +202,11 @@ public class Queries {
         }
 
     }
+    
+    /**
+     * Elimina un usuari de la base de dades pel seu ID.
+     * @param id 
+     */
 
     public static void delUser(int id) {
         String sql = "DELETE FROM user WHERE id = ?";
@@ -190,6 +228,11 @@ public class Queries {
         }
     }
 
+    /**
+     * Actualitza el saldo d'un usuari utilitzant el seu ID.
+     * @param id
+     * @param nouSaldo 
+     */
     public static void updateSaldo(int id, double nouSaldo) {
         String sql = "UPDATE user SET saldo = ? WHERE id = ?";
 
@@ -208,6 +251,14 @@ public class Queries {
             System.out.println("Error al actualitzar el saldo: " + e.getMessage());
         }
     }
+    
+    /**
+     * Guarda una nova partida de BlackJack a la base de dades.
+     * @param nomJugador
+     * @param totalJugador
+     * @param totalDealer
+     * @param guanyador 
+     */
 
     public static void guardarPartidaBlackjack(String nomJugador, int totalJugador, int totalDealer, boolean guanyador) {
         String sql = "INSERT INTO BLACKJACK (nomJugador, totalJugador, totalDealer, guanyador) VALUES (?, ?, ?, ?)";
@@ -225,6 +276,15 @@ public class Queries {
         }
 
     }
+    
+    /**
+     * Guarda una nova partida de Ruleta a la base de dades.
+     * @param nomJugador
+     * @param numero
+     * @param color
+     * @param esParell
+     * @param guanyador 
+     */
 
     public static void guardarPartidaRuleta(String nomJugador, int numero, colorRuleta color, boolean esParell, String guanyador) {
         String sql = "INSERT INTO RULETA (nomJugador, numero, color, esParell, guanyador) VALUES (?, ?, ?, ?, ?)";
@@ -241,6 +301,15 @@ public class Queries {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * Guarda una nova tirada de la màquina Tragaperras a la base de dades.
+     * @param nomJugador
+     * @param simbol1
+     * @param simbol2
+     * @param simbol3
+     * @param guanyador 
+     */
 
     public static void guardarPartidaTragaperras(String nomJugador, String simbol1, String simbol2, String simbol3, String guanyador) {
         String sql = "INSERT INTO TRAGAPERRAS (nomJugador, simbol1, simbol2, simbol3, guanyador) VALUES (?, ?, ?, ?, ?)";
@@ -258,7 +327,10 @@ public class Queries {
             e.printStackTrace();
         }
     }
-
+    
+    /**
+     * Carrega tot l'historial de partides de Blackjack a la llista de l'aplicació.
+     */
     public static void historialBlackjack() {
         String sql = "SELECT idPartida, nomJugador, totalJugador, totalDealer, guanyador FROM BLACKJACK";
 
@@ -279,6 +351,10 @@ public class Queries {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * Carrega tot l'historial de partides de Ruleta a la llista de l'aplicació.
+     */
 
     public static void historialRuleta() {
         String sql = "SELECT idPartida, nomJugador, numero, color, esParell, guanyador FROM RULETA";
@@ -306,6 +382,10 @@ public class Queries {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * Carrega tot l'historial de partides de Tragaperras a la llista de l'aplicació.
+     */
 
     public static void historialTragaperras() {
         String sql = "SELECT idPartida, nomJugador, simbol1, simbol2, simbol3, guanyador FROM TRAGAPERRAS";

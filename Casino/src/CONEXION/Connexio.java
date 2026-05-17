@@ -13,10 +13,15 @@ import java.sql.SQLException;
  */
 public class Connexio {
 
+    /**
+     * Intenta establir una connexió activa amb la base de dades del casino
+     * @return 
+     */
+    
     public Connection connectar() {
         String url = "jdbc:mysql://localhost:3306/casino";
         String user = "root";
-        String password = "Nico1234";
+        String password = "Marti";
         
         Connection con = null;
         try (Connection conn = DriverManager.getConnection(url, user, password)) {

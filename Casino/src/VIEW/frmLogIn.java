@@ -132,6 +132,10 @@ public class frmLogIn extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Comprova les credencials, si coincideixen amb un admin o usuari, obre el menú corresponent, tanca la finestra i ho registra al log.
+     * @param evt 
+     */
     private void btmLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmLoginActionPerformed
         boolean found = false;
         String username = txtUsuari.getText();
@@ -182,6 +186,10 @@ public class frmLogIn extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btmLoginActionPerformed
 
+    /**
+     * Obre la finestra de registre i tanca la finestra actual de Log In.
+     * @param evt 
+     */
     private void btmSignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmSignupActionPerformed
 
         frmSignUp m = new frmSignUp();
