@@ -168,13 +168,13 @@ public class frmSignUp extends javax.swing.JFrame {
 
         for (Usuari u : Users) {
             if (u.getNom().equals(nom)) {
-                javax.swing.JOptionPane.showMessageDialog(this, "nom incorrecte");
+                javax.swing.JOptionPane.showMessageDialog(this,"Error: El nom '" + nom + "' ja està en ús.");
                 escriureLog("Error registre: El nom '" + nom + "' ja està en ús.");
                 return;
             }
 
             if (u.getEmail().equals(email)) {
-                javax.swing.JOptionPane.showMessageDialog(this, "correu");
+                javax.swing.JOptionPane.showMessageDialog(this, "Error: L'email '" + email + "' ja està en ús.");
                 escriureLog("Error registre: L'email '" + email + "' ja està en ús.");
                 return;
             }
