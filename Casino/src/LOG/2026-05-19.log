@@ -1,0 +1,102 @@
+08:26:52	Programa iniciat
+08:26:52	Login iniciat
+08:27:00	Signup iniciat
+08:39:18	Programa iniciat
+08:39:19	Login iniciat
+08:39:24	Admin nico ha iniciat sesio al sistema
+08:39:32	Admin: Tancant gestió d'usuaris i tornant al menú
+08:39:34	Admin: Tancant gestió d'usuaris i tornant al menú
+08:39:35	Admin: Accés a l'historial de partides de Blackjack
+08:39:38	Admin: Accés a l'historial de partides de Tragaperras
+08:39:41	Login iniciat
+08:39:45	Usuari juan ha iniciat sesio al sistema
+08:39:46	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=18.0} esta jugant a la Ruleta
+08:39:48	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=18.0} esta jugant a Blackjack
+08:39:48	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=18.0} esta jugant a Blackjack
+08:39:49	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=18.0} esta jugant al Tragaperras
+08:39:51	juan no té saldo suficient per apostar 200.0
+08:39:57	Login iniciat
+08:40:06	Usuari maria ha iniciat sesio al sistema
+08:40:07	Usuari{id=3, nom=maria, email=maria@gmail.com, Contrasenya=1234, edat=2006-09-22, Saldo=500.0} esta jugant al Tragaperras
+08:40:08	maria realitza una aposta de 200.0
+08:40:14	maria ha perdut la jugada.
+08:40:16	maria realitza una aposta de 200.0
+08:40:22	maria ha perdut la jugada.
+08:40:26	maria realitza una aposta de 100.0
+08:40:32	maria ha perdut la jugada.
+08:40:42	Usuari{id=3, nom=maria, email=maria@gmail.com, Contrasenya=1234, edat=2006-09-22, Saldo=0.0} esta jugant a Blackjack
+08:40:42	Usuari{id=3, nom=maria, email=maria@gmail.com, Contrasenya=1234, edat=2006-09-22, Saldo=0.0} esta jugant a Blackjack
+08:40:44	Login iniciat
+08:41:22	Usuari juan ha iniciat sesio al sistema
+08:41:26	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=18.0} esta jugant a Blackjack
+08:41:26	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=18.0} esta jugant a Blackjack
+08:41:29	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=8.0} ha apostat: 10.0
+08:41:30	juan ha demanat carta: 11
+08:41:31	juan ha demanat carta: 4
+08:41:31	juan ha demanat carta: 11
+08:41:31	juan s'ha passat de 21 amb un total de: 26
+08:41:35	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=0.0} ha apostat: 8.0
+08:41:36	juan ha demanat carta: 10
+08:41:36	juan ha demanat carta: 3
+08:41:37	juan ha demanat carta: 11
+08:41:37	juan s'ha passat de 21 amb un total de: 24
+08:41:45	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=0.0} esta jugant a la Ruleta
+08:41:50	Login iniciat
+08:41:58	Usuari admin ha iniciat sesio al sistema
+08:42:00	Login iniciat
+08:42:01	Signup iniciat
+08:42:14	Intent de registre per a l'usuari: juan
+08:42:19	Error registre: El nom 'juan' ja està en ús.
+08:42:37	Intent de registre per a l'usuari: juansd
+08:42:39	Error registre: L'email 'juan@gmail.com' ja està en ús.
+08:45:07	Programa iniciat
+08:45:07	Login iniciat
+08:45:11	Signup iniciat
+08:45:22	Intent de registre per a l'usuari: juan
+08:45:29	Error registre: El nom 'juan' ja està en ús.
+08:45:33	Intent de registre per a l'usuari: Juan
+08:45:48	Intent de registre per a l'usuari: Juan
+08:45:50	Juan ha estat registrat al sistema
+08:45:50	Login iniciat
+08:46:07	Programa iniciat
+08:46:08	Login iniciat
+08:47:16	Programa iniciat
+08:47:16	Login iniciat
+08:47:18	Signup iniciat
+08:47:38	Intent de registre per a l'usuari: juan
+08:47:39	Error registre: El nom 'juan' ja està en ús.
+08:47:43	Login iniciat
+08:47:43	L'usuari ha cancel·lat el registre
+08:47:56	Programa iniciat
+08:47:56	Login iniciat
+08:47:57	Signup iniciat
+08:48:08	Intent de registre per a l'usuari: nico
+08:48:12	Error registre: Intent de suplentació de nom d'admin: nico
+08:51:15	Programa iniciat
+08:51:15	Login iniciat
+08:51:17	Signup iniciat
+08:51:28	Intent de registre per a l'usuari: ndas
+08:51:36	Login iniciat
+08:51:36	L'usuari ha cancel·lat el registre
+08:52:18	Programa iniciat
+08:52:19	Login iniciat
+08:52:21	Signup iniciat
+08:52:22	Intent de registre per a l'usuari: 
+08:53:19	Programa iniciat
+08:53:19	Login iniciat
+08:53:21	Signup iniciat
+08:53:32	Intent de registre per a l'usuari: asda
+08:54:38	Programa iniciat
+08:54:38	Login iniciat
+08:54:40	Signup iniciat
+08:54:48	Intent de registre per a l'usuari: juan
+08:54:53	Error registre: El nom 'juan' ja està en ús.
+08:55:42	Programa iniciat
+08:55:42	Login iniciat
+08:55:44	Signup iniciat
+08:55:45	Intent de registre per a l'usuari: 
+08:55:46	Error registre: Camps buits detectats.
+08:55:47	Login iniciat
+08:55:47	L'usuari ha cancel·lat el registre
+08:56:25	Programa iniciat
+08:56:25	Login iniciat

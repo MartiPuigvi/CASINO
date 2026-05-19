@@ -10,6 +10,10 @@ import CONTROLER.GestioLog;
 import static CONTROLER.GestioLog.escriureLog;
 import MODEL.Admin;
 import MODEL.Usuari;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -149,32 +153,36 @@ public class frmSignUp extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     /**
-     * Valida els camps, comprova que l'usuari/email no existeixi i fa el registre.
-     * @param evt 
+     * Valida els camps, comprova que l'usuari/email no existeixi i fa el
+     * registre.
+     *
+     * @param evt
      */
     private void btmSignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmSignActionPerformed
-        String nom = txtName.getText();
+        String nom = txtName.getText().toLowerCase();
         String pass = txtPass.getText();
-        String email = txtEmail.getText();
+        String email = txtEmail.getText().toLowerCase();
         String age = txtAge.getText();
 
         escriureLog("Intent de registre per a l'usuari: " + nom);
 
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
         if (nom.isEmpty() || pass.isEmpty() || email.isEmpty() || age.isEmpty()) {
-            javax.swing.JOptionPane.showMessageDialog(this, "Siusplau, omple tots els camps.");
+            javax.swing.JOptionPane.showMessageDialog(this, "Siusplau, omple tots els camps.", "Error", JOptionPane.ERROR_MESSAGE);
             escriureLog("Error registre: Camps buits detectats.");
             return;
         }
 
         for (Usuari u : Users) {
             if (u.getNom().equals(nom)) {
-                javax.swing.JOptionPane.showMessageDialog(this,"Error: El nom '" + nom + "' ja està en ús.");
+                javax.swing.JOptionPane.showMessageDialog(this, "Error: El nom '" + nom + "' ja està en ús.", "Error", JOptionPane.ERROR_MESSAGE);
                 escriureLog("Error registre: El nom '" + nom + "' ja està en ús.");
                 return;
             }
 
             if (u.getEmail().equals(email)) {
-                javax.swing.JOptionPane.showMessageDialog(this, "Error: L'email '" + email + "' ja està en ús.");
+                javax.swing.JOptionPane.showMessageDialog(this, "Error: L'email '" + email + "' ja està en ús.", "Error", JOptionPane.ERROR_MESSAGE);
                 escriureLog("Error registre: L'email '" + email + "' ja està en ús.");
                 return;
             }
@@ -183,11 +191,19 @@ public class frmSignUp extends javax.swing.JFrame {
 
         for (Admin u : Admins) {
             if (u.getNom().equals(nom)) {
-                javax.swing.JOptionPane.showMessageDialog(this, "nom admin");
+                javax.swing.JOptionPane.showMessageDialog(this, "Error: El nom '" + nom + "' ja està en ús.", "Error", JOptionPane.ERROR_MESSAGE);
                 escriureLog("Error registre: Intent de suplentació de nom d'admin: " + nom);
                 return;
             }
 
+        }
+
+        try {
+            LocalDate data = LocalDate.parse(age, formatter);
+        } catch (DateTimeParseException e) {
+            JOptionPane.showMessageDialog(this, "Data incorrecta. Introdueix una data valida", "Error", JOptionPane.ERROR_MESSAGE);
+            escriureLog("Error registre: La data es incorrecte.");
+            return;
         }
 
         CONEXION.Queries.signUp(nom, pass, email, age);
@@ -202,7 +218,8 @@ public class frmSignUp extends javax.swing.JFrame {
 
     /**
      * Cancela el procés i torna a la pantalla de Login.
-     * @param evt 
+     *
+     * @param evt
      */
     private void btmCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmCancelActionPerformed
         // TODO add your handling code here:
