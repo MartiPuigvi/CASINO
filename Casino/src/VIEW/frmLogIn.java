@@ -178,7 +178,7 @@ public class frmLogIn extends javax.swing.JFrame {
         }
 
         if (!found) {
-            JOptionPane.showMessageDialog(null, "Usuari o Admin no trobat / contrasenya incorrecte");
+            JOptionPane.showMessageDialog(null, "Usuari no trobat / contrasenya incorrecte", "Error", JOptionPane.ERROR_MESSAGE);
             txtUsuari.setText("");
             txtPassword.setText("");
         }

@@ -30,7 +30,7 @@ public class Casino {
 
     public static String url = "jdbc:mysql://localhost:3306/casino";
     public static String user = "root";
-    public static String password = "Marti";
+    public static String password = "Nico1234";
     public static String rutaFitxerLogActual;
     public static ArrayList<Usuari> Users = new ArrayList<Usuari>();
     public static ArrayList<Admin> Admins = new ArrayList<Admin>();

@@ -147,3 +147,37 @@
 04:31:06	Programa iniciat
 04:31:07	Login iniciat
 04:31:09	Admin nico ha iniciat sesio al sistema
+07:51:21	Programa iniciat
+07:51:22	Login iniciat
+07:51:54	Programa iniciat
+07:51:54	Login iniciat
+07:51:56	Usuari juan ha iniciat sesio al sistema
+07:52:16	Programa iniciat
+07:52:17	Login iniciat
+07:52:18	Usuari juan ha iniciat sesio al sistema
+07:52:21	Login iniciat
+07:53:00	Programa iniciat
+07:53:01	Login iniciat
+07:53:03	Usuari juan ha iniciat sesio al sistema
+07:53:04	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=440.0} esta jugant a la Ruleta
+07:53:07	juan ha apostat 20.0€ a: 9
+07:53:11	La bola ha caigut al número: 32 (Vermell)
+07:53:14	RESULTAT: juan no ha guanyat res.
+07:53:15	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=420.0} esta jugant a Blackjack
+07:53:15	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=420.0} esta jugant a Blackjack
+07:53:17	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=418.0} ha apostat: 2.0
+07:53:18	juan ha demanat carta: 6
+07:53:19	juan ha demanat carta: 8
+07:53:20	juan ha demanat carta: 3
+07:53:20	juan es planta amb un total de: 17
+07:53:20	Dealer ha tret carta: 4
+07:53:20	Dealer ha tret carta: 4
+07:53:20	Dealer ha tret carta: 9
+07:53:20	Dealer ha tret carta: 3
+07:53:20	Final Blackjack: juan perd per punts. Dealer: 20 - Jugador: 17
+07:53:23	Usuari{id=2, nom=juan, email=juan@gmail.com, Contrasenya=1234, edat=2003-01-15, Saldo=418.0} esta jugant al Tragaperras
+07:53:25	juan realitza una aposta de 400.0
+07:53:31	juan ha perdut la jugada.
+07:53:34	Login iniciat
+07:53:37	Admin nico ha iniciat sesio al sistema
+07:53:40	Login iniciat
